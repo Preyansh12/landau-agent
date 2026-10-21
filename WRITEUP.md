@@ -15,7 +15,7 @@ It is a toolset with an agent on top:
 - **Volume check.** PBE-trained potentials overestimate lattice constants. A tool rescales the parent to a known lattice constant to test whether an instability is real or a volume artefact.
 - **Agent.** A tool-calling LLM picks supercells and order parameters, adds forced secondary modes, runs the checks and writes the physical explanation. Its system prompt forbids deriving irreps, invariants, couplings, energies or space groups itself; every number must come from a tool, and tool errors are passed back to it.
 
-All results below come from a scripted pipeline that calls the same tools in the order the agent is instructed to use. The LLM agent was not run for them, because no API key was available in the build environment.
+The benchmark and showcase numbers below come from a scripted pipeline that calls the same tools as the agent, so they are reproducible without an API key. In a live run on "Is SrTiO₃ ferroelectric?" (Gemini Flash), the model applied the volume-check rule on its own initiative for this question. It supplied the experimental lattice constant from its own knowledge, called `rescale_parent`, saw the polar instability vanish, and chose the R4⁺ tilt as the real order parameter (`results/agent_SrTiO3_console_partial.md`).
 
 ## Results
 
@@ -69,4 +69,4 @@ All results below come from a scripted pipeline that calls the same tools in the
 - Standard ISOTROPY labels (Γ4⁻, R4⁺, M3⁺, X2⁺, X3⁻, Γ5⁻) are attached by the code and verified by projecting rigid-octahedron patterns, but only for the two parent families here.
 - Phase enumeration is symmetry-complete only for order parameters of dimension ≤ 3.
 - MACE-MP-0 inherits PBE errors.
-- Results come from the scripted pipeline; live agent runs need an API key.
+- Benchmark numbers come from the scripted pipeline; live agent transcripts are fewer and one run was cut short by a provider overload error.

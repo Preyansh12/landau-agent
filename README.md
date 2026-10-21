@@ -1,8 +1,48 @@
 # LandauAgent
 
-**From a high-symmetry crystal to its Landau free energy, its instabilities and its low-symmetry phase, with an LLM that plans and explains but never does the group theory.**
+**From a high-symmetry crystal to its symmetry-allowed couplings, its instabilities and its low-symmetry phase. An LLM plans and explains; exact group theory and a universal ML potential (MACE-MP-0) do all the computing.**
 
 Built for the Open Scientific Intelligence (OSI) Hackathon, 21–22 October 2026.
+
+## Scorecard
+
+**Right on 8 of 12 materials: all 7 n=2 Ruddlesden–Popper compounds, including 5 of 5 out-of-sample predictions committed to git before the literature check. Every failure is a cubic perovskite.**
+
+| Material | Known ground state | LandauAgent | |
+|---|---|---|---|
+| Ca₃Ti₂O₇ | A2₁am | A2₁am | ✅ |
+| Sr₃Zr₂O₇ | A2₁am | A2₁am | ✅ |
+| Ca₃Mn₂O₇ *(out of sample)* | A2₁am | A2₁am | ✅ |
+| Ca₃Sn₂O₇ *(out of sample)* | A2₁am | A2₁am | ✅ |
+| Sr₃Sn₂O₇ *(out of sample)* | A2₁am | A2₁am | ✅ |
+| Sr₃Hf₂O₇ *(out of sample)* | A2₁am (DFT) | A2₁am | ✅ |
+| Sr₃Ti₂O₇ *(out of sample, negative control)* | I4/mmm, undistorted | no instability | ✅ |
+| PbTiO₃ | P4mm | P4mm | ✅ |
+| LaAlO₃ | R-3c | Imma, 0.3 meV/f.u. below R-3c | ❌ near miss |
+| SrTiO₃ | I4/mcm | polar R3c: volume artefact, caught by `rescale_parent` | ❌ |
+| CaTiO₃ | Pnma | polar R3c (volume-sensitive polar mode) | ❌ |
+| BaTiO₃ | R3m | Aem2; top three phases within 0.3 meV/f.u. | ❌ |
+
+A2₁am is reported by spglib in its standard setting, Cmc2₁. Details, energies and runner-ups: [Benchmark](#benchmark-seven-materials-with-known-ground-states) and [Out-of-sample test](#out-of-sample-test-five-compounds-the-pipeline-never-saw).
+
+## The mechanism, found from the parent alone
+
+For Ca₃Ti₂O₇ the symmetry engine derives, with no input but the I4/mmm structure, the trilinear invariant `X3⁻ · X2⁺ · Γ5⁻` (tilt × rotation × polarisation), the coupling behind hybrid improper ferroelectricity. To test it directly, we contract the lattice so that the polar mode has no instability of its own (curvature −0.006 eV/Å²) and use **only tilt and rotation as order parameters**. The polar mode is free to appear wherever symmetry allows it:
+
+| Phase | Tilt / rotation pattern | Energy vs I4/mmm (meV/f.u.) | Nominal P (μC/cm²) |
+|---|---|---|---|
+| **A2₁am** | same k-arm (trilinear term on) | **−933.2** | **9.5** |
+| Pnma | different k-arms (trilinear term zero) | −891.8 | 0 |
+| tilt only | | −655.3 | 0 |
+| rotation only | | −427.8 | 0 |
+
+The ground state is polar purely because of the coupling the engine found. (`results/Ca3Ti2O7_contracted_enumeration.json`)
+
+## The agent
+
+A tool-calling LLM decides what to compute: the supercell, which instabilities are real, which become order parameters, which forced modes to add, and when the potential cannot decide. It is forbidden from doing any group theory or quoting any number a tool did not return. It works with Anthropic models or any OpenAI-compatible endpoint, such as Gemini.
+
+In a live run on **"Is SrTiO₃ ferroelectric?"** (Gemini Flash, [console log](results/agent_SrTiO3_console_partial.md)), the model found the polar instability at the MACE volume. The question did not mention volume. The system prompt carries only the general rule that polar instabilities from a PBE-trained potential should be volume-checked; the model applied it, supplied the experimental lattice constant (3.905 Å) from its own knowledge, and called `rescale_parent` "to test whether the polar instability is an artefact of the PBE volume overestimation". It then re-checked the instabilities and chose R4⁺ as the real order parameter. That run stopped on a provider overload error after 11 tool calls; full transcripts are in `results/agent_*_transcript.md` when present.
 
 ## The problem
 
@@ -29,9 +69,9 @@ Given a parent structure, LandauAgent:
 
 It can also take an *observed* low-symmetry structure and decompose it into irreps (`analyze_child`).
 
-## Results
+## Showcases
 
-**In short:** 8 of 12 materials right: 3 of 7 in a benchmark of known cases, and 5 of 5 out-of-sample predictions committed before the literature check. That includes all 7 n=2 Ruddlesden–Popper compounds; every failure is a cubic perovskite (see Benchmark and Out-of-sample test below). The two showcases:
+The two showcases in detail:
 
 | Material | Parent | Found instabilities | Forced coupling | Predicted phase | Literature |
 |---|---|---|---|---|---|
@@ -134,7 +174,7 @@ After the benchmark, we froze the protocol (commit `766821e`). We ran it on five
 |---|---|---|---|---|---|
 | Sr₃Ti₂O₇ | **I4/mmm**, no instability below −0.005 eV/Å² | 0 | — | I4/mmm, undistorted | **hit** (negative control) |
 | Ca₃Mn₂O₇ | Cm / **Cmc2₁** | −678.4 | Pnma −662.8 | polar A2₁am ground state, then Acaa and I4/mmm on heating (arXiv:1803.03957) | **hit** |
-| Ca₃Sn₂O₇ | Cm / **Cmc2₁** | −3099 (see note) | Aem2 −2683 | polar; T_C of (Sr,Ca)₃Sn₂O₇ rises to about 800 K with Ca content (Yoshida et al. 2018) | **hit** |
+| Ca₃Sn₂O₇ | Cm / **Cmc2₁** | −3099 † (parent far from stable; not a transition energy) | Aem2 −2683 | polar; T_C of (Sr,Ca)₃Sn₂O₇ rises to about 800 K with Ca content (Yoshida et al. 2018) | **hit** |
 | Sr₃Sn₂O₇ | **Cmc2₁** | −556.7 | Pnma −550.2 | A2₁am ground state, T_C ≈ 410 K, Pnab above (Yoshida et al. 2018; Acta Cryst. B 2025) | **hit** |
 | Sr₃Hf₂O₇ | **Cmc2₁** | −453.1 | Pnma −441.2 | Cmc2₁ ground state from PBEsol DFT; no experimental structure found (Pressure-induced phase transformations of Sr₃Hf₂O₇, 2023) | agrees with DFT |
 
@@ -173,7 +213,7 @@ At X = (½,½,0) the tilts about [110] and [1̄10] fall into **two different irr
 
 ## Provenance of the results
 
-All numbers above come from the **scripted pipeline** (out-of-sample runs: `run_benchmark.py` on the frozen protocol) (`run_case.py`, `run_enumerate.py`, `run_sto_tilts.py`, `run_decompose.py`, `run_benchmark.py`), which calls exactly the same tools the agent uses, in the order the agent's system prompt describes. The LLM agent itself was not run for these results: no API key was available in the build environment. The tool layer is tested against the agent's tool schema (`tests/test_agent_tools.py`). Raw outputs, logs and structures are in `results/`.
+All benchmark and showcase numbers come from the **scripted pipeline** (`run_case.py`, `run_enumerate.py`, `run_sto_tilts.py`, `run_decompose.py`, `run_benchmark.py`), which calls exactly the same tools the agent uses. This keeps the numbers reproducible without an API key and independent of the LLM. Live agent runs (see [The agent](#the-agent)) use the same tools, and their transcripts are kept in `results/`. The tool layer is tested against the agent's tool schema (`tests/test_agent_tools.py`). Raw outputs, logs and structures are in `results/`.
 
 ## Related work and what is new here
 
