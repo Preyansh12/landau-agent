@@ -160,10 +160,17 @@ class _OpenAICompatBackend:
         msg = self.client.chat.completions.create(model=MODEL, messages=self.messages,
                                                   tools=self.tools).choices[0].message
         calls = [(c.id, c.function.name, json.loads(c.function.arguments or "{}")) for c in (msg.tool_calls or [])]
-        entry = dict(role="assistant", content=msg.content or "")
-        if msg.tool_calls:
-            entry["tool_calls"] = [dict(id=c.id, type="function", function=dict(
-                name=c.function.name, arguments=c.function.arguments or "{}")) for c in msg.tool_calls]
+        if hasattr(msg, "model_dump"):
+            # Echo the assistant message back verbatim: Gemini attaches thought signatures to
+            # tool calls as extra fields, and rejects the next request if they are dropped.
+            entry = msg.model_dump(exclude_none=True)
+            entry["role"] = "assistant"
+            entry.setdefault("content", "")
+        else:
+            entry = dict(role="assistant", content=msg.content or "")
+            if msg.tool_calls:
+                entry["tool_calls"] = [dict(id=c.id, type="function", function=dict(
+                    name=c.function.name, arguments=c.function.arguments or "{}")) for c in msg.tool_calls]
         self.messages.append(entry)
         return ([msg.content] if msg.content else []), calls
 
