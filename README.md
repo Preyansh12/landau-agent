@@ -99,6 +99,31 @@ At the fixed experimental lattice the three tilt systems lie within 0.25 meV/f.u
 
 The R⁺ invariants the engine derives (η², Σηᵢ⁴, Σηᵢ²ηⱼ², no cubic term) are the textbook R4⁺ expansion. In the Landau fit at the MACE lattice (`results/SrTiO3_log.json`), the cross-quartic coefficient (48.28 meV/f.u. per Å⁴) is only marginally larger than twice the single quartic (2 × 23.65), which at quartic order is the condition that favours a single-axis tilt. The fit also has small 6th-order terms. This marginality is the same near-degeneracy seen in the enumeration.
 
+## Benchmark: seven materials with known ground states
+
+The same automated protocol on every material (`run_benchmark.py`): the MACE-relaxed parent, up to three distinct unstable irreps as primaries, symmetry-complete enumeration, then the four lowest candidates re-relaxed with a free cell (fmax 0.01 eV/Å). The winner is the lowest relaxed-cell energy. Space groups are reported at the strict tolerance and at 0.01 Å. **No volume correction is applied here**, so this is what the potential gives without the agent's volume check.
+
+v1 is our first protocol. Its misses exposed two bugs in the pipeline, both fixed in v2: the enumeration directions were not symmetry-complete (Pnma could never be generated), and candidates were picked for refinement by fixed-lattice energy (strain-favoured phases such as P4mm were never refined). v1 results are kept in `results/benchmark_*.json`, v2 in `results/benchmark_v2_*.json`.
+
+| Material | Known ground state | v1 winner | v2 winner (strict / 0.01 Å) | v2 energy (meV/f.u.) | v2 verdict |
+|---|---|---|---|---|---|
+| Ca₃Ti₂O₇ | A2₁am (Cmc2₁) | Cmc2₁ | Cm / **Cmc2₁** | −882.3 | **hit** |
+| Sr₃Zr₂O₇ | A2₁am (Cmc2₁) | Cmc2₁ | Pm / **Cmc2₁** | −807.5 | **hit** |
+| PbTiO₃ | P4mm | Amm2 | P4bm / **P4mm** | −189.7 | **hit** (v1 miss) |
+| LaAlO₃ | R-3c | Imma | Imma | −27.21 (R-3c −26.92) | near miss, 0.3 meV/f.u. |
+| BaTiO₃ | R3m | Pc | Aem2 | −40.47 (I4cm −40.36, P4bm −40.14) | miss |
+| CaTiO₃ | Pnma | Ima2 | R3c | −274.4 (Imma −262.2, R-3c −246.7) | miss |
+| SrTiO₃ | I4/mcm | Cc | R3c | −5.19 | miss (fixed by volume check, see above) |
+
+**3 hits and 1 near miss out of 7**, up from 2 in v1. In the two strict-tolerance labels (Cm, Pm) the residual distortion beyond Cmc2₁ is below 0.01 Å.
+
+What the misses say:
+- **CaTiO₃ and SrTiO₃ are polar artefacts of the PBE-like volume.** At the MACE lattice both have a strong polar Γ⁻ instability (−1.35 and −0.64 eV/Å²), and the polar phase wins. For SrTiO₃ we showed that the instability disappears at the experimental lattice. This is exactly the failure the agent's `rescale_parent` check is there to catch; the benchmark deliberately runs without it.
+- **BaTiO₃** has three nearly degenerate polar or antipolar instabilities in MACE (Γ⁻ −4.83, X⁻ −4.48, M⁻ −4.41 eV/Å²), and the top three phases lie within 0.3 meV/f.u. The potential gives no usable ranking.
+- **LaAlO₃** has the right instability (R⁺ dominates), and R-3c is among the four refined candidates, but Imma is 0.3 meV/f.u. lower. Like the SrTiO₃ tilt systems, this is below MACE's resolution.
+
+The pattern is useful in its own right: where the physics is driven by large, strongly coupled oxygen-octahedron modes (the layered hybrid-improper compounds, PbTiO₃'s large polar distortion), the pipeline gets the ground state. Where the answer depends on sub-meV differences or on the equilibrium volume, it fails, and the tool output (near-degenerate energies, a polar mode that is volume-sensitive) shows that it is in that regime.
+
 ## How the LLM is used, and how it isn't
 
 The agent (`landau_agent/agent.py`) is a tool-calling loop. The model picks the supercell, decides which instabilities to treat as order parameters, adds forced secondary modes, and writes the physical interpretation.
@@ -122,7 +147,7 @@ Other irreps with the same short name (for example the second, pure-O X⁻ insta
 
 ## Provenance of the results
 
-All numbers above come from the **scripted pipeline** (`run_case.py`, `run_enumerate.py`, `run_sto_tilts.py`, `run_decompose.py`), which calls exactly the same tools the agent uses, in the order the agent's system prompt describes. The LLM agent itself was not run for these results: no API key was available in the build environment. The tool layer is tested against the agent's tool schema (`tests/test_agent_tools.py`). Raw outputs, logs and structures are in `results/`.
+All numbers above come from the **scripted pipeline** (`run_case.py`, `run_enumerate.py`, `run_sto_tilts.py`, `run_decompose.py`, `run_benchmark.py`), which calls exactly the same tools the agent uses, in the order the agent's system prompt describes. The LLM agent itself was not run for these results: no API key was available in the build environment. The tool layer is tested against the agent's tool schema (`tests/test_agent_tools.py`). Raw outputs, logs and structures are in `results/`.
 
 ## Install and run
 

@@ -1,3 +1,10 @@
 cuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.
 Using Materials Project MACE for MACECalculator with /root/.cache/mace/20231203mace128L1_epoch199model
 Using float64 for MACECalculator, which is slower but more accurate. Recommended for geometry optimization.
+CaTiO3 -> {'space_group': 'R3c (161)', 'space_group_tol_0_01': 'R3c (161)', 'energy_meV_per_fu': -274.39, 'seed': 'R3c (161)'} 200s
+PbTiO3 -> {'space_group': 'P4bm (100)', 'space_group_tol_0_01': 'P4mm (99)', 'energy_meV_per_fu': -189.66, 'seed': 'P4bm (100)'} 296s
+BaTiO3 -> {'space_group': 'Aem2 (39)', 'space_group_tol_0_01': 'Aem2 (39)', 'energy_meV_per_fu': -40.47, 'seed': 'Aem2 (39)'} 201s
+LaAlO3 -> {'space_group': 'Imma (74)', 'space_group_tol_0_01': 'Imma (74)', 'energy_meV_per_fu': -27.21, 'seed': 'Imma (74)'} 148s
+SrTiO3 -> {'space_group': 'R3c (161)', 'space_group_tol_0_01': 'R3c (161)', 'energy_meV_per_fu': -5.19, 'seed': 'R3c (161)'} 126s
+Sr3Zr2O7 -> {'space_group': 'Pm (6)', 'space_group_tol_0_01': 'Cmc2_1 (36)', 'energy_meV_per_fu': -807.52, 'seed': 'Pm (6)'} 357s
+Ca3Ti2O7 -> {'space_group': 'Cm (8)', 'space_group_tol_0_01': 'Cmc2_1 (36)', 'energy_meV_per_fu': -882.32, 'seed': 'Cm (8)'} 498s

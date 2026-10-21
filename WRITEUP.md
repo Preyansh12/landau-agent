@@ -34,6 +34,12 @@ All results below come from a scripted pipeline that calls the same tools in the
 - At the experimental lattice constant the polar instability vanishes entirely, while the R⁺ and M⁺ oxygen tilts strengthen (R⁺ −0.28 → −0.42 eV/Å²).
 - The engine derives the textbook R4⁺ invariants. However, the three tilt systems (I4/mcm, Imma, R-3c) lie within 0.25 meV/f.u. of each other at the experimental lattice. MACE reproduces the tilt instability but cannot resolve which tilt system wins.
 
+**Benchmark: seven perovskite-family materials with known ground states**, same automated protocol, no volume correction.
+- **Hits (3):** Ca₃Ti₂O₇ and Sr₃Zr₂O₇ (A2₁am), PbTiO₃ (P4mm, at 0.01 Å tolerance).
+- **Near miss (1):** LaAlO₃: Imma beats the correct R-3c by 0.3 meV/f.u., below MACE's resolution.
+- **Misses (3):** CaTiO₃ and SrTiO₃ go polar (R3c) because of the PBE-like volume, the artefact the agent's volume check exists for. BaTiO₃ has three phases within 0.3 meV/f.u., so the potential gives no ranking.
+- Our first protocol scored 2/7. Its misses exposed two pipeline bugs (non-exhaustive direction set; refinement picked at fixed lattice), which we fixed before rerunning. Both versions are in the repository.
+
 ## What we learned
 
 - **Keep the LLM out of the algebra.** Group theory and invariant generation are exactly where language models are unreliable, and they are fully automatable. The useful job for the model is planning, choosing order parameters, cross-checking and explaining.
@@ -44,6 +50,7 @@ All results below come from a scripted pipeline that calls the same tools in the
   - Forced secondary modes have to be sampled far beyond their own shallow wells, because the primaries drive them there.
   - The fit-independent enumeration and the MACE cross-checks are what make the phase predictions trustworthy.
 - **Universal potentials carry their training functional's biases.** The SrTiO₃ ferroelectric artefact is invisible unless you look for it, so the volume check is now part of the agent's instructions.
+- **Benchmarks find bugs that showcases hide.** Two of the first benchmark's misses were our own enumeration and refinement errors, not the potential's. The remaining misses fall into two recognisable regimes, volume-sensitive polar modes and sub-meV degeneracies, both visible in the tool output.
 - **Check the write-up as hard as the code.** An independent audit of our own write-up against the raw result files caught several overstatements, now corrected. Every number here is backed by a file in `results/`.
 
 ## Limitations
