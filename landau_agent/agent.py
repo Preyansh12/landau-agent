@@ -1,8 +1,15 @@
 """LLM orchestrator. The model plans and interprets; every number comes from a tool.
 
-Usage:
+Usage (Anthropic, default):
     export ANTHROPIC_API_KEY=...
     python -m landau_agent.agent "Why is Ca3Ti2O7 ferroelectric?"
+
+Usage (any OpenAI-compatible endpoint, e.g. the free Gemini tier):
+    pip install openai
+    export LANDAU_AGENT_PROVIDER=gemini GEMINI_API_KEY=...
+    export LANDAU_AGENT_MODEL=<a Gemini model id from Google AI Studio>
+    python -m landau_agent.agent "Is SrTiO3 ferroelectric?" --tag sto_gemini
+    # other servers: LANDAU_AGENT_PROVIDER=openai, OPENAI_API_KEY, OPENAI_BASE_URL
 """
 from __future__ import annotations
 
@@ -12,7 +19,10 @@ import sys
 
 from .tools import BUILTIN, Session
 
-MODEL = os.environ.get("LANDAU_AGENT_MODEL", "claude-sonnet-5-5")
+PROVIDER = os.environ.get("LANDAU_AGENT_PROVIDER", "anthropic").lower()
+_DEFAULT_MODEL = {"anthropic": "claude-sonnet-5-5", "gemini": "gemini-flash-latest"}
+MODEL = os.environ.get("LANDAU_AGENT_MODEL", _DEFAULT_MODEL.get(PROVIDER, ""))
+GEMINI_BASE_URL = "https://generativelanguage.googleapis.com/v1beta/openai/"
 
 SYSTEM = f"""You are LandauAgent, a computational solid-state physicist that explains and predicts
 structural phase transitions by combining exact group theory with machine-learned interatomic
@@ -91,54 +101,102 @@ def _call(sess: Session, name: str, args: dict):
         return dict(error=f"{type(exc).__name__}: {exc}")
 
 
-def _transcript(path, question, messages):
+def _transcript(path, question, events):
     """Human-readable transcript: every model message and every tool call/result."""
     with open(path, "w") as fh:
-        fh.write(f"# LandauAgent transcript\n\nModel: `{MODEL}`\n\n**Question:** {question}\n\n")
-        for m in messages[1:]:
-            content = m["content"]
-            if m["role"] == "assistant":
-                for b in content:
-                    if b.type == "text" and b.text.strip():
-                        fh.write(f"**Agent:** {b.text.strip()}\n\n")
-                    elif b.type == "tool_use":
-                        fh.write(f"**Tool call:** `{b.name}({json.dumps(b.input, ensure_ascii=False)})`\n\n")
-            else:
-                for r in content:
-                    txt = r["content"]
-                    if len(txt) > 3000:
-                        txt = txt[:3000] + " ... [truncated in transcript; full result in the JSON log]"
-                    fh.write(f"<details><summary>Tool result</summary>\n\n```json\n{txt}\n```\n</details>\n\n")
+        fh.write(f"# LandauAgent transcript\n\nProvider: `{PROVIDER}`, model: `{MODEL}`\n\n**Question:** {question}\n\n")
+        for kind, *rest in events:
+            if kind == "text" and rest[0].strip():
+                fh.write(f"**Agent:** {rest[0].strip()}\n\n")
+            elif kind == "call":
+                fh.write(f"**Tool call:** `{rest[0]}({json.dumps(rest[1], ensure_ascii=False)})`\n\n")
+            elif kind == "result":
+                txt = rest[0]
+                if len(txt) > 3000:
+                    txt = txt[:3000] + " ... [truncated in transcript; full result in the JSON log]"
+                fh.write(f"<details><summary>Tool result</summary>\n\n```json\n{txt}\n```\n</details>\n\n")
+
+
+class _AnthropicBackend:
+    def __init__(self):
+        import anthropic
+        self.client = anthropic.Anthropic()
+        self.messages = []
+
+    def start(self, question):
+        self.messages = [dict(role="user", content=question)]
+
+    def step(self):
+        """-> (texts, calls[(id, name, args)])"""
+        resp = self.client.messages.create(model=MODEL, max_tokens=4000, system=SYSTEM,
+                                           tools=TOOLS, messages=self.messages)
+        self.messages.append(dict(role="assistant", content=resp.content))
+        texts = [b.text for b in resp.content if b.type == "text"]
+        calls = [(b.id, b.name, b.input) for b in resp.content if b.type == "tool_use"]
+        return texts, (calls if resp.stop_reason == "tool_use" else [])
+
+    def give_results(self, results):
+        self.messages.append(dict(role="user", content=[
+            dict(type="tool_result", tool_use_id=i, content=c) for i, c in results]))
+
+
+class _OpenAICompatBackend:
+    """Chat-completions tool calling; works with Gemini's OpenAI-compatible endpoint."""
+    def __init__(self):
+        from openai import OpenAI
+        if PROVIDER == "gemini":
+            self.client = OpenAI(api_key=os.environ["GEMINI_API_KEY"], base_url=GEMINI_BASE_URL)
+        else:
+            self.client = OpenAI()
+        if not MODEL:
+            raise SystemExit("set LANDAU_AGENT_MODEL")
+        self.tools = [dict(type="function", function=dict(name=t["name"], description=t["description"],
+                                                          parameters=t["input_schema"])) for t in TOOLS]
+
+    def start(self, question):
+        self.messages = [dict(role="system", content=SYSTEM), dict(role="user", content=question)]
+
+    def step(self):
+        msg = self.client.chat.completions.create(model=MODEL, messages=self.messages,
+                                                  tools=self.tools).choices[0].message
+        calls = [(c.id, c.function.name, json.loads(c.function.arguments or "{}")) for c in (msg.tool_calls or [])]
+        entry = dict(role="assistant", content=msg.content or "")
+        if msg.tool_calls:
+            entry["tool_calls"] = [dict(id=c.id, type="function", function=dict(
+                name=c.function.name, arguments=c.function.arguments or "{}")) for c in msg.tool_calls]
+        self.messages.append(entry)
+        return ([msg.content] if msg.content else []), calls
+
+    def give_results(self, results):
+        for i, c in results:
+            self.messages.append(dict(role="tool", tool_call_id=i, content=c))
 
 
 def run(question: str, max_turns: int = 40, verbose: bool = True, tag: str = "agent") -> str:
-    import anthropic
-    client = anthropic.Anthropic()
+    backend = _AnthropicBackend() if PROVIDER == "anthropic" else _OpenAICompatBackend()
+    backend.start(question)
     sess = Session()
-    messages = [dict(role="user", content=question)]
+    events, final = [], "Stopped: turn limit reached."
     for _ in range(max_turns):
-        resp = client.messages.create(model=MODEL, max_tokens=4000, system=SYSTEM,
-                                      tools=TOOLS, messages=messages)
-        messages.append(dict(role="assistant", content=resp.content))
-        if resp.stop_reason != "tool_use":
-            text = "".join(b.text for b in resp.content if b.type == "text")
-            sess.dump_log(f"results/{tag}_tool_log.json")
-            _transcript(f"results/{tag}_transcript.md", question, messages)
-            return text
+        texts, calls = backend.step()
+        for t in texts:
+            events.append(("text", t))
+            if verbose:
+                print(f"\n[agent] {t}", flush=True)
+        if not calls:
+            final = "".join(texts)
+            break
         results = []
-        for block in resp.content:
-            if block.type == "text" and verbose:
-                print(f"\n[agent] {block.text}", flush=True)
-            if block.type == "tool_use":
-                if verbose:
-                    print(f"[tool] {block.name}({json.dumps(block.input)})", flush=True)
-                out = _call(sess, block.name, block.input)
-                results.append(dict(type="tool_result", tool_use_id=block.id,
-                                    content=json.dumps(out, default=str)[:20000]))
-        messages.append(dict(role="user", content=results))
+        for cid, name, args in calls:
+            if verbose:
+                print(f"[tool] {name}({json.dumps(args)})", flush=True)
+            out = json.dumps(_call(sess, name, args), default=str)[:20000]
+            events += [("call", name, args), ("result", out)]
+            results.append((cid, out))
+        backend.give_results(results)
     sess.dump_log(f"results/{tag}_tool_log.json")
-    _transcript(f"results/{tag}_transcript.md", question, messages)
-    return "Stopped: turn limit reached."
+    _transcript(f"results/{tag}_transcript.md", question, events)
+    return final
 
 
 if __name__ == "__main__":

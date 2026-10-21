@@ -7,3 +7,4 @@ sympy>=1.13
 scipy
 numpy
 anthropic
+openai  # optional: Gemini / OpenAI-compatible agent backend

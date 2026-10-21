@@ -182,9 +182,16 @@ python -m venv .venv && . .venv/bin/activate
 pip install torch mace-torch ase pymatgen spglib sympy scipy anthropic
 python run_case.py SrTiO3            # scripted pipeline, no LLM needed
 python run_case.py Ca3Ti2O7
-export ANTHROPIC_API_KEY=...         # agent mode
+export ANTHROPIC_API_KEY=...         # agent mode (Anthropic, default)
 python -m landau_agent.agent "Why is Ca3Ti2O7 ferroelectric? Start from the I4/mmm parent."
+
+# or any OpenAI-compatible endpoint, e.g. the free Gemini tier
+pip install openai
+export LANDAU_AGENT_PROVIDER=gemini GEMINI_API_KEY=... LANDAU_AGENT_MODEL=<Gemini model id>
+./run_agent_demo.sh                  # SrTiO3 + Ca3Ti2O7, writes results/agent_*_transcript.md
 ```
+
+The agent loop is backend-neutral: the same tools, system prompt and transcript writer serve both providers (`tests/test_agent_loop.py` checks both paths with fake clients). Everything except the LLM calls runs on a CPU.
 
 A GPU is optional. On two CPU cores each scripted case takes about 5–10 minutes, and the phase enumeration with tight refinement 10–40 minutes. Force constants are cached in `results/`.
 
