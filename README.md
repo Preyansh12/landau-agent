@@ -31,6 +31,8 @@ It can also take an *observed* low-symmetry structure and decompose it into irre
 
 ## Results
 
+**In short:** 8 of 12 materials right: 3 of 7 in a benchmark of known cases, and 5 of 5 out-of-sample predictions committed before the literature check. That includes all 7 n=2 Ruddlesden–Popper compounds; every failure is a cubic perovskite (see Benchmark and Out-of-sample test below). The two showcases:
+
 | Material | Parent | Found instabilities | Forced coupling | Predicted phase | Literature |
 |---|---|---|---|---|---|
 | SrTiO₃ | Pm-3m | R⁺ and M⁺ tilts; a polar Γ⁻ mode **only at the MACE (PBE-like) volume** | — | at the MACE lattice: spurious polar Cc (−5.1 meV/f.u.); at the experimental lattice the polar instability vanishes and the three tilt systems are within 0.25 meV/f.u. of each other (not resolvable) | I4/mcm below 105 K, paraelectric to 0 K; semilocal DFT overestimates the tilt (PBEsol 5.7°) |
@@ -124,6 +126,27 @@ What the misses say:
 
 The pattern is useful in its own right: where the physics is driven by large, strongly coupled oxygen-octahedron modes (the layered hybrid-improper compounds, PbTiO₃'s large polar distortion), the pipeline gets the ground state. Where the answer depends on sub-meV differences or on the equilibrium volume, it fails, and the tool output (near-degenerate energies, a polar mode that is volume-sensitive) shows that it is in that regime.
 
+## Out-of-sample test: five compounds the pipeline never saw
+
+After the benchmark, we froze the protocol (commit `766821e`). We ran it on five n=2 Ruddlesden–Popper compounds that were never used while developing or fixing the pipeline. The predictions were committed (`results/out_of_sample_predictions.md`, commit `10bcd67`) **before** we checked them against the literature. We chose the materials ourselves, and we knew the general picture for some of them. What is pre-registered is the pipeline output, which was not tuned to them.
+
+| Material | Predicted (strict / 0.01 Å) | ΔE vs I4/mmm (meV/f.u.) | Runner-up | Literature | Verdict |
+|---|---|---|---|---|---|
+| Sr₃Ti₂O₇ | **I4/mmm**, no instability below −0.005 eV/Å² | 0 | — | I4/mmm, undistorted | **hit** (negative control) |
+| Ca₃Mn₂O₇ | Cm / **Cmc2₁** | −678.4 | Pnma −662.8 | polar A2₁am ground state, then Acaa and I4/mmm on heating (arXiv:1803.03957) | **hit** |
+| Ca₃Sn₂O₇ | Cm / **Cmc2₁** | −3099 (see note) | Aem2 −2683 | polar; T_C of (Sr,Ca)₃Sn₂O₇ rises to about 800 K with Ca content (Yoshida et al. 2018) | **hit** |
+| Sr₃Sn₂O₇ | **Cmc2₁** | −556.7 | Pnma −550.2 | A2₁am ground state, T_C ≈ 410 K, Pnab above (Yoshida et al. 2018; Acta Cryst. B 2025) | **hit** |
+| Sr₃Hf₂O₇ | **Cmc2₁** | −453.1 | Pnma −441.2 | Cmc2₁ ground state from PBEsol DFT; no experimental structure found (Pressure-induced phase transformations of Sr₃Hf₂O₇, 2023) | agrees with DFT |
+
+Cmc2₁ is the standard setting of A2₁am.
+
+Notes:
+- **Ca₃Sn₂O₇:** the −3.1 eV/f.u. is measured from an I4/mmm parent that is far from stable for this composition (small Ca on a large Sn–O framework). Its leading curvatures are about twice those of the other compounds. The phase is the prediction; that energy is not a physical transition energy.
+- **Ca₃Mn₂O₇:** MACE is used without spin, so magnetism is ignored.
+- **Close runner-ups:** in all four polar compounds the runner-up is the non-polar Pnma, 6–16 meV/f.u. higher. That fits the real phase diagrams, where non-polar orthorhombic phases (Acaa, Pnab) follow the polar phase on heating.
+
+Together with the benchmark, the pipeline is right on **8 of 12 materials, including all 7 n=2 Ruddlesden–Popper compounds**. All four failures (CaTiO₃, SrTiO₃ and BaTiO₃, plus LaAlO₃'s near miss) are cubic perovskites, where the answer turns on volume-sensitive polar modes or sub-meV degeneracies.
+
 ## How the LLM is used, and how it isn't
 
 The agent (`landau_agent/agent.py`) is a tool-calling loop. The model picks the supercell, decides which instabilities to treat as order parameters, adds forced secondary modes, and writes the physical interpretation.
@@ -150,7 +173,7 @@ At X = (½,½,0) the tilts about [110] and [1̄10] fall into **two different irr
 
 ## Provenance of the results
 
-All numbers above come from the **scripted pipeline** (`run_case.py`, `run_enumerate.py`, `run_sto_tilts.py`, `run_decompose.py`, `run_benchmark.py`), which calls exactly the same tools the agent uses, in the order the agent's system prompt describes. The LLM agent itself was not run for these results: no API key was available in the build environment. The tool layer is tested against the agent's tool schema (`tests/test_agent_tools.py`). Raw outputs, logs and structures are in `results/`.
+All numbers above come from the **scripted pipeline** (out-of-sample runs: `run_benchmark.py` on the frozen protocol) (`run_case.py`, `run_enumerate.py`, `run_sto_tilts.py`, `run_decompose.py`, `run_benchmark.py`), which calls exactly the same tools the agent uses, in the order the agent's system prompt describes. The LLM agent itself was not run for these results: no API key was available in the build environment. The tool layer is tested against the agent's tool schema (`tests/test_agent_tools.py`). Raw outputs, logs and structures are in `results/`.
 
 ## Install and run
 
@@ -182,3 +205,7 @@ A GPU is optional. On two CPU cores each scripted case takes about 5–10 minute
 - I. Batatia et al., MACE-MP-0 foundation model (2023).
 - H. T. Stokes, D. M. Hatch, H. M. Nelson, *Landau, Lifshitz, and weak Lifshitz conditions*, Phys. Rev. B 47, 9080 (1993).
 - C. Capillas et al., *SYMMODES*, J. Appl. Cryst. 36, 953 (2003).
+- S. Yoshida et al., *Hybrid improper ferroelectricity in (Sr,Ca)₃Sn₂O₇ and beyond*, J. Am. Chem. Soc. 140, 15690 (2018). [record](https://research-portal.st-andrews.ac.uk/en/publications/hybrid-improper-ferroelectricity-in-srcasub3subsnsub2subosub7sub-/)
+- *Revealing pressure-driven structural transitions in the hybrid improper ferroelectric Sr₃Sn₂O₇*, Acta Cryst. B 81 (2025). [link](https://journals.iucr.org/b/issues/2025/03/00/yh5041/)
+- *Soft tilt and rotational modes in the hybrid improper ferroelectric Ca₃Mn₂O₇*. [arXiv:1803.03957](https://arxiv.org/abs/1803.03957)
+- *Pressure-induced phase transformations of quasi-2D Sr₃Hf₂O₇*, J. Phys. Chem. C (2023). [arXiv:2306.04624](https://arxiv.org/abs/2306.04624)
