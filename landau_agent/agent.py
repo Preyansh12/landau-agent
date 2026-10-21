@@ -192,7 +192,8 @@ def _with_retries(fn, attempts: int = 8, wait: float = 15.0):
             code = getattr(exc, "status_code", None)
             name = type(exc).__name__
             transient = code in _TRANSIENT or any(w in name for w in ("RateLimit", "Overloaded", "InternalServer", "APIConnection", "Timeout"))
-            if not transient or k == attempts - 1:
+            daily = any(w in str(exc) for w in ("PerDay", "per day", "exceeded your current quota"))
+            if not transient or daily or k == attempts - 1:
                 raise
             delay = min(wait * 2 ** k, 300)
             print(f"[retry] {name} ({code}); waiting {delay:.0f} s", flush=True)
