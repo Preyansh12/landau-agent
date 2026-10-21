@@ -420,5 +420,5 @@ class Session:
         return self._rec("save_prediction", dict(path=path))
 
     def dump_log(self, path: str):
-        with open(path, "w") as fh:
+        with open(path, "w", encoding="utf-8") as fh:
             json.dump(self.log, fh, indent=1, default=str, ensure_ascii=False)

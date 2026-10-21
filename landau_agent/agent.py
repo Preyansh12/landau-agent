@@ -103,7 +103,7 @@ def _call(sess: Session, name: str, args: dict):
 
 def _transcript(path, question, events):
     """Human-readable transcript: every model message and every tool call/result."""
-    with open(path, "w") as fh:
+    with open(path, "w", encoding="utf-8") as fh:
         fh.write(f"# LandauAgent transcript\n\nProvider: `{PROVIDER}`, model: `{MODEL}`\n\n**Question:** {question}\n\n")
         for kind, *rest in events:
             if kind == "text" and rest[0].strip():
