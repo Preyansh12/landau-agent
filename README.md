@@ -24,7 +24,8 @@ Given a parent structure, LandauAgent:
 3. **Finds forced secondary modes.** A mode that appears *linearly* in an invariant with the primary order parameters must condense with them, whether or not it is unstable on its own. This is how improper and hybrid-improper ferroelectricity is diagnosed.
 4. **Generates the Landau polynomial.** It applies the Reynolds operator to all monomials and row-reduces in rational arithmetic, and checks the Landau condition (no cubic invariant). The representation matrices are computed numerically and rationalised; in the cleaned order-parameter bases their entries are exactly 0 and ±1, so the invariants are exact.
 5. **Fits the coefficients** to MACE frozen-mode energies (meV per formula unit).
-6. **Predicts the ground state.** It minimises the fitted model, builds the structure, reports its space group (spglib), relaxes it with MACE in that symmetry as a check, and estimates the polarisation with nominal charges.
+6. **Predicts the ground state, by direct enumeration.** It enumerates every symmetry-distinct order-parameter direction pattern, screens them with one MACE energy each, relaxes the best inside their own symmetry (fixed and relaxed lattice), and ranks them by energy.
+7. **Explains it with the Landau model.** The fitted polynomial says *why* the winner wins: which couplings lower its energy and which mode is driven by which. The polynomial's own minimum is also relaxed with MACE as a cross-check, but for deep, anharmonic wells it is a worse predictor than the enumeration, so we use it for the mechanism, not the verdict.
 
 It can also take an *observed* low-symmetry structure and decompose it into irreps (`analyze_child`).
 
@@ -92,6 +93,21 @@ The R⁺ invariants the engine derives (η², Σηᵢ⁴, Σηᵢ²ηⱼ², no c
 The agent (`landau_agent/agent.py`) is a tool-calling loop. The model picks the supercell, decides which instabilities to treat as order parameters, adds forced secondary modes, and writes the physical interpretation.
 
 The system prompt forbids it from deriving irreps, invariants, couplings, energies or space groups itself. Those come only from tools. Irrep names are computed (k-point, inversion parity, dimension, polarity, which atoms move). The model may state a textbook correspondence only when that output makes it unambiguous.
+
+## Computed labels vs standard (ISOTROPY/Bilbao) labels
+
+LandauAgent labels irreps by what it computes: k-point, inversion parity (about the parent origin), dimension and an index, plus polarity and which atoms move. The standard names below are a **hand-made correspondence**, made from those computed properties and the displacement pattern. They are not computed by the code.
+
+| Parent (origin) | Computed label | Pattern | Standard label |
+|---|---|---|---|
+| Pm-3m (B site at origin) | Γ⁻ (d=3), polar | B against O, polar | Γ4⁻ |
+| | R⁺ (d=3), O only | out-of-phase octahedral rotation | R4⁺ |
+| | M⁺ (d=3), O only | in-phase octahedral rotation | M3⁺ |
+| I4/mmm (n=2 Ruddlesden–Popper) | X⁺ (d=2) `#4`, O only | in-phase rotation about c | X2⁺ |
+| | X⁻ (d=2) `#2`, O plus A site | octahedral tilt about an in-plane axis | X3⁻ |
+| | Γ⁻ (d=2) `#1`, polar | in-plane polar mode | Γ5⁻ |
+
+Other irreps with the same short name (for example the second, pure-O X⁻ instability in Ca₃Ti₂O₇, `#8`) are distinct representations. The index in the label separates them; we have not mapped them to standard names.
 
 ## Provenance of the results
 

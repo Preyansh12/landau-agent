@@ -25,6 +25,9 @@ BUILTIN = {
     "PbTiO3": lambda: cubic_perovskite("Pb", "Ti", a=3.95),
     "CaTiO3": lambda: cubic_perovskite("Ca", "Ti", a=3.85),
     "Ca3Ti2O7": lambda: ruddlesden_popper_n2("Ca", "Ti", "O"),
+    "LaAlO3": lambda: cubic_perovskite("La", "Al", a=3.8),
+    "Sr3Zr2O7": lambda: ruddlesden_popper_n2("Sr", "Zr", "O", a=4.1, c=21.0),
+    "Ca3Zr2O7": lambda: ruddlesden_popper_n2("Ca", "Zr", "O", a=4.0, c=20.4),
     "Sr3Ti2O7": lambda: ruddlesden_popper_n2("Sr", "Ti", "O", a=3.9, c=20.3),
 }
 
@@ -311,9 +314,19 @@ class Session:
             desc = {self.op_names[k]: (None if c is None else [round(float(x), 3) for x in c])
                     for k, c in enumerate(combo)}
             cands.append((sg, desc, at))
-        # simplest patterns first (fewest active order parameters), so single-OP phases such as
-        # all three tilt systems of a perovskite are never cut by max_phases
-        cands.sort(key=lambda c: sum(v is not None for v in c[1].values()))
+        # screen: one MACE single point per distinct pattern at its seed amplitudes, then relax
+        # only the most promising (scales to many order parameters / many patterns)
+        calc0 = E.get_calculator()
+        screened = []
+        for sg, desc, at in cands:
+            a0 = at.copy()
+            a0.calc = calc0
+            e0 = (a0.get_potential_energy() - self.model.E0) / self.model.n_fu * 1000
+            screened.append((e0, sg, desc, at))
+        screened.sort(key=lambda c: c[0])
+        self._screen = [dict(space_group=sg, seed_energy_meV_per_fu=round(float(e), 1),
+                             order_parameter_directions=d) for e, sg, d, _ in screened]
+        cands = [(sg, desc, at) for _, sg, desc, at in screened]
         rows = []
         calc = E.get_calculator()
         for sg, desc, at in cands[:max_phases]:
@@ -331,7 +344,7 @@ class Session:
                              polarization_nominal_uC_cm2=self._nominal_polarization(at)))
         rows.sort(key=lambda r: r["energy_meV_per_fu"])
         self._phases = rows
-        return self._rec("enumerate_phases", dict(n_candidates=len(cands), phases=rows,
+        return self._rec("enumerate_phases", dict(n_candidates=len(cands), n_relaxed=len(rows), screening=self._screen, phases=rows,
                                                    note="relaxed with MACE-MP-0 inside each seed symmetry; fixed parent lattice"))
 
     def refine_phases(self, top: int = 3, fmax: float = 0.005, steps: int = 1500,

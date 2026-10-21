@@ -36,12 +36,17 @@ Hard rules:
 Typical workflow:
 1. load_parent  2. set_supercell (pick a matrix whose commensurate k-points contain the
    instabilities you care about; for cubic perovskites 2x2x2 covers Γ, X, M, R; for body-centred
-   tetragonal Ruddlesden-Popper parents [[1,1,0],[-1,1,0],[0,0,1]] covers Γ and X)
-3. find_instabilities  4. choose_order_parameters (unstable irreps)  5. forced_couplings
-6. add_secondary for each forced mode (especially polar ones)  7. landau_polynomial
-8. fit_landau  9. predict_ground_state  10. enumerate_phases (independent check of the
-   predicted phase; if the two disagree, say so and trust the direct MACE ranking for the
-   phase while using the Landau model for the mechanism)  11. answer the question.
+   tetragonal Ruddlesden-Popper parents [[1,1,0],[-1,1,0],[0,0,1]] covers Γ, Z and X)
+3. find_instabilities. Decide which unstable irreps are physically distinct order parameters
+   (several copies of the same short name are different irreps; look at which atoms move).
+   If a polar instability appears, test it with rescale_parent at the experimental lattice
+   constant (if you know it) before trusting it.
+4. choose_order_parameters  5. forced_couplings  6. add_secondary for forced polar modes
+7. landau_polynomial (the symmetry story)  8. enumerate_phases, then refine_phases: THIS is
+   the phase prediction  9. fit_landau + predict_ground_state: the mechanism and a cross-check.
+   If the Landau minimum and the enumeration disagree, trust the enumeration for the phase
+   and say so.
+10. answer the question.
 
 Final answer: a short physical explanation (which modes, which couplings, why), the fitted Landau
 free energy with coefficients, the predicted phase and its MACE check, and the caveats.
@@ -70,6 +75,8 @@ TOOLS = [
          input_schema=dict(type="object", properties=dict(max_degree=dict(type="integer"), n_random=dict(type="integer")))),
     dict(name="predict_ground_state", description="Minimise the fitted Landau model, build the structure, verify with MACE and report its space group.",
          input_schema=dict(type="object", properties=dict(relax_check=dict(type="boolean")))),
+    dict(name="refine_phases", description="Tightly re-relax the lowest enumerated phases at fixed and relaxed lattice and rank them (call after enumerate_phases).",
+         input_schema=dict(type="object", properties=dict(top=dict(type="integer")))),
     dict(name="enumerate_phases", description="Independent check: enumerate distinct order-parameter direction patterns of the primary modes, relax each with MACE in its own symmetry, rank by energy.",
          input_schema=dict(type="object", properties=dict(max_phases=dict(type="integer")))),
 ]
@@ -82,7 +89,27 @@ def _call(sess: Session, name: str, args: dict):
         return dict(error=f"{type(exc).__name__}: {exc}")
 
 
-def run(question: str, max_turns: int = 30, verbose: bool = True) -> str:
+def _transcript(path, question, messages):
+    """Human-readable transcript: every model message and every tool call/result."""
+    with open(path, "w") as fh:
+        fh.write(f"# LandauAgent transcript\n\nModel: `{MODEL}`\n\n**Question:** {question}\n\n")
+        for m in messages[1:]:
+            content = m["content"]
+            if m["role"] == "assistant":
+                for b in content:
+                    if b.type == "text" and b.text.strip():
+                        fh.write(f"**Agent:** {b.text.strip()}\n\n")
+                    elif b.type == "tool_use":
+                        fh.write(f"**Tool call:** `{b.name}({json.dumps(b.input, ensure_ascii=False)})`\n\n")
+            else:
+                for r in content:
+                    txt = r["content"]
+                    if len(txt) > 3000:
+                        txt = txt[:3000] + " ... [truncated in transcript; full result in the JSON log]"
+                    fh.write(f"<details><summary>Tool result</summary>\n\n```json\n{txt}\n```\n</details>\n\n")
+
+
+def run(question: str, max_turns: int = 40, verbose: bool = True, tag: str = "agent") -> str:
     import anthropic
     client = anthropic.Anthropic()
     sess = Session()
@@ -93,7 +120,8 @@ def run(question: str, max_turns: int = 30, verbose: bool = True) -> str:
         messages.append(dict(role="assistant", content=resp.content))
         if resp.stop_reason != "tool_use":
             text = "".join(b.text for b in resp.content if b.type == "text")
-            sess.dump_log("agent_log.json")
+            sess.dump_log(f"results/{tag}_tool_log.json")
+            _transcript(f"results/{tag}_transcript.md", question, messages)
             return text
         results = []
         for block in resp.content:
@@ -106,10 +134,16 @@ def run(question: str, max_turns: int = 30, verbose: bool = True) -> str:
                 results.append(dict(type="tool_result", tool_use_id=block.id,
                                     content=json.dumps(out, default=str)[:20000]))
         messages.append(dict(role="user", content=results))
-    sess.dump_log("agent_log.json")
+    sess.dump_log(f"results/{tag}_tool_log.json")
+    _transcript(f"results/{tag}_transcript.md", question, messages)
     return "Stopped: turn limit reached."
 
 
 if __name__ == "__main__":
-    q = " ".join(sys.argv[1:]) or "Why is Ca3Ti2O7 ferroelectric? Start from the I4/mmm parent."
-    print(run(q))
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("question", nargs="*")
+    ap.add_argument("--tag", default="agent")
+    a = ap.parse_args()
+    q = " ".join(a.question) or "Why is Ca3Ti2O7 ferroelectric? Start from the I4/mmm parent."
+    print(run(q, tag=a.tag))
