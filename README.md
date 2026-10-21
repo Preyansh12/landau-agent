@@ -226,5 +226,5 @@ A GPU is optional. On two CPU cores each scripted case takes about 5–10 minute
 - *Revealing pressure-driven structural transitions in the hybrid improper ferroelectric Sr₃Sn₂O₇*, Acta Cryst. B 81 (2025). [link](https://journals.iucr.org/b/issues/2025/03/00/yh5041/)
 - *Soft tilt and rotational modes in the hybrid improper ferroelectric Ca₃Mn₂O₇*. [arXiv:1803.03957](https://arxiv.org/abs/1803.03957)
 - spgrep: on-the-fly generator of space-group irreps, [JOSS](https://joss.theoj.org/papers/10.21105/joss.05269)
-- D. M. Hatch and H. T. Stokes, *INVARIANTS*, J. Appl. Cryst. 36, 951 (2003).
+- D. M. Hatch and H. T. Stokes, *INVARIANTS*, J. Appl. Cryst. (2003), doi:10.1107/S0021889803005946.
 - *Pressure-induced phase transformations of quasi-2D Sr₃Hf₂O₇*, J. Phys. Chem. C (2023). [arXiv:2306.04624](https://arxiv.org/abs/2306.04624)
