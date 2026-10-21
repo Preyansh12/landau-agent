@@ -8,7 +8,7 @@ import json, sys, time
 from landau_agent.tools import Session
 from run_case import SUPERCELLS
 
-SUPERCELLS.update({"LaAlO3": [[2, 0, 0], [0, 2, 0], [0, 0, 2]],
+SUPERCELLS.update({"SrTiO3": [[2, 0, 0], [0, 2, 0], [0, 0, 2]], "LaAlO3": [[2, 0, 0], [0, 2, 0], [0, 0, 2]],
                    "Sr3Zr2O7": [[1, 1, 0], [-1, 1, 0], [0, 0, 1]],
                    "Ca3Zr2O7": [[1, 1, 0], [-1, 1, 0], [0, 0, 1]]})
 
@@ -25,14 +25,15 @@ def run(name):
     picked = picked[:3]
     s.choose_order_parameters(picked)
     ph = s.enumerate_phases(max_phases=6, fmax=0.03, steps=250)
-    ref = s.refine_phases(top=2, fmax=0.01, steps=800)
+    # v2: strain can reorder phases, so the best 4 (not 2) get a full cell relaxation
+    ref = s.refine_phases(top=4, fmax=0.01, steps=800, relaxed_cell_only=True)
     best = ref["phases"][0]
     out = dict(material=name, parent=parent, instabilities=[{k: m[k] for k in ("name", "label", "curvature_eV_A2", "polar")} for m in modes if m["unstable"]],
                primaries=picked, enumeration=ph, refined=ref,
-               winner=dict(space_group=best["relaxed_cell"]["space_group"], space_group_tol_0_01=best["relaxed_cell"]["space_group_loose"],
+               protocol="v2", winner=dict(space_group=best["relaxed_cell"]["space_group"], space_group_tol_0_01=best["relaxed_cell"]["space_group_loose"],
                            energy_meV_per_fu=best["relaxed_cell"]["energy_meV_per_fu"], seed=best["space_group_seed"]),
                runtime_s=round(time.time() - T))
-    json.dump(out, open(f"results/benchmark_{name}.json", "w"), indent=1, ensure_ascii=False, default=str)
+    json.dump(out, open(f"results/benchmark_v2_{name}.json", "w"), indent=1, ensure_ascii=False, default=str)
     print(name, "->", out["winner"], f"{out['runtime_s']}s", flush=True)
 
 if __name__ == "__main__":

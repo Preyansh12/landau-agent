@@ -1,0 +1,466 @@
+{
+ "material": "LaAlO3",
+ "parent": {
+  "formula": "AlLaO3",
+  "space_group": "Pm-3m (221)",
+  "n_atoms": 5,
+  "lattice_A": [
+   3.8109,
+   3.8109,
+   3.8109,
+   90.0,
+   90.0,
+   90.0
+  ],
+  "relaxed_with": "MACE-MP-0 (medium, float64)"
+ },
+ "instabilities": [
+  {
+   "name": "R+ (d=3)",
+   "label": "k=(1/2,1/2,1/2) d=3 #3",
+   "curvature_eV_A2": -0.8774,
+   "polar": false
+  },
+  {
+   "name": "M+ (d=3)",
+   "label": "k=(0,1/2,1/2)*3 d=3 #2",
+   "curvature_eV_A2": -0.131,
+   "polar": false
+  }
+ ],
+ "primaries": [
+  "k=(1/2,1/2,1/2) d=3 #3",
+  "k=(0,1/2,1/2)*3 d=3 #2"
+ ],
+ "enumeration": {
+  "n_candidates": 15,
+  "n_relaxed": 6,
+  "screening": [
+   {
+    "space_group": "R-3c (167)",
+    "seed_energy_meV_per_fu": -24.5,
+    "order_parameter_directions": {
+     "R+_1": [
+      0.577,
+      0.577,
+      0.577
+     ],
+     "M+_2": null
+    }
+   },
+   {
+    "space_group": "Imma (74)",
+    "seed_energy_meV_per_fu": -24.4,
+    "order_parameter_directions": {
+     "R+_1": [
+      0.707,
+      0.707,
+      0.0
+     ],
+     "M+_2": null
+    }
+   },
+   {
+    "space_group": "I4/mcm (140)",
+    "seed_energy_meV_per_fu": -22.7,
+    "order_parameter_directions": {
+     "R+_1": [
+      1.0,
+      0.0,
+      0.0
+     ],
+     "M+_2": null
+    }
+   },
+   {
+    "space_group": "Pnma (62)",
+    "seed_energy_meV_per_fu": -18.6,
+    "order_parameter_directions": {
+     "R+_1": [
+      0.707,
+      0.707,
+      0.0
+     ],
+     "M+_2": [
+      0.0,
+      1.0,
+      0.0
+     ]
+    }
+   },
+   {
+    "space_group": "Cmcm (63)",
+    "seed_energy_meV_per_fu": -17.2,
+    "order_parameter_directions": {
+     "R+_1": [
+      1.0,
+      0.0,
+      0.0
+     ],
+     "M+_2": [
+      1.0,
+      0.0,
+      0.0
+     ]
+    }
+   },
+   {
+    "space_group": "P4_2/nmc (137)",
+    "seed_energy_meV_per_fu": -17.1,
+    "order_parameter_directions": {
+     "R+_1": [
+      1.0,
+      0.0,
+      0.0
+     ],
+     "M+_2": [
+      0.707,
+      0.707,
+      0.0
+     ]
+    }
+   },
+   {
+    "space_group": "P2_1/m (11)",
+    "seed_energy_meV_per_fu": -16.2,
+    "order_parameter_directions": {
+     "R+_1": [
+      0.707,
+      0.707,
+      0.0
+     ],
+     "M+_2": [
+      0.707,
+      0.707,
+      0.0
+     ]
+    }
+   },
+   {
+    "space_group": "P2_1/c (14)",
+    "seed_energy_meV_per_fu": -15.8,
+    "order_parameter_directions": {
+     "R+_1": [
+      0.577,
+      0.577,
+      0.577
+     ],
+     "M+_2": [
+      1.0,
+      0.0,
+      0.0
+     ]
+    }
+   },
+   {
+    "space_group": "C2/c (15)",
+    "seed_energy_meV_per_fu": -15.8,
+    "order_parameter_directions": {
+     "R+_1": [
+      0.577,
+      0.577,
+      0.577
+     ],
+     "M+_2": [
+      0.707,
+      0.707,
+      0.0
+     ]
+    }
+   },
+   {
+    "space_group": "R-3 (148)",
+    "seed_energy_meV_per_fu": -15.8,
+    "order_parameter_directions": {
+     "R+_1": [
+      0.577,
+      0.577,
+      0.577
+     ],
+     "M+_2": [
+      0.577,
+      0.577,
+      0.577
+     ]
+    }
+   },
+   {
+    "space_group": "C2/m (12)",
+    "seed_energy_meV_per_fu": -13.8,
+    "order_parameter_directions": {
+     "R+_1": [
+      0.707,
+      0.707,
+      0.0
+     ],
+     "M+_2": [
+      1.0,
+      0.0,
+      0.0
+     ]
+    }
+   },
+   {
+    "space_group": "Pmmn (59)",
+    "seed_energy_meV_per_fu": -13.5,
+    "order_parameter_directions": {
+     "R+_1": [
+      1.0,
+      0.0,
+      0.0
+     ],
+     "M+_2": [
+      0.577,
+      0.577,
+      0.577
+     ]
+    }
+   },
+   {
+    "space_group": "P4/mbm (127)",
+    "seed_energy_meV_per_fu": -0.6,
+    "order_parameter_directions": {
+     "R+_1": null,
+     "M+_2": [
+      1.0,
+      0.0,
+      0.0
+     ]
+    }
+   },
+   {
+    "space_group": "I4/mmm (139)",
+    "seed_energy_meV_per_fu": -0.5,
+    "order_parameter_directions": {
+     "R+_1": null,
+     "M+_2": [
+      0.707,
+      0.707,
+      0.0
+     ]
+    }
+   },
+   {
+    "space_group": "Im-3 (204)",
+    "seed_energy_meV_per_fu": -0.5,
+    "order_parameter_directions": {
+     "R+_1": null,
+     "M+_2": [
+      0.577,
+      0.577,
+      0.577
+     ]
+    }
+   }
+  ],
+  "phases": [
+   {
+    "space_group_seed": "Imma (74)",
+    "space_group_relaxed": "Imma (74)",
+    "order_parameter_directions": {
+     "R+_1": [
+      0.707,
+      0.707,
+      0.0
+     ],
+     "M+_2": null
+    },
+    "energy_meV_per_fu": -25.0,
+    "polarization_nominal_uC_cm2": [
+     -0.0,
+     -0.0,
+     -0.0
+    ]
+   },
+   {
+    "space_group_seed": "R-3c (167)",
+    "space_group_relaxed": "R-3c (167)",
+    "order_parameter_directions": {
+     "R+_1": [
+      0.577,
+      0.577,
+      0.577
+     ],
+     "M+_2": null
+    },
+    "energy_meV_per_fu": -24.5,
+    "polarization_nominal_uC_cm2": [
+     0.0,
+     -0.0,
+     0.0
+    ]
+   },
+   {
+    "space_group_seed": "Pnma (62)",
+    "space_group_relaxed": "Pnma (62)",
+    "order_parameter_directions": {
+     "R+_1": [
+      0.707,
+      0.707,
+      0.0
+     ],
+     "M+_2": [
+      0.0,
+      1.0,
+      0.0
+     ]
+    },
+    "energy_meV_per_fu": -23.1,
+    "polarization_nominal_uC_cm2": [
+     -0.0,
+     -0.0,
+     0.0
+    ]
+   },
+   {
+    "space_group_seed": "I4/mcm (140)",
+    "space_group_relaxed": "I4/mcm (140)",
+    "order_parameter_directions": {
+     "R+_1": [
+      1.0,
+      0.0,
+      0.0
+     ],
+     "M+_2": null
+    },
+    "energy_meV_per_fu": -22.7,
+    "polarization_nominal_uC_cm2": [
+     -0.0,
+     -0.0,
+     -0.0
+    ]
+   },
+   {
+    "space_group_seed": "P4_2/nmc (137)",
+    "space_group_relaxed": "P4_2/nmc (137)",
+    "order_parameter_directions": {
+     "R+_1": [
+      1.0,
+      0.0,
+      0.0
+     ],
+     "M+_2": [
+      0.707,
+      0.707,
+      0.0
+     ]
+    },
+    "energy_meV_per_fu": -21.1,
+    "polarization_nominal_uC_cm2": [
+     -0.0,
+     -0.0,
+     -0.0
+    ]
+   },
+   {
+    "space_group_seed": "Cmcm (63)",
+    "space_group_relaxed": "Cmcm (63)",
+    "order_parameter_directions": {
+     "R+_1": [
+      1.0,
+      0.0,
+      0.0
+     ],
+     "M+_2": [
+      1.0,
+      0.0,
+      0.0
+     ]
+    },
+    "energy_meV_per_fu": -20.9,
+    "polarization_nominal_uC_cm2": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   }
+  ],
+  "note": "relaxed with MACE-MP-0 inside each seed symmetry; fixed parent lattice"
+ },
+ "refined": {
+  "phases": [
+   {
+    "space_group_seed": "Imma (74)",
+    "order_parameter_directions": {
+     "R+_1": [
+      0.707,
+      0.707,
+      0.0
+     ],
+     "M+_2": null
+    },
+    "fixed_cell": {
+     "energy_meV_per_fu": -25.47,
+     "space_group": "Imma (74)",
+     "space_group_loose": "Imma (74)",
+     "lattice_A": [
+      7.6218,
+      7.6218,
+      7.6218
+     ],
+     "polarization_nominal_uC_cm2": [
+      -0.0,
+      -0.0,
+      -0.0
+     ]
+    },
+    "relaxed_cell": {
+     "energy_meV_per_fu": -27.21,
+     "space_group": "Imma (74)",
+     "space_group_loose": "Imma (74)",
+     "lattice_A": [
+      7.6277,
+      7.643,
+      7.643
+     ],
+     "polarization_nominal_uC_cm2": null
+    }
+   },
+   {
+    "space_group_seed": "R-3c (167)",
+    "order_parameter_directions": {
+     "R+_1": [
+      0.577,
+      0.577,
+      0.577
+     ],
+     "M+_2": null
+    },
+    "fixed_cell": {
+     "energy_meV_per_fu": -24.9,
+     "space_group": "R-3c (167)",
+     "space_group_loose": "R-3c (167)",
+     "lattice_A": [
+      7.6218,
+      7.6218,
+      7.6218
+     ],
+     "polarization_nominal_uC_cm2": [
+      0.0,
+      -0.0,
+      0.0
+     ]
+    },
+    "relaxed_cell": {
+     "energy_meV_per_fu": -26.92,
+     "space_group": "R-3c (167)",
+     "space_group_loose": "R-3c (167)",
+     "lattice_A": [
+      7.6386,
+      7.6386,
+      7.6386
+     ],
+     "polarization_nominal_uC_cm2": null
+    }
+   }
+  ],
+  "ranked_by": "relaxed_cell"
+ },
+ "winner": {
+  "space_group": "Imma (74)",
+  "space_group_tol_0_01": "Imma (74)",
+  "energy_meV_per_fu": -27.21,
+  "seed": "Imma (74)"
+ },
+ "runtime_s": 314
+}

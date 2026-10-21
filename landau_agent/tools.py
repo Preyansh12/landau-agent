@@ -281,15 +281,27 @@ class Session:
         from ase.optimize import FIRE
 
         def directions(d):
+            """Symmetry-complete special directions: every vector with entries in {-1,0,1}
+            (one per +- pair) for d <= 3; axes and pair combinations for larger d."""
+            from itertools import product as iprod
             if d == 1:
                 return [np.array([1.0])]
-            out = [np.eye(d)[0]]
-            if d >= 2:
-                out += [np.eye(d)[1], (np.eye(d)[0] + np.eye(d)[1]) / np.sqrt(2),
-                        (np.eye(d)[0] - np.eye(d)[1]) / np.sqrt(2)]
-            if d >= 3:
-                out += [np.ones(d) / np.sqrt(d)]
-            return out
+            vecs = []
+            if d <= 3:
+                for v in iprod((-1, 0, 1), repeat=d):
+                    v = np.array(v, float)
+                    if not v.any():
+                        continue
+                    if v[np.nonzero(v)[0][0]] < 0:      # keep one of each +- pair
+                        continue
+                    vecs.append(v / np.linalg.norm(v))
+            else:
+                for i in range(d):
+                    vecs.append(np.eye(d)[i])
+                    for j in range(i + 1, d):
+                        vecs.append((np.eye(d)[i] + np.eye(d)[j]) / np.sqrt(2))
+                        vecs.append((np.eye(d)[i] - np.eye(d)[j]) / np.sqrt(2))
+            return vecs
 
         if self.model is None:
             self.model = E.FrozenModeModel(self.G, self.ops)
@@ -348,7 +360,8 @@ class Session:
                                                    note="relaxed with MACE-MP-0 inside each seed symmetry; fixed parent lattice"))
 
     def refine_phases(self, top: int = 3, fmax: float = 0.005, steps: int = 1500,
-                      relax_cell: bool = True, out_dir: str | None = None) -> dict:
+                      relax_cell: bool = True, out_dir: str | None = None,
+                      relaxed_cell_only: bool = False) -> dict:
         """Tight MACE relaxation of the lowest enumerated phases, fixed lattice and (optionally)
         full cell relaxation inside the same symmetry. Energies vs the relaxed parent."""
         from ase.constraints import FixSymmetry
@@ -360,7 +373,8 @@ class Session:
         for r in self._phases[:top]:
             sg = r["space_group_seed"]
             row = dict(space_group_seed=sg, order_parameter_directions=r["order_parameter_directions"])
-            for mode in (["fixed_cell", "relaxed_cell"] if relax_cell else ["fixed_cell"]):
+            modes = ["relaxed_cell"] if relaxed_cell_only else (["fixed_cell", "relaxed_cell"] if relax_cell else ["fixed_cell"])
+            for mode in modes:
                 at = self._phase_structs[sg].copy()
                 at.calc = calc
                 at.set_constraint(FixSymmetry(at, symprec=1e-3))

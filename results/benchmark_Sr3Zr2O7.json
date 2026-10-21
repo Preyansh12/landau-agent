@@ -1,0 +1,497 @@
+{
+ "material": "Sr3Zr2O7",
+ "parent": {
+  "formula": "O14Sr6Zr4",
+  "space_group": "I4/mmm (139)",
+  "n_atoms": 24,
+  "lattice_A": [
+   4.1881,
+   4.1881,
+   21.1318,
+   90.0,
+   90.0,
+   90.0
+  ],
+  "relaxed_with": "MACE-MP-0 (medium, float64)"
+ },
+ "instabilities": [
+  {
+   "name": "X- (d=2)",
+   "label": "k=(1/2,-1/2,0)*2 d=2 #5",
+   "curvature_eV_A2": -1.3748,
+   "polar": false
+  },
+  {
+   "name": "X- (d=2)",
+   "label": "k=(1/2,-1/2,0)*2 d=2 #8",
+   "curvature_eV_A2": -1.1283,
+   "polar": false
+  },
+  {
+   "name": "X+ (d=2)",
+   "label": "k=(1/2,-1/2,0)*2 d=2 #6",
+   "curvature_eV_A2": -1.0526,
+   "polar": false
+  },
+  {
+   "name": "X- (d=2)",
+   "label": "k=(1/2,-1/2,0)*2 d=2 #3",
+   "curvature_eV_A2": -0.9811,
+   "polar": false
+  },
+  {
+   "name": "X+ (d=2)",
+   "label": "k=(1/2,-1/2,0)*2 d=2 #1",
+   "curvature_eV_A2": -0.9071,
+   "polar": false
+  },
+  {
+   "name": "Z- (d=2)",
+   "label": "k=(1,0,0) d=2 #1",
+   "curvature_eV_A2": -0.4131,
+   "polar": false
+  },
+  {
+   "name": "Γ- (d=2)",
+   "label": "k=(0,0,0) d=2 #1",
+   "curvature_eV_A2": -0.4068,
+   "polar": true
+  },
+  {
+   "name": "X+ (d=2)",
+   "label": "k=(1/2,-1/2,0)*2 d=2 #7",
+   "curvature_eV_A2": -0.3326,
+   "polar": false
+  },
+  {
+   "name": "Z+ (d=2)",
+   "label": "k=(1,0,0) d=2 #2",
+   "curvature_eV_A2": -0.0577,
+   "polar": false
+  }
+ ],
+ "primaries": [
+  "k=(1/2,-1/2,0)*2 d=2 #5",
+  "k=(1/2,-1/2,0)*2 d=2 #6",
+  "k=(1,0,0) d=2 #1"
+ ],
+ "enumeration": {
+  "n_candidates": 13,
+  "n_relaxed": 6,
+  "screening": [
+   {
+    "space_group": "P4_2/mnm (136)",
+    "seed_energy_meV_per_fu": -470.9,
+    "order_parameter_directions": {
+     "X-_1": [
+      0.707,
+      0.707
+     ],
+     "X+_2": null,
+     "Z-_3": null
+    }
+   },
+   {
+    "space_group": "Cmc2_1 (36)",
+    "seed_energy_meV_per_fu": -420.7,
+    "order_parameter_directions": {
+     "X-_1": [
+      1.0,
+      0.0
+     ],
+     "X+_2": [
+      1.0,
+      0.0
+     ],
+     "Z-_3": null
+    }
+   },
+   {
+    "space_group": "Pm (6)",
+    "seed_energy_meV_per_fu": -340.3,
+    "order_parameter_directions": {
+     "X-_1": [
+      1.0,
+      0.0
+     ],
+     "X+_2": [
+      1.0,
+      0.0
+     ],
+     "Z-_3": [
+      1.0,
+      0.0
+     ]
+    }
+   },
+   {
+    "space_group": "Pmn2_1 (31)",
+    "seed_energy_meV_per_fu": -296.2,
+    "order_parameter_directions": {
+     "X-_1": [
+      1.0,
+      0.0
+     ],
+     "X+_2": [
+      1.0,
+      0.0
+     ],
+     "Z-_3": [
+      0.707,
+      0.707
+     ]
+    }
+   },
+   {
+    "space_group": "Cmce (64)",
+    "seed_energy_meV_per_fu": -276.1,
+    "order_parameter_directions": {
+     "X-_1": null,
+     "X+_2": [
+      1.0,
+      0.0
+     ],
+     "Z-_3": null
+    }
+   },
+   {
+    "space_group": "P2_1/m (11)",
+    "seed_energy_meV_per_fu": -251.3,
+    "order_parameter_directions": {
+     "X-_1": null,
+     "X+_2": [
+      1.0,
+      0.0
+     ],
+     "Z-_3": [
+      1.0,
+      0.0
+     ]
+    }
+   },
+   {
+    "space_group": "Pnma (62)",
+    "seed_energy_meV_per_fu": -248.8,
+    "order_parameter_directions": {
+     "X-_1": null,
+     "X+_2": [
+      1.0,
+      0.0
+     ],
+     "Z-_3": [
+      0.707,
+      0.707
+     ]
+    }
+   },
+   {
+    "space_group": "Pbcm (57)",
+    "seed_energy_meV_per_fu": -248.8,
+    "order_parameter_directions": {
+     "X-_1": null,
+     "X+_2": [
+      1.0,
+      0.0
+     ],
+     "Z-_3": [
+      0.707,
+      -0.707
+     ]
+    }
+   },
+   {
+    "space_group": "Pmmn (59)",
+    "seed_energy_meV_per_fu": -8.5,
+    "order_parameter_directions": {
+     "X-_1": null,
+     "X+_2": null,
+     "Z-_3": [
+      1.0,
+      0.0
+     ]
+    }
+   },
+   {
+    "space_group": "Cmcm (63)",
+    "seed_energy_meV_per_fu": -5.8,
+    "order_parameter_directions": {
+     "X-_1": null,
+     "X+_2": null,
+     "Z-_3": [
+      0.707,
+      0.707
+     ]
+    }
+   },
+   {
+    "space_group": "P4/mbm (127)",
+    "seed_energy_meV_per_fu": 33.8,
+    "order_parameter_directions": {
+     "X-_1": null,
+     "X+_2": [
+      0.707,
+      0.707
+     ],
+     "Z-_3": null
+    }
+   },
+   {
+    "space_group": "Amm2 (38)",
+    "seed_energy_meV_per_fu": 53.9,
+    "order_parameter_directions": {
+     "X-_1": null,
+     "X+_2": [
+      0.707,
+      0.707
+     ],
+     "Z-_3": [
+      1.0,
+      0.0
+     ]
+    }
+   },
+   {
+    "space_group": "Pmc2_1 (26)",
+    "seed_energy_meV_per_fu": 56.2,
+    "order_parameter_directions": {
+     "X-_1": null,
+     "X+_2": [
+      0.707,
+      0.707
+     ],
+     "Z-_3": [
+      0.707,
+      0.707
+     ]
+    }
+   }
+  ],
+  "phases": [
+   {
+    "space_group_seed": "Pm (6)",
+    "space_group_relaxed": "Pm (6)",
+    "order_parameter_directions": {
+     "X-_1": [
+      1.0,
+      0.0
+     ],
+     "X+_2": [
+      1.0,
+      0.0
+     ],
+     "Z-_3": [
+      1.0,
+      0.0
+     ]
+    },
+    "energy_meV_per_fu": -780.8,
+    "polarization_nominal_uC_cm2": [
+     -4.79,
+     4.79,
+     -0.0
+    ]
+   },
+   {
+    "space_group_seed": "Pmn2_1 (31)",
+    "space_group_relaxed": "Pmn2_1 (31)",
+    "order_parameter_directions": {
+     "X-_1": [
+      1.0,
+      0.0
+     ],
+     "X+_2": [
+      1.0,
+      0.0
+     ],
+     "Z-_3": [
+      0.707,
+      0.707
+     ]
+    },
+    "energy_meV_per_fu": -780.6,
+    "polarization_nominal_uC_cm2": [
+     -4.78,
+     4.78,
+     -0.0
+    ]
+   },
+   {
+    "space_group_seed": "Cmc2_1 (36)",
+    "space_group_relaxed": "Cmc2_1 (36)",
+    "order_parameter_directions": {
+     "X-_1": [
+      1.0,
+      0.0
+     ],
+     "X+_2": [
+      1.0,
+      0.0
+     ],
+     "Z-_3": null
+    },
+    "energy_meV_per_fu": -780.0,
+    "polarization_nominal_uC_cm2": [
+     -4.51,
+     4.51,
+     -0.0
+    ]
+   },
+   {
+    "space_group_seed": "P2_1/m (11)",
+    "space_group_relaxed": "P2_1/m (11)",
+    "order_parameter_directions": {
+     "X-_1": null,
+     "X+_2": [
+      1.0,
+      0.0
+     ],
+     "Z-_3": [
+      1.0,
+      0.0
+     ]
+    },
+    "energy_meV_per_fu": -758.2,
+    "polarization_nominal_uC_cm2": [
+     0.0,
+     -0.0,
+     -0.0
+    ]
+   },
+   {
+    "space_group_seed": "P4_2/mnm (136)",
+    "space_group_relaxed": "P4_2/mnm (136)",
+    "order_parameter_directions": {
+     "X-_1": [
+      0.707,
+      0.707
+     ],
+     "X+_2": null,
+     "Z-_3": null
+    },
+    "energy_meV_per_fu": -631.2,
+    "polarization_nominal_uC_cm2": [
+     0.0,
+     -0.0,
+     -0.0
+    ]
+   },
+   {
+    "space_group_seed": "Cmce (64)",
+    "space_group_relaxed": "Cmce (64)",
+    "order_parameter_directions": {
+     "X-_1": null,
+     "X+_2": [
+      1.0,
+      0.0
+     ],
+     "Z-_3": null
+    },
+    "energy_meV_per_fu": -307.1,
+    "polarization_nominal_uC_cm2": [
+     0.0,
+     -0.0,
+     -0.0
+    ]
+   }
+  ],
+  "note": "relaxed with MACE-MP-0 inside each seed symmetry; fixed parent lattice"
+ },
+ "refined": {
+  "phases": [
+   {
+    "space_group_seed": "Pm (6)",
+    "order_parameter_directions": {
+     "X-_1": [
+      1.0,
+      0.0
+     ],
+     "X+_2": [
+      1.0,
+      0.0
+     ],
+     "Z-_3": [
+      1.0,
+      0.0
+     ]
+    },
+    "fixed_cell": {
+     "energy_meV_per_fu": -781.9,
+     "space_group": "Pm (6)",
+     "space_group_loose": "Cmc2_1 (36)",
+     "lattice_A": [
+      5.9229,
+      5.9229,
+      21.1318
+     ],
+     "polarization_nominal_uC_cm2": [
+      -4.87,
+      4.88,
+      -0.0
+     ]
+    },
+    "relaxed_cell": {
+     "energy_meV_per_fu": -807.52,
+     "space_group": "Pm (6)",
+     "space_group_loose": "Cmc2_1 (36)",
+     "lattice_A": [
+      5.8773,
+      5.906,
+      21.0866
+     ],
+     "polarization_nominal_uC_cm2": null
+    }
+   },
+   {
+    "space_group_seed": "Pmn2_1 (31)",
+    "order_parameter_directions": {
+     "X-_1": [
+      1.0,
+      0.0
+     ],
+     "X+_2": [
+      1.0,
+      0.0
+     ],
+     "Z-_3": [
+      0.707,
+      0.707
+     ]
+    },
+    "fixed_cell": {
+     "energy_meV_per_fu": -782.16,
+     "space_group": "Pmn2_1 (31)",
+     "space_group_loose": "Cmc2_1 (36)",
+     "lattice_A": [
+      5.9229,
+      5.9229,
+      21.1318
+     ],
+     "polarization_nominal_uC_cm2": [
+      -4.92,
+      4.92,
+      -0.0
+     ]
+    },
+    "relaxed_cell": {
+     "energy_meV_per_fu": -807.42,
+     "space_group": "Pmn2_1 (31)",
+     "space_group_loose": "Cmc2_1 (36)",
+     "lattice_A": [
+      5.8793,
+      5.905,
+      21.0815
+     ],
+     "polarization_nominal_uC_cm2": null
+    }
+   }
+  ],
+  "ranked_by": "relaxed_cell"
+ },
+ "winner": {
+  "space_group": "Pm (6)",
+  "space_group_tol_0_01": "Cmc2_1 (36)",
+  "energy_meV_per_fu": -807.52,
+  "seed": "Pm (6)"
+ },
+ "runtime_s": 566
+}

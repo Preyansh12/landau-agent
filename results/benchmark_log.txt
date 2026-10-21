@@ -1,3 +1,8 @@
 cuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.
 Using Materials Project MACE for MACECalculator with /root/.cache/mace/20231203mace128L1_epoch199model
 Using float64 for MACECalculator, which is slower but more accurate. Recommended for geometry optimization.
+CaTiO3 -> {'space_group': 'Ima2 (46)', 'space_group_tol_0_01': 'Ima2 (46)', 'energy_meV_per_fu': -262.73, 'seed': 'Ima2 (46)'} 383s
+LaAlO3 -> {'space_group': 'Imma (74)', 'space_group_tol_0_01': 'Imma (74)', 'energy_meV_per_fu': -27.21, 'seed': 'Imma (74)'} 314s
+BaTiO3 -> {'space_group': 'Pc (7)', 'space_group_tol_0_01': 'Pc (7)', 'energy_meV_per_fu': -46.07, 'seed': 'Pc (7)'} 339s
+PbTiO3 -> {'space_group': 'Amm2 (38)', 'space_group_tol_0_01': 'Amm2 (38)', 'energy_meV_per_fu': -100.71, 'seed': 'Amm2 (38)'} 388s
+Sr3Zr2O7 -> {'space_group': 'Pm (6)', 'space_group_tol_0_01': 'Cmc2_1 (36)', 'energy_meV_per_fu': -807.52, 'seed': 'Pm (6)'} 566s
