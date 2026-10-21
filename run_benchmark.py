@@ -11,6 +11,8 @@ from run_case import SUPERCELLS
 SUPERCELLS.update({"SrTiO3": [[2, 0, 0], [0, 2, 0], [0, 0, 2]], "LaAlO3": [[2, 0, 0], [0, 2, 0], [0, 0, 2]],
                    "Sr3Zr2O7": [[1, 1, 0], [-1, 1, 0], [0, 0, 1]],
                    "Ca3Zr2O7": [[1, 1, 0], [-1, 1, 0], [0, 0, 1]]})
+for _n in ("Sr3Ti2O7", "Ca3Mn2O7", "Ca3Sn2O7", "Sr3Sn2O7", "Sr3Hf2O7"):
+    SUPERCELLS[_n] = [[1, 1, 0], [-1, 1, 0], [0, 0, 1]]
 
 def run(name):
     T = time.time()
@@ -23,6 +25,12 @@ def run(name):
         if m["unstable"] and m["name"] not in seen:
             picked.append(m["label"]); seen.add(m["name"])
     picked = picked[:3]
+    if not picked:
+        out = dict(material=name, parent=parent, instabilities=[], protocol="v2",
+                   winner=dict(space_group="parent (no instability)"), runtime_s=round(time.time() - T))
+        json.dump(out, open(f"results/benchmark_v2_{name}.json", "w"), indent=1, ensure_ascii=False, default=str)
+        print(name, "->", out["winner"], flush=True)
+        return
     s.choose_order_parameters(picked)
     ph = s.enumerate_phases(max_phases=6, fmax=0.03, steps=250)
     # v2: strain can reorder phases, so the best 4 (not 2) get a full cell relaxation

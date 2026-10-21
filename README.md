@@ -55,7 +55,7 @@ The only input is the I4/mmm parent (`results/Ca3Ti2O7_run.txt`, `Ca3Ti2O7_log.j
    | Cmce (rotation only) | | −427.8 | 0 |
 
    The polar mode has essentially no drive of its own here (−0.006 eV/Å²), yet the ground state carries 9.5 μC/cm². When tilt and rotation sit on different arms the trilinear term vanishes; that phase (Pnma) is non-polar and loses by 41 meV/f.u. This is the textbook hybrid-improper mechanism, reproduced end to end.
-3. **Landau prediction.** The fitted model has 6th order in each mode and couplings to 4th. Its RMSE is 14 meV/f.u. over sampled configurations below the parent (lowest −540 meV/f.u.). Its minimum is a Pmn2₁ point at −633 meV/f.u. (MACE gives −590 there). Relaxing that structure with MACE gives −865.16 meV/f.u.: Pmn2₁ at 0.001 Å tolerance, **Cmc2₁ (A2₁am) at 0.01 Å**, with residual second-arm tilt 0.009 Å (`Ca3Ti2O7_decompositions.json`). So the fitted polynomial gets into the right basin but does not pin the exact minimum; the deep, strongly anharmonic coupled wells need the MACE relaxation.
+3. **Landau prediction.** The fitted model has 6th order in each mode and couplings to 4th. Its RMSE is 14 meV/f.u. over all sampled configurations below the parent, but **31 meV/f.u. over the lowest-energy half of the samples**, the region that matters for the ground state (lowest sample −540 meV/f.u.; both numbers in `Ca3Ti2O7_log.json`). Its minimum is a Pmn2₁ point at −633 meV/f.u. (MACE gives −590 there). Relaxing that structure with MACE gives −865.16 meV/f.u.: Pmn2₁ at 0.001 Å tolerance, **Cmc2₁ (A2₁am) at 0.01 Å**, with residual second-arm tilt 0.009 Å (`Ca3Ti2O7_decompositions.json`). So the fitted polynomial gets into the right basin but does not pin the exact minimum; the deep, strongly anharmonic coupled wells need the MACE relaxation.
 4. **Independent check: direct enumeration.** Every symmetry-distinct tilt/rotation pattern is relaxed with MACE inside its own symmetry (meV/f.u. vs I4/mmm; † = loose relaxation only):
 
 | Phase | Fixed lattice | Relaxed lattice | Nominal P, fixed lattice (μC/cm²) |
@@ -132,18 +132,21 @@ The system prompt forbids it from deriving irreps, invariants, couplings, energi
 
 ## Computed labels vs standard (ISOTROPY/Bilbao) labels
 
-LandauAgent labels irreps by what it computes: k-point, inversion parity (about the parent origin), dimension and an index, plus polarity and which atoms move. The standard names below are a **hand-made correspondence**, made from those computed properties and the displacement pattern. They are not computed by the code.
+LandauAgent labels irreps by what it computes: k-point, inversion parity (about the parent origin), dimension and an index, plus polarity and which atoms move. The index (`#n`) depends on numerical ordering and can change with the lattice constant, so on its own it is not a usable name.
 
-| Parent (origin) | Computed label | Pattern | Standard label |
+Standard labels are attached **by the code, and verified**, not looked up (`landau_agent/labels.py`). For each standard label the code builds the textbook rigid-octahedron pattern directly in the supercell (for example R4⁺: BO₆ octahedra rotating about one cubic axis, out of phase between neighbours, B at the origin). It then projects that pattern onto every computed irrep. The label is attached only to an irrep that contains more than 90% of the pattern; in practice the match is 100.0%, and every other irrep gets 0%. Polar Γ irreps are unique for their dimension in both parent point groups, so their labels follow from polarity and dimension. Tools return the result as `standard_label`, and the agent may use only labels a tool returned. Tested in `tests/test_symmetry.py`.
+
+| Parent (origin) | Computed | Verified standard label | Pattern |
 |---|---|---|---|
-| Pm-3m (B site at origin) | Γ⁻ (d=3), polar | B against O, polar | Γ4⁻ |
-| | R⁺ (d=3), O only | out-of-phase octahedral rotation | R4⁺ |
-| | M⁺ (d=3), O only | in-phase octahedral rotation | M3⁺ |
-| I4/mmm (n=2 Ruddlesden–Popper) | X⁺ (d=2) `#4`, O only | in-phase rotation about c | X2⁺ |
-| | X⁻ (d=2) `#2`, O plus A site | octahedral tilt about an in-plane axis | X3⁻ |
-| | Γ⁻ (d=2) `#1`, polar | in-plane polar mode | Γ5⁻ |
+| Pm-3m (B at origin) | Γ⁻ (d=3), polar | Γ4⁻ | polar B against O |
+| | R⁺ (d=3) | R4⁺ | out-of-phase octahedral rotation (a⁰a⁰c⁻) |
+| | M⁺ (d=3) | M3⁺ | in-phase octahedral rotation (a⁰a⁰c⁺) |
+| I4/mmm, n=2 RP (bilayer at origin) | X⁺ (d=2) | X2⁺ | octahedral rotation about c |
+| | X⁻ (d=2) | X3⁻ | octahedral tilt about the in-plane axis along k, the two layers of a bilayer in opposite sense |
+| | Γ⁻ (d=2), polar | Γ5⁻ | in-plane polarisation |
+| | Γ⁻ (d=1), polar | Γ3⁻ (A2u) | polarisation along c |
 
-Other irreps with the same short name (for example the second, pure-O X⁻ instability in Ca₃Ti₂O₇, `#8`) are distinct representations. The index in the label separates them; we have not mapped them to standard names.
+At X = (½,½,0) the tilts about [110] and [1̄10] fall into **two different irreps**. Geometry alone does not say which one ISOTROPY calls X3⁻. We fixed it with one external fact: A2₁am is X2⁺ ⊕ X3⁻ ⊕ Γ5⁻ (Benedek & Fennie 2011). Decomposing our relaxed A2₁am Ca₃Ti₂O₇ puts the whole tilt (1.75 Å) in the irrep whose tilt axis lies along k. Other unstable irreps with the same short name (for example the second X⁻ instability of Ca₃Ti₂O₇) get no standard label; we have not mapped them.
 
 ## Provenance of the results
 
@@ -169,7 +172,9 @@ A GPU is optional. On two CPU cores each scripted case takes about 5–10 minute
 - MACE-MP-0 is PBE-trained, so energy scales inherit PBE errors (e.g. overestimated tilts).
 - Only k-points commensurate with the chosen supercell are visible.
 - Polarisation uses nominal ionic charges, not Born effective charges, so it is an estimate.
-- Irrep labels are computed descriptors (k-point, parity, dimension), not ISOTROPY's numbered labels.
+- Standard (ISOTROPY) labels are attached and verified only for the irreps in the table above; other irreps keep computed descriptors.
+- Phase enumeration uses all {−1,0,1} direction patterns for order parameters of dimension ≤ 3 (symmetry-complete there), but only axes and pairs above that. It is not a full isotropy-subgroup enumeration.
+- The Reynolds averaging is over dense monomials, so several 3-dimensional order parameters at 6th order become slow.
 
 ## References
 

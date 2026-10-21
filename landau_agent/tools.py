@@ -29,6 +29,10 @@ BUILTIN = {
     "Sr3Zr2O7": lambda: ruddlesden_popper_n2("Sr", "Zr", "O", a=4.1, c=21.0),
     "Ca3Zr2O7": lambda: ruddlesden_popper_n2("Ca", "Zr", "O", a=4.0, c=20.4),
     "Sr3Ti2O7": lambda: ruddlesden_popper_n2("Sr", "Ti", "O", a=3.9, c=20.3),
+    "Ca3Mn2O7": lambda: ruddlesden_popper_n2("Ca", "Mn", "O", a=3.7, c=19.4),
+    "Ca3Sn2O7": lambda: ruddlesden_popper_n2("Ca", "Sn", "O", a=4.0, c=19.9),
+    "Sr3Sn2O7": lambda: ruddlesden_popper_n2("Sr", "Sn", "O", a=4.05, c=20.8),
+    "Sr3Hf2O7": lambda: ruddlesden_popper_n2("Sr", "Hf", "O", a=4.1, c=20.9),
 }
 
 
@@ -87,9 +91,20 @@ class Session:
         self.H = self.curv = None
         self.ops, self.op_names, self.fit = [], [], None
         rows = [S.describe_irrep(self.G, t) for t in self.types]
+        try:
+            from .labels import standard_labels
+            self.std = standard_labels(self.G, self.types, S.describe_irrep)
+        except Exception:
+            self.std = {}
         kpts = sorted({r["k_point"] for r in rows})
-        out = dict(group_order=self.G.order, n_atoms=len(self.G.numbers), k_points=kpts,
-                   irreps=[{k: r[k] for k in ("label", "name", "dim", "multiplicity", "polar")} for r in rows])
+        irreps = []
+        for r in rows:
+            row = {k: r[k] for k in ("label", "name", "dim", "multiplicity", "polar")}
+            if r["label"] in self.std:
+                row["standard_label"] = self.std[r["label"]]["standard"]
+                row["standard_label_evidence"] = self.std[r["label"]]["evidence"]
+            irreps.append(row)
+        out = dict(group_order=self.G.order, n_atoms=len(self.G.numbers), k_points=kpts, irreps=irreps)
         return self._rec("set_supercell", out)
 
     # ------------------------------------------------------------ discovery
@@ -114,6 +129,9 @@ class Session:
             rows.append(dict(label=r["label"], name=r["name"], curvature_eV_A2=r["curvature_eV_A2"],
                              polar=r["polar"], unstable=r["curvature_eV_A2"] < threshold,
                              eigvec_weight_by_species=by))
+            std = getattr(self, "std", {}).get(r["label"])
+            if std:
+                rows[-1]["standard_label"] = std["standard"]
         return self._rec("find_instabilities", dict(modes=rows))
 
     def analyze_child(self, cif_path: str, origin_shift=(0, 0, 0)) -> dict:

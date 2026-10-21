@@ -58,3 +58,19 @@ def test_tilt_is_single_R_irrep():
     degs = sorted(i.degree for i in invs)
     # textbook R4+: one quadratic (a^2+b^2+c^2), no cubic, two quartics
     assert degs == [2, 4, 4], degs
+
+
+def test_standard_labels_verified_by_patterns():
+    import numpy as np
+    from landau_agent.structures import cubic_perovskite, ruddlesden_popper_n2
+    from landau_agent import symmetry as S, labels as L
+    G = S.build_supercell_group(cubic_perovskite("Sr", "Ti", a=3.9), np.diag([2, 2, 2]))
+    types = S.decompose(G)
+    got = {v["standard"]: S.describe_irrep(G, next(t for t in types if t.label == k))["name"]
+           for k, v in L.standard_labels(G, types, S.describe_irrep).items()}
+    assert got == {"Γ4-": "Γ- (d=3)", "R4+": "R+ (d=3)", "M3+": "M+ (d=3)"}
+    G = S.build_supercell_group(ruddlesden_popper_n2("Ca", "Ti", "O"), np.array([[1, 1, 0], [-1, 1, 0], [0, 0, 1]]))
+    types = S.decompose(G)
+    got = {v["standard"].split()[0]: S.describe_irrep(G, next(t for t in types if t.label == k))["name"]
+           for k, v in L.standard_labels(G, types, S.describe_irrep).items()}
+    assert got == {"Γ5-": "Γ- (d=2)", "Γ3-": "Γ- (d=1)", "X2+": "X+ (d=2)", "X3-": "X- (d=2)"}

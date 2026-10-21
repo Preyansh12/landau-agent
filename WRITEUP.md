@@ -59,6 +59,7 @@ All results below come from a scripted pipeline that calls the same tools in the
 - Strain enters only through the final relaxations, not the Landau fit.
 - Only k-points commensurate with the supercell are visible.
 - Polarisation uses nominal charges.
-- Irrep labels are computed descriptors rather than ISOTROPY's numbered labels.
+- Standard ISOTROPY labels (Γ4⁻, R4⁺, M3⁺, X2⁺, X3⁻, Γ5⁻) are attached by the code and verified by projecting rigid-octahedron patterns, but only for the two parent families here.
+- Phase enumeration is symmetry-complete only for order parameters of dimension ≤ 3.
 - MACE-MP-0 inherits PBE errors.
 - Results come from the scripted pipeline; live agent runs need an API key.
