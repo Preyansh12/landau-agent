@@ -61,6 +61,8 @@ The only input is the I4/mmm parent (`results/Ca3Ti2O7_run.txt`, `Ca3Ti2O7_log.j
 
 At fixed lattice, the polar phase is more than 230 meV/f.u. below any tilt-only or rotation-only phase.
 
+![Ca3Ti2O7 phase ladder](results/phase_ladder_Ca3Ti2O7.png)
+
 ### SrTiO₃: catching a known failure of the potential
 
 At its own relaxed lattice (a = 3.943 Å, about 1% larger than experiment, as expected for a PBE-trained model), MACE-MP-0 finds three instabilities in cubic SrTiO₃: a polar Γ⁻ mode (−0.64 eV/Å²), the R⁺ octahedral tilt (−0.28) and a weak M⁺ tilt (−0.04). Enumeration then gives a polar ground state (Cc, close to R3c, −5.1 meV/f.u.) just below the experimental tetragonal phase I4/mcm (−3.5 meV/f.u.).
