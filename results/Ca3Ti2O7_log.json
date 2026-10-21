@@ -1,7 +1,7 @@
 [
  {
   "tool": "load_parent",
-  "t": "00:15:59",
+  "t": "00:39:06",
   "result": {
    "formula": "Ca6O14Ti4",
    "space_group": "I4/mmm (139)",
@@ -19,7 +19,7 @@
  },
  {
   "tool": "set_supercell",
-  "t": "00:15:59",
+  "t": "00:39:07",
   "result": {
    "group_order": 64,
    "n_atoms": 48,
@@ -174,7 +174,7 @@
  },
  {
   "tool": "find_instabilities",
-  "t": "00:15:59",
+  "t": "00:39:07",
   "result": {
    "modes": [
     {
@@ -422,7 +422,7 @@
  },
  {
   "tool": "choose_order_parameters",
-  "t": "00:15:59",
+  "t": "00:39:07",
   "result": {
    "order_parameters": [
     {
@@ -440,7 +440,7 @@
  },
  {
   "tool": "forced_couplings",
-  "t": "00:16:00",
+  "t": "00:39:08",
   "result": {
    "forced_secondary_modes": [
     {
@@ -484,7 +484,7 @@
  },
  {
   "tool": "add_secondary",
-  "t": "00:16:00",
+  "t": "00:39:08",
   "result": {
    "order_parameters": [
     "X-_1",
@@ -495,7 +495,7 @@
  },
  {
   "tool": "landau_polynomial",
-  "t": "00:16:00",
+  "t": "00:39:08",
   "result": {
    "n_invariants": 16,
    "invariants": [
@@ -604,7 +604,7 @@
  },
  {
   "tool": "fit_landau",
-  "t": "00:20:03",
+  "t": "00:43:19",
   "result": {
    "single_mode_wells": {
     "X-_1": {
@@ -774,7 +774,7 @@
  },
  {
   "tool": "predict_ground_state",
-  "t": "00:22:13",
+  "t": "00:45:37",
   "result": {
    "order_parameter_values": {
     "X-_1": [
@@ -801,6 +801,7 @@
    },
    "mace_relaxed_in_predicted_symmetry_meV_per_fu": -865.163,
    "relaxed_space_group": "Pmn2_1 (31)",
+   "relaxed_space_group_tol_0.01A": "Cmc2_1 (36)",
    "polarization_nominal_charges_uC_cm2": [
     10.18,
     -10.18,
@@ -810,7 +811,7 @@
  },
  {
   "tool": "save_prediction",
-  "t": "00:22:13",
+  "t": "00:45:37",
   "result": {
    "path": "results/Ca3Ti2O7_predicted.cif"
   }

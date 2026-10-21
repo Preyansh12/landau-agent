@@ -2,7 +2,7 @@ cuequivariance or cuequivariance_torch is not available. Cuequivariance accelera
 Using Materials Project MACE for MACECalculator with /root/.cache/mace/20231203mace128L1_epoch199model
 Using float64 for MACECalculator, which is slower but more accurate. Recommended for geometry optimization.
 
-=== load_parent  [19s]
+=== load_parent  [90s]
 {
  "formula": "Ca6O14Ti4",
  "space_group": "I4/mmm (139)",
@@ -18,7 +18,7 @@ Using float64 for MACECalculator, which is slower but more accurate. Recommended
  "relaxed_with": "MACE-MP-0 (medium, float64)"
 }
 
-=== set_supercell  [19s]
+=== set_supercell  [91s]
 {
  "group_order": 64,
  "n_atoms": 48,
@@ -29,7 +29,7 @@ Using float64 for MACECalculator, which is slower but more accurate. Recommended
  ]
 }
 
-=== instabilities  [19s]
+=== instabilities  [91s]
 [
  {
   "label": "k=(1/2,-1/2,0)*2 d=2 #2",
@@ -117,7 +117,7 @@ Using float64 for MACECalculator, which is slower but more accurate. Recommended
  }
 ]
 
-=== choose_order_parameters  [19s]
+=== choose_order_parameters  [91s]
 {
  "order_parameters": [
   {
@@ -133,7 +133,7 @@ Using float64 for MACECalculator, which is slower but more accurate. Recommended
  ]
 }
 
-=== forced_couplings  [20s]
+=== forced_couplings  [92s]
 {
  "forced_secondary_modes": [
   {
@@ -175,7 +175,7 @@ Using float64 for MACECalculator, which is slower but more accurate. Recommended
  ]
 }
 
-=== landau_polynomial  [20s]
+=== landau_polynomial  [92s]
 {
  "n_invariants": 16,
  "invariants": [
@@ -282,7 +282,7 @@ Using float64 for MACECalculator, which is slower but more accurate. Recommended
  ]
 }
 
-=== fit_landau  [263s]
+=== fit_landau  [342s]
 {
  "single_mode_wells": {
   "X-_1": {
@@ -409,7 +409,7 @@ Using float64 for MACECalculator, which is slower but more accurate. Recommended
    "degree": 4,
    "coefficient_meV": 957.
 
-=== predict_ground_state  [393s]
+=== predict_ground_state  [481s]
 {
  "order_parameter_values": {
   "X-_1": [
@@ -436,6 +436,7 @@ Using float64 for MACECalculator, which is slower but more accurate. Recommended
  },
  "mace_relaxed_in_predicted_symmetry_meV_per_fu": -865.163,
  "relaxed_space_group": "Pmn2_1 (31)",
+ "relaxed_space_group_tol_0.01A": "Cmc2_1 (36)",
  "polarization_nominal_charges_uC_cm2": [
   10.18,
   -10.18,
@@ -443,4 +444,4 @@ Using float64 for MACECalculator, which is slower but more accurate. Recommended
  ]
 }
 
-Done in 393s
+Done in 481s
