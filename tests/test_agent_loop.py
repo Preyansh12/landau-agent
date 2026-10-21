@@ -56,3 +56,19 @@ def test_openai_compatible_backend(tmp_path, monkeypatch):
     out = agent.run("q", verbose=False, tag="fakeoa")
     assert "error" in out.lower()
     assert "set_supercell" in open("results/fakeoa_transcript.md").read()
+
+
+def test_retry_on_transient_error(monkeypatch):
+    from landau_agent import agent
+    monkeypatch.setattr("time.sleep", lambda s: None)
+    calls = {"n": 0}
+
+    class Overload(Exception):
+        status_code = 503
+
+    def flaky():
+        calls["n"] += 1
+        if calls["n"] < 3:
+            raise Overload("busy")
+        return "ok"
+    assert agent._with_retries(flaky) == "ok" and calls["n"] == 3

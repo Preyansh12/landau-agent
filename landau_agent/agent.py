@@ -179,13 +179,37 @@ class _OpenAICompatBackend:
             self.messages.append(dict(role="tool", tool_call_id=i, content=c))
 
 
+_TRANSIENT = (429, 500, 502, 503, 504, 529)
+
+
+def _with_retries(fn, attempts: int = 8, wait: float = 15.0):
+    """Retry provider overload / rate-limit / network errors with exponential backoff."""
+    import time
+    for k in range(attempts):
+        try:
+            return fn()
+        except Exception as exc:
+            code = getattr(exc, "status_code", None)
+            name = type(exc).__name__
+            transient = code in _TRANSIENT or any(w in name for w in ("RateLimit", "Overloaded", "InternalServer", "APIConnection", "Timeout"))
+            if not transient or k == attempts - 1:
+                raise
+            delay = min(wait * 2 ** k, 300)
+            print(f"[retry] {name} ({code}); waiting {delay:.0f} s", flush=True)
+            time.sleep(delay)
+
+
 def run(question: str, max_turns: int = 40, verbose: bool = True, tag: str = "agent") -> str:
     backend = _AnthropicBackend() if PROVIDER == "anthropic" else _OpenAICompatBackend()
     backend.start(question)
     sess = Session()
     events, final = [], "Stopped: turn limit reached."
+    def save():
+        sess.dump_log(f"results/{tag}_tool_log.json")
+        _transcript(f"results/{tag}_transcript.md", question, events)
+
     for _ in range(max_turns):
-        texts, calls = backend.step()
+        texts, calls = _with_retries(backend.step)
         for t in texts:
             events.append(("text", t))
             if verbose:
@@ -201,8 +225,8 @@ def run(question: str, max_turns: int = 40, verbose: bool = True, tag: str = "ag
             events += [("call", name, args), ("result", out)]
             results.append((cid, out))
         backend.give_results(results)
-    sess.dump_log(f"results/{tag}_tool_log.json")
-    _transcript(f"results/{tag}_transcript.md", question, events)
+        save()  # keep the transcript on disk even if a later API call fails
+    save()
     return final
 
 
