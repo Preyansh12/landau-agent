@@ -175,6 +175,16 @@ At X = (½,½,0) the tilts about [110] and [1̄10] fall into **two different irr
 
 All numbers above come from the **scripted pipeline** (out-of-sample runs: `run_benchmark.py` on the frozen protocol) (`run_case.py`, `run_enumerate.py`, `run_sto_tilts.py`, `run_decompose.py`, `run_benchmark.py`), which calls exactly the same tools the agent uses, in the order the agent's system prompt describes. The LLM agent itself was not run for these results: no API key was available in the build environment. The tool layer is tested against the agent's tool schema (`tests/test_agent_tools.py`). Raw outputs, logs and structures are in `results/`.
 
+## Related work and what is new here
+
+Each ingredient exists on its own; the combination, as far as our literature search found (SciSpace and web search, October 2026), does not.
+- **Group theory for phase transitions:** ISOTROPY (INVARIANTS, COPL), the Bilbao server, and spgrep (on-the-fly space-group irreps) are mature. Our symmetry engine is a re-implementation, not a new method.
+- **Landau models fitted to data:** recent work learns Landau potentials by regression over *predefined* invariants for PbTiO₃ (arXiv:2507.23369), or fits a neural network, without symmetry invariants, to universal-MLIP energies for HfO₂ (arXiv:2512.16207). Neither generates the invariants or finds couplings automatically.
+- **Universal MLIPs and instabilities:** VibroML (arXiv:2604.27685) repairs dynamical instabilities with foundation MLIPs using a genetic algorithm, without irreps or Landau theory.
+- **LLM agents for atomistic simulation:** El Agente Sólido (Quantum ESPRESSO, phonons, MLIPs), AtomisticSkills, Catalyst-Agent and an agentic LAMMPS workflow (arXiv:2607.22596) orchestrate simulations, but none performs symmetry-mode or Landau analysis of phase transitions. The closest in spirit is PTagent (arXiv:2610.21118), an LLM agent for building finite-temperature models of *cosmological* phase transitions, where the LLM likewise organises and the tools compute.
+
+**What we did not find elsewhere:** a tool-using agent that goes from a parent crystal alone to (i) exact symmetry-allowed invariants, (ii) automatic discovery of forced (improper or hybrid-improper) couplings, (iii) universal-MLIP energetics for a symmetry-complete set of candidate phases, and (iv) an explicit check for artefacts of the potential's volume. We also found no prior pre-registered test of such a pipeline on materials it was not developed on. Absence of evidence is not proof: very recent preprints may be missing from the indexes.
+
 ## Install and run
 
 ```bash
@@ -215,4 +225,6 @@ A GPU is optional. On two CPU cores each scripted case takes about 5–10 minute
 - S. Yoshida et al., *Hybrid improper ferroelectricity in (Sr,Ca)₃Sn₂O₇ and beyond*, J. Am. Chem. Soc. 140, 15690 (2018). [record](https://research-portal.st-andrews.ac.uk/en/publications/hybrid-improper-ferroelectricity-in-srcasub3subsnsub2subosub7sub-/)
 - *Revealing pressure-driven structural transitions in the hybrid improper ferroelectric Sr₃Sn₂O₇*, Acta Cryst. B 81 (2025). [link](https://journals.iucr.org/b/issues/2025/03/00/yh5041/)
 - *Soft tilt and rotational modes in the hybrid improper ferroelectric Ca₃Mn₂O₇*. [arXiv:1803.03957](https://arxiv.org/abs/1803.03957)
+- spgrep: on-the-fly generator of space-group irreps, [JOSS](https://joss.theoj.org/papers/10.21105/joss.05269)
+- D. M. Hatch and H. T. Stokes, *INVARIANTS*, J. Appl. Cryst. 36, 951 (2003).
 - *Pressure-induced phase transformations of quasi-2D Sr₃Hf₂O₇*, J. Phys. Chem. C (2023). [arXiv:2306.04624](https://arxiv.org/abs/2306.04624)
