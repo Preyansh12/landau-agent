@@ -1,0 +1,118 @@
+{
+ "lattice_A": [
+  3.8349,
+  19.5207
+ ],
+ "modes": [
+  {
+   "name": "X- (d=2)",
+   "label": "k=(1/2,-1/2,0)*2 d=2 #2",
+   "curvature_eV_A2": -1.7661,
+   "polar": false,
+   "eigvec_weight_by_species": {
+    "O": 0.972,
+    "Ca": 0.236,
+    "Ti": 0.02
+   }
+  },
+  {
+   "name": "X- (d=2)",
+   "label": "k=(1/2,-1/2,0)*2 d=2 #8",
+   "curvature_eV_A2": -1.5952,
+   "polar": false,
+   "eigvec_weight_by_species": {
+    "O": 1.0,
+    "Ca": 0.0,
+    "Ti": 0.0
+   }
+  },
+  {
+   "name": "X+ (d=2)",
+   "label": "k=(1/2,-1/2,0)*2 d=2 #4",
+   "curvature_eV_A2": -1.5167,
+   "polar": false,
+   "eigvec_weight_by_species": {
+    "O": 1.0,
+    "Ca": 0.0,
+    "Ti": 0.0
+   }
+  },
+  {
+   "name": "X- (d=2)",
+   "label": "k=(1/2,-1/2,0)*2 d=2 #1",
+   "curvature_eV_A2": -1.2757,
+   "polar": false,
+   "eigvec_weight_by_species": {
+    "O": 0.967,
+    "Ca": 0.251,
+    "Ti": 0.037
+   }
+  },
+  {
+   "name": "X+ (d=2)",
+   "label": "k=(1/2,-1/2,0)*2 d=2 #5",
+   "curvature_eV_A2": -0.6508,
+   "polar": false,
+   "eigvec_weight_by_species": {
+    "O": 0.908,
+    "Ca": 0.418,
+    "Ti": 0.012
+   }
+  },
+  {
+   "name": "Γ- (d=2)",
+   "label": "k=(0,0,0) d=2 #1",
+   "curvature_eV_A2": -0.0057,
+   "polar": true,
+   "eigvec_weight_by_species": {
+    "O": 0.533,
+    "Ca": 0.838,
+    "Ti": 0.116
+   }
+  },
+  {
+   "name": "Z- (d=2)",
+   "label": "k=(1,0,0) d=2 #1",
+   "curvature_eV_A2": -0.0018,
+   "polar": false,
+   "eigvec_weight_by_species": {
+    "O": 0.415,
+    "Ca": 0.892,
+    "Ti": 0.178
+   }
+  },
+  {
+   "name": "Γ- (d=1)",
+   "label": "k=(0,0,0) d=1 #2",
+   "curvature_eV_A2": -0.0,
+   "polar": true,
+   "eigvec_weight_by_species": {
+    "O": 0.764,
+    "Ca": 0.5,
+    "Ti": 0.408
+   }
+  },
+  {
+   "name": "X+ (d=2)",
+   "label": "k=(1/2,-1/2,0)*2 d=2 #6",
+   "curvature_eV_A2": 0.2851,
+   "polar": false,
+   "eigvec_weight_by_species": {
+    "O": 0.851,
+    "Ca": 0.526,
+    "Ti": 0.015
+   }
+  },
+  {
+   "name": "Z+ (d=2)",
+   "label": "k=(1,0,0) d=2 #2",
+   "curvature_eV_A2": 0.4062,
+   "polar": false,
+   "eigvec_weight_by_species": {
+    "O": 0.62,
+    "Ca": 0.706,
+    "Ti": 0.343
+   }
+  }
+ ]
+}
