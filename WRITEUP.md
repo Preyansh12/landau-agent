@@ -21,7 +21,7 @@ All results below come from a scripted pipeline that calls the same tools in the
 
 **Ca₃Ti₂O₇ (hybrid improper ferroelectric), from the I4/mmm parent alone.**
 - **Instabilities.** The strongest MACE instabilities are an X-point octahedral tilt (X⁻, −1.65 eV/Å²) and rotation (X⁺, −1.30 eV/Å²).
-- **Coupling.** The engine finds that a polar Γ⁻ mode appears linearly in one trilinear invariant: `X⁻₁·X⁺₁·(P₁ − P₂) + X⁻₂·X⁺₂·(P₁ + P₂)`. Each k-arm's tilt × rotation product drives an in-plane polarisation, the coupling behind hybrid improper ferroelectricity, derived rather than assumed. (Caveat: unlike DFT, MACE also finds this polar mode weakly unstable on its own, −0.48 eV/Å².)
+- **Coupling.** The engine finds that a polar Γ⁻ mode appears linearly in one trilinear invariant: `X⁻₁·X⁺₁·(P₁ − P₂) + X⁻₂·X⁺₂·(P₁ + P₂)`. Each k-arm's tilt × rotation product drives an in-plane polarisation, the coupling behind hybrid improper ferroelectricity, derived rather than assumed. At the MACE lattice the polar mode is also weakly unstable on its own (−0.48 eV/Å²), but contracting the parent by about 1% (the size of MACE's PBE-like overestimate) makes it essentially neutral (−0.006). At that volume, with **only tilt and rotation as order parameters**, the A2₁am ground state still develops 9.5 μC/cm² (nominal charges) and beats the non-polar Pnma, where the trilinear term vanishes, by 41 meV/f.u.: the polarisation is driven purely by the coupling.
 - **Direct enumeration.** It gives **Cmc2₁ = A2₁am**, the known ground state:
   - 865 meV/f.u. below I4/mmm at fixed lattice, 882 meV/f.u. with a relaxed lattice.
   - Mode amplitudes: X⁻ 1.75 Å, X⁺ 1.22 Å, Γ⁻ 0.85 Å.

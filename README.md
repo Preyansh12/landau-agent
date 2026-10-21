@@ -44,6 +44,17 @@ The only input is the I4/mmm parent (`results/Ca3Ti2O7_run.txt`, `Ca3Ti2O7_log.j
 2. **Coupling.** The engine finds a polar Γ⁻ mode that appears **linearly** in one trilinear invariant with them:
    `X⁻₁·X⁺₁·(P₁ − P₂) + X⁻₂·X⁺₂·(P₁ + P₂)`
    Each k-arm's tilt × rotation product drives one in-plane polarisation direction. This is the coupling behind hybrid improper ferroelectricity. *Caveat and volume test:* at the MACE lattice the polar mode is weakly unstable on its own (−0.48 eV/Å²). Contracting the parent by 1.2% in a and 0.3% in c (`results/Ca3Ti2O7_exp_instabilities.json`, about the size of MACE's PBE-like overestimate) makes it essentially neutral (−0.006 eV/Å²), while the tilt (−1.77) and rotation (−1.52) strengthen. As in SrTiO₃, the polar instability is mostly a volume artefact of the potential; at the smaller volume the polarisation must come from the trilinear coupling.
+
+   **Direct test of the hybrid-improper mechanism** (`results/Ca3Ti2O7_contracted_enumeration.json`). At this contracted lattice we enumerate phases with **only the X⁻ tilt and X⁺ rotation** as order parameters. The polar mode is not an order parameter, but every relaxation lets it develop if symmetry allows (fixed lattice, meV/f.u. vs I4/mmm):
+
+   | Phase | Tilt / rotation pattern | Energy | Nominal P (μC/cm²) |
+   |---|---|---|---|
+   | **A2₁am (Cmc2₁)** | same k-arm | **−933.2** | **9.5** |
+   | Pnma | different k-arms | −891.8 | 0 |
+   | P4₂/mnm, Cmcm (tilt only) | | −655.3, −640.9 | 0 |
+   | Cmce (rotation only) | | −427.8 | 0 |
+
+   The polar mode has essentially no drive of its own here (−0.006 eV/Å²), yet the ground state carries 9.5 μC/cm². When tilt and rotation sit on different arms the trilinear term vanishes; that phase (Pnma) is non-polar and loses by 41 meV/f.u. This is the textbook hybrid-improper mechanism, reproduced end to end.
 3. **Landau prediction.** The fitted model has 6th order in each mode and couplings to 4th. Its RMSE is 14 meV/f.u. over sampled configurations below the parent (lowest −540 meV/f.u.). Its minimum is a Pmn2₁ point at −633 meV/f.u. (MACE gives −590 there). Relaxing that structure with MACE gives −865.16 meV/f.u.: Pmn2₁ at 0.001 Å tolerance, **Cmc2₁ (A2₁am) at 0.01 Å**, with residual second-arm tilt 0.009 Å (`Ca3Ti2O7_decompositions.json`). So the fitted polynomial gets into the right basin but does not pin the exact minimum; the deep, strongly anharmonic coupled wells need the MACE relaxation.
 4. **Independent check: direct enumeration.** Every symmetry-distinct tilt/rotation pattern is relaxed with MACE inside its own symmetry (meV/f.u. vs I4/mmm; † = loose relaxation only):
 
