@@ -6,7 +6,7 @@ Built for the Open Scientific Intelligence (OSI) Hackathon, 21–22 October 2026
 
 ## Scorecard
 
-**Right on 8 of 12 materials: all 7 n=2 Ruddlesden–Popper compounds, including 5 of 5 out-of-sample predictions committed to git before the literature check. Every failure is a cubic perovskite.**
+**Right on 9 of 13 materials: all 8 n=2 Ruddlesden–Popper compounds, including 6 of 6 out-of-sample predictions whose inputs were committed to git before the run. One of those has a ground state that is *not* A2₁am (Sr₃Ru₂O₇), and one has no distortion at all (Sr₃Ti₂O₇). Every failure is a cubic perovskite.**
 
 | Material | Known ground state | LandauAgent | |
 |---|---|---|---|
@@ -17,13 +17,14 @@ Built for the Open Scientific Intelligence (OSI) Hackathon, 21–22 October 2026
 | Sr₃Sn₂O₇ *(out of sample)* | A2₁am | A2₁am | ✅ |
 | Sr₃Hf₂O₇ *(out of sample)* | A2₁am (DFT) | A2₁am | ✅ |
 | Sr₃Ti₂O₇ *(out of sample, negative control)* | I4/mmm, undistorted | no instability | ✅ |
+| Sr₃Ru₂O₇ *(out of sample, not A2₁am)* | Bbcb (No. 68): RuO₆ rotation only, no tilt | Ccce (No. 68, same group): rotation only, opposite sense in the two layers of a bilayer | ✅ ‡ |
 | PbTiO₃ | P4mm | P4mm | ✅ |
 | LaAlO₃ | R-3c | Imma, 0.3 meV/f.u. below R-3c | ❌ near miss |
 | SrTiO₃ | I4/mcm | polar R3c: volume artefact, caught by `rescale_parent` | ❌ |
 | CaTiO₃ | Pnma | polar R3c (volume-sensitive polar mode) | ❌ |
 | BaTiO₃ | R3m | Aem2; top three phases within 0.3 meV/f.u. | ❌ |
 
-A2₁am is reported by spglib in its standard setting, Cmc2₁. Details, energies and runner-ups: [Benchmark](#benchmark-seven-materials-with-known-ground-states) and [Out-of-sample test](#out-of-sample-test-five-compounds-the-pipeline-never-saw).
+A2₁am is reported by spglib in its standard setting, Cmc2₁; Bbcb is a setting of Ccce. ‡ The frozen protocol keeps one irrep per short name, so for Sr₃Ru₂O₇ the X3⁻ tilt was not an order parameter. Rerun with the tilt included, Ccce still wins and A2₁am is 15 meV/f.u. higher (see Out-of-sample test). Details, energies and runner-ups: [Benchmark](#benchmark-seven-materials-with-known-ground-states) and [Out-of-sample test](#out-of-sample-test-six-compounds-the-pipeline-never-saw).
 
 ## The mechanism, found from the parent alone
 
@@ -166,7 +167,7 @@ What the misses say:
 
 The pattern is useful in its own right: where the physics is driven by large, strongly coupled oxygen-octahedron modes (the layered hybrid-improper compounds, PbTiO₃'s large polar distortion), the pipeline gets the ground state. Where the answer depends on sub-meV differences or on the equilibrium volume, it fails, and the tool output (near-degenerate energies, a polar mode that is volume-sensitive) shows that it is in that regime.
 
-## Out-of-sample test: five compounds the pipeline never saw
+## Out-of-sample test: six compounds the pipeline never saw
 
 After the benchmark, we froze the protocol (commit `766821e`). We ran it on five n=2 Ruddlesden–Popper compounds that were never used while developing or fixing the pipeline. The predictions were committed (`results/out_of_sample_predictions.md`, commit `10bcd67`) **before** we checked them against the literature. We chose the materials ourselves, and we knew the general picture for some of them. What is pre-registered is the pipeline output, which was not tuned to them.
 
@@ -177,6 +178,7 @@ After the benchmark, we froze the protocol (commit `766821e`). We ran it on five
 | Ca₃Sn₂O₇ | Cm / **Cmc2₁** | −3099 † (parent far from stable; not a transition energy) | Aem2 −2683 | polar; T_C of (Sr,Ca)₃Sn₂O₇ rises to about 800 K with Ca content (Yoshida et al. 2018) | **hit** |
 | Sr₃Sn₂O₇ | **Cmc2₁** | −556.7 | Pnma −550.2 | A2₁am ground state, T_C ≈ 410 K, Pnab above (Yoshida et al. 2018; Acta Cryst. B 2025) | **hit** |
 | Sr₃Hf₂O₇ | **Cmc2₁** | −453.1 | Pnma −441.2 | Cmc2₁ ground state from PBEsol DFT; no experimental structure found (Pressure-induced phase transformations of Sr₃Hf₂O₇, 2023) | agrees with DFT |
+| Sr₃Ru₂O₇ (added after review, inputs committed in `ebf1862` before the run) | Aea2 / **Ccce** | −268.7 | Ccce seed −268.7, P-4b2 −257.6, Cmce −246.6 | Bbcb (No. 68 = Ccce): RuO₆ rotations of about 7–8°, no tilt (arXiv:1003.5221 reports rotation only; Bbcb is the usual orthorhombic assignment) | **hit** ‡ |
 
 Cmc2₁ is the standard setting of A2₁am.
 
@@ -185,7 +187,20 @@ Notes:
 - **Ca₃Mn₂O₇:** MACE is used without spin, so magnetism is ignored.
 - **Close runner-ups:** in all four polar compounds the runner-up is the non-polar Pnma, 6–16 meV/f.u. higher. That fits the real phase diagrams, where non-polar orthorhombic phases (Acaa, Pnab) follow the polar phase on heating.
 
-Together with the benchmark, the pipeline is right on **8 of 12 materials, including all 7 n=2 Ruddlesden–Popper compounds**. All four failures (CaTiO₃, SrTiO₃ and BaTiO₃, plus LaAlO₃'s near miss) are cubic perovskites, where the answer turns on volume-sensitive polar modes or sub-meV degeneracies.
+Sr₃Ru₂O₇ answers the obvious objection that the pipeline simply returns A2₁am for every n=2 compound with a tilt and a rotation. Its two rotation instabilities (same sense −0.85 eV/Å², opposite sense −0.90 eV/Å², identified by pattern projection) compete, and the pipeline picks the opposite-sense rotation, Ccce = Bbcb, the observed space group. The same-sense rotation phase Cmce (No. 64) is 22 meV/f.u. higher.
+
+*Robustness check (not part of the frozen protocol).* The protocol keeps one irrep per short name, so the X3⁻ tilt (−0.84 eV/Å²) was not offered as an order parameter. Rerun with both rotations **and** the tilt (`run_sro_tilt_check.py`, `results/Sr3Ru2O7_with_tilt.json`, relaxed cell):
+
+| Phase | Energy (meV/f.u.) |
+|---|---|
+| **Ccce (= Bbcb), rotation only** | **−268.68** |
+| P2₁/c | −268.35 |
+| Pmn2₁ seed → A2₁am (Cmc2₁ at 0.01 Å) | −253.91 |
+| Cmce, same-sense rotation | −246.58 |
+
+The hybrid-improper A2₁am state is available and loses by 15 meV/f.u., so the pipeline's answer is not built in. P2₁/c, a lower-symmetry phase, is only 0.33 meV/f.u. above Ccce, below what we trust MACE to resolve.
+
+Together with the benchmark, the pipeline is right on **9 of 13 materials, including all 8 n=2 Ruddlesden–Popper compounds**. All four failures (CaTiO₃, SrTiO₃ and BaTiO₃, plus LaAlO₃'s near miss) are cubic perovskites, where the answer turns on volume-sensitive polar modes or sub-meV degeneracies.
 
 ## How the LLM is used, and how it isn't
 

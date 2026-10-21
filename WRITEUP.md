@@ -40,12 +40,13 @@ The benchmark and showcase numbers below come from a scripted pipeline that call
 - **Misses (3):** CaTiO₃ and SrTiO₃ go polar (R3c) because of the PBE-like volume, the artefact the agent's volume check exists for. BaTiO₃ has three phases within 0.3 meV/f.u., so the potential gives no ranking.
 - Our first protocol scored 2/7. Its misses exposed two pipeline bugs (non-exhaustive direction set; refinement picked at fixed lattice), which we fixed before rerunning. Both versions are in the repository.
 
-**Out-of-sample test: five Ruddlesden–Popper compounds the pipeline never saw**, predictions committed to git before the literature check.
+**Out-of-sample test: six Ruddlesden–Popper compounds the pipeline never saw**, predictions committed to git before the literature check.
 - Sr₃Ti₂O₇: no instability, stays I4/mmm (negative control, correct).
 - Ca₃Mn₂O₇, Ca₃Sn₂O₇, Sr₃Sn₂O₇: polar A2₁am, matching experiment.
 - Sr₃Hf₂O₇ (no experimental structure that we found): A2₁am, matching a published PBEsol DFT study.
 - In each polar case the non-polar Pnma is the runner-up, 6–16 meV/f.u. higher, consistent with the non-polar orthorhombic phases these materials pass through on heating.
-- Overall: 8 of 12 materials right, including all 7 n=2 Ruddlesden–Popper compounds. All four failures are cubic perovskites.
+- Sr₃Ru₂O₇, chosen because its ground state is not A2₁am (Bbcb, rotation only): the pipeline predicts Ccce (= Bbcb, the same space group No. 68), a pure opposite-sense rotation. With the tilt also offered as an order parameter, A2₁am is 15 meV/f.u. higher, so the answer is not built into the method.
+- Overall: 9 of 13 materials right, including all 8 n=2 Ruddlesden–Popper compounds. All four failures are cubic perovskites.
 
 ## What we learned
 
