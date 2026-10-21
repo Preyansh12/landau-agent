@@ -33,6 +33,7 @@ BUILTIN = {
     "Ca3Sn2O7": lambda: ruddlesden_popper_n2("Ca", "Sn", "O", a=4.0, c=19.9),
     "Sr3Sn2O7": lambda: ruddlesden_popper_n2("Sr", "Sn", "O", a=4.05, c=20.8),
     "Sr3Hf2O7": lambda: ruddlesden_popper_n2("Sr", "Hf", "O", a=4.1, c=20.9),
+    "Sr3Ru2O7": lambda: ruddlesden_popper_n2("Sr", "Ru", "O", a=3.89, c=20.7),
 }
 
 
