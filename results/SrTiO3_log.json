@@ -1,0 +1,685 @@
+[
+ {
+  "tool": "load_parent",
+  "t": "21:49:25",
+  "result": {
+   "formula": "O3SrTi",
+   "space_group": "Pm-3m (221)",
+   "n_atoms": 5,
+   "lattice_A": [
+    3.9429,
+    3.9429,
+    3.9429,
+    90.0,
+    90.0,
+    90.0
+   ],
+   "relaxed_with": "MACE-MP-0 (medium, float64)"
+  }
+ },
+ {
+  "tool": "set_supercell",
+  "t": "21:49:26",
+  "result": {
+   "group_order": 384,
+   "n_atoms": 40,
+   "k_points": [
+    "M",
+    "R",
+    "X",
+    "Γ"
+   ],
+   "irreps": [
+    {
+     "label": "k=(0,0,0) d=3 #1",
+     "name": "Γ- (d=3)",
+     "dim": 3,
+     "multiplicity": 4,
+     "polar": true
+    },
+    {
+     "label": "k=(0,0,0) d=3 #2",
+     "name": "Γ- (d=3)",
+     "dim": 3,
+     "multiplicity": 1,
+     "polar": false
+    },
+    {
+     "label": "k=(1/2,1/2,1/2) d=1 #1",
+     "name": "R+ (d=1)",
+     "dim": 1,
+     "multiplicity": 1,
+     "polar": false
+    },
+    {
+     "label": "k=(1/2,1/2,1/2) d=2 #1",
+     "name": "R+ (d=2)",
+     "dim": 2,
+     "multiplicity": 1,
+     "polar": false
+    },
+    {
+     "label": "k=(1/2,1/2,1/2) d=3 #1",
+     "name": "R+ (d=3)",
+     "dim": 3,
+     "multiplicity": 2,
+     "polar": false
+    },
+    {
+     "label": "k=(1/2,1/2,1/2) d=3 #2",
+     "name": "R- (d=3)",
+     "dim": 3,
+     "multiplicity": 1,
+     "polar": false
+    },
+    {
+     "label": "k=(1/2,1/2,1/2) d=3 #3",
+     "name": "R+ (d=3)",
+     "dim": 3,
+     "multiplicity": 1,
+     "polar": false
+    },
+    {
+     "label": "k=(0,0,1/2)*3 d=3 #1",
+     "name": "X- (d=3)",
+     "dim": 3,
+     "multiplicity": 1,
+     "polar": false
+    },
+    {
+     "label": "k=(0,0,1/2)*3 d=3 #2",
+     "name": "X- (d=3)",
+     "dim": 3,
+     "multiplicity": 2,
+     "polar": false
+    },
+    {
+     "label": "k=(0,0,1/2)*3 d=3 #3",
+     "name": "X+ (d=3)",
+     "dim": 3,
+     "multiplicity": 2,
+     "polar": false
+    },
+    {
+     "label": "k=(0,0,1/2)*3 d=6 #1",
+     "name": "X+ (d=6)",
+     "dim": 6,
+     "multiplicity": 2,
+     "polar": false
+    },
+    {
+     "label": "k=(0,0,1/2)*3 d=6 #2",
+     "name": "X- (d=6)",
+     "dim": 6,
+     "multiplicity": 3,
+     "polar": false
+    },
+    {
+     "label": "k=(0,1/2,1/2)*3 d=3 #1",
+     "name": "M+ (d=3)",
+     "dim": 3,
+     "multiplicity": 1,
+     "polar": false
+    },
+    {
+     "label": "k=(0,1/2,1/2)*3 d=3 #2",
+     "name": "M+ (d=3)",
+     "dim": 3,
+     "multiplicity": 1,
+     "polar": false
+    },
+    {
+     "label": "k=(0,1/2,1/2)*3 d=3 #3",
+     "name": "M- (d=3)",
+     "dim": 3,
+     "multiplicity": 2,
+     "polar": false
+    },
+    {
+     "label": "k=(0,1/2,1/2)*3 d=3 #4",
+     "name": "M+ (d=3)",
+     "dim": 3,
+     "multiplicity": 1,
+     "polar": false
+    },
+    {
+     "label": "k=(0,1/2,1/2)*3 d=3 #5",
+     "name": "M+ (d=3)",
+     "dim": 3,
+     "multiplicity": 1,
+     "polar": false
+    },
+    {
+     "label": "k=(0,1/2,1/2)*3 d=3 #6",
+     "name": "M- (d=3)",
+     "dim": 3,
+     "multiplicity": 1,
+     "polar": false
+    },
+    {
+     "label": "k=(0,1/2,1/2)*3 d=6 #1",
+     "name": "M- (d=6)",
+     "dim": 6,
+     "multiplicity": 3,
+     "polar": false
+    },
+    {
+     "label": "k=(0,1/2,1/2)*3 d=6 #2",
+     "name": "M+ (d=6)",
+     "dim": 6,
+     "multiplicity": 1,
+     "polar": false
+    }
+   ]
+  }
+ },
+ {
+  "tool": "find_instabilities",
+  "t": "21:49:26",
+  "result": {
+   "modes": [
+    {
+     "label": "k=(0,0,0) d=3 #1",
+     "name": "Γ- (d=3)",
+     "curvature_eV_A2": -0.6365,
+     "polar": true,
+     "unstable": true,
+     "eigvec_weight_by_species": {
+      "O": 0.626,
+      "Ti": 0.658,
+      "Sr": 0.419
+     }
+    },
+    {
+     "label": "k=(1/2,1/2,1/2) d=3 #3",
+     "name": "R+ (d=3)",
+     "curvature_eV_A2": -0.2846,
+     "polar": false,
+     "unstable": true,
+     "eigvec_weight_by_species": {
+      "O": 1.0,
+      "Ti": 0.0,
+      "Sr": 0.0
+     }
+    },
+    {
+     "label": "k=(0,1/2,1/2)*3 d=3 #2",
+     "name": "M+ (d=3)",
+     "curvature_eV_A2": -0.0426,
+     "polar": false,
+     "unstable": true,
+     "eigvec_weight_by_species": {
+      "O": 1.0,
+      "Ti": 0.0,
+      "Sr": 0.0
+     }
+    },
+    {
+     "label": "k=(0,0,1/2)*3 d=6 #2",
+     "name": "X- (d=6)",
+     "curvature_eV_A2": 0.6119,
+     "polar": false,
+     "unstable": false,
+     "eigvec_weight_by_species": {
+      "O": 0.642,
+      "Ti": 0.766,
+      "Sr": 0.0
+     }
+    },
+    {
+     "label": "k=(0,1/2,1/2)*3 d=3 #3",
+     "name": "M- (d=3)",
+     "curvature_eV_A2": 0.8146,
+     "polar": false,
+     "unstable": false,
+     "eigvec_weight_by_species": {
+      "O": 0.201,
+      "Ti": 0.98,
+      "Sr": 0.0
+     }
+    },
+    {
+     "label": "k=(0,1/2,1/2)*3 d=3 #6",
+     "name": "M- (d=3)",
+     "curvature_eV_A2": 2.6173,
+     "polar": false,
+     "unstable": false,
+     "eigvec_weight_by_species": {
+      "O": 0.0,
+      "Ti": 0.0,
+      "Sr": 1.0
+     }
+    },
+    {
+     "label": "k=(0,1/2,1/2)*3 d=6 #1",
+     "name": "M- (d=6)",
+     "curvature_eV_A2": 2.7065,
+     "polar": false,
+     "unstable": false,
+     "eigvec_weight_by_species": {
+      "O": 0.379,
+      "Ti": 0.237,
+      "Sr": 0.895
+     }
+    },
+    {
+     "label": "k=(0,0,1/2)*3 d=6 #1",
+     "name": "X+ (d=6)",
+     "curvature_eV_A2": 2.75,
+     "polar": false,
+     "unstable": false,
+     "eigvec_weight_by_species": {
+      "O": 0.184,
+      "Ti": 0.0,
+      "Sr": 0.983
+     }
+    },
+    {
+     "label": "k=(0,0,0) d=3 #2",
+     "name": "Γ- (d=3)",
+     "curvature_eV_A2": 2.9012,
+     "polar": false,
+     "unstable": false,
+     "eigvec_weight_by_species": {
+      "O": 1.0,
+      "Ti": 0.0,
+      "Sr": 0.0
+     }
+    },
+    {
+     "label": "k=(0,0,1/2)*3 d=3 #1",
+     "name": "X- (d=3)",
+     "curvature_eV_A2": 3.7706,
+     "polar": false,
+     "unstable": false,
+     "eigvec_weight_by_species": {
+      "O": 1.0,
+      "Ti": 0.0,
+      "Sr": 0.0
+     }
+    },
+    {
+     "label": "k=(1/2,1/2,1/2) d=3 #1",
+     "name": "R+ (d=3)",
+     "curvature_eV_A2": 4.1395,
+     "polar": false,
+     "unstable": false,
+     "eigvec_weight_by_species": {
+      "O": 0.281,
+      "Ti": 0.0,
+      "Sr": 0.96
+     }
+    },
+    {
+     "label": "k=(0,0,1/2)*3 d=3 #2",
+     "name": "X- (d=3)",
+     "curvature_eV_A2": 5.1298,
+     "polar": false,
+     "unstable": false,
+     "eigvec_weight_by_species": {
+      "O": 0.943,
+      "Ti": 0.333,
+      "Sr": 0.0
+     }
+    },
+    {
+     "label": "k=(0,1/2,1/2)*3 d=6 #2",
+     "name": "M+ (d=6)",
+     "curvature_eV_A2": 5.6669,
+     "polar": false,
+     "unstable": false,
+     "eigvec_weight_by_species": {
+      "O": 1.0,
+      "Ti": 0.0,
+      "Sr": 0.0
+     }
+    },
+    {
+     "label": "k=(0,0,1/2)*3 d=3 #3",
+     "name": "X+ (d=3)",
+     "curvature_eV_A2": 6.5432,
+     "polar": false,
+     "unstable": false,
+     "eigvec_weight_by_species": {
+      "O": 0.265,
+      "Ti": 0.0,
+      "Sr": 0.964
+     }
+    },
+    {
+     "label": "k=(1/2,1/2,1/2) d=2 #1",
+     "name": "R+ (d=2)",
+     "curvature_eV_A2": 11.6983,
+     "polar": false,
+     "unstable": false,
+     "eigvec_weight_by_species": {
+      "O": 1.0,
+      "Ti": 0.0,
+      "Sr": 0.0
+     }
+    },
+    {
+     "label": "k=(0,1/2,1/2)*3 d=3 #1",
+     "name": "M+ (d=3)",
+     "curvature_eV_A2": 11.8308,
+     "polar": false,
+     "unstable": false,
+     "eigvec_weight_by_species": {
+      "O": 1.0,
+      "Ti": 0.0,
+      "Sr": 0.0
+     }
+    },
+    {
+     "label": "k=(0,1/2,1/2)*3 d=3 #5",
+     "name": "M+ (d=3)",
+     "curvature_eV_A2": 11.8686,
+     "polar": false,
+     "unstable": false,
+     "eigvec_weight_by_species": {
+      "O": 1.0,
+      "Ti": 0.0,
+      "Sr": 0.0
+     }
+    },
+    {
+     "label": "k=(1/2,1/2,1/2) d=3 #2",
+     "name": "R- (d=3)",
+     "curvature_eV_A2": 24.3203,
+     "polar": false,
+     "unstable": false,
+     "eigvec_weight_by_species": {
+      "O": 0.0,
+      "Ti": 1.0,
+      "Sr": 0.0
+     }
+    },
+    {
+     "label": "k=(0,1/2,1/2)*3 d=3 #4",
+     "name": "M+ (d=3)",
+     "curvature_eV_A2": 35.2043,
+     "polar": false,
+     "unstable": false,
+     "eigvec_weight_by_species": {
+      "O": 1.0,
+      "Ti": 0.0,
+      "Sr": 0.0
+     }
+    },
+    {
+     "label": "k=(1/2,1/2,1/2) d=1 #1",
+     "name": "R+ (d=1)",
+     "curvature_eV_A2": 39.3313,
+     "polar": false,
+     "unstable": false,
+     "eigvec_weight_by_species": {
+      "O": 1.0,
+      "Ti": 0.0,
+      "Sr": 0.0
+     }
+    }
+   ]
+  }
+ },
+ {
+  "tool": "choose_order_parameters",
+  "t": "21:49:27",
+  "result": {
+   "order_parameters": [
+    {
+     "name": "Γ-_1",
+     "label": "k=(0,0,0) d=3 #1",
+     "components": 3
+    },
+    {
+     "name": "R+_2",
+     "label": "k=(1/2,1/2,1/2) d=3 #3",
+     "components": 3
+    }
+   ]
+  }
+ },
+ {
+  "tool": "forced_couplings",
+  "t": "21:49:45",
+  "result": {
+   "forced_secondary_modes": [
+    {
+     "label": "k=(1/2,1/2,1/2) d=3 #2",
+     "name": "R- (d=3)",
+     "polar": false,
+     "curvature_eV_A2": 24.3203,
+     "coupling_terms": [
+      "Rp_2_1*S_1*Γm_1_3 + Rp_2_1*S_2*Γm_1_1 - Rp_2_2*S_2*Γm_1_2 + Rp_2_2*S_3*Γm_1_3 + Rp_2_3*S_1*Γm_1_2 + Rp_2_3*S_3*Γm_1_1"
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "tool": "landau_polynomial",
+  "t": "21:49:45",
+  "result": {
+   "n_invariants": 9,
+   "invariants": [
+    {
+     "degree": 2,
+     "term": "Γm_1_1**2 + Γm_1_2**2 + Γm_1_3**2",
+     "kind": "Γ-_1^2  [single]"
+    },
+    {
+     "degree": 2,
+     "term": "Rp_2_1**2 + Rp_2_2**2 + Rp_2_3**2",
+     "kind": "R+_2^2  [single]"
+    },
+    {
+     "degree": 4,
+     "term": "Γm_1_1**4 + Γm_1_2**4 + Γm_1_3**4",
+     "kind": "Γ-_1^4  [single]"
+    },
+    {
+     "degree": 4,
+     "term": "Γm_1_1**2*Γm_1_2**2 + Γm_1_1**2*Γm_1_3**2 + Γm_1_2**2*Γm_1_3**2",
+     "kind": "Γ-_1^4  [single]"
+    },
+    {
+     "degree": 4,
+     "term": "Rp_2_1**2*Γm_1_1**2 + Rp_2_1**2*Γm_1_3**2 + Rp_2_2**2*Γm_1_2**2 + Rp_2_2**2*Γm_1_3**2 + Rp_2_3**2*Γm_1_1**2 + Rp_2_3**2*Γm_1_2**2",
+     "kind": "Γ-_1^2 * R+_2^2  [coupling]"
+    },
+    {
+     "degree": 4,
+     "term": "Rp_2_1**2*Γm_1_2**2 + Rp_2_2**2*Γm_1_1**2 + Rp_2_3**2*Γm_1_3**2",
+     "kind": "Γ-_1^2 * R+_2^2  [coupling]"
+    },
+    {
+     "degree": 4,
+     "term": "Rp_2_1*Rp_2_2*Γm_1_1*Γm_1_2 - Rp_2_1*Rp_2_3*Γm_1_2*Γm_1_3 - Rp_2_2*Rp_2_3*Γm_1_1*Γm_1_3",
+     "kind": "Γ-_1^2 * R+_2^2  [coupling]"
+    },
+    {
+     "degree": 4,
+     "term": "Rp_2_1**4 + Rp_2_2**4 + Rp_2_3**4",
+     "kind": "R+_2^4  [single]"
+    },
+    {
+     "degree": 4,
+     "term": "Rp_2_1**2*Rp_2_2**2 + Rp_2_1**2*Rp_2_3**2 + Rp_2_2**2*Rp_2_3**2",
+     "kind": "R+_2^4  [single]"
+    }
+   ],
+   "landau_condition": [
+    {
+     "irrep": "Γ-_1",
+     "totally_symmetric": false,
+     "third_order_invariant": false,
+     "landau_condition": "satisfied: no cubic invariant"
+    },
+    {
+     "irrep": "R+_2",
+     "totally_symmetric": false,
+     "third_order_invariant": false,
+     "landau_condition": "satisfied: no cubic invariant"
+    }
+   ]
+  }
+ },
+ {
+  "tool": "fit_landau",
+  "t": "21:52:23",
+  "result": {
+   "single_mode_wells": {
+    "Γ-_1": {
+     "amp_at_min_A": 0.1,
+     "E_min_meV_per_fu": -0.3024247817933201
+    },
+    "R+_2": {
+     "amp_at_min_A": 0.6,
+     "E_min_meV_per_fu": -3.462642444901576
+    }
+   },
+   "sampling_scales_A": [
+    0.35,
+    0.78
+   ],
+   "n_points": 185,
+   "rmse_meV_per_fu": 0.0939,
+   "fit_diagnostics": {
+    "rmse_low_energy_half_meV": 0.094,
+    "energy_range_meV": [
+     -4.3,
+     32.0
+    ]
+   },
+   "units": "meV per parent formula unit, order parameters in Å (whole supercell)",
+   "rmse_definition": "RMSE over sampled configurations below the parent energy (weighted fit; far-uphill points down-weighted)",
+   "coefficients": [
+    {
+     "degree": 2,
+     "coefficient_meV": -32.1298,
+     "term": "Γm_1_1**2 + Γm_1_2**2 + Γm_1_3**2",
+     "kind": "Γ-_1^2  [single]"
+    },
+    {
+     "degree": 2,
+     "coefficient_meV": -18.0939,
+     "term": "Rp_2_1**2 + Rp_2_2**2 + Rp_2_3**2",
+     "kind": "R+_2^2  [single]"
+    },
+    {
+     "degree": 4,
+     "coefficient_meV": 758.8598,
+     "term": "Γm_1_1**4 + Γm_1_2**4 + Γm_1_3**4",
+     "kind": "Γ-_1^4  [single]"
+    },
+    {
+     "degree": 4,
+     "coefficient_meV": 665.7376,
+     "term": "Γm_1_1**2*Γm_1_2**2 + Γm_1_1**2*Γm_1_3**2 + Γm_1_2**2*Γm_1_3**2",
+     "kind": "Γ-_1^4  [single]"
+    },
+    {
+     "degree": 4,
+     "coefficient_meV": -29.1128,
+     "term": "Rp_2_1**2*Γm_1_1**2 + Rp_2_1**2*Γm_1_3**2 + Rp_2_2**2*Γm_1_2**2 + Rp_2_2**2*Γm_1_3**2 + Rp_2_3**2*Γm_1_1**2 + Rp_2_3**2*Γm_1_2**2",
+     "kind": "Γ-_1^2 * R+_2^2  [coupling]"
+    },
+    {
+     "degree": 4,
+     "coefficient_meV": 54.0165,
+     "term": "Rp_2_1**2*Γm_1_2**2 + Rp_2_2**2*Γm_1_1**2 + Rp_2_3**2*Γm_1_3**2",
+     "kind": "Γ-_1^2 * R+_2^2  [coupling]"
+    },
+    {
+     "degree": 4,
+     "coefficient_meV": -120.5718,
+     "term": "Rp_2_1*Rp_2_2*Γm_1_1*Γm_1_2 - Rp_2_1*Rp_2_3*Γm_1_2*Γm_1_3 - Rp_2_2*Rp_2_3*Γm_1_1*Γm_1_3",
+     "kind": "Γ-_1^2 * R+_2^2  [coupling]"
+    },
+    {
+     "degree": 4,
+     "coefficient_meV": 23.6478,
+     "term": "Rp_2_1**4 + Rp_2_2**4 + Rp_2_3**4",
+     "kind": "R+_2^4  [single]"
+    },
+    {
+     "degree": 4,
+     "coefficient_meV": 48.281,
+     "term": "Rp_2_1**2*Rp_2_2**2 + Rp_2_1**2*Rp_2_3**2 + Rp_2_2**2*Rp_2_3**2",
+     "kind": "R+_2^4  [single]"
+    },
+    {
+     "degree": 6,
+     "coefficient_meV": -350.9265,
+     "term": "Γm_1_1**6 + Γm_1_2**6 + Γm_1_3**6",
+     "kind": "Γ-_1^6  [single]"
+    },
+    {
+     "degree": 6,
+     "coefficient_meV": -1098.7593,
+     "term": "Γm_1_1**4*Γm_1_2**2 + Γm_1_1**4*Γm_1_3**2 + Γm_1_1**2*Γm_1_2**4 + Γm_1_1**2*Γm_1_3**4 + Γm_1_2**4*Γm_1_3**2 + Γm_1_2**2*Γm_1_3**4",
+     "kind": "Γ-_1^6  [single]"
+    },
+    {
+     "degree": 6,
+     "coefficient_meV": -2709.6732,
+     "term": "Γm_1_1**2*Γm_1_2**2*Γm_1_3**2",
+     "kind": "Γ-_1^6  [single]"
+    },
+    {
+     "degree": 6,
+     "coefficient_meV": -1.2092,
+     "term": "Rp_2_1**6 + Rp_2_2**6 + Rp_2_3**6",
+     "kind": "R+_2^6  [single]"
+    },
+    {
+     "degree": 6,
+     "coefficient_meV": -3.4309,
+     "term": "Rp_2_1**4*Rp_2_2**2 + Rp_2_1**4*Rp_2_3**2 + Rp_2_1**2*Rp_2_2**4 + Rp_2_1**2*Rp_2_3**4 + Rp_2_2**4*Rp_2_3**2 + Rp_2_2**2*Rp_2_3**4",
+     "kind": "R+_2^6  [single]"
+    },
+    {
+     "degree": 6,
+     "coefficient_meV": -12.2798,
+     "term": "Rp_2_1**2*Rp_2_2**2*Rp_2_3**2",
+     "kind": "R+_2^6  [single]"
+    }
+   ]
+  }
+ },
+ {
+  "tool": "predict_ground_state",
+  "t": "21:53:10",
+  "result": {
+   "order_parameter_values": {
+    "Γ-_1": [
+     1.1466,
+     -1.1466,
+     -1.1466
+    ],
+    "R+_2": [
+     -1.1466,
+     1.1466,
+     1.1466
+    ]
+   },
+   "landau_energy_meV_per_fu": -16698.187,
+   "mace_energy_at_prediction_meV_per_fu": 1816.622,
+   "predicted_space_group": "R3c (161)",
+   "mace_relaxed_in_predicted_symmetry_meV_per_fu": -5.086,
+   "relaxed_space_group": "R3c (161)",
+   "polarization_nominal_charges_uC_cm2": [
+    7.51,
+    7.51,
+    7.51
+   ]
+  }
+ },
+ {
+  "tool": "save_prediction",
+  "t": "21:53:10",
+  "result": {
+   "path": "results/SrTiO3_predicted.cif"
+  }
+ }
+]

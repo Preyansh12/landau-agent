@@ -1,0 +1,126 @@
+cuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.
+Using Materials Project MACE for MACECalculator with /root/.cache/mace/20231203mace128L1_epoch199model
+Using float64 for MACECalculator, which is slower but more accurate. Recommended for geometry optimization.
+{
+ "phases": [
+  {
+   "space_group_seed": "Cmc2_1 (36)",
+   "order_parameter_directions": {
+    "X-_1": [
+     1.0,
+     0.0
+    ],
+    "X+_2": [
+     1.0,
+     0.0
+    ]
+   },
+   "fixed_cell": {
+    "energy_meV_per_fu": -865.14,
+    "space_group": "Cmc2_1 (36)",
+    "space_group_loose": "Cmc2_1 (36)",
+    "lattice_A": [
+     5.4896,
+     5.4896,
+     19.5844
+    ],
+    "polarization_nominal_uC_cm2": [
+     -10.32,
+     -10.32,
+     -0.0
+    ]
+   },
+   "relaxed_cell": {
+    "energy_meV_per_fu": -882.37,
+    "space_group": "Cmc2_1 (36)",
+    "space_group_loose": "Cmc2_1 (36)",
+    "lattice_A": [
+     5.5196,
+     5.4486,
+     19.4856
+    ],
+    "polarization_nominal_uC_cm2": null
+   }
+  },
+  {
+   "space_group_seed": "Pmc2_1 (26)",
+   "order_parameter_directions": {
+    "X-_1": [
+     1.0,
+     0.0
+    ],
+    "X+_2": [
+     0.707,
+     0.707
+    ]
+   },
+   "fixed_cell": {
+    "energy_meV_per_fu": -865.01,
+    "space_group": "Pmc2_1 (26)",
+    "space_group_loose": "Pmc2_1 (26)",
+    "lattice_A": [
+     5.4896,
+     5.4896,
+     19.5844
+    ],
+    "polarization_nominal_uC_cm2": [
+     -10.03,
+     -10.03,
+     0.0
+    ]
+   },
+   "relaxed_cell": {
+    "energy_meV_per_fu": -882.36,
+    "space_group": "Pmc2_1 (26)",
+    "space_group_loose": "Pmc2_1 (26)",
+    "lattice_A": [
+     5.5193,
+     5.4495,
+     19.4861
+    ],
+    "polarization_nominal_uC_cm2": null
+   }
+  },
+  {
+   "space_group_seed": "Pnma (62)",
+   "order_parameter_directions": {
+    "X-_1": [
+     1.0,
+     0.0
+    ],
+    "X+_2": [
+     0.0,
+     1.0
+    ]
+   },
+   "fixed_cell": {
+    "energy_meV_per_fu": -831.94,
+    "space_group": "Pnma (62)",
+    "space_group_loose": "Pnma (62)",
+    "lattice_A": [
+     5.4896,
+     5.4896,
+     19.5844
+    ],
+    "polarization_nominal_uC_cm2": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "relaxed_cell": {
+    "energy_meV_per_fu": -842.08,
+    "space_group": "Pnma (62)",
+    "space_group_loose": "Pnma (62)",
+    "lattice_A": [
+     5.5086,
+     5.4519,
+     19.5531
+    ],
+    "polarization_nominal_uC_cm2": null
+   }
+  }
+ ],
+ "ranked_by": "relaxed_cell"
+}
+Done in 587s

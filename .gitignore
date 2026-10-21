@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+scratch_*.py
+*.log
+cto_*.npy
+cto_*.cif
+cto_*.pkl
+results/*_force_constants.npy
+agent_log.json
