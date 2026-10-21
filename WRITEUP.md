@@ -40,7 +40,7 @@ The benchmark and showcase numbers below come from a scripted pipeline that call
 - **Misses (3):** CaTiO₃ and SrTiO₃ go polar (R3c) because of the PBE-like volume, the artefact the agent's volume check exists for. BaTiO₃ has three phases within 0.3 meV/f.u., so the potential gives no ranking.
 - Our first protocol scored 2/7. Its misses exposed two pipeline bugs (non-exhaustive direction set; refinement picked at fixed lattice), which we fixed before rerunning. Both versions are in the repository.
 
-**Out-of-sample test: six Ruddlesden–Popper compounds the pipeline never saw**, predictions committed to git before the literature check.
+**Out-of-sample test: six Ruddlesden–Popper compounds the pipeline never saw**, with inputs committed to git before each run (the first five also before any literature check).
 - Sr₃Ti₂O₇: no instability, stays I4/mmm (negative control, correct).
 - Ca₃Mn₂O₇, Ca₃Sn₂O₇, Sr₃Sn₂O₇: polar A2₁am, matching experiment.
 - Sr₃Hf₂O₇ (no experimental structure that we found): A2₁am, matching a published PBEsol DFT study.
