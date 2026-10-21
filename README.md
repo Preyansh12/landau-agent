@@ -41,7 +41,7 @@ The only input is the I4/mmm parent. LandauAgent:
 
 1. Finds the X-point octahedral tilt (X⁻) and rotation (X⁺) as the strongest MACE instabilities.
 2. Shows that a polar Γ⁻ mode appears **linearly** in invariants with them. The invariants come out arm-resolved: `S_1·X⁻_1·X⁺_1 − S_2·X⁻_2·X⁺_2` and `S_1·X⁻_2·X⁺_2 + S_2·X⁻_1·X⁺_1`. This is the trilinear coupling of hybrid improper ferroelectricity.
-3. Minimises the fitted Landau model (6th order in each mode, couplings to 4th). The minimum puts tilt and rotation on the same k-arm with an induced polarisation, and MACE relaxation in that symmetry gives Cmc2₁ (A2₁am).
+3. Minimises the fitted Landau model (6th order in each mode, couplings to 4th; fit RMSE 14 meV/f.u. over configurations spanning about 900 meV/f.u.). The fitted minimum lies in the polar tilt+rotation basin, and relaxing it with MACE converges to **A2₁am**: −865.2 meV/f.u., Cmc2₁ at 0.01 Å tolerance, with residual second-arm tilt 0.009 Å. The Landau model alone does not pin the exact minimum, because the coupled wells are deep and strongly anharmonic, which is why the agent always confirms with MACE.
 4. Checks this independently by enumerating every distinct tilt/rotation pattern and relaxing each with MACE in its own symmetry (meV/f.u. vs I4/mmm):
 
 | Phase | Fixed lattice | Relaxed lattice | Nominal P (μC/cm²) |

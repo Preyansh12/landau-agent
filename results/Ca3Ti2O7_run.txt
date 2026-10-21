@@ -1,1 +1,446 @@
 cuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.
+Using Materials Project MACE for MACECalculator with /root/.cache/mace/20231203mace128L1_epoch199model
+Using float64 for MACECalculator, which is slower but more accurate. Recommended for geometry optimization.
+
+=== load_parent  [19s]
+{
+ "formula": "Ca6O14Ti4",
+ "space_group": "I4/mmm (139)",
+ "n_atoms": 24,
+ "lattice_A": [
+  3.8818,
+  3.8818,
+  19.5844,
+  90.0,
+  90.0,
+  90.0
+ ],
+ "relaxed_with": "MACE-MP-0 (medium, float64)"
+}
+
+=== set_supercell  [19s]
+{
+ "group_order": 64,
+ "n_atoms": 48,
+ "k_points": [
+  "X",
+  "Z",
+  "Γ"
+ ]
+}
+
+=== instabilities  [19s]
+[
+ {
+  "label": "k=(1/2,-1/2,0)*2 d=2 #2",
+  "name": "X- (d=2)",
+  "curvature_eV_A2": -1.6484,
+  "polar": false,
+  "unstable": true,
+  "eigvec_weight_by_species": {
+   "O": 0.965,
+   "Ca": 0.262,
+   "Ti": 0.023
+  }
+ },
+ {
+  "label": "k=(1/2,-1/2,0)*2 d=2 #8",
+  "name": "X- (d=2)",
+  "curvature_eV_A2": -1.3732,
+  "polar": false,
+  "unstable": true,
+  "eigvec_weight_by_species": {
+   "O": 1.0,
+   "Ca": 0.0,
+   "Ti": 0.0
+  }
+ },
+ {
+  "label": "k=(1/2,-1/2,0)*2 d=2 #4",
+  "name": "X+ (d=2)",
+  "curvature_eV_A2": -1.2955,
+  "polar": false,
+  "unstable": true,
+  "eigvec_weight_by_species": {
+   "O": 1.0,
+   "Ca": 0.0,
+   "Ti": 0.0
+  }
+ },
+ {
+  "label": "k=(1/2,-1/2,0)*2 d=2 #1",
+  "name": "X- (d=2)",
+  "curvature_eV_A2": -1.1707,
+  "polar": false,
+  "unstable": true,
+  "eigvec_weight_by_species": {
+   "O": 0.959,
+   "Ca": 0.282,
+   "Ti": 0.039
+  }
+ },
+ {
+  "label": "k=(1/2,-1/2,0)*2 d=2 #5",
+  "name": "X+ (d=2)",
+  "curvature_eV_A2": -0.6982,
+  "polar": false,
+  "unstable": true,
+  "eigvec_weight_by_species": {
+   "O": 0.89,
+   "Ca": 0.456,
+   "Ti": 0.007
+  }
+ },
+ {
+  "label": "k=(0,0,0) d=2 #1",
+  "name": "Γ- (d=2)",
+  "curvature_eV_A2": -0.4849,
+  "polar": true,
+  "unstable": true,
+  "eigvec_weight_by_species": {
+   "O": 0.527,
+   "Ca": 0.832,
+   "Ti": 0.171
+  }
+ },
+ {
+  "label": "k=(1,0,0) d=2 #1",
+  "name": "Z- (d=2)",
+  "curvature_eV_A2": -0.4771,
+  "polar": false,
+  "unstable": true,
+  "eigvec_weight_by_species": {
+   "O": 0.484,
+   "Ca": 0.855,
+   "Ti": 0.189
+  }
+ }
+]
+
+=== choose_order_parameters  [19s]
+{
+ "order_parameters": [
+  {
+   "name": "X-_1",
+   "label": "k=(1/2,-1/2,0)*2 d=2 #2",
+   "components": 2
+  },
+  {
+   "name": "X+_2",
+   "label": "k=(1/2,-1/2,0)*2 d=2 #4",
+   "components": 2
+  }
+ ]
+}
+
+=== forced_couplings  [20s]
+{
+ "forced_secondary_modes": [
+  {
+   "label": "k=(0,0,0) d=2 #1",
+   "name": "Γ- (d=2)",
+   "polar": true,
+   "curvature_eV_A2": -0.4849,
+   "coupling_terms": [
+    "S_1*Xm_1_1*Xp_2_1 + S_1*Xm_1_2*Xp_2_2 - S_2*Xm_1_1*Xp_2_1 + S_2*Xm_1_2*Xp_2_2"
+   ]
+  },
+  {
+   "label": "k=(1,0,0) d=2 #1",
+   "name": "Z- (d=2)",
+   "polar": false,
+   "curvature_eV_A2": -0.4771,
+   "coupling_terms": [
+    "S_1*Xm_1_1*Xp_2_2 - S_1*Xm_1_2*Xp_2_1 - S_2*Xm_1_1*Xp_2_2 - S_2*Xm_1_2*Xp_2_1"
+   ]
+  },
+  {
+   "label": "k=(1,0,0) d=1 #2",
+   "name": "Z+ (d=1)",
+   "polar": false,
+   "curvature_eV_A2": 1.9415,
+   "coupling_terms": [
+    "S*Xp_2_1*Xp_2_2"
+   ]
+  },
+  {
+   "label": "k=(1,0,0) d=1 #3",
+   "name": "Z+ (d=1)",
+   "polar": false,
+   "curvature_eV_A2": 3.2957,
+   "coupling_terms": [
+    "S*Xm_1_1*Xm_1_2"
+   ]
+  }
+ ]
+}
+
+=== landau_polynomial  [20s]
+{
+ "n_invariants": 16,
+ "invariants": [
+  {
+   "degree": 2,
+   "term": "Xm_1_1**2 + Xm_1_2**2",
+   "kind": "X-_1^2  [single]"
+  },
+  {
+   "degree": 2,
+   "term": "Xp_2_1**2 + Xp_2_2**2",
+   "kind": "X+_2^2  [single]"
+  },
+  {
+   "degree": 2,
+   "term": "Γm_3_1**2 + Γm_3_2**2",
+   "kind": "Γ-_3^2  [single]"
+  },
+  {
+   "degree": 3,
+   "term": "Xm_1_1*Xp_2_1*Γm_3_1 - Xm_1_1*Xp_2_1*Γm_3_2 + Xm_1_2*Xp_2_2*Γm_3_1 + Xm_1_2*Xp_2_2*Γm_3_2",
+   "kind": "X-_1 * X+_2 * Γ-_3  [trilinear coupling]"
+  },
+  {
+   "degree": 4,
+   "term": "Xm_1_1**4 + Xm_1_2**4",
+   "kind": "X-_1^4  [single]"
+  },
+  {
+   "degree": 4,
+   "term": "Xm_1_1**2*Xm_1_2**2",
+   "kind": "X-_1^4  [single]"
+  },
+  {
+   "degree": 4,
+   "term": "Xm_1_1**2*Xp_2_1**2 + Xm_1_2**2*Xp_2_2**2",
+   "kind": "X-_1^2 * X+_2^2  [coupling]"
+  },
+  {
+   "degree": 4,
+   "term": "Xm_1_1**2*Xp_2_2**2 + Xm_1_2**2*Xp_2_1**2",
+   "kind": "X-_1^2 * X+_2^2  [coupling]"
+  },
+  {
+   "degree": 4,
+   "term": "Xm_1_1**2*Γm_3_1**2 + Xm_1_1**2*Γm_3_2**2 + Xm_1_2**2*Γm_3_1**2 + Xm_1_2**2*Γm_3_2**2",
+   "kind": "X-_1^2 * Γ-_3^2  [coupling]"
+  },
+  {
+   "degree": 4,
+   "term": "Xm_1_1**2*Γm_3_1*Γm_3_2 - Xm_1_2**2*Γm_3_1*Γm_3_2",
+   "kind": "X-_1^2 * Γ-_3^2  [coupling]"
+  },
+  {
+   "degree": 4,
+   "term": "Xp_2_1**4 + Xp_2_2**4",
+   "kind": "X+_2^4  [single]"
+  },
+  {
+   "degree": 4,
+   "term": "Xp_2_1**2*Xp_2_2**2",
+   "kind": "X+_2^4  [single]"
+  },
+  {
+   "degree": 4,
+   "term": "Xp_2_1**2*Γm_3_1**2 + Xp_2_1**2*Γm_3_2**2 + Xp_2_2**2*Γm_3_1**2 + Xp_2_2**2*Γm_3_2**2",
+   "kind": "X+_2^2 * Γ-_3^2  [coupling]"
+  },
+  {
+   "degree": 4,
+   "term": "Xp_2_1**2*Γm_3_1*Γm_3_2 - Xp_2_2**2*Γm_3_1*Γm_3_2",
+   "kind": "X+_2^2 * Γ-_3^2  [coupling]"
+  },
+  {
+   "degree": 4,
+   "term": "Γm_3_1**4 + Γm_3_2**4",
+   "kind": "Γ-_3^4  [single]"
+  },
+  {
+   "degree": 4,
+   "term": "Γm_3_1**2*Γm_3_2**2",
+   "kind": "Γ-_3^4  [single]"
+  }
+ ],
+ "landau_condition": [
+  {
+   "irrep": "X-_1",
+   "totally_symmetric": false,
+   "third_order_invariant": false,
+   "landau_condition": "satisfied: no cubic invariant"
+  },
+  {
+   "irrep": "X+_2",
+   "totally_symmetric": false,
+   "third_order_invariant": false,
+   "landau_condition": "satisfied: no cubic invariant"
+  },
+  {
+   "irrep": "Γ-_3",
+   "totally_symmetric": false,
+   "third_order_invariant": false,
+   "landau_condition": "satisfied: no cubic invariant"
+  }
+ ]
+}
+
+=== fit_landau  [263s]
+{
+ "single_mode_wells": {
+  "X-_1": {
+   "amp_at_min_A": 1.5000000000000002,
+   "E_min_meV_per_fu": -440.6672054841181
+  },
+  "X+_2": {
+   "amp_at_min_A": 1.3,
+   "E_min_meV_per_fu": -276.89956456896425
+  },
+  "Γ-_3": {
+   "amp_at_min_A": 0.4,
+   "E_min_meV_per_fu": -11.674973162882907
+  }
+ },
+ "sampling_scales_A": [
+  1.95,
+  1.69,
+  1.365
+ ],
+ "n_points": 197,
+ "rmse_meV_per_fu": 14.2501,
+ "fit_diagnostics": {
+  "rmse_low_energy_half_meV": 30.851,
+  "energy_range_meV": [
+   -540.0,
+   31613.2
+  ]
+ },
+ "units": "meV per parent formula unit, order parameters in Å (whole supercell)",
+ "rmse_definition": "RMSE over sampled configurations below the parent energy (weighted fit; far-uphill points down-weighted)",
+ "coefficients": [
+  {
+   "degree": 2,
+   "coefficient_meV": -400.8292,
+   "term": "Xm_1_1**2 + Xm_1_2**2",
+   "kind": "X-_1^2  [single]"
+  },
+  {
+   "degree": 2,
+   "coefficient_meV": -319.12,
+   "term": "Xp_2_1**2 + Xp_2_2**2",
+   "kind": "X+_2^2  [single]"
+  },
+  {
+   "degree": 2,
+   "coefficient_meV": -101.4287,
+   "term": "Γm_3_1**2 + Γm_3_2**2",
+   "kind": "Γ-_3^2  [single]"
+  },
+  {
+   "degree": 3,
+   "coefficient_meV": -101.852,
+   "term": "Xm_1_1*Xp_2_1*Γm_3_1 - Xm_1_1*Xp_2_1*Γm_3_2 + Xm_1_2*Xp_2_2*Γm_3_1 + Xm_1_2*Xp_2_2*Γm_3_2",
+   "kind": "X-_1 * X+_2 * Γ-_3  [trilinear coupling]"
+  },
+  {
+   "degree": 4,
+   "coefficient_meV": 86.752,
+   "term": "Xm_1_1**4 + Xm_1_2**4",
+   "kind": "X-_1^4  [single]"
+  },
+  {
+   "degree": 4,
+   "coefficient_meV": 91.1832,
+   "term": "Xm_1_1**2*Xm_1_2**2",
+   "kind": "X-_1^4  [single]"
+  },
+  {
+   "degree": 4,
+   "coefficient_meV": 78.6904,
+   "term": "Xm_1_1**2*Xp_2_1**2 + Xm_1_2**2*Xp_2_2**2",
+   "kind": "X-_1^2 * X+_2^2  [coupling]"
+  },
+  {
+   "degree": 4,
+   "coefficient_meV": 79.4938,
+   "term": "Xm_1_1**2*Xp_2_2**2 + Xm_1_2**2*Xp_2_1**2",
+   "kind": "X-_1^2 * X+_2^2  [coupling]"
+  },
+  {
+   "degree": 4,
+   "coefficient_meV": 302.7202,
+   "term": "Xm_1_1**2*Γm_3_1**2 + Xm_1_1**2*Γm_3_2**2 + Xm_1_2**2*Γm_3_1**2 + Xm_1_2**2*Γm_3_2**2",
+   "kind": "X-_1^2 * Γ-_3^2  [coupling]"
+  },
+  {
+   "degree": 4,
+   "coefficient_meV": 676.6135,
+   "term": "Xm_1_1**2*Γm_3_1*Γm_3_2 - Xm_1_2**2*Γm_3_1*Γm_3_2",
+   "kind": "X-_1^2 * Γ-_3^2  [coupling]"
+  },
+  {
+   "degree": 4,
+   "coefficient_meV": 97.8185,
+   "term": "Xp_2_1**4 + Xp_2_2**4",
+   "kind": "X+_2^4  [single]"
+  },
+  {
+   "degree": 4,
+   "coefficient_meV": 565.2333,
+   "term": "Xp_2_1**2*Xp_2_2**2",
+   "kind": "X+_2^4  [single]"
+  },
+  {
+   "degree": 4,
+   "coefficient_meV": 69.9031,
+   "term": "Xp_2_1**2*Γm_3_1**2 + Xp_2_1**2*Γm_3_2**2 + Xp_2_2**2*Γm_3_1**2 + Xp_2_2**2*Γm_3_2**2",
+   "kind": "X+_2^2 * Γ-_3^2  [coupling]"
+  },
+  {
+   "degree": 4,
+   "coefficient_meV": -26.7923,
+   "term": "Xp_2_1**2*Γm_3_1*Γm_3_2 - Xp_2_2**2*Γm_3_1*Γm_3_2",
+   "kind": "X+_2^2 * Γ-_3^2  [coupling]"
+  },
+  {
+   "degree": 4,
+   "coefficient_meV": 250.0054,
+   "term": "Γm_3_1**4 + Γm_3_2**4",
+   "kind": "Γ-_3^4  [single]"
+  },
+  {
+   "degree": 4,
+   "coefficient_meV": 957.
+
+=== predict_ground_state  [393s]
+{
+ "order_parameter_values": {
+  "X-_1": [
+   -1.174,
+   1.1255
+  ],
+  "X+_2": [
+   -0.7867,
+   -0.0
+  ],
+  "Γ-_3": [
+   0.0654,
+   -0.0654
+  ]
+ },
+ "landau_energy_meV_per_fu": -632.83,
+ "mace_energy_at_prediction_meV_per_fu": -590.395,
+ "predicted_space_group": "Pmn2_1 (31)",
+ "reliability": {
+  "minimum_on_sampling_boundary": false,
+  "landau_vs_mace_mismatch_meV_per_fu": 42.435,
+  "trustworthy": true,
+  "note": "if not trustworthy, use enumerate_phases for the phase and the Landau polynomial only for the symmetry/coupling story"
+ },
+ "mace_relaxed_in_predicted_symmetry_meV_per_fu": -865.163,
+ "relaxed_space_group": "Pmn2_1 (31)",
+ "polarization_nominal_charges_uC_cm2": [
+  10.18,
+  -10.18,
+  0.0
+ ]
+}
+
+Done in 393s

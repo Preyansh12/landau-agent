@@ -30,7 +30,7 @@ Using float64 for MACECalculator, which is slower but more accurate. Recommended
  ]
 }
 
-=== instabilities  [5s]
+=== instabilities  [6s]
 [
  {
   "label": "k=(0,0,0) d=3 #1",
@@ -86,7 +86,7 @@ Using float64 for MACECalculator, which is slower but more accurate. Recommended
  ]
 }
 
-=== forced_couplings  [24s]
+=== forced_couplings  [23s]
 {
  "forced_secondary_modes": [
   {
@@ -101,7 +101,7 @@ Using float64 for MACECalculator, which is slower but more accurate. Recommended
  ]
 }
 
-=== landau_polynomial  [24s]
+=== landau_polynomial  [23s]
 {
  "n_invariants": 9,
  "invariants": [
@@ -282,3 +282,37 @@ Using float64 for MACECalculator, which is slower but more accurate. Recommended
   {
    "degree": 6,
    "coe
+
+=== predict_ground_state  [187s]
+{
+ "order_parameter_values": {
+  "Γ-_1": [
+   -0.1381,
+   -0.1381,
+   -0.1381
+  ],
+  "R+_2": [
+   -0.3845,
+   -0.3845,
+   0.3845
+  ]
+ },
+ "landau_energy_meV_per_fu": -4.838,
+ "mace_energy_at_prediction_meV_per_fu": -5.027,
+ "predicted_space_group": "R3c (161)",
+ "reliability": {
+  "minimum_on_sampling_boundary": false,
+  "landau_vs_mace_mismatch_meV_per_fu": 0.189,
+  "trustworthy": true,
+  "note": "if not trustworthy, use enumerate_phases for the phase and the Landau polynomial only for the symmetry/coupling story"
+ },
+ "mace_relaxed_in_predicted_symmetry_meV_per_fu": -5.096,
+ "relaxed_space_group": "R3c (161)",
+ "polarization_nominal_charges_uC_cm2": [
+  -7.2,
+  -7.2,
+  7.2
+ ]
+}
+
+Done in 187s

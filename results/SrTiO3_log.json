@@ -1,7 +1,7 @@
 [
  {
   "tool": "load_parent",
-  "t": "21:49:25",
+  "t": "00:12:04",
   "result": {
    "formula": "O3SrTi",
    "space_group": "Pm-3m (221)",
@@ -19,7 +19,7 @@
  },
  {
   "tool": "set_supercell",
-  "t": "21:49:26",
+  "t": "00:12:04",
   "result": {
    "group_order": 384,
    "n_atoms": 40,
@@ -175,7 +175,7 @@
  },
  {
   "tool": "find_instabilities",
-  "t": "21:49:26",
+  "t": "00:12:05",
   "result": {
    "modes": [
     {
@@ -423,7 +423,7 @@
  },
  {
   "tool": "choose_order_parameters",
-  "t": "21:49:27",
+  "t": "00:12:05",
   "result": {
    "order_parameters": [
     {
@@ -441,7 +441,7 @@
  },
  {
   "tool": "forced_couplings",
-  "t": "21:49:45",
+  "t": "00:12:22",
   "result": {
    "forced_secondary_modes": [
     {
@@ -458,7 +458,7 @@
  },
  {
   "tool": "landau_polynomial",
-  "t": "21:49:45",
+  "t": "00:12:22",
   "result": {
    "n_invariants": 9,
    "invariants": [
@@ -526,7 +526,7 @@
  },
  {
   "tool": "fit_landau",
-  "t": "21:52:23",
+  "t": "00:14:57",
   "result": {
    "single_mode_wells": {
     "Γ-_1": {
@@ -649,35 +649,41 @@
  },
  {
   "tool": "predict_ground_state",
-  "t": "21:53:10",
+  "t": "00:15:07",
   "result": {
    "order_parameter_values": {
     "Γ-_1": [
-     1.1466,
-     -1.1466,
-     -1.1466
+     -0.1381,
+     -0.1381,
+     -0.1381
     ],
     "R+_2": [
-     -1.1466,
-     1.1466,
-     1.1466
+     -0.3845,
+     -0.3845,
+     0.3845
     ]
    },
-   "landau_energy_meV_per_fu": -16698.187,
-   "mace_energy_at_prediction_meV_per_fu": 1816.622,
+   "landau_energy_meV_per_fu": -4.838,
+   "mace_energy_at_prediction_meV_per_fu": -5.027,
    "predicted_space_group": "R3c (161)",
-   "mace_relaxed_in_predicted_symmetry_meV_per_fu": -5.086,
+   "reliability": {
+    "minimum_on_sampling_boundary": false,
+    "landau_vs_mace_mismatch_meV_per_fu": 0.189,
+    "trustworthy": true,
+    "note": "if not trustworthy, use enumerate_phases for the phase and the Landau polynomial only for the symmetry/coupling story"
+   },
+   "mace_relaxed_in_predicted_symmetry_meV_per_fu": -5.096,
    "relaxed_space_group": "R3c (161)",
    "polarization_nominal_charges_uC_cm2": [
-    7.51,
-    7.51,
-    7.51
+    -7.2,
+    -7.2,
+    7.2
    ]
   }
  },
  {
   "tool": "save_prediction",
-  "t": "21:53:10",
+  "t": "00:15:07",
   "result": {
    "path": "results/SrTiO3_predicted.cif"
   }

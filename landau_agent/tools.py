@@ -164,6 +164,7 @@ class Session:
     def add_secondary(self, label: str) -> dict:
         """Add a (forced) secondary mode to the order-parameter set before fitting."""
         r = next(r for r in self.curv if r["label"] == label)
+        self._secondary_labels = getattr(self, "_secondary_labels", set()) | {label}
         self.ops.append(SM.op_from_vector(self.G, r["irrep_type"], r["eigvec"], amp=0.1))
         self.op_names.append(r["name"].split(" ")[0] + f"_{len(self.ops)}")
         self.fit = None
@@ -192,6 +193,14 @@ class Session:
                 a, e, curve = self.model.well_scan(k)
                 wells[n] = dict(amp_at_min_A=a, E_min_meV_per_fu=e)
                 scales.append(max(1.3 * a, 0.35))
+            # forced (improper) secondaries can be driven far beyond their own shallow well by
+            # the primaries: sample them out to a fraction of the largest primary amplitude
+            unstable = {r["label"] for r in (self.curv or []) if r["curvature_eV_A2"] < -0.005}
+            prim_scales = [sc for sc, o in zip(scales, self.ops) if o.irrep.label in unstable] or scales
+            secondary = getattr(self, "_secondary_labels", set())
+            for k, o in enumerate(self.ops):
+                if o.irrep.label in secondary:
+                    scales[k] = max(scales[k], 0.7 * max(prim_scales))
         self.fit = self.model.fit(max_degree, names=self.op_names, scale=np.array(scales),
                                   n_line=13, n_random=n_random, single_degree=single_degree)
         resid = self.fit.F(self.fit.eta_samples) * 1000 - self.fit.energies
@@ -240,6 +249,7 @@ class Session:
             e_relax = (at2.get_potential_energy() - self.model.E0) / self.model.n_fu * 1000
             out["mace_relaxed_in_predicted_symmetry_meV_per_fu"] = round(float(e_relax), 3)
             out["relaxed_space_group"] = SM.space_group(at2, symprec=1e-3)
+            out["relaxed_space_group_tol_0.01A"] = SM.space_group(at2, symprec=1e-2)
             out["polarization_nominal_charges_uC_cm2"] = self._nominal_polarization(at2)
             at2.calc = None
             self._pred_struct = at2
