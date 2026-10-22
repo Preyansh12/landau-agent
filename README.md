@@ -279,6 +279,10 @@ Each ingredient exists on its own; the combination, as far as our literature sea
 
 **What we did not find elsewhere:** a tool-using agent that goes from a parent crystal alone to (i) exact symmetry-allowed invariants, (ii) automatic discovery of forced (improper or hybrid-improper) couplings, (iii) universal-MLIP energetics for a symmetry-complete set of candidate phases, and (iv) an explicit check for artefacts of the potential's volume. We also found no prior pre-registered test of such a pipeline on materials it was not developed on. Absence of evidence is not proof: very recent preprints may be missing from the indexes.
 
+## Marimo notebook
+
+`notebook.py` is a [Marimo](https://marimo.io) notebook: it regenerates the scorecard from the result files, shows the Ca₃Ti₂O₇ phase ladder, and runs a live instability search through the same tools the agent uses (`pip install marimo && marimo run notebook.py`).
+
 ## Install and run
 
 ```bash
