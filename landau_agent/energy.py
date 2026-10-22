@@ -13,9 +13,14 @@ warnings.filterwarnings("ignore")
 _CALC = None
 
 
-def get_calculator(model: str = "medium", device: str | None = None):
-    """MACE-MP-0 in float64 (small energy wells need double precision)."""
+MODEL = __import__("os").environ.get("LANDAU_MLIP_MODEL", "medium")  # e.g. mace-matpes-r2scan-0
+
+
+def get_calculator(model: str | None = None, device: str | None = None):
+    """MACE foundation model in float64 (small energy wells need double precision).
+    Default MACE-MP-0 medium (PBE); set LANDAU_MLIP_MODEL=mace-matpes-r2scan-0 for the r2SCAN model."""
     global _CALC
+    model = model or MODEL
     if _CALC is None:
         import torch
         from mace.calculators import mace_mp
