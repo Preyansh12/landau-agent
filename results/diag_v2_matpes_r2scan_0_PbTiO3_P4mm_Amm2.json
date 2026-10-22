@@ -1,0 +1,70 @@
+{
+ "P4mm (99)": {
+  "seed_energy": -15.7,
+  "directions": {
+   "\u0393-_1": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "R+_2": null,
+   "M+_3": null
+  },
+  "fixed_cell": {
+   "energy_meV_per_fu": -28.56,
+   "space_group": "P4mm (99)",
+   "space_group_loose": "P4mm (99)",
+   "lattice_A": [
+    7.8473,
+    7.8473,
+    7.8473
+   ]
+  },
+  "relaxed_cell": {
+   "energy_meV_per_fu": -73.84,
+   "space_group": "P4mm (99)",
+   "space_group_loose": "P4mm (99)",
+   "lattice_A": [
+    8.5879,
+    7.7291,
+    7.7291
+   ]
+  }
+ },
+ "Amm2 (38)": {
+  "seed_energy": -15.0,
+  "directions": {
+   "\u0393-_1": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "R+_2": null,
+   "M+_3": [
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  "fixed_cell": {
+   "energy_meV_per_fu": -28.47,
+   "space_group": "Amm2 (38)",
+   "space_group_loose": "Amm2 (38)",
+   "lattice_A": [
+    7.8473,
+    7.8473,
+    7.8473
+   ]
+  },
+  "relaxed_cell": {
+   "energy_meV_per_fu": -73.83,
+   "space_group": "Amm2 (38)",
+   "space_group_loose": "P4mm (99)",
+   "lattice_A": [
+    8.5923,
+    7.7302,
+    7.7269
+   ]
+  }
+ }
+}

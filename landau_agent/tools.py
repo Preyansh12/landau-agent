@@ -460,8 +460,11 @@ class Session:
         for mode in modes:
             ranked = sorted(rows, key=lambda x: x[mode]["energy_meV_per_fu"])
             e0 = ranked[0][mode]["energy_meV_per_fu"]
+            # the same phase reached from a lower-symmetry seed is not a competitor: compare by the
+            # relaxed space group at 0.01 A, not by the seed label
             close = [f'{r[mode]["space_group_loose"]} ({r[mode]["energy_meV_per_fu"] - e0:+.2f})'
-                     for r in ranked[1:] if r[mode]["energy_meV_per_fu"] - e0 < window]
+                     for r in ranked[1:] if r[mode]["energy_meV_per_fu"] - e0 < window
+                     and r[mode]["space_group_loose"] != ranked[0][mode]["space_group_loose"]]
             out[mode] = dict(lowest=ranked[0][mode]["space_group_loose"],
                              within_1_meV_per_fu_of_lowest=close,
                              verdict="resolved" if not close else

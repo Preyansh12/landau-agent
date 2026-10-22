@@ -9,3 +9,4 @@ LaAlO3 -> {'space_group': 'Imma (74)', 'space_group_tol_0_01': 'Imma (74)', 'ene
 BaTiO3 -> {'space_group': 'R3m (160)', 'space_group_tol_0_01': 'R3m (160)', 'energy_meV_per_fu': -6.78, 'seed': 'R3m (160)'} 396s
 PbTiO3 -> {'space_group': 'Aea2 (41)', 'space_group_tol_0_01': 'Amm2 (38)', 'energy_meV_per_fu': -56.25, 'seed': 'Aea2 (41)'} 1416s
 Ca3Ti2O7 -> {'space_group': 'Cmc2_1 (36)', 'space_group_tol_0_01': 'Cmc2_1 (36)', 'energy_meV_per_fu': -677.36, 'seed': 'Cmc2_1 (36)'} 1655s
+Sr3Ru2O7 -> {'space_group': 'Pcca (54)', 'space_group_tol_0_01': 'Ccce (68)', 'energy_meV_per_fu': -36.65, 'seed': 'Pcca (54)'} 1301s
