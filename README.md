@@ -4,6 +4,8 @@
 
 Built for the Open Scientific Intelligence (OSI) Hackathon, 21–22 October 2026. Built with Claude as a coding assistant.
 
+**In one paragraph.** Give LandauAgent a high-symmetry crystal and it works out *why* the crystal distorts: which atomic motions are unstable, which ones symmetry forces to move together, and which low-symmetry structure results. For example, starting from nothing but the undistorted Ca₃Ti₂O₇ structure, it discovers that two non-polar octahedral motions, a tilt and a rotation, lower the energy together only by dragging a polarisation along with them, the mechanism that makes the material ferroelectric. **It works well for strongly distorted layered oxides (8 of 8 correct), it fails for subtle cubic perovskites, where competing phases differ by less than 1 meV/f.u. (0 of 4 fully correct, 1 of 4 within 0.3 meV/f.u.), and its tools report when the potential cannot decide.**
+
 ## Scorecard
 
 **Right on 9 of 13 materials: all 8 n=2 Ruddlesden–Popper compounds, including 6 of 6 out-of-sample predictions whose inputs were committed to git before the run. One of those has a ground state that is *not* A2₁am (Sr₃Ru₂O₇), and one has no distortion at all (Sr₃Ti₂O₇). Every failure is a cubic perovskite.**

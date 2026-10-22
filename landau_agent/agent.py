@@ -239,6 +239,7 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("question", nargs="*")
     ap.add_argument("--tag", default="agent")
+    ap.add_argument("--max-turns", type=int, default=40, help="cap on LLM requests (free API tiers allow ~20/day)")
     a = ap.parse_args()
     q = " ".join(a.question) or "Why is Ca3Ti2O7 ferroelectric? Start from the I4/mmm parent."
-    answer = run(q, tag=a.tag)   # the final answer is already printed above as it arrives
+    answer = run(q, tag=a.tag, max_turns=a.max_turns)   # the final answer is already printed above as it arrives
