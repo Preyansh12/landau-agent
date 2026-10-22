@@ -11,7 +11,8 @@ ORDER = ["CaTiO3", "PbTiO3", "BaTiO3", "LaAlO3", "SrTiO3", "Ca3Ti2O7", "Sr3Zr2O7
          "Sr3Sn2O7", "Sr3Hf2O7", "Sr3Ru2O7", "Sr3Ti2O7"]
 PROTOCOLS = [("v1", "benchmark_{m}.json", "v1 (PBE)"), ("v2", "benchmark_v2_{m}.json", "v2 (PBE)"),
              ("v2r", "benchmark_v2_matpes_r2scan_0_{m}.json", "v2 (r2SCAN)"),
-             ("v3", "benchmark_v3_matpes_r2scan_0_{m}.json", "v3 (r2SCAN)")]
+             ("v3", "benchmark_v3_matpes_r2scan_0_{m}.json", "v3 (r2SCAN)"),
+             ("v4", "benchmark_v4_matpes_r2scan_0_{m}.json", "v4 (r2SCAN)")]
 
 
 def sgnum(label):

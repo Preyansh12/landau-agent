@@ -6,6 +6,8 @@ Protocol versions (all kept, all reported):
   v3  v2 + 25-step relaxation of every candidate before ranking, and 10x tighter re-relaxation
       of any phases within 1 meV/f.u. before they are declared unresolved; all 6 enumerated
       phases get a free-cell relaxation (v2: best 4 at fixed lattice)                results/benchmark_v3*_<name>.json
+  v4  v3 + primaries are the three softest DISTINCT irreps (not one per short name), and the
+      reported winner is always converged to fmax = 0.001 eV/A                        results/benchmark_v4*_<name>.json
 MLIP: LANDAU_MLIP_MODEL=medium (MACE-MP-0, PBE) or mace-matpes-r2scan-0 (MACE MatPES r2SCAN); the tag records it.
 
 Protocol: MACE-relax the parent -> instabilities -> up to 3 most unstable distinct irreps as
@@ -24,8 +26,8 @@ for _n in ("Sr3Ti2O7", "Ca3Mn2O7", "Ca3Sn2O7", "Sr3Sn2O7", "Sr3Hf2O7", "Sr3Ru2O7
 
 import os
 from landau_agent import energy as _E
-PROTOCOL = os.environ.get("LANDAU_PROTOCOL", "v2")          # v2: single-point screening; v3: 25-step relaxation screening
-SCREEN_STEPS = {"v2": 0, "v3": 25}[PROTOCOL]
+PROTOCOL = os.environ.get("LANDAU_PROTOCOL", "v2")          # v2: single-point screening; v3/v4: 25-step relaxation screening
+SCREEN_STEPS = {"v2": 0, "v3": 25, "v4": 25}[PROTOCOL]
 TAG = PROTOCOL if _E.MODEL == "medium" else PROTOCOL + "_" + _E.MODEL.replace("mace-", "").replace("-", "_")
 
 
@@ -38,10 +40,15 @@ def run(name):
     s.set_supercell(SUPERCELLS[name])
     modes = s.find_instabilities()["modes"]
     picked, seen = [], set()
-    for m in modes:
-        if m["unstable"] and m["name"] not in seen:
-            picked.append(m["label"]); seen.add(m["name"])
-    picked = picked[:3]
+    if PROTOCOL == "v4":
+        # v4: the three softest DISTINCT irreps, whatever their short names. Keeping one irrep per
+        # name let a rotation displace the X3- tilt in Ca3Mn2O7 and Sr3Sn2O7 (see README).
+        picked = [m["label"] for m in modes if m["unstable"]][:3]
+    else:
+        for m in modes:
+            if m["unstable"] and m["name"] not in seen:
+                picked.append(m["label"]); seen.add(m["name"])
+        picked = picked[:3]
     if not picked:
         out = dict(material=name, parent=parent, instabilities=[], protocol=TAG, mlip=_E.MODEL,
                    winner=dict(space_group="parent (no instability)"), runtime_s=round(time.time() - T))
@@ -53,8 +60,8 @@ def run(name):
     # v2: strain can reorder phases, so the best 4 (not 2) get a full cell relaxation
     # v2 refined the best 4 of the 6 fixed-lattice relaxations; strain-driven phases (PbTiO3 P4mm)
     # can sit 5th or 6th at fixed lattice and win with a free cell, so v3 refines all 6.
-    ref = s.refine_phases(top=6 if PROTOCOL == "v3" else 4, fmax=0.01, steps=800, relaxed_cell_only=True,
-                          tighten_if_unresolved=(PROTOCOL == "v3"))
+    ref = s.refine_phases(top=6 if PROTOCOL in ("v3", "v4") else 4, fmax=0.01, steps=800, relaxed_cell_only=True,
+                          tighten_if_unresolved=(PROTOCOL in ("v3", "v4")), polish_winner=(PROTOCOL == "v4"))
     best = ref["phases"][0]
     out = dict(material=name, parent=parent, instabilities=[{k: m[k] for k in ("name", "label", "curvature_eV_A2", "polar")} for m in modes if m["unstable"]],
                primaries=picked, enumeration=ph, refined=ref,

@@ -414,7 +414,8 @@ class Session:
 
     def refine_phases(self, top: int = 3, fmax: float = 0.005, steps: int = 1500,
                       relax_cell: bool = True, out_dir: str | None = None,
-                      relaxed_cell_only: bool = False, tighten_if_unresolved: bool = False) -> dict:
+                      relaxed_cell_only: bool = False, tighten_if_unresolved: bool = False,
+                      polish_winner: bool = False) -> dict:
         """Tight MACE relaxation of the lowest enumerated phases, fixed lattice and (optionally)
         full cell relaxation inside the same symmetry. Energies vs the relaxed parent."""
         from ase.constraints import FixSymmetry
@@ -470,7 +471,8 @@ class Session:
         # The winner's symmetry is reported only after tight convergence when it is ambiguous: a
         # residual slow mode left by the step cap can make a P4mm state read as Pm at 1e-3 A.
         w = rows[0]
-        if tighten_if_unresolved and w[key]["space_group"] != w[key]["space_group_loose"] \
+        ambiguous = w[key]["space_group"] != w[key]["space_group_loose"]
+        if (polish_winner or (tighten_if_unresolved and ambiguous)) \
                 and w[key].get("fmax_eV_per_A", fmax) > fmax * 0.1 + 1e-12:
             w[key] = relax(w["space_group_seed"], key, relaxed[(w["space_group_seed"], key)], fmax * 0.1, steps * 3)
             w[key]["polished"] = True
