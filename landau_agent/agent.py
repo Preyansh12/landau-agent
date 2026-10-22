@@ -9,7 +9,8 @@ Usage (any OpenAI-compatible endpoint, e.g. the free Gemini tier):
     export LANDAU_AGENT_PROVIDER=gemini GEMINI_API_KEY=...
     export LANDAU_AGENT_MODEL=<a Gemini model id from Google AI Studio>
     python -m landau_agent.agent "Is SrTiO3 ferroelectric?" --tag sto_gemini
-    # other servers: LANDAU_AGENT_PROVIDER=openai, OPENAI_API_KEY, OPENAI_BASE_URL
+    # other servers: LANDAU_AGENT_PROVIDER=openai, OPENAI_API_KEY, OPENAI_BASE_URL, e.g. for Groq:
+    #   OPENAI_BASE_URL=https://api.groq.com/openai/v1  LANDAU_AGENT_MODEL=<a tool-calling model id>
 """
 from __future__ import annotations
 
@@ -163,7 +164,7 @@ class _OpenAICompatBackend:
         msg = self.client.chat.completions.create(model=MODEL, messages=self.messages,
                                                   tools=self.tools).choices[0].message
         calls = [(c.id, c.function.name, json.loads(c.function.arguments or "{}")) for c in (msg.tool_calls or [])]
-        if hasattr(msg, "model_dump"):
+        if PROVIDER == "gemini" and hasattr(msg, "model_dump"):
             # Echo the assistant message back verbatim: Gemini attaches thought signatures to
             # tool calls as extra fields, and rejects the next request if they are dropped.
             entry = msg.model_dump(exclude_none=True)
