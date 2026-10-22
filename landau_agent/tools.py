@@ -394,7 +394,7 @@ class Session:
 
     def refine_phases(self, top: int = 3, fmax: float = 0.005, steps: int = 1500,
                       relax_cell: bool = True, out_dir: str | None = None,
-                      relaxed_cell_only: bool = False) -> dict:
+                      relaxed_cell_only: bool = False, tighten_if_unresolved: bool = False) -> dict:
         """Tight MACE relaxation of the lowest enumerated phases, fixed lattice and (optionally)
         full cell relaxation inside the same symmetry. Energies vs the relaxed parent."""
         from ase.constraints import FixSymmetry
@@ -403,33 +403,55 @@ class Session:
         from ase.optimize import BFGS, FIRE
         calc = E.get_calculator()
         rows = []
+        modes = ["relaxed_cell"] if relaxed_cell_only else (["fixed_cell", "relaxed_cell"] if relax_cell else ["fixed_cell"])
+        relaxed = {}
+
+        def relax(sg, mode, start, fm, st):
+            at = start.copy()
+            at.calc = calc
+            at.set_constraint(FixSymmetry(at, symprec=1e-3))
+            if mode == "fixed_cell":
+                FIRE(at, logfile=None).run(fmax=fm, steps=st)
+            else:
+                BFGS(FrechetCellFilter(at), logfile=None).run(fmax=fm, steps=st)
+            at.set_constraint()
+            e = (at.get_potential_energy() - self.model.E0) / self.model.n_fu * 1000
+            relaxed[(sg, mode)] = at
+            return dict(energy_meV_per_fu=round(float(e), 2),
+                        space_group=SM.space_group(at, 1e-3),
+                        space_group_loose=SM.space_group(at, 1e-2),
+                        lattice_A=[round(float(x), 4) for x in at.cell.cellpar()[:3]],
+                        polarization_nominal_uC_cm2=self._nominal_polarization(at) if mode == "fixed_cell" else None,
+                        fmax_eV_per_A=fm)
+
         for r in self._phases[:top]:
             sg = r["space_group_seed"]
             row = dict(space_group_seed=sg, order_parameter_directions=r["order_parameter_directions"])
-            modes = ["relaxed_cell"] if relaxed_cell_only else (["fixed_cell", "relaxed_cell"] if relax_cell else ["fixed_cell"])
             for mode in modes:
-                at = self._phase_structs[sg].copy()
-                at.calc = calc
-                at.set_constraint(FixSymmetry(at, symprec=1e-3))
-                if mode == "fixed_cell":
-                    FIRE(at, logfile=None).run(fmax=fmax, steps=steps)
-                else:
-                    BFGS(FrechetCellFilter(at), logfile=None).run(fmax=fmax, steps=steps)
-                at.set_constraint()
-                e = (at.get_potential_energy() - self.model.E0) / self.model.n_fu * 1000
-                row[mode] = dict(energy_meV_per_fu=round(float(e), 2),
-                                 space_group=SM.space_group(at, 1e-3),
-                                 space_group_loose=SM.space_group(at, 1e-2),
-                                 lattice_A=[round(float(x), 4) for x in at.cell.cellpar()[:3]],
-                                 polarization_nominal_uC_cm2=self._nominal_polarization(at) if mode == "fixed_cell" else None)
-                if out_dir:
-                    at.calc = None
-                    awrite(f"{out_dir}/phase_{sg.split()[0].replace('/', '_')}_{mode}.cif", at)
+                row[mode] = relax(sg, mode, self._phase_structs[sg], fmax, steps)
             rows.append(row)
         key = "relaxed_cell" if relax_cell else "fixed_cell"
         rows.sort(key=lambda x: x[key]["energy_meV_per_fu"])
-        return self._rec("refine_phases", dict(phases=rows, ranked_by=key,
-                                               resolution=self._resolution(rows, modes)))
+        res = self._resolution(rows, modes)
+        tightened = None
+        if tighten_if_unresolved and res[key]["verdict"] != "resolved":
+            # Energies converged to fmax carry ~fmax * (residual displacement) of noise, which for
+            # fmax = 0.01 eV/A is of the order of 0.1 meV/f.u., the same size as the gaps in question.
+            # Re-relax only the near-degenerate set 10x tighter before declaring them unresolved.
+            e0 = rows[0][key]["energy_meV_per_fu"]
+            close = [x for x in rows if x[key]["energy_meV_per_fu"] - e0 < 1.0]
+            before = {x["space_group_seed"]: x[key]["energy_meV_per_fu"] for x in close}
+            for x in close:
+                x[key] = relax(x["space_group_seed"], key, relaxed[(x["space_group_seed"], key)], fmax * 0.1, steps * 2)
+            rows.sort(key=lambda x: x[key]["energy_meV_per_fu"])
+            res = self._resolution(rows, modes)
+            tightened = dict(fmax_eV_per_A=fmax * 0.1, before=before,
+                             after={x["space_group_seed"]: x[key]["energy_meV_per_fu"] for x in close})
+        if out_dir:
+            for (sg, mode), at in relaxed.items():
+                at.calc = None
+                awrite(f"{out_dir}/phase_{sg.split()[0].replace('/', '_')}_{mode}.cif", at)
+        return self._rec("refine_phases", dict(phases=rows, ranked_by=key, resolution=res, tightened=tightened))
 
     @staticmethod
     def _resolution(rows, modes, window: float = 1.0) -> dict:

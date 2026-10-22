@@ -1,0 +1,70 @@
+{
+ "Imma (74)": {
+  "seed_energy": -191.3,
+  "directions": {
+   "R+_1": [
+    0.0,
+    0.707,
+    -0.707
+   ],
+   "M+_2": null,
+   "\u0393-_3": null
+  },
+  "fixed_cell": {
+   "energy_meV_per_fu": -212.44,
+   "space_group": "Imma (74)",
+   "space_group_loose": "Imma (74)",
+   "lattice_A": [
+    7.6894,
+    7.6894,
+    7.6894
+   ]
+  },
+  "relaxed_cell": {
+   "energy_meV_per_fu": -225.27,
+   "space_group": "Imma (74)",
+   "space_group_loose": "Imma (74)",
+   "lattice_A": [
+    7.6653,
+    7.5974,
+    7.6653
+   ]
+  }
+ },
+ "Pnma (62)": {
+  "seed_energy": -112.1,
+  "directions": {
+   "R+_1": [
+    0.0,
+    0.707,
+    -0.707
+   ],
+   "M+_2": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "\u0393-_3": null
+  },
+  "fixed_cell": {
+   "energy_meV_per_fu": -251.12,
+   "space_group": "Pnma (62)",
+   "space_group_loose": "Pnma (62)",
+   "lattice_A": [
+    7.6894,
+    7.6894,
+    7.6894
+   ]
+  },
+  "relaxed_cell": {
+   "energy_meV_per_fu": -271.23,
+   "space_group": "Pnma (62)",
+   "space_group_loose": "Pnma (62)",
+   "lattice_A": [
+    7.6377,
+    7.6161,
+    7.6377
+   ]
+  }
+ }
+}

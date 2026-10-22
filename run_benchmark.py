@@ -3,7 +3,8 @@
 Protocol versions (all kept, all reported):
   v1  original: incomplete direction set, refinement chosen at fixed lattice        results/benchmark_<name>.json
   v2  symmetry-complete directions, strain-aware refinement, single-point screening results/benchmark_v2_<name>.json
-  v3  v2 + 25-step symmetry-constrained relaxation of every candidate before ranking results/benchmark_v3*_<name>.json
+  v3  v2 + 25-step relaxation of every candidate before ranking, and 10x tighter re-relaxation
+      of any phases within 1 meV/f.u. before they are declared unresolved             results/benchmark_v3*_<name>.json
 MLIP: LANDAU_MLIP_MODEL=medium (MACE-MP-0, PBE) or mace-matpes-r2scan-0 (MACE MatPES r2SCAN); the tag records it.
 
 Protocol: MACE-relax the parent -> instabilities -> up to 3 most unstable distinct irreps as
@@ -49,7 +50,8 @@ def run(name):
     s.choose_order_parameters(picked)
     ph = s.enumerate_phases(max_phases=6, fmax=0.03, steps=250, screen_steps=SCREEN_STEPS)
     # v2: strain can reorder phases, so the best 4 (not 2) get a full cell relaxation
-    ref = s.refine_phases(top=4, fmax=0.01, steps=800, relaxed_cell_only=True)
+    ref = s.refine_phases(top=4, fmax=0.01, steps=800, relaxed_cell_only=True,
+                          tighten_if_unresolved=(PROTOCOL == "v3"))
     best = ref["phases"][0]
     out = dict(material=name, parent=parent, instabilities=[{k: m[k] for k in ("name", "label", "curvature_eV_A2", "polar")} for m in modes if m["unstable"]],
                primaries=picked, enumeration=ph, refined=ref,
