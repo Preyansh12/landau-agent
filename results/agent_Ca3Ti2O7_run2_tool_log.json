@@ -1,0 +1,704 @@
+[
+ {
+  "tool": "load_parent",
+  "t": "02:48:40",
+  "result": {
+   "formula": "Ca6O14Ti4",
+   "space_group": "I4/mmm (139)",
+   "n_atoms": 24,
+   "lattice_A": [
+    3.8818,
+    3.8818,
+    19.5844,
+    90.0,
+    90.0,
+    90.0
+   ],
+   "relaxed_with": "MACE-MP-0 (medium, float64)"
+  }
+ },
+ {
+  "tool": "set_supercell",
+  "t": "02:48:42",
+  "result": {
+   "group_order": 64,
+   "n_atoms": 48,
+   "k_points": [
+    "X",
+    "Z",
+    "Γ"
+   ],
+   "irreps": [
+    {
+     "label": "k=(0,0,0) d=1 #1",
+     "name": "Γ+ (d=1)",
+     "dim": 1,
+     "multiplicity": 4,
+     "polar": false
+    },
+    {
+     "label": "k=(0,0,0) d=1 #2",
+     "name": "Γ- (d=1)",
+     "dim": 1,
+     "multiplicity": 6,
+     "polar": true,
+     "standard_label": "Γ3- (A2u, polar along c)",
+     "standard_label_evidence": "unique polar irrep of this dimension in the parent point group"
+    },
+    {
+     "label": "k=(0,0,0) d=1 #3",
+     "name": "Γ- (d=1)",
+     "dim": 1,
+     "multiplicity": 1,
+     "polar": false
+    },
+    {
+     "label": "k=(0,0,0) d=1 #4",
+     "name": "Γ+ (d=1)",
+     "dim": 1,
+     "multiplicity": 1,
+     "polar": false
+    },
+    {
+     "label": "k=(0,0,0) d=2 #1",
+     "name": "Γ- (d=2)",
+     "dim": 2,
+     "multiplicity": 7,
+     "polar": true,
+     "standard_label": "Γ5-",
+     "standard_label_evidence": "unique polar irrep of this dimension in the parent point group"
+    },
+    {
+     "label": "k=(0,0,0) d=2 #2",
+     "name": "Γ+ (d=2)",
+     "dim": 2,
+     "multiplicity": 5,
+     "polar": false
+    },
+    {
+     "label": "k=(1,0,0) d=1 #1",
+     "name": "Z- (d=1)",
+     "dim": 1,
+     "multiplicity": 6,
+     "polar": false
+    },
+    {
+     "label": "k=(1,0,0) d=1 #2",
+     "name": "Z+ (d=1)",
+     "dim": 1,
+     "multiplicity": 4,
+     "polar": false
+    },
+    {
+     "label": "k=(1,0,0) d=1 #3",
+     "name": "Z+ (d=1)",
+     "dim": 1,
+     "multiplicity": 1,
+     "polar": false
+    },
+    {
+     "label": "k=(1,0,0) d=1 #4",
+     "name": "Z- (d=1)",
+     "dim": 1,
+     "multiplicity": 1,
+     "polar": false
+    },
+    {
+     "label": "k=(1,0,0) d=2 #1",
+     "name": "Z- (d=2)",
+     "dim": 2,
+     "multiplicity": 7,
+     "polar": false
+    },
+    {
+     "label": "k=(1,0,0) d=2 #2",
+     "name": "Z+ (d=2)",
+     "dim": 2,
+     "multiplicity": 5,
+     "polar": false
+    },
+    {
+     "label": "k=(1/2,-1/2,0)*2 d=2 #1",
+     "name": "X- (d=2)",
+     "dim": 2,
+     "multiplicity": 6,
+     "polar": false
+    },
+    {
+     "label": "k=(1/2,-1/2,0)*2 d=2 #2",
+     "name": "X- (d=2)",
+     "dim": 2,
+     "multiplicity": 6,
+     "polar": false,
+     "standard_label": "X3-",
+     "standard_label_evidence": "contains 100.0% of the rigid octahedral tilt about the in-plane axis along k pattern"
+    },
+    {
+     "label": "k=(1/2,-1/2,0)*2 d=2 #3",
+     "name": "X- (d=2)",
+     "dim": 2,
+     "multiplicity": 7,
+     "polar": false
+    },
+    {
+     "label": "k=(1/2,-1/2,0)*2 d=2 #4",
+     "name": "X+ (d=2)",
+     "dim": 2,
+     "multiplicity": 2,
+     "polar": false,
+     "standard_label": "X2+",
+     "standard_label_evidence": "contains 100.0% of the rigid octahedral rotation about c pattern"
+    },
+    {
+     "label": "k=(1/2,-1/2,0)*2 d=2 #5",
+     "name": "X+ (d=2)",
+     "dim": 2,
+     "multiplicity": 4,
+     "polar": false
+    },
+    {
+     "label": "k=(1/2,-1/2,0)*2 d=2 #6",
+     "name": "X+ (d=2)",
+     "dim": 2,
+     "multiplicity": 4,
+     "polar": false
+    },
+    {
+     "label": "k=(1/2,-1/2,0)*2 d=2 #7",
+     "name": "X+ (d=2)",
+     "dim": 2,
+     "multiplicity": 5,
+     "polar": false
+    },
+    {
+     "label": "k=(1/2,-1/2,0)*2 d=2 #8",
+     "name": "X- (d=2)",
+     "dim": 2,
+     "multiplicity": 2,
+     "polar": false
+    }
+   ]
+  }
+ },
+ {
+  "tool": "find_instabilities",
+  "t": "02:52:09",
+  "result": {
+   "modes": [
+    {
+     "label": "k=(1/2,-1/2,0)*2 d=2 #2",
+     "name": "X- (d=2)",
+     "curvature_eV_A2": -1.6482,
+     "polar": false,
+     "unstable": true,
+     "eigvec_weight_by_species": {
+      "O": 0.965,
+      "Ca": 0.262,
+      "Ti": 0.023
+     },
+     "standard_label": "X3-"
+    },
+    {
+     "label": "k=(1/2,-1/2,0)*2 d=2 #8",
+     "name": "X- (d=2)",
+     "curvature_eV_A2": -1.3738,
+     "polar": false,
+     "unstable": true,
+     "eigvec_weight_by_species": {
+      "O": 1.0,
+      "Ca": 0.0,
+      "Ti": 0.0
+     }
+    },
+    {
+     "label": "k=(1/2,-1/2,0)*2 d=2 #4",
+     "name": "X+ (d=2)",
+     "curvature_eV_A2": -1.2962,
+     "polar": false,
+     "unstable": true,
+     "eigvec_weight_by_species": {
+      "O": 1.0,
+      "Ca": 0.0,
+      "Ti": 0.0
+     },
+     "standard_label": "X2+"
+    },
+    {
+     "label": "k=(1/2,-1/2,0)*2 d=2 #1",
+     "name": "X- (d=2)",
+     "curvature_eV_A2": -1.1707,
+     "polar": false,
+     "unstable": true,
+     "eigvec_weight_by_species": {
+      "O": 0.959,
+      "Ca": 0.282,
+      "Ti": 0.039
+     }
+    },
+    {
+     "label": "k=(1/2,-1/2,0)*2 d=2 #5",
+     "name": "X+ (d=2)",
+     "curvature_eV_A2": -0.6978,
+     "polar": false,
+     "unstable": true,
+     "eigvec_weight_by_species": {
+      "O": 0.89,
+      "Ca": 0.456,
+      "Ti": 0.007
+     }
+    },
+    {
+     "label": "k=(0,0,0) d=2 #1",
+     "name": "Γ- (d=2)",
+     "curvature_eV_A2": -0.4847,
+     "polar": true,
+     "unstable": true,
+     "eigvec_weight_by_species": {
+      "O": 0.527,
+      "Ca": 0.832,
+      "Ti": 0.171
+     },
+     "standard_label": "Γ5-"
+    },
+    {
+     "label": "k=(1,0,0) d=2 #1",
+     "name": "Z- (d=2)",
+     "curvature_eV_A2": -0.4769,
+     "polar": false,
+     "unstable": true,
+     "eigvec_weight_by_species": {
+      "O": 0.484,
+      "Ca": 0.855,
+      "Ti": 0.189
+     }
+    },
+    {
+     "label": "k=(0,0,0) d=1 #2",
+     "name": "Γ- (d=1)",
+     "curvature_eV_A2": -0.0,
+     "polar": true,
+     "unstable": false,
+     "eigvec_weight_by_species": {
+      "O": 0.764,
+      "Ca": 0.5,
+      "Ti": 0.408
+     },
+     "standard_label": "Γ3- (A2u, polar along c)"
+    },
+    {
+     "label": "k=(1/2,-1/2,0)*2 d=2 #6",
+     "name": "X+ (d=2)",
+     "curvature_eV_A2": 0.1502,
+     "polar": false,
+     "unstable": false,
+     "eigvec_weight_by_species": {
+      "O": 0.827,
+      "Ca": 0.562,
+      "Ti": 0.022
+     }
+    },
+    {
+     "label": "k=(1,0,0) d=2 #2",
+     "name": "Z+ (d=2)",
+     "curvature_eV_A2": 0.2953,
+     "polar": false,
+     "unstable": false,
+     "eigvec_weight_by_species": {
+      "O": 0.516,
+      "Ca": 0.785,
+      "Ti": 0.342
+     }
+    },
+    {
+     "label": "k=(0,0,0) d=2 #2",
+     "name": "Γ+ (d=2)",
+     "curvature_eV_A2": 0.6259,
+     "polar": false,
+     "unstable": false,
+     "eigvec_weight_by_species": {
+      "O": 0.604,
+      "Ca": 0.716,
+      "Ti": 0.349
+     }
+    },
+    {
+     "label": "k=(1/2,-1/2,0)*2 d=2 #3",
+     "name": "X- (d=2)",
+     "curvature_eV_A2": 1.5392,
+     "polar": false,
+     "unstable": false,
+     "eigvec_weight_by_species": {
+      "O": 0.209,
+      "Ca": 0.976,
+      "Ti": 0.066
+     }
+    },
+    {
+     "label": "k=(1,0,0) d=1 #1",
+     "name": "Z- (d=1)",
+     "curvature_eV_A2": 1.5758,
+     "polar": false,
+     "unstable": false,
+     "eigvec_weight_by_species": {
+      "O": 0.809,
+      "Ca": 0.361,
+      "Ti": 0.464
+     }
+    },
+    {
+     "label": "k=(1,0,0) d=1 #2",
+     "name": "Z+ (d=1)",
+     "curvature_eV_A2": 1.9414,
+     "polar": false,
+     "unstable": false,
+     "eigvec_weight_by_species": {
+      "O": 0.771,
+      "Ca": 0.531,
+      "Ti": 0.351
+     }
+    },
+    {
+     "label": "k=(1,0,0) d=1 #4",
+     "name": "Z- (d=1)",
+     "curvature_eV_A2": 2.8625,
+     "polar": false,
+     "unstable": false,
+     "eigvec_weight_by_species": {
+      "O": 1.0,
+      "Ca": 0.0,
+      "Ti": 0.0
+     }
+    },
+    {
+     "label": "k=(0,0,0) d=1 #3",
+     "name": "Γ- (d=1)",
+     "curvature_eV_A2": 2.8658,
+     "polar": false,
+     "unstable": false,
+     "eigvec_weight_by_species": {
+      "O": 1.0,
+      "Ca": 0.0,
+      "Ti": 0.0
+     }
+    },
+    {
+     "label": "k=(0,0,0) d=1 #4",
+     "name": "Γ+ (d=1)",
+     "curvature_eV_A2": 3.2915,
+     "polar": false,
+     "unstable": false,
+     "eigvec_weight_by_species": {
+      "O": 1.0,
+      "Ca": 0.0,
+      "Ti": 0.0
+     }
+    },
+    {
+     "label": "k=(1,0,0) d=1 #3",
+     "name": "Z+ (d=1)",
+     "curvature_eV_A2": 3.2947,
+     "polar": false,
+     "unstable": false,
+     "eigvec_weight_by_species": {
+      "O": 1.0,
+      "Ca": 0.0,
+      "Ti": 0.0
+     }
+    },
+    {
+     "label": "k=(0,0,0) d=1 #1",
+     "name": "Γ+ (d=1)",
+     "curvature_eV_A2": 4.0187,
+     "polar": false,
+     "unstable": false,
+     "eigvec_weight_by_species": {
+      "O": 0.903,
+      "Ca": 0.035,
+      "Ti": 0.427
+     }
+    },
+    {
+     "label": "k=(1/2,-1/2,0)*2 d=2 #7",
+     "name": "X+ (d=2)",
+     "curvature_eV_A2": 5.67,
+     "polar": false,
+     "unstable": false,
+     "eigvec_weight_by_species": {
+      "O": 0.306,
+      "Ca": 0.922,
+      "Ti": 0.235
+     }
+    }
+   ]
+  }
+ },
+ {
+  "tool": "choose_order_parameters",
+  "t": "02:52:10",
+  "result": {
+   "order_parameters": [
+    {
+     "name": "X-_1",
+     "label": "k=(1/2,-1/2,0)*2 d=2 #2",
+     "components": 2
+    },
+    {
+     "name": "X+_2",
+     "label": "k=(1/2,-1/2,0)*2 d=2 #4",
+     "components": 2
+    }
+   ]
+  }
+ },
+ {
+  "tool": "forced_couplings",
+  "t": "02:52:11",
+  "result": {
+   "forced_secondary_modes": [
+    {
+     "label": "k=(0,0,0) d=2 #1",
+     "name": "Γ- (d=2)",
+     "polar": true,
+     "standard_label": "Γ5-",
+     "curvature_eV_A2": -0.4847,
+     "coupling_terms": [
+      "S_1*Xm_1_1*Xp_2_1 - S_1*Xm_1_2*Xp_2_2 + S_2*Xm_1_1*Xp_2_1 + S_2*Xm_1_2*Xp_2_2"
+     ]
+    },
+    {
+     "label": "k=(1,0,0) d=2 #1",
+     "name": "Z- (d=2)",
+     "polar": false,
+     "standard_label": null,
+     "curvature_eV_A2": -0.4769,
+     "coupling_terms": [
+      "S_1*Xm_1_1*Xp_2_2 + S_1*Xm_1_2*Xp_2_1 + S_2*Xm_1_1*Xp_2_2 - S_2*Xm_1_2*Xp_2_1"
+     ]
+    },
+    {
+     "label": "k=(1,0,0) d=1 #2",
+     "name": "Z+ (d=1)",
+     "polar": false,
+     "standard_label": null,
+     "curvature_eV_A2": 1.9414,
+     "coupling_terms": [
+      "S*Xp_2_1*Xp_2_2"
+     ]
+    },
+    {
+     "label": "k=(1,0,0) d=1 #3",
+     "name": "Z+ (d=1)",
+     "polar": false,
+     "standard_label": null,
+     "curvature_eV_A2": 3.2947,
+     "coupling_terms": [
+      "S*Xm_1_1*Xm_1_2"
+     ]
+    }
+   ],
+   "any_polar": true,
+   "note": "standard_label is null where no verified ISOTROPY label exists; refer to those modes by their computed name (k-point, parity, dimension) only."
+  }
+ },
+ {
+  "tool": "landau_polynomial",
+  "t": "02:52:21",
+  "result": {
+   "n_invariants": 8,
+   "invariants": [
+    {
+     "degree": 2,
+     "term": "Xm_1_1**2 + Xm_1_2**2",
+     "kind": "X-_1^2  [single]"
+    },
+    {
+     "degree": 2,
+     "term": "Xp_2_1**2 + Xp_2_2**2",
+     "kind": "X+_2^2  [single]"
+    },
+    {
+     "degree": 4,
+     "term": "Xm_1_1**4 + Xm_1_2**4",
+     "kind": "X-_1^4  [single]"
+    },
+    {
+     "degree": 4,
+     "term": "Xm_1_1**2*Xm_1_2**2",
+     "kind": "X-_1^4  [single]"
+    },
+    {
+     "degree": 4,
+     "term": "Xm_1_1**2*Xp_2_1**2 + Xm_1_2**2*Xp_2_2**2",
+     "kind": "X-_1^2 * X+_2^2  [coupling]"
+    },
+    {
+     "degree": 4,
+     "term": "Xm_1_1**2*Xp_2_2**2 + Xm_1_2**2*Xp_2_1**2",
+     "kind": "X-_1^2 * X+_2^2  [coupling]"
+    },
+    {
+     "degree": 4,
+     "term": "Xp_2_1**4 + Xp_2_2**4",
+     "kind": "X+_2^4  [single]"
+    },
+    {
+     "degree": 4,
+     "term": "Xp_2_1**2*Xp_2_2**2",
+     "kind": "X+_2^4  [single]"
+    }
+   ],
+   "landau_condition": [
+    {
+     "irrep": "X-_1",
+     "totally_symmetric": false,
+     "third_order_invariant": false,
+     "landau_condition": "satisfied: no cubic invariant"
+    },
+    {
+     "irrep": "X+_2",
+     "totally_symmetric": false,
+     "third_order_invariant": false,
+     "landau_condition": "satisfied: no cubic invariant"
+    }
+   ]
+  }
+ },
+ {
+  "tool": "fit_landau",
+  "t": "02:55:47",
+  "result": {
+   "single_mode_wells": {
+    "X-_1": {
+     "amp_at_min_A": 1.5000000000000002,
+     "E_min_meV_per_fu": -440.7349110180405
+    },
+    "X+_2": {
+     "amp_at_min_A": 1.3,
+     "E_min_meV_per_fu": -276.8995645689074
+    }
+   },
+   "sampling_scales_A": [
+    1.95,
+    1.69
+   ],
+   "n_points": 225,
+   "rmse_meV_per_fu": 4.3849,
+   "fit_diagnostics": {
+    "rmse_low_energy_half_meV": 4.242,
+    "energy_range_meV": [
+     -573.2,
+     4866.7
+    ]
+   },
+   "units": "meV per parent formula unit, order parameters in Å (whole supercell)",
+   "rmse_definition": "RMSE over sampled configurations below the parent energy (weighted fit; far-uphill points down-weighted)",
+   "coefficients": [
+    {
+     "degree": 2,
+     "coefficient_meV": -402.691,
+     "term": "Xm_1_1**2 + Xm_1_2**2",
+     "kind": "X-_1^2  [single]"
+    },
+    {
+     "degree": 2,
+     "coefficient_meV": -320.7459,
+     "term": "Xp_2_1**2 + Xp_2_2**2",
+     "kind": "X+_2^2  [single]"
+    },
+    {
+     "degree": 4,
+     "coefficient_meV": 90.7152,
+     "term": "Xm_1_1**4 + Xm_1_2**4",
+     "kind": "X-_1^4  [single]"
+    },
+    {
+     "degree": 4,
+     "coefficient_meV": 121.3165,
+     "term": "Xm_1_1**2*Xm_1_2**2",
+     "kind": "X-_1^4  [single]"
+    },
+    {
+     "degree": 4,
+     "coefficient_meV": 76.1359,
+     "term": "Xm_1_1**2*Xp_2_1**2 + Xm_1_2**2*Xp_2_2**2",
+     "kind": "X-_1^2 * X+_2^2  [coupling]"
+    },
+    {
+     "degree": 4,
+     "coefficient_meV": 75.4803,
+     "term": "Xm_1_1**2*Xp_2_2**2 + Xm_1_2**2*Xp_2_1**2",
+     "kind": "X-_1^2 * X+_2^2  [coupling]"
+    },
+    {
+     "degree": 4,
+     "coefficient_meV": 96.8361,
+     "term": "Xp_2_1**4 + Xp_2_2**4",
+     "kind": "X+_2^4  [single]"
+    },
+    {
+     "degree": 4,
+     "coefficient_meV": 581.7672,
+     "term": "Xp_2_1**2*Xp_2_2**2",
+     "kind": "X+_2^4  [single]"
+    },
+    {
+     "degree": 6,
+     "coefficient_meV": 0.409,
+     "term": "Xm_1_1**6 + Xm_1_2**6",
+     "kind": "X-_1^6  [single]"
+    },
+    {
+     "degree": 6,
+     "coefficient_meV": -4.8223,
+     "term": "Xm_1_1**4*Xm_1_2**2 + Xm_1_1**2*Xm_1_2**4",
+     "kind": "X-_1^6  [single]"
+    },
+    {
+     "degree": 6,
+     "coefficient_meV": -1.436,
+     "term": "Xp_2_1**6 + Xp_2_2**6",
+     "kind": "X+_2^6  [single]"
+    },
+    {
+     "degree": 6,
+     "coefficient_meV": -21.5509,
+     "term": "Xp_2_1**4*Xp_2_2**2 + Xp_2_1**2*Xp_2_2**4",
+     "kind": "X+_2^6  [single]"
+    }
+   ]
+  }
+ },
+ {
+  "tool": "predict_ground_state",
+  "t": "02:57:51",
+  "result": {
+   "order_parameter_values": {
+    "X-_1": [
+     -1.1039,
+     -1.101
+    ],
+    "X+_2": [
+     -0.0,
+     -0.8462
+    ]
+   },
+   "landau_energy_meV_per_fu": -596.089,
+   "mace_energy_at_prediction_meV_per_fu": -590.207,
+   "predicted_space_group": "Pmn2_1 (31)",
+   "reliability": {
+    "minimum_on_sampling_boundary": false,
+    "landau_vs_mace_mismatch_meV_per_fu": 5.883,
+    "trustworthy": true,
+    "note": "if not trustworthy, use enumerate_phases for the phase and the Landau polynomial only for the symmetry/coupling story"
+   },
+   "mace_relaxed_in_predicted_symmetry_meV_per_fu": -865.141,
+   "relaxed_space_group": "Pmn2_1 (31)",
+   "relaxed_space_group_tol_0.01A": "Cmc2_1 (36)",
+   "polarization_nominal_charges_uC_cm2": [
+    -9.8,
+    -9.8,
+    0.0
+   ]
+  }
+ }
+]
