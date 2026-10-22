@@ -295,7 +295,8 @@ class Session:
         P = (q[:, None] * d).sum(0) / at.get_volume()   # e / Å^2
         return [round(float(x) * 1602.176634, 2) for x in P]
 
-    def enumerate_phases(self, max_phases: int = 8, fmax: float = 0.03, steps: int = 250) -> dict:
+    def enumerate_phases(self, max_phases: int = 8, fmax: float = 0.03, steps: int = 250,
+                         screen_steps: int = 0) -> dict:
         """Isotropy-subgroup style enumeration: every distinct OP-direction pattern of the
         PRIMARY order parameters, de-duplicated by space group, relaxed with MACE inside its
         own symmetry (all compatible secondary modes free to develop), ranked by energy."""
@@ -349,19 +350,28 @@ class Session:
             desc = {self.op_names[k]: (None if c is None else [round(float(x), 3) for x in c])
                     for k, c in enumerate(combo)}
             cands.append((sg, desc, at))
-        # screen: one MACE single point per distinct pattern at its seed amplitudes, then relax
-        # only the most promising (scales to many order parameters / many patterns)
+        # screen every distinct pattern cheaply, then relax only the most promising (scales to many
+        # order parameters / many patterns). screen_steps=0: one single point at the seed amplitudes.
+        # screen_steps>0: a short symmetry-constrained relaxation first. Seeds that superpose several
+        # modes at their individual well amplitudes overshoot, and a single point then under-ranks
+        # exactly the multi-mode phases (e.g. Pnma = R4+ + M3+) that are often the ground state.
         calc0 = E.get_calculator()
         screened = []
         for sg, desc, at in cands:
             a0 = at.copy()
             a0.calc = calc0
+            if screen_steps > 0:
+                a0.set_constraint(FixSymmetry(a0, symprec=1e-3))
+                FIRE(a0, logfile=None).run(fmax=0.05, steps=screen_steps)
+                a0.set_constraint()
             e0 = (a0.get_potential_energy() - self.model.E0) / self.model.n_fu * 1000
-            screened.append((e0, sg, desc, at))
+            a0.calc = None
+            screened.append((e0, sg, desc, a0 if screen_steps > 0 else at))
         screened.sort(key=lambda c: c[0])
-        self._screen = [dict(space_group=sg, seed_energy_meV_per_fu=round(float(e), 1),
+        self._screen = [dict(space_group=sg, seed_energy_meV_per_fu=round(float(e), 1), screen_steps=screen_steps,
                              order_parameter_directions=d) for e, sg, d, _ in screened]
         cands = [(sg, desc, at) for _, sg, desc, at in screened]
+        self._seed_structs = {sg: at.copy() for sg, _, at in cands}   # every candidate's seed, for diagnostics
         rows = []
         calc = E.get_calculator()
         for sg, desc, at in cands[:max_phases]:
@@ -433,7 +443,7 @@ class Session:
             out[mode] = dict(lowest=ranked[0][mode]["space_group_loose"],
                              within_1_meV_per_fu_of_lowest=close,
                              verdict="resolved" if not close else
-                             "UNRESOLVED: competing phases lie within 1 meV/f.u.; MACE-MP-0 cannot reliably rank them. Report them as degenerate, do not call the lowest one confirmed.")
+                             "UNRESOLVED: competing phases lie within 1 meV/f.u.; the ML potential cannot reliably rank them. Report them as degenerate, do not call the lowest one confirmed.")
         if len(modes) == 2:
             a, b = (out[m]["lowest"] for m in modes)
             out["fixed_vs_relaxed_winner_agree"] = a == b

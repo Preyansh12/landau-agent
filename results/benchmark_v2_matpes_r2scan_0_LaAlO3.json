@@ -1,0 +1,208 @@
+{
+ "material": "LaAlO3",
+ "parent": {
+  "formula": "AlLaO3",
+  "space_group": "Pm-3m (221)",
+  "n_atoms": 5,
+  "lattice_A": [
+   3.7821,
+   3.7821,
+   3.7821,
+   90.0,
+   90.0,
+   90.0
+  ],
+  "relaxed_with": "MACE-MP-0 (medium, float64)"
+ },
+ "instabilities": [
+  {
+   "name": "R+ (d=3)",
+   "label": "k=(1/2,1/2,1/2) d=3 #3",
+   "curvature_eV_A2": -0.6072,
+   "polar": false
+  }
+ ],
+ "primaries": [
+  "k=(1/2,1/2,1/2) d=3 #3"
+ ],
+ "enumeration": {
+  "n_candidates": 3,
+  "n_relaxed": 3,
+  "screening": [
+   {
+    "space_group": "R-3c (167)",
+    "seed_energy_meV_per_fu": -10.1,
+    "order_parameter_directions": {
+     "R+_1": [
+      0.577,
+      -0.577,
+      -0.577
+     ]
+    }
+   },
+   {
+    "space_group": "Imma (74)",
+    "seed_energy_meV_per_fu": -10.0,
+    "order_parameter_directions": {
+     "R+_1": [
+      0.0,
+      0.707,
+      -0.707
+     ]
+    }
+   },
+   {
+    "space_group": "I4/mcm (140)",
+    "seed_energy_meV_per_fu": -9.6,
+    "order_parameter_directions": {
+     "R+_1": [
+      0.0,
+      0.0,
+      1.0
+     ]
+    }
+   }
+  ],
+  "phases": [
+   {
+    "space_group_seed": "R-3c (167)",
+    "space_group_relaxed": "R-3c (167)",
+    "order_parameter_directions": {
+     "R+_1": [
+      0.577,
+      -0.577,
+      -0.577
+     ]
+    },
+    "energy_meV_per_fu": -10.1,
+    "polarization_nominal_uC_cm2": [
+     -0.0,
+     0.0,
+     -0.0
+    ]
+   },
+   {
+    "space_group_seed": "Imma (74)",
+    "space_group_relaxed": "Imma (74)",
+    "order_parameter_directions": {
+     "R+_1": [
+      0.0,
+      0.707,
+      -0.707
+     ]
+    },
+    "energy_meV_per_fu": -10.1,
+    "polarization_nominal_uC_cm2": [
+     -0.0,
+     0.0,
+     -0.0
+    ]
+   },
+   {
+    "space_group_seed": "I4/mcm (140)",
+    "space_group_relaxed": "I4/mcm (140)",
+    "order_parameter_directions": {
+     "R+_1": [
+      0.0,
+      0.0,
+      1.0
+     ]
+    },
+    "energy_meV_per_fu": -9.6,
+    "polarization_nominal_uC_cm2": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   }
+  ],
+  "note": "relaxed with MACE-MP-0 inside each seed symmetry; fixed parent lattice"
+ },
+ "refined": {
+  "phases": [
+   {
+    "space_group_seed": "Imma (74)",
+    "order_parameter_directions": {
+     "R+_1": [
+      0.0,
+      0.707,
+      -0.707
+     ]
+    },
+    "relaxed_cell": {
+     "energy_meV_per_fu": -10.89,
+     "space_group": "Imma (74)",
+     "space_group_loose": "Imma (74)",
+     "lattice_A": [
+      7.5762,
+      7.5651,
+      7.5762
+     ],
+     "polarization_nominal_uC_cm2": null
+    }
+   },
+   {
+    "space_group_seed": "R-3c (167)",
+    "order_parameter_directions": {
+     "R+_1": [
+      0.577,
+      -0.577,
+      -0.577
+     ]
+    },
+    "relaxed_cell": {
+     "energy_meV_per_fu": -10.81,
+     "space_group": "R-3c (167)",
+     "space_group_loose": "R-3c (167)",
+     "lattice_A": [
+      7.5729,
+      7.5729,
+      7.5729
+     ],
+     "polarization_nominal_uC_cm2": null
+    }
+   },
+   {
+    "space_group_seed": "I4/mcm (140)",
+    "order_parameter_directions": {
+     "R+_1": [
+      0.0,
+      0.0,
+      1.0
+     ]
+    },
+    "relaxed_cell": {
+     "energy_meV_per_fu": -10.44,
+     "space_group": "I4/mcm (140)",
+     "space_group_loose": "I4/mcm (140)",
+     "lattice_A": [
+      7.5962,
+      7.5609,
+      7.5609
+     ],
+     "polarization_nominal_uC_cm2": null
+    }
+   }
+  ],
+  "ranked_by": "relaxed_cell",
+  "resolution": {
+   "relaxed_cell": {
+    "lowest": "Imma (74)",
+    "within_1_meV_per_fu_of_lowest": [
+     "R-3c (167) (+0.08)",
+     "I4/mcm (140) (+0.45)"
+    ],
+    "verdict": "UNRESOLVED: competing phases lie within 1 meV/f.u.; MACE-MP-0 cannot reliably rank them. Report them as degenerate, do not call the lowest one confirmed."
+   }
+  }
+ },
+ "protocol": "v2_matpes_r2scan_0",
+ "mlip": "mace-matpes-r2scan-0",
+ "winner": {
+  "space_group": "Imma (74)",
+  "space_group_tol_0_01": "Imma (74)",
+  "energy_meV_per_fu": -10.89,
+  "seed": "Imma (74)"
+ },
+ "runtime_s": 291
+}

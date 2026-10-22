@@ -1,0 +1,9 @@
+cuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.
+Using model under Academic Software License (ASL) license, see https://github.com/gabor1/ASL 
+ To use this model you accept the terms of the license.
+Using Materials Project MACE for MACECalculator with /root/.cache/mace/MACEmatpesr2scanomatftmodel
+Using float64 for MACECalculator, which is slower but more accurate. Recommended for geometry optimization.
+SrTiO3 -> {'space_group': 'R-3c (167)', 'space_group_tol_0_01': 'R-3c (167)', 'energy_meV_per_fu': -0.26, 'seed': 'R-3c (167)'} 218s
+CaTiO3 -> {'space_group': 'Imma (74)', 'space_group_tol_0_01': 'Imma (74)', 'energy_meV_per_fu': -225.28, 'seed': 'Imma (74)'} 418s
+LaAlO3 -> {'space_group': 'Imma (74)', 'space_group_tol_0_01': 'Imma (74)', 'energy_meV_per_fu': -10.89, 'seed': 'Imma (74)'} 291s
+BaTiO3 -> {'space_group': 'R3m (160)', 'space_group_tol_0_01': 'R3m (160)', 'energy_meV_per_fu': -6.78, 'seed': 'R3m (160)'} 396s

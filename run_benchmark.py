@@ -1,5 +1,11 @@
 """Fixed-protocol benchmark: same steps, same settings for every material, no per-material tuning.
 
+Protocol versions (all kept, all reported):
+  v1  original: incomplete direction set, refinement chosen at fixed lattice        results/benchmark_<name>.json
+  v2  symmetry-complete directions, strain-aware refinement, single-point screening results/benchmark_v2_<name>.json
+  v3  v2 + 25-step symmetry-constrained relaxation of every candidate before ranking results/benchmark_v3*_<name>.json
+MLIP: LANDAU_MLIP_MODEL=medium (MACE-MP-0, PBE) or mace-matpes-r2scan-0 (MACE MatPES r2SCAN); the tag records it.
+
 Protocol: MACE-relax the parent -> instabilities -> up to 3 most unstable distinct irreps as
 primaries -> screen all symmetry-distinct patterns with one MACE energy each -> relax the best 6
 in their own symmetry (fixed lattice) -> tighten the best 2 with full cell relaxation -> winner.
@@ -16,13 +22,16 @@ for _n in ("Sr3Ti2O7", "Ca3Mn2O7", "Ca3Sn2O7", "Sr3Sn2O7", "Sr3Hf2O7", "Sr3Ru2O7
 
 import os
 from landau_agent import energy as _E
-TAG = "v2" if _E.MODEL == "medium" else "v2_" + _E.MODEL.replace("mace-", "").replace("-", "_")
+PROTOCOL = os.environ.get("LANDAU_PROTOCOL", "v2")          # v2: single-point screening; v3: 25-step relaxation screening
+SCREEN_STEPS = {"v2": 0, "v3": 25}[PROTOCOL]
+TAG = PROTOCOL if _E.MODEL == "medium" else PROTOCOL + "_" + _E.MODEL.replace("mace-", "").replace("-", "_")
 
 
 def run(name):
     T = time.time()
     s = Session()
-    s.fc_cache = f"results/{name}_force_constants.npy" if TAG == "v2" else f"results/{name}_{TAG}_force_constants.npy"
+    mtag = "" if _E.MODEL == "medium" else "_" + _E.MODEL.replace("mace-", "").replace("-", "_")
+    s.fc_cache = f"results/{name}{mtag}_force_constants.npy"          # force constants depend only on the model
     parent = s.load_parent(name)
     s.set_supercell(SUPERCELLS[name])
     modes = s.find_instabilities()["modes"]
@@ -38,7 +47,7 @@ def run(name):
         print(name, "->", out["winner"], flush=True)
         return
     s.choose_order_parameters(picked)
-    ph = s.enumerate_phases(max_phases=6, fmax=0.03, steps=250)
+    ph = s.enumerate_phases(max_phases=6, fmax=0.03, steps=250, screen_steps=SCREEN_STEPS)
     # v2: strain can reorder phases, so the best 4 (not 2) get a full cell relaxation
     ref = s.refine_phases(top=4, fmax=0.01, steps=800, relaxed_cell_only=True)
     best = ref["phases"][0]
