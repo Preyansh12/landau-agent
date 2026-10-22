@@ -71,3 +71,7 @@ The benchmark and showcase numbers below come from a scripted pipeline that call
 - Phase enumeration is symmetry-complete only for order parameters of dimension ≤ 3.
 - MACE-MP-0 inherits PBE errors.
 - Benchmark numbers come from the scripted pipeline; live agent transcripts are fewer and one run was cut short by a provider overload error.
+
+## Acknowledgement
+
+Built with Claude as a coding assistant.

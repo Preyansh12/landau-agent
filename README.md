@@ -2,7 +2,7 @@
 
 **From a high-symmetry crystal to its symmetry-allowed couplings, its instabilities and its low-symmetry phase. An LLM plans and explains; exact group theory and a universal ML potential (MACE-MP-0) do all the computing.**
 
-Built for the Open Scientific Intelligence (OSI) Hackathon, 21–22 October 2026.
+Built for the Open Scientific Intelligence (OSI) Hackathon, 21–22 October 2026. Built with Claude as a coding assistant.
 
 ## Scorecard
 
