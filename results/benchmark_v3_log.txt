@@ -18,3 +18,6 @@ Using model under Academic Software License (ASL) license, see https://github.co
  To use this model you accept the terms of the license.
 Using Materials Project MACE for MACECalculator with /root/.cache/mace/MACEmatpesr2scanomatftmodel
 Using float64 for MACECalculator, which is slower but more accurate. Recommended for geometry optimization.
+Ca3Sn2O7 -> {'space_group': 'Cmc2_1 (36)', 'space_group_tol_0_01': 'Cmc2_1 (36)', 'energy_meV_per_fu': -2799.74, 'seed': 'Cm (8)'} 4204s
+Sr3Sn2O7 -> {'space_group': 'Ccce (68)', 'space_group_tol_0_01': 'Ccce (68)', 'energy_meV_per_fu': -266.65, 'seed': 'Ccce (68)'} 697s
+Sr3Hf2O7 -> {'space_group': 'Cmc2_1 (36)', 'space_group_tol_0_01': 'Cmc2_1 (36)', 'energy_meV_per_fu': -351.88, 'seed': 'Cmc2_1 (36)'} 833s

@@ -151,10 +151,30 @@ class Session:
                                 amplitude: float = 0.3) -> dict:
         """Select irreps (by label) as order parameters, seeded from soft modes or the child."""
         self.ops, self.op_names = [], []
+        if self.curv is None and source != "child":
+            self.find_instabilities()
+        std = getattr(self, "std", {})
+
+        def resolve(lab):
+            """Accept the computed label, a verified standard label (R4+, X3-, Γ5-...) or a short name."""
+            if any(r["label"] == lab for r in self.curv):
+                return lab
+            norm = lambda x: x.replace("⁺", "+").replace("⁻", "-").replace("Γ", "G").replace("Gamma", "G").replace(" ", "").lower()
+            hits = [k for k, v in std.items() if norm(v["standard"].split()[0]) == norm(lab)]
+            if len(hits) == 1:
+                return hits[0]
+            hits = [r["label"] for r in self.curv if r["curvature_eV_A2"] < 0 and norm(r["name"].split(" ")[0]) == norm(lab)]
+            if len(hits) == 1:
+                return hits[0]
+            if len(hits) > 1:
+                raise ValueError(f"'{lab}' is ambiguous: several unstable irreps share that name ({hits}); use the full computed label")
+            raise ValueError(f"unknown irrep '{lab}'; use a label returned by find_instabilities (or its standard_label)")
+
         for lab in labels:
             if source == "child":
                 op = next(o for o in self._child_ops if o.irrep.label == lab)
             else:
+                lab = resolve(lab)
                 r = next(r for r in self.curv if r["label"] == lab)
                 op = SM.op_from_vector(self.G, r["irrep_type"], r["eigvec"], amp=amplitude)
             self.ops.append(op)

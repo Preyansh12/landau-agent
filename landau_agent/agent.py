@@ -24,6 +24,12 @@ PROVIDER = os.environ.get("LANDAU_AGENT_PROVIDER", "anthropic").lower()
 _DEFAULT_MODEL = {"anthropic": "claude-sonnet-5-5", "gemini": "gemini-flash-latest"}
 MODEL = os.environ.get("LANDAU_AGENT_MODEL", _DEFAULT_MODEL.get(PROVIDER, ""))
 GEMINI_BASE_URL = "https://generativelanguage.googleapis.com/v1beta/openai/"
+# Context budget, for small-context or low-TPM providers (e.g. free tiers): characters kept per tool
+# result, and how many recent tool results stay verbatim in the history (older ones are elided
+# in the conversation only; the transcript and JSON log keep them in full).
+MAX_RESULT_CHARS = int(os.environ.get("LANDAU_AGENT_MAX_RESULT_CHARS", "20000"))
+KEEP_RESULTS = int(os.environ.get("LANDAU_AGENT_KEEP_RESULTS", "1000"))
+ELIDED = "[earlier tool result elided to save context; it is in the transcript/log]"
 
 SYSTEM = f"""You are LandauAgent, a computational solid-state physicist that explains and predicts
 structural phase transitions by combining exact group theory with machine-learned interatomic
@@ -143,6 +149,13 @@ class _AnthropicBackend:
         self.messages.append(dict(role="user", content=[
             dict(type="tool_result", tool_use_id=i, content=c) for i, c in results]))
 
+    def compact(self, keep):
+        blocks = [b for m in self.messages if m["role"] == "user" and isinstance(m["content"], list)
+                  for b in m["content"] if b.get("type") == "tool_result"]
+        for b in blocks[:-keep] if keep < len(blocks) else []:
+            if b["content"] != ELIDED:
+                b["content"] = ELIDED
+
 
 class _OpenAICompatBackend:
     """Chat-completions tool calling; works with Gemini's OpenAI-compatible endpoint."""
@@ -181,6 +194,11 @@ class _OpenAICompatBackend:
     def give_results(self, results):
         for i, c in results:
             self.messages.append(dict(role="tool", tool_call_id=i, content=c))
+
+    def compact(self, keep):
+        tools = [m for m in self.messages if m["role"] == "tool"]
+        for m in tools[:-keep] if keep < len(tools) else []:
+            m["content"] = ELIDED
 
 
 _TRANSIENT = (429, 500, 502, 503, 504, 529)
@@ -226,10 +244,12 @@ def run(question: str, max_turns: int = 40, verbose: bool = True, tag: str = "ag
         for cid, name, args in calls:
             if verbose:
                 print(f"[tool] {name}({json.dumps(args)})", flush=True)
-            out = json.dumps(_call(sess, name, args), default=str)[:20000]
-            events += [("call", name, args), ("result", out)]
+            full = json.dumps(_call(sess, name, args), default=str)
+            out = full[:MAX_RESULT_CHARS] + (" ...[truncated]" if len(full) > MAX_RESULT_CHARS else "")
+            events += [("call", name, args), ("result", full[:20000])]
             results.append((cid, out))
         backend.give_results(results)
+        backend.compact(KEEP_RESULTS)
         save()  # keep the transcript on disk even if a later API call fails
     save()
     return final
