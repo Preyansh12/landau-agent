@@ -11,7 +11,8 @@ except ImportError:
 HULL_MEV, MAG_MUB, MAX_ATOMS_SUPERCELL = 30.0, 0.1, 160
 BAD = set("He Ne Ar Kr Xe Rn Ac Th Pa U Np Pu Am Cm Bk Cf Es Fm Md No Lr Po At Fr Ra".split())
 PRIOR = set("CaTiO3 PbTiO3 LaAlO3 BaTiO3 SrTiO3 Ca3Ti2O7 Sr3Zr2O7 Sr3Ru2O7 Sr3Ti2O7 Ca3Mn2O7 Ca3Sn2O7 Sr3Sn2O7 Sr3Hf2O7".split())
-FAMILIES = {"ABO3": (r"^[A-Z][a-z]?[A-Z][a-z]?O3$", "Pm-3m", 40), "A3B2O7": (r"^[A-Z][a-z]?3[A-Z][a-z]?2O7$", "I4/mmm", 48)}
+# (regex on the pretty formula, aristotype space group, MP anonymous formula used for the query)
+FAMILIES = {"ABO3": (r"^[A-Z][a-z]?[A-Z][a-z]?O3$", "Pm-3m", "ABC3"), "A3B2O7": (r"^[A-Z][a-z]?3[A-Z][a-z]?2O7$", "I4/mmm", "A2B3C7")}
 
 def main():
     key = os.environ.get("MP_API_KEY") or sys.exit("set MP_API_KEY")
@@ -19,9 +20,8 @@ def main():
               "total_magnetization", "nsites", "elements", "nelements"]
     rows = []
     with MPRester(key) as mpr:
-        for fam, (pat, aristo, _) in FAMILIES.items():
-            docs = mpr.materials.summary.search(formula=["*{}O3".format("*") if fam == "ABO3" else "*3*2O7"],
-                                                 fields=fields)
+        for fam, (pat, aristo, anon) in FAMILIES.items():
+            docs = mpr.materials.summary.search(formula=anon, elements=["O"], fields=fields)
             by_comp = defaultdict(list)
             for d in docs:
                 if re.match(pat, d.formula_pretty) and d.nelements == 3:
