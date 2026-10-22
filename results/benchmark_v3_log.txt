@@ -3,3 +3,8 @@ Using model under Academic Software License (ASL) license, see https://github.co
  To use this model you accept the terms of the license.
 Using Materials Project MACE for MACECalculator with /root/.cache/mace/MACEmatpesr2scanomatftmodel
 Using float64 for MACECalculator, which is slower but more accurate. Recommended for geometry optimization.
+CaTiO3 -> {'space_group': 'Pnma (62)', 'space_group_tol_0_01': 'Pnma (62)', 'energy_meV_per_fu': -271.24, 'seed': 'P2_1/m (11)'} 958s
+PbTiO3 -> {'space_group': 'Pm (6)', 'space_group_tol_0_01': 'Pm (6)', 'energy_meV_per_fu': -73.78, 'seed': 'Pm (6)'} 594s
+LaAlO3 -> {'space_group': 'Imma (74)', 'space_group_tol_0_01': 'Imma (74)', 'energy_meV_per_fu': -10.94, 'seed': 'Imma (74)'} 83s
+BaTiO3 -> {'space_group': 'R3m (160)', 'space_group_tol_0_01': 'R3m (160)', 'energy_meV_per_fu': -6.82, 'seed': 'R3m (160)'} 491s
+SrTiO3 -> {'space_group': 'I4/mcm (140)', 'space_group_tol_0_01': 'I4/mcm (140)', 'energy_meV_per_fu': -0.3, 'seed': 'I4/mcm (140)'} 59s

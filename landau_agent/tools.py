@@ -447,6 +447,15 @@ class Session:
             res = self._resolution(rows, modes)
             tightened = dict(fmax_eV_per_A=fmax * 0.1, before=before,
                              after={x["space_group_seed"]: x[key]["energy_meV_per_fu"] for x in close})
+        # The winner's symmetry is reported only after tight convergence when it is ambiguous: a
+        # residual slow mode left by the step cap can make a P4mm state read as Pm at 1e-3 A.
+        w = rows[0]
+        if tighten_if_unresolved and w[key]["space_group"] != w[key]["space_group_loose"] \
+                and w[key].get("fmax_eV_per_A", fmax) > fmax * 0.1 + 1e-12:
+            w[key] = relax(w["space_group_seed"], key, relaxed[(w["space_group_seed"], key)], fmax * 0.1, steps * 3)
+            w[key]["polished"] = True
+            rows.sort(key=lambda x: x[key]["energy_meV_per_fu"])
+            res = self._resolution(rows, modes)
         if out_dir:
             for (sg, mode), at in relaxed.items():
                 at.calc = None

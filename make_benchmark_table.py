@@ -26,6 +26,10 @@ def verdict(mat, d):
     if "no instability" in w.get("space_group", ""):
         return ("hit" if known_num == 139 else "miss"), "no instability"
     loose = w.get("space_group_tol_0_01") or w["space_group"]
+    pol = d.get("winner_polished") or {}
+    if pol.get("needed"):          # v3: winner converged to fmax 0.001 when its symmetry was tolerance-dependent
+        loose = pol["space_group"]
+        w = dict(w, energy_meV_per_fu=pol["energy_meV_per_fu"])
     res = (d.get("refined") or {}).get("resolution", {})
     key = (d.get("refined") or {}).get("ranked_by", "relaxed_cell")
     r = dict(res.get(key)) if res and res.get(key) else None
@@ -35,8 +39,8 @@ def verdict(mat, d):
             r["verdict"] = "resolved"
     txt = f"{loose} ({w['energy_meV_per_fu']})"
     if sgnum(loose) == known_num:
-        if r and r["verdict"] != "resolved":
-            return "hit*", txt + "; degenerate with " + ", ".join(r["within_1_meV_per_fu_of_lowest"])
+        if r and r["verdict"] != "resolved":   # the tool itself declines to call a winner: not a hit
+            return "unresolved", txt + "; known state lowest but within 1 meV/f.u. of " + ", ".join(r["within_1_meV_per_fu_of_lowest"])
         return "hit", txt
     if r and r["verdict"] != "resolved":
         close = r["within_1_meV_per_fu_of_lowest"]
@@ -57,8 +61,8 @@ def main():
                 continue
             d = json.load(open(f[0]))
             v, txt = verdict(mat, d)
-            mark = {"hit": "✅", "hit*": "✅ (margin <1 meV)", "unresolved": "⚠️ unresolved", "miss": "❌"}[v]
-            tally[key][0 if v.startswith("hit") else 1 if v == "unresolved" else 2] += 1
+            mark = {"hit": "✅", "unresolved": "⚠️ unresolved", "miss": "❌"}[v]
+            tally[key][0 if v == "hit" else 1 if v == "unresolved" else 2] += 1
             cells.append(f"{mark} {txt}")
         rows.append(f"| {mat} | {KNOWN[mat][0]} | " + " | ".join(cells) + " |")
     print("| Material | Known | " + " | ".join(p[2] for p in PROTOCOLS) + " |")

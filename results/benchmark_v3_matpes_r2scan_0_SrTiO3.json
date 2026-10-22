@@ -1,0 +1,227 @@
+{
+ "material": "SrTiO3",
+ "parent": {
+  "formula": "O3SrTi",
+  "space_group": "Pm-3m (221)",
+  "n_atoms": 5,
+  "lattice_A": [
+   3.8996,
+   3.8996,
+   3.8996,
+   90.0,
+   90.0,
+   90.0
+  ],
+  "relaxed_with": "MACE-MP-0 (medium, float64)"
+ },
+ "instabilities": [
+  {
+   "name": "R+ (d=3)",
+   "label": "k=(1/2,1/2,1/2) d=3 #3",
+   "curvature_eV_A2": -0.076,
+   "polar": false
+  }
+ ],
+ "primaries": [
+  "k=(1/2,1/2,1/2) d=3 #3"
+ ],
+ "enumeration": {
+  "n_candidates": 3,
+  "n_relaxed": 3,
+  "screening": [
+   {
+    "space_group": "R-3c (167)",
+    "seed_energy_meV_per_fu": -0.3,
+    "screen_steps": 25,
+    "order_parameter_directions": {
+     "R+_1": [
+      0.577,
+      -0.577,
+      -0.577
+     ]
+    }
+   },
+   {
+    "space_group": "Imma (74)",
+    "seed_energy_meV_per_fu": -0.3,
+    "screen_steps": 25,
+    "order_parameter_directions": {
+     "R+_1": [
+      0.0,
+      0.707,
+      -0.707
+     ]
+    }
+   },
+   {
+    "space_group": "I4/mcm (140)",
+    "seed_energy_meV_per_fu": -0.2,
+    "screen_steps": 25,
+    "order_parameter_directions": {
+     "R+_1": [
+      0.0,
+      0.0,
+      1.0
+     ]
+    }
+   }
+  ],
+  "phases": [
+   {
+    "space_group_seed": "R-3c (167)",
+    "space_group_relaxed": "R-3c (167)",
+    "order_parameter_directions": {
+     "R+_1": [
+      0.577,
+      -0.577,
+      -0.577
+     ]
+    },
+    "energy_meV_per_fu": -0.3,
+    "polarization_nominal_uC_cm2": [
+     -0.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "space_group_seed": "Imma (74)",
+    "space_group_relaxed": "Imma (74)",
+    "order_parameter_directions": {
+     "R+_1": [
+      0.0,
+      0.707,
+      -0.707
+     ]
+    },
+    "energy_meV_per_fu": -0.3,
+    "polarization_nominal_uC_cm2": [
+     -0.0,
+     -0.0,
+     -0.0
+    ]
+   },
+   {
+    "space_group_seed": "I4/mcm (140)",
+    "space_group_relaxed": "I4/mcm (140)",
+    "order_parameter_directions": {
+     "R+_1": [
+      0.0,
+      0.0,
+      1.0
+     ]
+    },
+    "energy_meV_per_fu": -0.2,
+    "polarization_nominal_uC_cm2": [
+     0.0,
+     -0.0,
+     -0.0
+    ]
+   }
+  ],
+  "note": "relaxed with MACE-MP-0 inside each seed symmetry; fixed parent lattice"
+ },
+ "refined": {
+  "phases": [
+   {
+    "space_group_seed": "I4/mcm (140)",
+    "order_parameter_directions": {
+     "R+_1": [
+      0.0,
+      0.0,
+      1.0
+     ]
+    },
+    "relaxed_cell": {
+     "energy_meV_per_fu": -0.3,
+     "space_group": "I4/mcm (140)",
+     "space_group_loose": "I4/mcm (140)",
+     "lattice_A": [
+      7.8056,
+      7.7947,
+      7.7947
+     ],
+     "polarization_nominal_uC_cm2": null,
+     "fmax_eV_per_A": 0.001
+    }
+   },
+   {
+    "space_group_seed": "R-3c (167)",
+    "order_parameter_directions": {
+     "R+_1": [
+      0.577,
+      -0.577,
+      -0.577
+     ]
+    },
+    "relaxed_cell": {
+     "energy_meV_per_fu": -0.29,
+     "space_group": "R-3c (167)",
+     "space_group_loose": "R-3c (167)",
+     "lattice_A": [
+      7.7985,
+      7.7985,
+      7.7985
+     ],
+     "polarization_nominal_uC_cm2": null,
+     "fmax_eV_per_A": 0.001
+    }
+   },
+   {
+    "space_group_seed": "Imma (74)",
+    "order_parameter_directions": {
+     "R+_1": [
+      0.0,
+      0.707,
+      -0.707
+     ]
+    },
+    "relaxed_cell": {
+     "energy_meV_per_fu": -0.29,
+     "space_group": "Imma (74)",
+     "space_group_loose": "Imma (74)",
+     "lattice_A": [
+      7.8,
+      7.795,
+      7.8
+     ],
+     "polarization_nominal_uC_cm2": null,
+     "fmax_eV_per_A": 0.001
+    }
+   }
+  ],
+  "ranked_by": "relaxed_cell",
+  "resolution": {
+   "relaxed_cell": {
+    "lowest": "I4/mcm (140)",
+    "within_1_meV_per_fu_of_lowest": [
+     "R-3c (167) (+0.01)",
+     "Imma (74) (+0.01)"
+    ],
+    "verdict": "UNRESOLVED: competing phases lie within 1 meV/f.u.; the ML potential cannot reliably rank them. Report them as degenerate, do not call the lowest one confirmed."
+   }
+  },
+  "tightened": {
+   "fmax_eV_per_A": 0.001,
+   "before": {
+    "R-3c (167)": -0.26,
+    "Imma (74)": -0.25,
+    "I4/mcm (140)": -0.25
+   },
+   "after": {
+    "R-3c (167)": -0.29,
+    "Imma (74)": -0.29,
+    "I4/mcm (140)": -0.3
+   }
+  }
+ },
+ "protocol": "v3_matpes_r2scan_0",
+ "mlip": "mace-matpes-r2scan-0",
+ "winner": {
+  "space_group": "I4/mcm (140)",
+  "space_group_tol_0_01": "I4/mcm (140)",
+  "energy_meV_per_fu": -0.3,
+  "seed": "I4/mcm (140)"
+ },
+ "runtime_s": 59
+}
