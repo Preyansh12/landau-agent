@@ -455,5 +455,8 @@
   "energy_meV_per_fu": -266.65,
   "seed": "Ccce (68)"
  },
- "runtime_s": 697
+ "runtime_s": 697,
+ "winner_polished": {
+  "needed": false
+ }
 }

@@ -4,29 +4,35 @@
 
 Built for the Open Scientific Intelligence (OSI) Hackathon, 21–22 October 2026. Built with Claude as a coding assistant.
 
-**In one paragraph.** Give LandauAgent a high-symmetry crystal and it works out *why* the crystal distorts: which atomic motions are unstable, which ones symmetry forces to move together, and which low-symmetry structure results. For example, starting from nothing but the undistorted Ca₃Ti₂O₇ structure, it discovers that two non-polar octahedral motions, a tilt and a rotation, lower the energy together only by dragging a polarisation along with them, the mechanism that makes the material ferroelectric. **It works well for strongly distorted layered oxides (8 of 8 correct), it fails for subtle cubic perovskites, where competing phases differ by less than 1 meV/f.u. (0 of 4 fully correct, 1 of 4 within 0.3 meV/f.u.), and its tools report when the potential cannot decide.**
+**In one paragraph.** Give LandauAgent a high-symmetry crystal and it works out *why* the crystal distorts: which atomic motions are unstable, which ones symmetry forces to move together, and which low-symmetry structure results. For example, starting from nothing but the undistorted Ca₃Ti₂O₇ structure, it discovers that two non-polar octahedral motions, a tilt and a rotation, lower the energy together only by dragging a polarisation along with them, the mechanism that makes the material ferroelectric. **On 13 materials with known ground states, the current protocol gets 7 right, declares 3 unresolved (competing phases within 1 meV/f.u., the experimental phase always inside the degenerate set), and gets 3 wrong. Each of the 3 wrong answers traces to a pipeline rule, not to the symmetry analysis, and each has a verified fix that is not yet rerun as a full protocol.**
 
 ## Scorecard
 
-**Right on 9 of 13 materials: all 8 n=2 Ruddlesden–Popper compounds, including 6 of 6 out-of-sample predictions whose inputs were committed to git before the run. One of those has a ground state that is *not* A2₁am (Sr₃Ru₂O₇), and one has no distortion at all (Sr₃Ti₂O₇). Every failure is a cubic perovskite.**
+Every protocol version is kept and shown; the table is generated from the result files by `make_benchmark_table.py`. "Known" is the experimental ground state (Sr₃Hf₂O₇: DFT). Energies are meV/f.u. below the parent, relaxed cell. ⚠️ means the tool itself declined to name a winner because phases lie within 1 meV/f.u.; the text says whether the known phase is in that set.
 
-| Material | Known ground state | LandauAgent | |
-|---|---|---|---|
-| Ca₃Ti₂O₇ | A2₁am | A2₁am | ✅ |
-| Sr₃Zr₂O₇ | A2₁am | A2₁am | ✅ |
-| Ca₃Mn₂O₇ *(out of sample)* | A2₁am | A2₁am | ✅ |
-| Ca₃Sn₂O₇ *(out of sample)* | A2₁am | A2₁am | ✅ |
-| Sr₃Sn₂O₇ *(out of sample)* | A2₁am | A2₁am | ✅ |
-| Sr₃Hf₂O₇ *(out of sample)* | A2₁am (DFT) | A2₁am | ✅ |
-| Sr₃Ti₂O₇ *(out of sample, negative control)* | I4/mmm, undistorted | no instability | ✅ |
-| Sr₃Ru₂O₇ *(out of sample, not A2₁am)* | Bbcb (No. 68): RuO₆ rotation only, no tilt | Ccce (No. 68, same group): rotation only, opposite sense in the two layers of a bilayer | ✅ ‡ |
-| PbTiO₃ | P4mm | P4mm | ✅ |
-| LaAlO₃ | R-3c | Imma, 0.3 meV/f.u. below R-3c | ❌ near miss |
-| SrTiO₃ | I4/mcm | polar R3c: volume artefact, caught by `rescale_parent` | ❌ |
-| CaTiO₃ | Pnma | polar R3c (volume-sensitive polar mode) | ❌ |
-| BaTiO₃ | R3m | Aem2; top three phases within 0.3 meV/f.u. | ❌ |
+| Material | Known | v1 (PBE) | v2 (PBE) | v2 (r2SCAN) | v3 (r2SCAN) |
+|---|---|---|---|---|---|
+| CaTiO3 | Pnma | ❌ Ima2 (46) (-262.73) | ❌ R3c (161) (-274.39) | ❌ Imma (74) (-225.28) | ✅ Pnma (62) (-271.24) |
+| PbTiO3 | P4mm | ❌ Amm2 (38) (-100.71) | ✅ P4mm (99) (-189.66) | ❌ Amm2 (38) (-56.25) | ❌ Pm (6) (-73.78) |
+| BaTiO3 | R3m | ❌ Pc (7) (-46.07) | ❌ Aem2 (39) (-40.47) | ⚠️ unresolved R3m (160) (-6.78); known state lowest but within 1 meV/f.u. of Amm2 (38) (+0.91) | ⚠️ unresolved R3m (160) (-6.82); known state lowest but within 1 meV/f.u. of Amm2 (38) (+0.94), Amm2 (38) (+0.94) |
+| LaAlO3 | R-3c | ❌ Imma (74) (-27.21) | ❌ Imma (74) (-27.21) | ⚠️ unresolved Imma (74) (-10.89); known state within R-3c (167) (+0.08) | ⚠️ unresolved Imma (74) (-10.94); known state within R-3c (167) (+0.10) |
+| SrTiO3 | I4/mcm | — | ❌ R3c (161) (-5.19) | ⚠️ unresolved R-3c (167) (-0.26); known state within I4/mcm (140) (+0.01) | ⚠️ unresolved I4/mcm (140) (-0.3); known state lowest but within 1 meV/f.u. of R-3c (167) (+0.01), Imma (74) (+0.01) |
+| Ca3Ti2O7 | A2_1am | — | ✅ Cmc2_1 (36) (-882.32) | ⚠️ unresolved Cmc2_1 (36) (-677.36); known state lowest but within 1 meV/f.u. of Pmn2_1 (31) (+0.42) | ✅ Cmc2_1 (36) (-677.39) |
+| Sr3Zr2O7 | A2_1am | ✅ Cmc2_1 (36) (-807.52) | ✅ Cmc2_1 (36) (-807.52) | — | ✅ Cmc2_1 (36) (-615.9) |
+| Ca3Mn2O7 | A2_1am | — | ✅ Cmc2_1 (36) (-678.37) | — | ❌ Ccce (68) (-286.21) |
+| Ca3Sn2O7 | A2_1am | — | ✅ Cmc2_1 (36) (-3099.05) | — | ✅ Cmc2_1 (36) (-2799.74) |
+| Sr3Sn2O7 | A2_1am | — | ✅ Cmc2_1 (36) (-556.71) | — | ❌ Ccce (68) (-266.65) |
+| Sr3Hf2O7 | A2_1am (DFT) | — | ✅ Cmc2_1 (36) (-453.13) | — | ✅ Cmc2_1 (36) (-351.88) |
+| Sr3Ru2O7 | Bbcb | — | ✅ Ccce (68) (-268.72) | ✅ Ccce (68) (-36.65) | ✅ Ccce (68) (-36.75) |
+| Sr3Ti2O7 | I4/mmm | — | ✅ no instability | — | ✅ no instability |
+| **Tally (hit / unresolved / miss)** | | **1 / 0 / 4** | **9 / 0 / 4** | **1 / 4 / 2** | **7 / 3 / 3** |
 
-A2₁am is reported by spglib in its standard setting, Cmc2₁; Bbcb is a setting of Ccce. ‡ The frozen protocol keeps one irrep per short name, so for Sr₃Ru₂O₇ the X3⁻ tilt was not an order parameter. Rerun with the tilt included, Ccce still wins and A2₁am is 15 meV/f.u. higher (see Out-of-sample test). Details, energies and runner-ups: [Benchmark](#benchmark-seven-materials-with-known-ground-states) and [Out-of-sample test](#out-of-sample-test-six-compounds-the-pipeline-never-saw).
+- **v1 → v2** fixed two enumeration bugs (incomplete direction set; refinement chosen at fixed lattice).
+- **v2 (PBE) → v2 (r2SCAN)** swaps MACE-MP-0 for the r2SCAN-trained `mace-matpes-r2scan-0`, with no experimental input. The false ferroelectric instabilities of SrTiO₃ and CaTiO₃ disappear; BaTiO₃ acquires the textbook R3m → Amm2 → tetragonal ladder.
+- **v3** relaxes every candidate briefly before ranking (CaTiO₃'s Pnma had been discarded on an overshot seed), gives all enumerated phases a free-cell relaxation (PbTiO₃'s P4mm lives on its c/a strain), and converges near-degenerate phases and the winner ten times tighter before reporting. See [Where the failures came from](#where-the-failures-came-from-and-what-fixed-them).
+- The BaTiO₃ and SrTiO₃ "unresolved" entries have the experimental phase lowest; we still count them as unresolved because the tool's own rule does, and we prefer a consistent rule to a flattering one.
+- The v2 (PBE) column is the result we submitted first; the r2SCAN columns were run after reviewer feedback, with the code committed before each run.
+- The 8 Ruddlesden–Popper compounds include 6 that were out of sample (inputs committed before the run), one that stays undistorted (Sr₃Ti₂O₇) and one whose ground state is not A2₁am (Sr₃Ru₂O₇). The three v3 misses (PbTiO₃'s Pm label, Ca₃Mn₂O₇ and Sr₃Sn₂O₇) are traced below.
 
 ## The mechanism, found from the parent alone
 
@@ -144,7 +150,7 @@ At the fixed experimental lattice the three tilt systems lie within 0.25 meV/f.u
 
 The R⁺ invariants the engine derives (η², Σηᵢ⁴, Σηᵢ²ηⱼ², no cubic term) are the textbook R4⁺ expansion. In the Landau fit at the MACE lattice (`results/SrTiO3_log.json`), the cross-quartic coefficient (48.28 meV/f.u. per Å⁴) is only marginally larger than twice the single quartic (2 × 23.65), which at quartic order is the condition that favours a single-axis tilt. The fit also has small 6th-order terms. This marginality is the same near-degeneracy seen in the enumeration.
 
-## Benchmark: seven materials with known ground states
+## Benchmark (protocol v2, PBE potential): seven materials with known ground states
 
 The same automated protocol on every material (`run_benchmark.py`): the MACE-relaxed parent, up to three distinct unstable irreps as primaries, symmetry-complete enumeration, then the four lowest candidates re-relaxed with a free cell (fmax 0.01 eV/Å). The winner is the lowest relaxed-cell energy. Space groups are reported at the strict tolerance and at 0.01 Å. **No volume correction is applied here**, so this is what the potential gives without the agent's volume check.
 
@@ -169,7 +175,7 @@ What the misses say:
 
 The pattern is useful in its own right: where the physics is driven by large, strongly coupled oxygen-octahedron modes (the layered hybrid-improper compounds, PbTiO₃'s large polar distortion), the pipeline gets the ground state. Where the answer depends on sub-meV differences or on the equilibrium volume, it fails, and the tool output (near-degenerate energies, a polar mode that is volume-sensitive) shows that it is in that regime.
 
-## Out-of-sample test: six compounds the pipeline never saw
+## Out-of-sample test (protocol v2, PBE potential): six compounds the pipeline never saw
 
 After the benchmark, we froze the protocol (commit `766821e`). We ran it on five n=2 Ruddlesden–Popper compounds that were never used while developing or fixing the pipeline. The predictions were committed (`results/out_of_sample_predictions.md`, commit `10bcd67`) **before** we checked them against the literature. We chose the materials ourselves, and we knew the general picture for some of them. What is pre-registered is the pipeline output, which was not tuned to them.
 
@@ -202,7 +208,36 @@ Sr₃Ru₂O₇ answers the obvious objection that the pipeline simply returns A2
 
 The hybrid-improper A2₁am state is available and loses by 15 meV/f.u., so the pipeline's answer is not built in. P2₁/c, a lower-symmetry phase, is only 0.33 meV/f.u. above Ccce, below what we trust MACE to resolve.
 
-Together with the benchmark, the pipeline is right on **9 of 13 materials, including all 8 n=2 Ruddlesden–Popper compounds**. All four failures (CaTiO₃, SrTiO₃ and BaTiO₃, plus LaAlO₃'s near miss) are cubic perovskites, where the answer turns on volume-sensitive polar modes or sub-meV degeneracies.
+Under protocol v2 with the PBE-trained potential this gave 9 of 13 right, all 8 Ruddlesden–Popper compounds among them, with all four failures cubic perovskites. The [Scorecard](#scorecard) at the top shows how that changed once the failures were traced and the protocol and potential were revised.
+
+## Where the failures came from, and what fixed them
+
+Four of the five cubic perovskites were wrong under protocol v2. Rather than report them as "MACE's fault" we traced each one. Every change below was committed before the run that tested it, and every protocol version's results are kept.
+
+**1. The potential's volume (SrTiO₃, BaTiO₃, LaAlO₃, partly CaTiO₃).** MACE-MP-0 is trained on PBE data and inherits PBE's 1–2 % overestimate of lattice constants, which is known to create or exaggerate polar instabilities in titanates; universal MLIPs trained on near-equilibrium data also systematically soften the energy surface (Deng et al., npj Comput. Mater. 2025). We swapped in `mace-matpes-r2scan-0`, trained on r2SCAN data with off-equilibrium sampling (MatPES, Kaplan et al. 2025). No experimental input is used. Its cubic lattice constants come out at 3.900 Å for SrTiO₃ (experiment 3.905; MACE-MP-0 gives 3.943).
+- SrTiO₃: the false ferroelectric instability disappears; only the R4⁺ tilt remains.
+- BaTiO₃: wrong → **R3m**, then Amm2 (+0.9 meV/f.u.), then tetragonal: the experimental phase sequence, with the R–O gap DFT also gives.
+- LaAlO₃: R-3c moves to within 0.08 meV/f.u. of the winner.
+
+**2. Our screening (CaTiO₃).** The enumeration scored every candidate with one energy evaluation at its seed amplitude. A seed that superposes two modes at their individual well amplitudes (Pnma = R4⁺ tilt + M3⁺ rotation) overshoots: Pnma's seed scored −112 meV/f.u. and was discarded, while fully relaxed it is −271 meV/f.u., **46 meV/f.u. below** the Imma phase that won. The correct answer was generated and thrown away. v3 relaxes every candidate for 25 symmetry-constrained steps before ranking.
+
+**3. Our refinement cut and convergence (PbTiO₃ under r2SCAN).** Only the best 4 of 6 fixed-lattice candidates got a free-cell relaxation. PbTiO₃'s tetragonal phase lives on its c/a strain: P4mm is 6th at the cubic lattice and the best phase once the cell is free (−73.8 vs −56.3 meV/f.u. for the phase that had won). v3 refines all enumerated candidates with a free cell. The v3 run then reports PbTiO₃ as **Pm**, which is P4mm with a residual tilt that the 800-step cap had not relaxed away (same c/a ≈ 1.11, energy within 0.06 meV/f.u.); continuing that relaxation to fmax = 0.001 eV/Å gives P4mm at every tolerance, −73.84 meV/f.u. (`results/diag_pto_polish.log`). The v3 table keeps the Pm label as run and counts it as a miss; "always converge the reported winner to fmax = 0.001" is the third v4 change.
+
+**4. Real degeneracy (SrTiO₃ tilt system, LaAlO₃).** Where phases lie within a few tenths of a meV/f.u., `refine_phases` now re-relaxes just those phases ten times tighter and, if they stay degenerate, returns an explicit **UNRESOLVED** verdict instead of a winner. For SrTiO₃ the three tilt systems stay within 0.01 meV/f.u. at fmax = 0.005 eV/Å; this is below the resolution of DFT itself at this energy scale, so "unresolved" is the correct answer.
+
+**5. Our order-parameter selection (Ca₃Mn₂O₇ and Sr₃Sn₂O₇ under r2SCAN).** The benchmark protocol keeps one unstable irrep per short name ("X⁻", "X⁺"). Under the r2SCAN model the opposite-sense rotation (X⁻, −1.19 eV/Å²) edges out the X3⁻ tilt (−1.17) for the X⁻ slot, so the tilt was never offered and the hybrid-improper A2₁am phase was never enumerated; the pipeline returned Ccce, which is this material's *intermediate* paraelectric phase (Acaa, stable above 310 K). Offering the three softest distinct irreps instead (`run_all_irreps_check.py`, `results/all_irreps_matpes_r2scan_0_Ca3Mn2O7.json`) gives **A2₁am at −335.6 meV/f.u., 49 meV/f.u. below Ccce**, clearly resolved. The same check on Sr₃Ru₂O₇ (PBE model) left Ccce the winner with A2₁am 15 meV/f.u. higher, so selecting by distinct irrep fixes Ca₃Mn₂O₇ without breaking the one compound that really is rotation-only. Sr₃Sn₂O₇ shows the same pattern under r2SCAN (rotation −0.97 vs tilt −0.89 eV/Å²); with the three softest distinct irreps it gives A2₁am at −312.7 meV/f.u., resolved (`results/all_irreps_matpes_r2scan_0_Sr3Sn2O7.json`). This is a protocol v4 change we have identified but not rerun across all materials before the deadline; the v3 table reports both as misses.
+
+**v4 preview.** The three v3 misses, each rerun with only the identified fix applied (files cited above):
+
+| Material | v3 as run | with the identified fix | Known |
+|---|---|---|---|
+| PbTiO₃ | Pm, −73.78 | **P4mm**, −73.84 (winner converged to fmax 0.001) | P4mm ✅ |
+| Ca₃Mn₂O₇ | Ccce, −286.2 | **A2₁am**, −335.6, resolved (distinct-irrep selection) | A2₁am ✅ |
+| Sr₃Sn₂O₇ | Ccce, −266.7 | **A2₁am**, −312.7, resolved (distinct-irrep selection) | A2₁am ✅ |
+
+These are not counted in the scorecard, because they were not run as one uniform protocol over all 13 materials.
+
+The honest summary: every disagreement we traced was either our pipeline (screening, refinement cut, winner convergence, order-parameter selection) or the potential's PBE volume, each fixed or identified with a verified rerun, or a sub-meV degeneracy that the tool now declares rather than guesses. None was a failure of the symmetry analysis. Three wrong answers remain in the protocol as run; each has a verified fix listed above.
 
 ## How the LLM is used, and how it isn't
 

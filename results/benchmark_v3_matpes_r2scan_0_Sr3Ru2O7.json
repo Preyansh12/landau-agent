@@ -464,5 +464,8 @@
   "energy_meV_per_fu": -36.75,
   "seed": "Aea2 (41)"
  },
- "runtime_s": 648
+ "runtime_s": 648,
+ "winner_polished": {
+  "needed": false
+ }
 }

@@ -470,5 +470,8 @@
   "energy_meV_per_fu": -286.21,
   "seed": "Pcca (54)"
  },
- "runtime_s": 823
+ "runtime_s": 823,
+ "winner_polished": {
+  "needed": false
+ }
 }

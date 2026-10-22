@@ -9,7 +9,7 @@ table = subprocess.run(["python3", "make_benchmark_table.py"], capture_output=Tr
 m = re.search(r"\*\*(\d+) / (\d+) / (\d+)\*\* \|\s*$", table)
 hits, unres, miss = map(int, m.groups())
 
-summary = f"""**In one paragraph.** Give LandauAgent a high-symmetry crystal and it works out *why* the crystal distorts: which atomic motions are unstable, which ones symmetry forces to move together, and which low-symmetry structure results. For example, starting from nothing but the undistorted Ca₃Ti₂O₇ structure, it discovers that two non-polar octahedral motions, a tilt and a rotation, lower the energy together only by dragging a polarisation along with them, the mechanism that makes the material ferroelectric. **On 13 materials with known ground states, the current protocol gets {hits} right, declares {unres} unresolved (competing phases within 1 meV/f.u., the experimental phase always inside the degenerate set), and gets {miss} wrong. It never states a wrong answer with confidence: every disagreement is one the tool flags itself.**"""
+summary = f"""**In one paragraph.** Give LandauAgent a high-symmetry crystal and it works out *why* the crystal distorts: which atomic motions are unstable, which ones symmetry forces to move together, and which low-symmetry structure results. For example, starting from nothing but the undistorted Ca₃Ti₂O₇ structure, it discovers that two non-polar octahedral motions, a tilt and a rotation, lower the energy together only by dragging a polarisation along with them, the mechanism that makes the material ferroelectric. **On 13 materials with known ground states, the current protocol gets {hits} right, declares {unres} unresolved (competing phases within 1 meV/f.u., the experimental phase always inside the degenerate set), and gets {miss} wrong. Each of the {miss} wrong answers traces to a pipeline rule, not to the symmetry analysis, and each has a verified fix that is not yet rerun as a full protocol.**"""
 
 scorecard = f"""## Scorecard
 
@@ -22,7 +22,7 @@ Every protocol version is kept and shown; the table is generated from the result
 - **v3** relaxes every candidate briefly before ranking (CaTiO₃'s Pnma had been discarded on an overshot seed), gives all enumerated phases a free-cell relaxation (PbTiO₃'s P4mm lives on its c/a strain), and converges near-degenerate phases and the winner ten times tighter before reporting. See [Where the failures came from](#where-the-failures-came-from-and-what-fixed-them).
 - The BaTiO₃ and SrTiO₃ "unresolved" entries have the experimental phase lowest; we still count them as unresolved because the tool's own rule does, and we prefer a consistent rule to a flattering one.
 - The v2 (PBE) column is the result we submitted first; the r2SCAN columns were run after reviewer feedback, with the code committed before each run.
-- The 8 Ruddlesden–Popper compounds include 6 that were out of sample (inputs committed before the run), one that stays undistorted (Sr₃Ti₂O₇) and one whose ground state is not A2₁am (Sr₃Ru₂O₇). Ca₃Mn₂O₇ under r2SCAN is discussed below.
+- The 8 Ruddlesden–Popper compounds include 6 that were out of sample (inputs committed before the run), one that stays undistorted (Sr₃Ti₂O₇) and one whose ground state is not A2₁am (Sr₃Ru₂O₇). The three v3 misses (PbTiO₃'s Pm label, Ca₃Mn₂O₇ and Sr₃Sn₂O₇) are traced below.
 
 """
 

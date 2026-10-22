@@ -20,5 +20,8 @@
  "winner": {
   "space_group": "parent (no instability)"
  },
- "runtime_s": 235
+ "runtime_s": 235,
+ "winner_polished": {
+  "needed": false
+ }
 }

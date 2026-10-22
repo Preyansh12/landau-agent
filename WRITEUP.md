@@ -46,7 +46,15 @@ The benchmark and showcase numbers below come from a scripted pipeline that call
 - Sr₃Hf₂O₇ (no experimental structure that we found): A2₁am, matching a published PBEsol DFT study.
 - In each polar case the non-polar Pnma is the runner-up, 6–16 meV/f.u. higher, consistent with the non-polar orthorhombic phases these materials pass through on heating.
 - Sr₃Ru₂O₇, chosen because its ground state is not A2₁am (Bbcb, rotation only): the pipeline predicts Ccce (= Bbcb, the same space group No. 68), a pure opposite-sense rotation. With the tilt also offered as an order parameter, A2₁am is 15 meV/f.u. higher, so the answer is not built into the method.
-- Overall: 9 of 13 materials right, including all 8 n=2 Ruddlesden–Popper compounds. All four failures are cubic perovskites.
+- Under that first protocol: 9 of 13 right, all 8 Ruddlesden–Popper compounds among them; all four failures were cubic perovskites.
+
+**Tracing the failures (after reviewer feedback; every change committed before the run that tested it).**
+- *The potential's volume.* MACE-MP-0 inherits PBE's oversized lattice, which manufactures polar instabilities in titanates. Swapping to the r2SCAN-trained `mace-matpes-r2scan-0` (no experimental input) removes SrTiO₃'s false ferroelectricity and gives BaTiO₃ the textbook R3m → Amm2 → tetragonal ladder.
+- *Our screening.* CaTiO₃'s Pnma was generated and then discarded on a single-point energy of an overshot seed; fully relaxed it is 46 meV/f.u. below the phase that had won. Fixed (short relaxation before ranking): CaTiO₃ is now right.
+- *Our refinement cut and convergence.* PbTiO₃'s P4mm sits 6th at the cubic lattice and wins once the cell is free; the v3 run still labels it Pm because of a residual tilt that a tighter convergence removes (verified).
+- *Our order-parameter selection.* Keeping one irrep per short name let a rotation displace the X3⁻ tilt under the new potential for Ca₃Mn₂O₇ and Sr₃Sn₂O₇; offering the three softest distinct irreps restores A2₁am for both by 49 and 46 meV/f.u. Identified and verified, not yet rerun as a full protocol.
+- *Real degeneracies.* SrTiO₃'s tilt systems (0.01 meV/f.u. apart) and LaAlO₃ (0.10) are now returned as an explicit "unresolved" set containing the experimental phase, after a ten-times tighter relaxation, instead of a guessed winner.
+- Current protocol (v3) on all 13: **7 right, 3 unresolved with the experimental phase inside the set, 3 wrong**, and all three wrongs have a verified fix that is not yet rerun as a full protocol. The full version-by-version table, generated from the result files, is in the README.
 
 ## What we learned
 
@@ -58,7 +66,7 @@ The benchmark and showcase numbers below come from a scripted pipeline that call
   - Forced secondary modes have to be sampled far beyond their own shallow wells, because the primaries drive them there.
   - The fit-independent enumeration and the MACE cross-checks are what make the phase predictions trustworthy.
 - **Universal potentials carry their training functional's biases.** The SrTiO₃ ferroelectric artefact is invisible unless you look for it, so the volume check is now part of the agent's instructions.
-- **Benchmarks find bugs that showcases hide.** Two of the first benchmark's misses were our own enumeration and refinement errors, not the potential's. The remaining misses fall into two recognisable regimes, volume-sensitive polar modes and sub-meV degeneracies, both visible in the tool output.
+- **Benchmarks find bugs that showcases hide.** Of every miss we traced, most were our own pipeline (enumeration, screening, refinement, selection), one was the potential's volume, and the rest are sub-meV degeneracies. A tool that says "unresolved" when phases are within 1 meV/f.u. is more useful than one that always names a winner.
 - **Check the write-up as hard as the code.** An independent audit of our own write-up against the raw result files caught several overstatements, now corrected. Every number here is backed by a file in `results/`.
 
 ## Limitations

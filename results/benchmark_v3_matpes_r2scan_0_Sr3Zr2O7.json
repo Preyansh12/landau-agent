@@ -485,5 +485,8 @@
   "energy_meV_per_fu": -615.9,
   "seed": "Cmc2_1 (36)"
  },
- "runtime_s": 650
+ "runtime_s": 650,
+ "winner_polished": {
+  "needed": false
+ }
 }

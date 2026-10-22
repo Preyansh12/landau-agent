@@ -223,5 +223,8 @@
   "energy_meV_per_fu": -0.3,
   "seed": "I4/mcm (140)"
  },
- "runtime_s": 59
+ "runtime_s": 59,
+ "winner_polished": {
+  "needed": false
+ }
 }

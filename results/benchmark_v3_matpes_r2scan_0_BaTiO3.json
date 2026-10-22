@@ -1378,5 +1378,8 @@
   "energy_meV_per_fu": -6.82,
   "seed": "R3m (160)"
  },
- "runtime_s": 491
+ "runtime_s": 491,
+ "winner_polished": {
+  "needed": false
+ }
 }

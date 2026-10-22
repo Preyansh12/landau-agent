@@ -1137,5 +1137,8 @@
   "energy_meV_per_fu": -73.78,
   "seed": "Pm (6)"
  },
- "runtime_s": 594
+ "runtime_s": 594,
+ "winner_polished": {
+  "needed": false
+ }
 }

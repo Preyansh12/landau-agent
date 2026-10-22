@@ -223,5 +223,8 @@
   "energy_meV_per_fu": -10.94,
   "seed": "Imma (74)"
  },
- "runtime_s": 83
+ "runtime_s": 83,
+ "winner_polished": {
+  "needed": false
+ }
 }
