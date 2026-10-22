@@ -176,12 +176,16 @@ class Session:
         out = []
         for f in found:
             r = cands[int(f["irrep"][1:])]
+            std = getattr(self, "std", {}).get(r["label"])
             out.append(dict(label=r["label"], name=r["name"], polar=r["polar"],
+                            standard_label=std["standard"] if std else None,
                             curvature_eV_A2=r["curvature_eV_A2"],
                             coupling_terms=[t.replace(f["irrep"], "S") for t in f["coupling_terms"]]))
             f["irrep"] = r["label"]
         self._forced = found
-        return self._rec("forced_couplings", dict(forced_secondary_modes=out))
+        return self._rec("forced_couplings", dict(
+            forced_secondary_modes=out, any_polar=any(o["polar"] for o in out),
+            note="standard_label is null where no verified ISOTROPY label exists; refer to those modes by their computed name (k-point, parity, dimension) only."))
 
     def add_secondary(self, label: str) -> dict:
         """Add a (forced) secondary mode to the order-parameter set before fitting."""
@@ -414,7 +418,26 @@ class Session:
             rows.append(row)
         key = "relaxed_cell" if relax_cell else "fixed_cell"
         rows.sort(key=lambda x: x[key]["energy_meV_per_fu"])
-        return self._rec("refine_phases", dict(phases=rows, ranked_by=key))
+        return self._rec("refine_phases", dict(phases=rows, ranked_by=key,
+                                               resolution=self._resolution(rows, modes)))
+
+    @staticmethod
+    def _resolution(rows, modes, window: float = 1.0) -> dict:
+        """Machine-readable verdict on whether MACE can rank the phases (window in meV/f.u.)."""
+        out = {}
+        for mode in modes:
+            ranked = sorted(rows, key=lambda x: x[mode]["energy_meV_per_fu"])
+            e0 = ranked[0][mode]["energy_meV_per_fu"]
+            close = [f'{r[mode]["space_group_loose"]} ({r[mode]["energy_meV_per_fu"] - e0:+.2f})'
+                     for r in ranked[1:] if r[mode]["energy_meV_per_fu"] - e0 < window]
+            out[mode] = dict(lowest=ranked[0][mode]["space_group_loose"],
+                             within_1_meV_per_fu_of_lowest=close,
+                             verdict="resolved" if not close else
+                             "UNRESOLVED: competing phases lie within 1 meV/f.u.; MACE-MP-0 cannot reliably rank them. Report them as degenerate, do not call the lowest one confirmed.")
+        if len(modes) == 2:
+            a, b = (out[m]["lowest"] for m in modes)
+            out["fixed_vs_relaxed_winner_agree"] = a == b
+        return out
 
     def save_prediction(self, path: str) -> dict:
         write(path, getattr(self, "_pred_struct", self._pred_struct_unrelaxed))

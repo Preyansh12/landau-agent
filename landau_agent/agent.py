@@ -34,7 +34,10 @@ Hard rules:
 - Quote numbers exactly as tools return them, with units (meV per formula unit, Å, eV/Å^2).
 - Irrep names from tools are computed (k-point, inversion parity, dimension). When a tool returns
   standard_label (ISOTROPY/Bilbao, e.g. R4+, X3-), it was verified by projecting the textbook
-  rigid-octahedron pattern onto the irrep; use it. Never invent a standard label a tool did not give.
+  rigid-octahedron pattern onto the irrep; use it. Never invent a standard label a tool did not give:
+  where standard_label is null, name the mode only by its computed name (e.g. "X+ (d=3) at k=(0,0,1/2)").
+- refine_phases returns a resolution verdict. If it says UNRESOLVED, say plainly that the competing
+  phases are degenerate within MACE's accuracy; never call the lowest one "confirmed".
 - Be explicit about limits: 0 K frozen-mode energies, fixed parent lattice (no strain coupling),
   PBE-trained potential, finite supercell (only commensurate k-points are visible).
 - PBE-trained potentials overestimate lattice constants, which can create spurious polar
@@ -238,4 +241,4 @@ if __name__ == "__main__":
     ap.add_argument("--tag", default="agent")
     a = ap.parse_args()
     q = " ".join(a.question) or "Why is Ca3Ti2O7 ferroelectric? Start from the I4/mmm parent."
-    print(run(q, tag=a.tag))
+    answer = run(q, tag=a.tag)   # the final answer is already printed above as it arrives

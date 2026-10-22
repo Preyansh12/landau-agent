@@ -23,3 +23,8 @@ We checked the agent's final answer against the tool outputs and against indepen
 - **Invented standard labels.** It names the secondary modes X5⁺, R5⁺, M2⁺ and M5⁺. The code attaches verified labels only to Γ4⁻, R4⁺ and M3⁺ for this parent, so these four labels did not come from a tool. That breaks the system prompt's rule against inventing labels. The underlying claim, that no forced secondary mode is polar, does come from the tool.
 - **Overstated certainty about the tilt system.** It says the full relaxation "confirms" I4/mcm. The tool numbers put I4/mcm, Imma and R-3c within about 0.3 meV/f.u., and at fixed cell Imma is actually lowest. The system prompt asks the model to say the potential cannot decide in that case, and it did not. Its yes/no answer (not ferroelectric) is unaffected.
 - The statement that SrTiO₃ is a quantum paraelectric is correct general knowledge, but it is not a tool result.
+
+## Fixes made in the tools after this audit
+Both errors are now addressed at the tool level, not just in the prompt:
+- `forced_couplings` returns `standard_label` for every secondary mode. The value is null where no verified label exists, with an explicit instruction to use the computed name instead.
+- `refine_phases` returns a machine-readable `resolution` verdict. On the SrTiO₃ numbers above it reports "UNRESOLVED" for both fixed and relaxed cells (Imma, I4/mcm and R-3c within 0.4 meV/f.u.) and flags that the fixed-cell and relaxed-cell winners disagree.
