@@ -8,3 +8,8 @@ PbTiO3 -> {'space_group': 'Pm (6)', 'space_group_tol_0_01': 'Pm (6)', 'energy_me
 LaAlO3 -> {'space_group': 'Imma (74)', 'space_group_tol_0_01': 'Imma (74)', 'energy_meV_per_fu': -10.94, 'seed': 'Imma (74)'} 83s
 BaTiO3 -> {'space_group': 'R3m (160)', 'space_group_tol_0_01': 'R3m (160)', 'energy_meV_per_fu': -6.82, 'seed': 'R3m (160)'} 491s
 SrTiO3 -> {'space_group': 'I4/mcm (140)', 'space_group_tol_0_01': 'I4/mcm (140)', 'energy_meV_per_fu': -0.3, 'seed': 'I4/mcm (140)'} 59s
+Ca3Ti2O7 -> {'space_group': 'Cmc2_1 (36)', 'space_group_tol_0_01': 'Cmc2_1 (36)', 'energy_meV_per_fu': -677.39, 'seed': 'Cmc2_1 (36)'} 1506s
+Sr3Zr2O7 -> {'space_group': 'Cmc2_1 (36)', 'space_group_tol_0_01': 'Cmc2_1 (36)', 'energy_meV_per_fu': -615.9, 'seed': 'Cmc2_1 (36)'} 650s
+Sr3Ru2O7 -> {'space_group': 'Ccce (68)', 'space_group_tol_0_01': 'Ccce (68)', 'energy_meV_per_fu': -36.75, 'seed': 'Aea2 (41)'} 648s
+Sr3Ti2O7 -> {'space_group': 'parent (no instability)'}
+Ca3Mn2O7 -> {'space_group': 'Ccce (68)', 'space_group_tol_0_01': 'Ccce (68)', 'energy_meV_per_fu': -286.21, 'seed': 'Pcca (54)'} 823s
