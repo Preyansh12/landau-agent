@@ -1,6 +1,6 @@
 # Live agent run 3, console output (complete)
 
-Model: gemini-3.8-flash via the OpenAI-compatible backend, Windows laptop, 22 Oct 2026. Run on the code before commit b4d8314; see agent_SrTiO3_audit.md.
+Model: gemini-3.8-flash via the OpenAI-compatible backend, Windows laptop, 22 Oct 2026. Run on the code before commit 19dcc3f; see agent_SrTiO3_audit.md.
 The full transcript and tool log are agent_SrTiO3_transcript.md and agent_SrTiO3_tool_log.json. Console output below, verbatim except that local paths are redacted and the final answer, which the old CLI printed twice, appears once.
 
 ```

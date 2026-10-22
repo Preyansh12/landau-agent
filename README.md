@@ -2,7 +2,9 @@
 
 **From a high-symmetry crystal to its symmetry-allowed couplings, its instabilities and its low-symmetry phase. An LLM plans and explains; exact group theory and a universal ML potential (MACE-MP-0) do all the computing.**
 
-Built for the Open Scientific Intelligence (OSI) Hackathon, 21–22 October 2026. Built with Claude as a coding assistant.
+Built for the Open Scientific Intelligence (OSI) Hackathon, 21–22 October 2026.
+
+**Attribution.** Project led by Preyansh Srivastava: problem selection, experiment design decisions, all runs and the submission. Claude (Anthropic) was used as a research and coding assistant and wrote much of the code and documentation under the author's direction.
 
 **In one paragraph.** Give LandauAgent a high-symmetry crystal and it works out *why* the crystal distorts: which atomic motions are unstable, which ones symmetry forces to move together, and which low-symmetry structure results. For example, starting from nothing but the undistorted Ca₃Ti₂O₇ structure, it discovers that two non-polar octahedral motions, a tilt and a rotation, lower the energy together only by dragging a polarisation along with them, the mechanism that makes the material ferroelectric. **On 13 materials with known ground states, the current protocol gets 7 right, declares 3 unresolved (competing phases within 1 meV/f.u., the experimental phase always inside the degenerate set), and gets 3 wrong. Each of the 3 wrong answers traces to a pipeline rule, not to the symmetry analysis, and each has a verified fix that is not yet rerun as a full protocol.**
 
@@ -177,7 +179,7 @@ The pattern is useful in its own right: where the physics is driven by large, st
 
 ## Out-of-sample test (protocol v2, PBE potential): six compounds the pipeline never saw
 
-After the benchmark, we froze the protocol (commit `766821e`). We ran it on five n=2 Ruddlesden–Popper compounds that were never used while developing or fixing the pipeline. The predictions were committed (`results/out_of_sample_predictions.md`, commit `10bcd67`) **before** we checked them against the literature. We chose the materials ourselves, and we knew the general picture for some of them. What is pre-registered is the pipeline output, which was not tuned to them.
+After the benchmark, we froze the protocol (commit `8b75568`). We ran it on five n=2 Ruddlesden–Popper compounds that were never used while developing or fixing the pipeline. The predictions were committed (`results/out_of_sample_predictions.md`, commit `62d59c2`) **before** we checked them against the literature. We chose the materials ourselves, and we knew the general picture for some of them. What is pre-registered is the pipeline output, which was not tuned to them.
 
 | Material | Predicted (strict / 0.01 Å) | ΔE vs I4/mmm (meV/f.u.) | Runner-up | Literature | Verdict |
 |---|---|---|---|---|---|
@@ -186,7 +188,7 @@ After the benchmark, we froze the protocol (commit `766821e`). We ran it on five
 | Ca₃Sn₂O₇ | Cm / **Cmc2₁** | −3099 † (parent far from stable; not a transition energy) | Aem2 −2683 | polar; T_C of (Sr,Ca)₃Sn₂O₇ rises to about 800 K with Ca content (Yoshida et al. 2018) | **hit** |
 | Sr₃Sn₂O₇ | **Cmc2₁** | −556.7 | Pnma −550.2 | A2₁am ground state, T_C ≈ 410 K, Pnab above (Yoshida et al. 2018; Acta Cryst. B 2025) | **hit** |
 | Sr₃Hf₂O₇ | **Cmc2₁** | −453.1 | Pnma −441.2 | Cmc2₁ ground state from PBEsol DFT; no experimental structure found (Pressure-induced phase transformations of Sr₃Hf₂O₇, 2023) | agrees with DFT |
-| Sr₃Ru₂O₇ (added after review, inputs committed in `ebf1862` before the run) | Aea2 / **Ccce** | −268.7 | Ccce seed −268.7, P-4b2 −257.6, Cmce −246.6 | Bbcb (No. 68 = Ccce): RuO₆ rotations of about 7–8°, no tilt (arXiv:1003.5221 reports rotation only; Bbcb is the usual orthorhombic assignment) | **hit** ‡ |
+| Sr₃Ru₂O₇ (added after review, inputs committed in `61ffde6` before the run) | Aea2 / **Ccce** | −268.7 | Ccce seed −268.7, P-4b2 −257.6, Cmce −246.6 | Bbcb (No. 68 = Ccce): RuO₆ rotations of about 7–8°, no tilt (arXiv:1003.5221 reports rotation only; Bbcb is the usual orthorhombic assignment) | **hit** ‡ |
 
 Cmc2₁ is the standard setting of A2₁am.
 

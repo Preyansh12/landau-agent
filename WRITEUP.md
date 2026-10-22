@@ -82,4 +82,4 @@ The benchmark and showcase numbers below come from a scripted pipeline that call
 
 ## Acknowledgement
 
-Built with Claude as a coding assistant.
+Project led by Preyansh Srivastava: problem selection, experiment design decisions, all runs and the submission. Claude (Anthropic) was used as a research and coding assistant and wrote much of the code and documentation under the author's direction.

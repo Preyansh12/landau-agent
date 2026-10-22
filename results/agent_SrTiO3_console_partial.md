@@ -1,7 +1,7 @@
 # Live agent run, console output (partial)
 
 Model: Gemini Flash via the OpenAI-compatible backend, run on a Windows laptop, 22 Oct 2026.
-The run stopped on a provider error (HTTP 503, model overloaded) after 11 tool calls; retries and per-turn transcript saving were added after this (commit f94eb85).
+The run stopped on a provider error (HTTP 503, model overloaded) after 11 tool calls; retries and per-turn transcript saving were added after this (commit 9c607de).
 Console output below, verbatim except that local paths are redacted.
 
 ```

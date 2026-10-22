@@ -1,6 +1,6 @@
 # Out-of-sample predictions (committed before the literature check)
 
-Protocol: `run_benchmark.py` v2, frozen at commit 766821e, no per-material tuning, MACE-relaxed parent,
+Protocol: `run_benchmark.py` v2, frozen at commit 8b75568, no per-material tuning, MACE-relaxed parent,
 no volume correction. These five materials were not used while developing or fixing the pipeline.
 The materials were chosen by us, and we knew some of the answers in general terms; what is
 pre-registered is the pipeline output, which was not tuned to them.
