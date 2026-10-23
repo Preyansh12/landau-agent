@@ -1,0 +1,77 @@
+family  formula    A  B   a       reference    status notes
+ABO3    BaBiO3     Ba Bi    4.428 P2_1/c       new    degenerate ['C2/m', 'P2_1/c', 'R-3']
+ABO3    BaCeO3     Ba Ce    4.474 Pnma         new    degenerate ['Imma', 'Pnma']
+ABO3    BaGeO3     Ba Ge    3.980 P2_12_12_1   new
+ABO3    BaMoO3     Ba Mo    4.048 Pm-3m        new    aristotype
+ABO3    BaNbO3     Ba Nb    4.134 Pm-3m        new    aristotype
+ABO3    BaNiO3     Ba Ni    4.031 P6_3/mmc     new    degenerate ['P6_3/mmc', 'P6_3mc']
+ABO3    BaPbO3     Ba Pb    4.362 Imma         new    degenerate ['C2/m', 'I4/mcm', 'Imma']
+ABO3    BaSiO3     Ba Si    3.837 P2_12_12_1   new
+ABO3    BaSnO3     Ba Sn    4.144 Pm-3m        new    aristotype
+ABO3    BaTiO3     Ba Ti    4.008 Amm2         prior  degenerate ['Amm2', 'R3m']
+ABO3    BaZrO3     Ba Zr    4.212 I4/mcm       new    degenerate ['I4/mcm', 'Pm-3m']
+ABO3    CaGeO3     Ca Ge    3.783 P-1          new
+ABO3    CaSiO3     Ca Si    3.608 P-1          new    degenerate ['P-1', 'P2_1/c']
+ABO3    CaSnO3     Ca Sn    4.066 Pnma         new
+ABO3    CaTiO3     Ca Ti    3.889 Pnma         prior
+ABO3    CaZrO3     Ca Zr    4.160 Pnma         new
+ABO3    CdGeO3     Cd Ge    3.783 C2/c         new
+ABO3    CdSiO3     Cd Si    3.620 P2_1/c       new
+ABO3    CdSnO3     Cd Sn    4.057 R-3          new
+ABO3    CsIO3      I  Cs    4.590 Pmn2_1       new
+ABO3    CsNbO3     Cs Nb    4.171 P2_1/c       new
+ABO3    DyAlO3     Dy Al    3.711 Pnma         new
+ABO3    EuZrO3     Eu Zr    4.197 Pnma         new
+ABO3    GaBO3      Ga B     3.364 R-3c         new
+ABO3    GaBiO3     Bi Ga    3.853 Pcca         new
+ABO3    GePbO3     Pb Ge    3.888 R-3          new
+ABO3    HfPbO3     Pb Hf    4.155 Pbam         new
+ABO3    InBiO3     Bi In    4.173 Pna2_1       new
+ABO3    KAsO3      K  As    3.844 Pbcn         new
+ABO3    KBiO3      K  Bi    4.284 Pn-3         new
+ABO3    KIO3       K  I     4.200 P1           new
+ABO3    KNbO3      K  Nb    4.029 R3m          new    degenerate ['Amm2', 'R3m']
+ABO3    KTaO3      K  Ta    3.995 Pm-3m        new    aristotype
+ABO3    KVO3       K  V     3.853 Pbcm         new
+ABO3    LaAlO3     La Al    3.783 R-3c         prior
+ABO3    LaCuO3     La Cu    3.872 R-3c         new
+ABO3    LaScO3     La Sc    4.079 Pnma         new
+ABO3    LaTiO3     La Ti    3.959 Pnma         new
+ABO3    LaVO3      La V     3.950 Pnma         new
+ABO3    LuRhO3     Lu Rh    3.924 Pnma         new
+ABO3    MgGeO3     Mg Ge    3.718 C2/c         new
+ABO3    MgSiO3     Mg Si    3.527 P2_1/c       new    degenerate ['P2_1/c', 'Pbca', 'Pbcn']
+ABO3    MgTiO3     Mg Ti    3.842 R-3          new
+ABO3    NaAsO3     Na As    3.719 P-1          new
+ABO3    NaNbO3     Na Nb    4.009 R3c          new
+ABO3    NaTaO3     Na Ta    3.948 Pnma         new
+ABO3    NaVO3      Na V     3.774 C2/c         new
+ABO3    NdAlO3     Nd Al    3.735 R-3c         new
+ABO3    NdCoO3     Nd Co    3.802 Pnma         new
+ABO3    PrAlO3     Pr Al    3.759 R-3c         new
+ABO3    PrCoO3     Pr Co    3.819 Pnma         new
+ABO3    PrGaO3     Ga Pr    4.603 Pnma         new
+ABO3    RbNbO3     Rb Nb    4.099 P-1          new
+ABO3    RbTaO3     Rb Ta    4.071 C2/m         new
+ABO3    RbVO3      Rb V     3.915 Pbcm         new
+ABO3    SiPbO3     Pb Si    3.748 P2/c         new
+ABO3    SmCoO3     Sm Co    3.757 Pnma         new
+ABO3    SrGeO3     Sr Ge    3.857 C2/c         new
+ABO3    SrHfO3     Sr Hf    4.141 Pnma         new
+ABO3    SrMnO3     Sr Mn    3.843 C222_1       new
+ABO3    SrNbO3     Sr Nb    4.070 Pnma         new
+ABO3    SrSiO3     Sr Si    3.699 C2/c         new
+ABO3    SrSnO3     Sr Sn    4.115 Pnma         new
+ABO3    SrTcO3     Sr Tc    3.962 Pnma         new
+ABO3    SrTiO3     Sr Ti    3.913 Pm-3m        prior  aristotype
+ABO3    SrZrO3     Sr Zr    4.198 Pnma         new
+ABO3    TiCdO3     Cd Ti    3.887 R-3          new
+ABO3    TiPbO3     Pb Ti    3.969 P4mm         new
+ABO3    TiZnO3     Zn Ti    3.843 R-3          new
+ABO3    TlIO3      Tl I     4.250 R3m          new
+ABO3    VHgO3      Hg V     3.864 P-1          new
+ABO3    VPbO3      Pb V     3.933 P4mm         new
+ABO3    YCoO3      Y  Co    3.786 Pnma         new
+ABO3    ZrPbO3     Pb Zr    4.209 Pbam         new
+A3B2O7  Sr3Ti2O7   Sr Ti    3.909 I4/mmm       prior  aristotype
+75 compositions; 70 new; 1296 excluded (materials/selection_log.json)
