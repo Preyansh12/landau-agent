@@ -1,0 +1,27 @@
+cuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.
+Using model under Academic Software License (ASL) license, see https://github.com/gabor1/ASL 
+ To use this model you accept the terms of the license.
+Using Materials Project MACE for MACECalculator with C:\Users\preya\.cache\mace/MACEmatpesr2scanomatftmodel
+Using float64 for MACECalculator, which is slower but more accurate. Recommended for geometry optimization.
+CaTiO3 FAILED UnicodeEncodeError 'charmap' codec can't encode character '\u0393' in position 1: character maps to <undefined>
+PbTiO3 FAILED UnicodeEncodeError 'charmap' codec can't encode character '\u0393' in position 1: character maps to <undefined>
+LaAlO3 -> {'space_group': 'Imma (74)', 'space_group_tol_0_01': 'Imma (74)', 'energy_meV_per_fu': -10.94, 'seed': 'Imma (74)'} 61s
+BaTiO3 FAILED UnicodeEncodeError 'charmap' codec can't encode character '\u0393' in position 1: character maps to <undefined>
+SrTiO3 -> {'space_group': 'I4/mcm (140)', 'space_group_tol_0_01': 'I4/mcm (140)', 'energy_meV_per_fu': -0.3, 'seed': 'I4/mcm (140)'} 46s
+Ca3Ti2O7 -> {'space_group': 'Cmc2_1 (36)', 'space_group_tol_0_01': 'Cmc2_1 (36)', 'energy_meV_per_fu': -677.39, 'seed': 'Cmc2_1 (36)'} 731s
+Sr3Zr2O7 -> {'space_group': 'Cmc2_1 (36)', 'space_group_tol_0_01': 'Cmc2_1 (36)', 'energy_meV_per_fu': -615.9, 'seed': 'Cmc2_1 (36)'} 665s
+Sr3Ru2O7 -> {'space_group': 'Ccce (68)', 'space_group_tol_0_01': 'Ccce (68)', 'energy_meV_per_fu': -36.75, 'seed': 'Ccce (68)'} 626s
+Sr3Ti2O7 -> {'space_group': 'parent (no instability)'}
+Ca3Mn2O7 -> {'space_group': 'Cmc2_1 (36)', 'space_group_tol_0_01': 'Cmc2_1 (36)', 'energy_meV_per_fu': -335.77, 'seed': 'Cmc2_1 (36)'} 830s
+Ca3Sn2O7 FAILED UnicodeEncodeError 'charmap' codec can't encode character '\u0393' in position 1: character maps to <undefined>
+Sr3Sn2O7 -> {'space_group': 'Cmc2_1 (36)', 'space_group_tol_0_01': 'Cmc2_1 (36)', 'energy_meV_per_fu': -312.86, 'seed': 'Cmc2_1 (36)'} 644s
+Sr3Hf2O7 -> {'space_group': 'P4_2/mnm (136)', 'space_group_tol_0_01': 'P4_2/mnm (136)', 'energy_meV_per_fu': -345.32, 'seed': 'P4_2/mnm (136)'} 534s
+cuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.
+Using model under Academic Software License (ASL) license, see https://github.com/gabor1/ASL 
+ To use this model you accept the terms of the license.
+Using Materials Project MACE for MACECalculator with C:\Users\preya\.cache\mace/MACEmatpesr2scanomatftmodel
+Using float64 for MACECalculator, which is slower but more accurate. Recommended for geometry optimization.
+CaTiO3 -> {'space_group': 'Pnma (62)', 'space_group_tol_0_01': 'Pnma (62)', 'energy_meV_per_fu': -271.24, 'seed': 'P2_1/m (11)'} 706s
+PbTiO3 -> {'space_group': 'Pm (6)', 'space_group_tol_0_01': 'P4mm (99)', 'energy_meV_per_fu': -73.84, 'seed': 'Pm (6)'} 543s
+BaTiO3 -> {'space_group': 'R3m (160)', 'space_group_tol_0_01': 'R3m (160)', 'energy_meV_per_fu': -6.82, 'seed': 'R3m (160)'} 425s
+Ca3Sn2O7 -> {'space_group': 'Cmc2_1 (36)', 'space_group_tol_0_01': 'Cmc2_1 (36)', 'energy_meV_per_fu': -2799.81, 'seed': 'Cmc2_1 (36)'} 836s

@@ -1,0 +1,24 @@
+{
+ "material": "Sr3Ti2O7",
+ "parent": {
+  "formula": "O14Sr6Ti4",
+  "space_group": "I4/mmm (139)",
+  "n_atoms": 24,
+  "lattice_A": [
+   3.8941,
+   3.8941,
+   20.3207,
+   90.0,
+   90.0,
+   90.0
+  ],
+  "relaxed_with": "MACE-MP-0 (medium, float64)"
+ },
+ "instabilities": [],
+ "protocol": "v5_matpes_r2scan_0",
+ "mlip": "mace-matpes-r2scan-0",
+ "winner": {
+  "space_group": "parent (no instability)"
+ },
+ "runtime_s": 18
+}

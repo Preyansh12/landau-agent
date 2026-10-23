@@ -1,0 +1,1146 @@
+{
+ "material": "Ca3Ti2O7",
+ "parent": {
+  "formula": "Ca6O14Ti4",
+  "space_group": "I4/mmm (139)",
+  "n_atoms": 24,
+  "lattice_A": [
+   3.8377,
+   3.8377,
+   19.4356,
+   90.0,
+   90.0,
+   90.0
+  ],
+  "relaxed_with": "MACE-MP-0 (medium, float64)"
+ },
+ "instabilities": [
+  {
+   "name": "X- (d=2)",
+   "label": "k=(1/2,-1/2,0)*2 d=2 #2",
+   "curvature_eV_A2": -1.4678,
+   "polar": false
+  },
+  {
+   "name": "X- (d=2)",
+   "label": "k=(1/2,-1/2,0)*2 d=2 #8",
+   "curvature_eV_A2": -1.2982,
+   "polar": false
+  },
+  {
+   "name": "X+ (d=2)",
+   "label": "k=(1/2,-1/2,0)*2 d=2 #4",
+   "curvature_eV_A2": -1.1922,
+   "polar": false
+  },
+  {
+   "name": "X- (d=2)",
+   "label": "k=(1/2,-1/2,0)*2 d=2 #1",
+   "curvature_eV_A2": -1.0157,
+   "polar": false
+  },
+  {
+   "name": "X+ (d=2)",
+   "label": "k=(1/2,-1/2,0)*2 d=2 #5",
+   "curvature_eV_A2": -0.4746,
+   "polar": false
+  }
+ ],
+ "primaries": [
+  "k=(1/2,-1/2,0)*2 d=2 #2",
+  "k=(1/2,-1/2,0)*2 d=2 #8",
+  "k=(1/2,-1/2,0)*2 d=2 #4",
+  "k=(1/2,-1/2,0)*2 d=2 #1"
+ ],
+ "enumeration": {
+  "n_candidates": 43,
+  "n_relaxed": 6,
+  "screening": [
+   {
+    "space_group": "Cmc2_1 (36)",
+    "seed_energy_meV_per_fu": -660.9,
+    "screen_steps": 25,
+    "order_parameter_directions": {
+     "X-_1": [
+      0.0,
+      1.0
+     ],
+     "X-_2": null,
+     "X+_3": [
+      0.0,
+      1.0
+     ],
+     "X-_4": null
+    }
+   },
+   {
+    "space_group": "Pnma (62)",
+    "seed_energy_meV_per_fu": -631.6,
+    "screen_steps": 25,
+    "order_parameter_directions": {
+     "X-_1": [
+      0.0,
+      1.0
+     ],
+     "X-_2": null,
+     "X+_3": [
+      1.0,
+      0.0
+     ],
+     "X-_4": null
+    }
+   },
+   {
+    "space_group": "Pbcn (60)",
+    "seed_energy_meV_per_fu": -606.8,
+    "screen_steps": 25,
+    "order_parameter_directions": {
+     "X-_1": [
+      0.0,
+      1.0
+     ],
+     "X-_2": [
+      1.0,
+      0.0
+     ],
+     "X+_3": null,
+     "X-_4": null
+    }
+   },
+   {
+    "space_group": "C2/c (15)",
+    "seed_energy_meV_per_fu": -575.3,
+    "screen_steps": 25,
+    "order_parameter_directions": {
+     "X-_1": [
+      0.0,
+      1.0
+     ],
+     "X-_2": [
+      0.0,
+      1.0
+     ],
+     "X+_3": null,
+     "X-_4": null
+    }
+   },
+   {
+    "space_group": "Pm (6)",
+    "seed_energy_meV_per_fu": -574.1,
+    "screen_steps": 25,
+    "order_parameter_directions": {
+     "X-_1": [
+      0.0,
+      1.0
+     ],
+     "X-_2": null,
+     "X+_3": [
+      0.0,
+      1.0
+     ],
+     "X-_4": [
+      0.707,
+      -0.707
+     ]
+    }
+   },
+   {
+    "space_group": "Pmn2_1 (31)",
+    "seed_energy_meV_per_fu": -569.2,
+    "screen_steps": 25,
+    "order_parameter_directions": {
+     "X-_1": [
+      0.707,
+      -0.707
+     ],
+     "X-_2": null,
+     "X+_3": [
+      0.0,
+      1.0
+     ],
+     "X-_4": null
+    }
+   },
+   {
+    "space_group": "P2_1/m (11)",
+    "seed_energy_meV_per_fu": -556.6,
+    "screen_steps": 25,
+    "order_parameter_directions": {
+     "X-_1": [
+      0.0,
+      1.0
+     ],
+     "X-_2": null,
+     "X+_3": [
+      1.0,
+      0.0
+     ],
+     "X-_4": [
+      0.0,
+      1.0
+     ]
+    }
+   },
+   {
+    "space_group": "Pna2_1 (33)",
+    "seed_energy_meV_per_fu": -530.4,
+    "screen_steps": 25,
+    "order_parameter_directions": {
+     "X-_1": [
+      0.0,
+      1.0
+     ],
+     "X-_2": [
+      1.0,
+      0.0
+     ],
+     "X+_3": [
+      1.0,
+      0.0
+     ],
+     "X-_4": null
+    }
+   },
+   {
+    "space_group": "Cc (9)",
+    "seed_energy_meV_per_fu": -530.4,
+    "screen_steps": 25,
+    "order_parameter_directions": {
+     "X-_1": [
+      0.0,
+      1.0
+     ],
+     "X-_2": [
+      0.0,
+      1.0
+     ],
+     "X+_3": [
+      0.0,
+      1.0
+     ],
+     "X-_4": null
+    }
+   },
+   {
+    "space_group": "P2_1/c (14)",
+    "seed_energy_meV_per_fu": -528.7,
+    "screen_steps": 25,
+    "order_parameter_directions": {
+     "X-_1": [
+      0.0,
+      1.0
+     ],
+     "X-_2": [
+      0.0,
+      1.0
+     ],
+     "X+_3": [
+      1.0,
+      0.0
+     ],
+     "X-_4": null
+    }
+   },
+   {
+    "space_group": "P-1 (2)",
+    "seed_energy_meV_per_fu": -523.7,
+    "screen_steps": 25,
+    "order_parameter_directions": {
+     "X-_1": [
+      0.0,
+      1.0
+     ],
+     "X-_2": [
+      0.0,
+      1.0
+     ],
+     "X+_3": null,
+     "X-_4": [
+      0.0,
+      1.0
+     ]
+    }
+   },
+   {
+    "space_group": "P4_2/mnm (136)",
+    "seed_energy_meV_per_fu": -516.0,
+    "screen_steps": 25,
+    "order_parameter_directions": {
+     "X-_1": [
+      0.707,
+      -0.707
+     ],
+     "X-_2": null,
+     "X+_3": null,
+     "X-_4": null
+    }
+   },
+   {
+    "space_group": "Cmmm (65)",
+    "seed_energy_meV_per_fu": -507.0,
+    "screen_steps": 25,
+    "order_parameter_directions": {
+     "X-_1": [
+      0.707,
+      -0.707
+     ],
+     "X-_2": null,
+     "X+_3": null,
+     "X-_4": [
+      0.707,
+      -0.707
+     ]
+    }
+   },
+   {
+    "space_group": "Cmcm (63)",
+    "seed_energy_meV_per_fu": -488.4,
+    "screen_steps": 25,
+    "order_parameter_directions": {
+     "X-_1": [
+      0.0,
+      1.0
+     ],
+     "X-_2": null,
+     "X+_3": null,
+     "X-_4": null
+    }
+   },
+   {
+    "space_group": "P4_2/m (84)",
+    "seed_energy_meV_per_fu": -479.6,
+    "screen_steps": 25,
+    "order_parameter_directions": {
+     "X-_1": [
+      0.707,
+      -0.707
+     ],
+     "X-_2": null,
+     "X+_3": null,
+     "X-_4": [
+      0.707,
+      0.707
+     ]
+    }
+   },
+   {
+    "space_group": "P2_1 (4)",
+    "seed_energy_meV_per_fu": -472.5,
+    "screen_steps": 25,
+    "order_parameter_directions": {
+     "X-_1": [
+      0.0,
+      1.0
+     ],
+     "X-_2": [
+      1.0,
+      0.0
+     ],
+     "X+_3": [
+      1.0,
+      0.0
+     ],
+     "X-_4": [
+      0.0,
+      1.0
+     ]
+    }
+   },
+   {
+    "space_group": "Pmma (51)",
+    "seed_energy_meV_per_fu": -463.7,
+    "screen_steps": 25,
+    "order_parameter_directions": {
+     "X-_1": [
+      0.0,
+      1.0
+     ],
+     "X-_2": null,
+     "X+_3": null,
+     "X-_4": [
+      1.0,
+      0.0
+     ]
+    }
+   },
+   {
+    "space_group": "P2/m (10)",
+    "seed_energy_meV_per_fu": -462.4,
+    "screen_steps": 25,
+    "order_parameter_directions": {
+     "X-_1": [
+      0.0,
+      1.0
+     ],
+     "X-_2": null,
+     "X+_3": null,
+     "X-_4": [
+      0.707,
+      -0.707
+     ]
+    }
+   },
+   {
+    "space_group": "Aem2 (39)",
+    "seed_energy_meV_per_fu": -450.7,
+    "screen_steps": 25,
+    "order_parameter_directions": {
+     "X-_1": null,
+     "X-_2": null,
+     "X+_3": [
+      0.0,
+      1.0
+     ],
+     "X-_4": [
+      0.0,
+      1.0
+     ]
+    }
+   },
+   {
+    "space_group": "Pbcm (57)",
+    "seed_energy_meV_per_fu": -430.5,
+    "screen_steps": 25,
+    "order_parameter_directions": {
+     "X-_1": null,
+     "X-_2": null,
+     "X+_3": [
+      0.0,
+      1.0
+     ],
+     "X-_4": [
+      1.0,
+      0.0
+     ]
+    }
+   },
+   {
+    "space_group": "Pcca (54)",
+    "seed_energy_meV_per_fu": -423.7,
+    "screen_steps": 25,
+    "order_parameter_directions": {
+     "X-_1": null,
+     "X-_2": [
+      0.0,
+      1.0
+     ],
+     "X+_3": null,
+     "X-_4": [
+      1.0,
+      0.0
+     ]
+    }
+   },
+   {
+    "space_group": "Pma2 (28)",
+    "seed_energy_meV_per_fu": -402.9,
+    "screen_steps": 25,
+    "order_parameter_directions": {
+     "X-_1": null,
+     "X-_2": null,
+     "X+_3": [
+      0.0,
+      1.0
+     ],
+     "X-_4": [
+      0.707,
+      -0.707
+     ]
+    }
+   },
+   {
+    "space_group": "P2/c (13)",
+    "seed_energy_meV_per_fu": -401.9,
+    "screen_steps": 25,
+    "order_parameter_directions": {
+     "X-_1": null,
+     "X-_2": [
+      0.0,
+      1.0
+     ],
+     "X+_3": null,
+     "X-_4": [
+      0.0,
+      1.0
+     ]
+    }
+   },
+   {
+    "space_group": "C2 (5)",
+    "seed_energy_meV_per_fu": -391.0,
+    "screen_steps": 25,
+    "order_parameter_directions": {
+     "X-_1": null,
+     "X-_2": [
+      0.707,
+      -0.707
+     ],
+     "X+_3": [
+      0.707,
+      0.707
+     ],
+     "X-_4": [
+      0.707,
+      -0.707
+     ]
+    }
+   },
+   {
+    "space_group": "P1 (1)",
+    "seed_energy_meV_per_fu": -376.0,
+    "screen_steps": 25,
+    "order_parameter_directions": {
+     "X-_1": null,
+     "X-_2": [
+      0.0,
+      1.0
+     ],
+     "X+_3": [
+      0.707,
+      -0.707
+     ],
+     "X-_4": [
+      0.707,
+      -0.707
+     ]
+    }
+   },
+   {
+    "space_group": "C2/m (12)",
+    "seed_energy_meV_per_fu": -361.9,
+    "screen_steps": 25,
+    "order_parameter_directions": {
+     "X-_1": null,
+     "X-_2": [
+      0.707,
+      -0.707
+     ],
+     "X+_3": null,
+     "X-_4": [
+      0.707,
+      -0.707
+     ]
+    }
+   },
+   {
+    "space_group": "Amm2 (38)",
+    "seed_energy_meV_per_fu": -356.9,
+    "screen_steps": 25,
+    "order_parameter_directions": {
+     "X-_1": null,
+     "X-_2": null,
+     "X+_3": [
+      0.707,
+      -0.707
+     ],
+     "X-_4": [
+      0.707,
+      -0.707
+     ]
+    }
+   },
+   {
+    "space_group": "Pmc2_1 (26)",
+    "seed_energy_meV_per_fu": -339.7,
+    "screen_steps": 25,
+    "order_parameter_directions": {
+     "X-_1": null,
+     "X-_2": null,
+     "X+_3": [
+      0.707,
+      -0.707
+     ],
+     "X-_4": [
+      0.0,
+      1.0
+     ]
+    }
+   },
+   {
+    "space_group": "P2 (3)",
+    "seed_energy_meV_per_fu": -337.2,
+    "screen_steps": 25,
+    "order_parameter_directions": {
+     "X-_1": null,
+     "X-_2": [
+      0.0,
+      1.0
+     ],
+     "X+_3": [
+      1.0,
+      0.0
+     ],
+     "X-_4": [
+      0.707,
+      -0.707
+     ]
+    }
+   },
+   {
+    "space_group": "Pcc2 (27)",
+    "seed_energy_meV_per_fu": -325.1,
+    "screen_steps": 25,
+    "order_parameter_directions": {
+     "X-_1": null,
+     "X-_2": [
+      0.0,
+      1.0
+     ],
+     "X+_3": [
+      1.0,
+      0.0
+     ],
+     "X-_4": [
+      1.0,
+      0.0
+     ]
+    }
+   },
+   {
+    "space_group": "Pca2_1 (29)",
+    "seed_energy_meV_per_fu": -305.7,
+    "screen_steps": 25,
+    "order_parameter_directions": {
+     "X-_1": null,
+     "X-_2": [
+      0.0,
+      1.0
+     ],
+     "X+_3": [
+      0.0,
+      1.0
+     ],
+     "X-_4": [
+      1.0,
+      0.0
+     ]
+    }
+   },
+   {
+    "space_group": "Pc (7)",
+    "seed_energy_meV_per_fu": -305.6,
+    "screen_steps": 25,
+    "order_parameter_directions": {
+     "X-_1": null,
+     "X-_2": [
+      0.0,
+      1.0
+     ],
+     "X+_3": [
+      0.0,
+      1.0
+     ],
+     "X-_4": [
+      0.0,
+      1.0
+     ]
+    }
+   },
+   {
+    "space_group": "Cm (8)",
+    "seed_energy_meV_per_fu": -296.5,
+    "screen_steps": 25,
+    "order_parameter_directions": {
+     "X-_1": null,
+     "X-_2": [
+      0.707,
+      -0.707
+     ],
+     "X+_3": [
+      0.707,
+      -0.707
+     ],
+     "X-_4": [
+      0.707,
+      -0.707
+     ]
+    }
+   },
+   {
+    "space_group": "Ccce (68)",
+    "seed_energy_meV_per_fu": -292.3,
+    "screen_steps": 25,
+    "order_parameter_directions": {
+     "X-_1": null,
+     "X-_2": [
+      0.0,
+      1.0
+     ],
+     "X+_3": null,
+     "X-_4": null
+    }
+   },
+   {
+    "space_group": "P4_2/mcm (132)",
+    "seed_energy_meV_per_fu": -290.5,
+    "screen_steps": 25,
+    "order_parameter_directions": {
+     "X-_1": null,
+     "X-_2": null,
+     "X+_3": null,
+     "X-_4": [
+      0.707,
+      -0.707
+     ]
+    }
+   },
+   {
+    "space_group": "P-4b2 (117)",
+    "seed_energy_meV_per_fu": -276.2,
+    "screen_steps": 25,
+    "order_parameter_directions": {
+     "X-_1": null,
+     "X-_2": [
+      0.707,
+      -0.707
+     ],
+     "X+_3": [
+      0.707,
+      0.707
+     ],
+     "X-_4": null
+    }
+   },
+   {
+    "space_group": "Cmce (64)",
+    "seed_energy_meV_per_fu": -258.1,
+    "screen_steps": 25,
+    "order_parameter_directions": {
+     "X-_1": null,
+     "X-_2": null,
+     "X+_3": [
+      0.0,
+      1.0
+     ],
+     "X-_4": null
+    }
+   },
+   {
+    "space_group": "Pba2 (32)",
+    "seed_energy_meV_per_fu": -246.2,
+    "screen_steps": 25,
+    "order_parameter_directions": {
+     "X-_1": null,
+     "X-_2": [
+      0.0,
+      1.0
+     ],
+     "X+_3": [
+      0.707,
+      -0.707
+     ],
+     "X-_4": null
+    }
+   },
+   {
+    "space_group": "Cmme (67)",
+    "seed_energy_meV_per_fu": -239.5,
+    "screen_steps": 25,
+    "order_parameter_directions": {
+     "X-_1": null,
+     "X-_2": null,
+     "X+_3": null,
+     "X-_4": [
+      0.0,
+      1.0
+     ]
+    }
+   },
+   {
+    "space_group": "Aea2 (41)",
+    "seed_energy_meV_per_fu": -147.5,
+    "screen_steps": 25,
+    "order_parameter_directions": {
+     "X-_1": null,
+     "X-_2": [
+      0.0,
+      1.0
+     ],
+     "X+_3": [
+      0.0,
+      1.0
+     ],
+     "X-_4": null
+    }
+   },
+   {
+    "space_group": "P4/nbm (125)",
+    "seed_energy_meV_per_fu": -143.2,
+    "screen_steps": 25,
+    "order_parameter_directions": {
+     "X-_1": null,
+     "X-_2": [
+      0.707,
+      -0.707
+     ],
+     "X+_3": null,
+     "X-_4": null
+    }
+   },
+   {
+    "space_group": "P4/mbm (127)",
+    "seed_energy_meV_per_fu": -126.6,
+    "screen_steps": 25,
+    "order_parameter_directions": {
+     "X-_1": null,
+     "X-_2": null,
+     "X+_3": [
+      0.707,
+      -0.707
+     ],
+     "X-_4": null
+    }
+   },
+   {
+    "space_group": "P4bm (100)",
+    "seed_energy_meV_per_fu": -75.8,
+    "screen_steps": 25,
+    "order_parameter_directions": {
+     "X-_1": null,
+     "X-_2": [
+      0.707,
+      -0.707
+     ],
+     "X+_3": [
+      0.707,
+      -0.707
+     ],
+     "X-_4": null
+    }
+   }
+  ],
+  "phases": [
+   {
+    "space_group_seed": "Cmc2_1 (36)",
+    "space_group_relaxed": "Cmc2_1 (36)",
+    "order_parameter_directions": {
+     "X-_1": [
+      0.0,
+      1.0
+     ],
+     "X-_2": null,
+     "X+_3": [
+      0.0,
+      1.0
+     ],
+     "X-_4": null
+    },
+    "energy_meV_per_fu": -668.6,
+    "polarization_nominal_uC_cm2": [
+     -6.36,
+     -6.36,
+     -0.0
+    ]
+   },
+   {
+    "space_group_seed": "Pm (6)",
+    "space_group_relaxed": "Pm (6)",
+    "order_parameter_directions": {
+     "X-_1": [
+      0.0,
+      1.0
+     ],
+     "X-_2": null,
+     "X+_3": [
+      0.0,
+      1.0
+     ],
+     "X-_4": [
+      0.707,
+      -0.707
+     ]
+    },
+    "energy_meV_per_fu": -667.8,
+    "polarization_nominal_uC_cm2": [
+     -6.87,
+     -6.98,
+     -0.0
+    ]
+   },
+   {
+    "space_group_seed": "Pnma (62)",
+    "space_group_relaxed": "Pnma (62)",
+    "order_parameter_directions": {
+     "X-_1": [
+      0.0,
+      1.0
+     ],
+     "X-_2": null,
+     "X+_3": [
+      1.0,
+      0.0
+     ],
+     "X-_4": null
+    },
+    "energy_meV_per_fu": -642.6,
+    "polarization_nominal_uC_cm2": [
+     0.0,
+     0.0,
+     -0.0
+    ]
+   },
+   {
+    "space_group_seed": "Pbcn (60)",
+    "space_group_relaxed": "Pbcn (60)",
+    "order_parameter_directions": {
+     "X-_1": [
+      0.0,
+      1.0
+     ],
+     "X-_2": [
+      1.0,
+      0.0
+     ],
+     "X+_3": null,
+     "X-_4": null
+    },
+    "energy_meV_per_fu": -616.3,
+    "polarization_nominal_uC_cm2": [
+     -0.0,
+     -0.0,
+     -0.0
+    ]
+   },
+   {
+    "space_group_seed": "C2/c (15)",
+    "space_group_relaxed": "C2/c (15)",
+    "order_parameter_directions": {
+     "X-_1": [
+      0.0,
+      1.0
+     ],
+     "X-_2": [
+      0.0,
+      1.0
+     ],
+     "X+_3": null,
+     "X-_4": null
+    },
+    "energy_meV_per_fu": -580.4,
+    "polarization_nominal_uC_cm2": [
+     0.0,
+     0.0,
+     -0.0
+    ]
+   },
+   {
+    "space_group_seed": "Pmn2_1 (31)",
+    "space_group_relaxed": "Pmn2_1 (31)",
+    "order_parameter_directions": {
+     "X-_1": [
+      0.707,
+      -0.707
+     ],
+     "X-_2": null,
+     "X+_3": [
+      0.0,
+      1.0
+     ],
+     "X-_4": null
+    },
+    "energy_meV_per_fu": -574.5,
+    "polarization_nominal_uC_cm2": [
+     0.41,
+     0.41,
+     -0.0
+    ]
+   }
+  ],
+  "note": "relaxed with MACE-MP-0 inside each seed symmetry; fixed parent lattice"
+ },
+ "refined": {
+  "phases": [
+   {
+    "space_group_seed": "Pm (6)",
+    "order_parameter_directions": {
+     "X-_1": [
+      0.0,
+      1.0
+     ],
+     "X-_2": null,
+     "X+_3": [
+      0.0,
+      1.0
+     ],
+     "X-_4": [
+      0.707,
+      -0.707
+     ]
+    },
+    "relaxed_cell": {
+     "energy_meV_per_fu": -677.39,
+     "space_group": "Cmc2_1 (36)",
+     "space_group_loose": "Cmc2_1 (36)",
+     "lattice_A": [
+      5.4369,
+      5.402,
+      19.3711
+     ],
+     "polarization_nominal_uC_cm2": null,
+     "fmax_eV_per_A": 0.001,
+     "polished": true,
+     "symmetrisation_test": {
+      "symmetrised_to": "Cmc2_1 (36)",
+      "energy_meV_per_fu": -677.39,
+      "unsymmetrised_energy_meV_per_fu": -677.39,
+      "cost_meV_per_fu": 0.0,
+      "accepted": true
+     }
+    }
+   },
+   {
+    "space_group_seed": "Cmc2_1 (36)",
+    "order_parameter_directions": {
+     "X-_1": [
+      0.0,
+      1.0
+     ],
+     "X-_2": null,
+     "X+_3": [
+      0.0,
+      1.0
+     ],
+     "X-_4": null
+    },
+    "relaxed_cell": {
+     "energy_meV_per_fu": -677.35,
+     "space_group": "Cmc2_1 (36)",
+     "space_group_loose": "Cmc2_1 (36)",
+     "lattice_A": [
+      5.4365,
+      5.4021,
+      19.3705
+     ],
+     "polarization_nominal_uC_cm2": null,
+     "fmax_eV_per_A": 0.01
+    }
+   },
+   {
+    "space_group_seed": "Pnma (62)",
+    "order_parameter_directions": {
+     "X-_1": [
+      0.0,
+      1.0
+     ],
+     "X-_2": null,
+     "X+_3": [
+      1.0,
+      0.0
+     ],
+     "X-_4": null
+    },
+    "relaxed_cell": {
+     "energy_meV_per_fu": -649.14,
+     "space_group": "Pnma (62)",
+     "space_group_loose": "Pnma (62)",
+     "lattice_A": [
+      5.4204,
+      5.4127,
+      19.4066
+     ],
+     "polarization_nominal_uC_cm2": null,
+     "fmax_eV_per_A": 0.01
+    }
+   },
+   {
+    "space_group_seed": "Pbcn (60)",
+    "order_parameter_directions": {
+     "X-_1": [
+      0.0,
+      1.0
+     ],
+     "X-_2": [
+      1.0,
+      0.0
+     ],
+     "X+_3": null,
+     "X-_4": null
+    },
+    "relaxed_cell": {
+     "energy_meV_per_fu": -622.31,
+     "space_group": "Pbcn (60)",
+     "space_group_loose": "Pbcn (60)",
+     "lattice_A": [
+      5.4144,
+      5.4318,
+      19.374
+     ],
+     "polarization_nominal_uC_cm2": null,
+     "fmax_eV_per_A": 0.01
+    }
+   },
+   {
+    "space_group_seed": "C2/c (15)",
+    "order_parameter_directions": {
+     "X-_1": [
+      0.0,
+      1.0
+     ],
+     "X-_2": [
+      0.0,
+      1.0
+     ],
+     "X+_3": null,
+     "X-_4": null
+    },
+    "relaxed_cell": {
+     "energy_meV_per_fu": -597.55,
+     "space_group": "C2/c (15)",
+     "space_group_loose": "C2/c (15)",
+     "lattice_A": [
+      5.4019,
+      5.4355,
+      19.4165
+     ],
+     "polarization_nominal_uC_cm2": null,
+     "fmax_eV_per_A": 0.01
+    }
+   },
+   {
+    "space_group_seed": "Pmn2_1 (31)",
+    "order_parameter_directions": {
+     "X-_1": [
+      0.707,
+      -0.707
+     ],
+     "X-_2": null,
+     "X+_3": [
+      0.0,
+      1.0
+     ],
+     "X-_4": null
+    },
+    "relaxed_cell": {
+     "energy_meV_per_fu": -580.74,
+     "space_group": "Pmn2_1 (31)",
+     "space_group_loose": "Pmn2_1 (31)",
+     "lattice_A": [
+      5.4175,
+      5.4173,
+      19.3953
+     ],
+     "polarization_nominal_uC_cm2": null,
+     "fmax_eV_per_A": 0.01
+    }
+   }
+  ],
+  "ranked_by": "relaxed_cell",
+  "resolution": {
+   "relaxed_cell": {
+    "lowest": "Cmc2_1 (36)",
+    "within_1_meV_per_fu_of_lowest": [],
+    "verdict": "resolved"
+   }
+  },
+  "tightened": null
+ },
+ "protocol": "v5_matpes_r2scan_0",
+ "mlip": "mace-matpes-r2scan-0",
+ "winner": {
+  "space_group": "Cmc2_1 (36)",
+  "space_group_tol_0_01": "Cmc2_1 (36)",
+  "energy_meV_per_fu": -677.39,
+  "seed": "Pm (6)"
+ },
+ "runtime_s": 1003
+}

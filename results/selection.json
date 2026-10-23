@@ -1,0 +1,1048 @@
+[
+ {
+  "family": "ABO3",
+  "formula": "BaBiO3",
+  "reference_sg": "P2_1/c",
+  "reference_id": "mp-559051",
+  "e_hull_meV_atom": 0.0,
+  "degenerate_reference": [
+   "C2/m",
+   "P2_1/c",
+   "R-3"
+  ],
+  "experimental_polymorphs": [
+   "C2/m",
+   "Fm-3m",
+   "P2_1/c",
+   "Pm-3m",
+   "R-3"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "BaCeO3",
+  "reference_sg": "Pnma",
+  "reference_id": "mp-3187",
+  "e_hull_meV_atom": 0.0,
+  "degenerate_reference": [
+   "Imma",
+   "Pnma"
+  ],
+  "experimental_polymorphs": [
+   "Imma",
+   "Pm-3m",
+   "Pnma",
+   "R-3c"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "BaGeO3",
+  "reference_sg": "P2_12_12_1",
+  "reference_id": "mp-13863",
+  "e_hull_meV_atom": 0.0,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "P2_12_12_1"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "BaMoO3",
+  "reference_sg": "Pm-3m",
+  "reference_id": "mp-19322",
+  "e_hull_meV_atom": 0.0,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "Pm-3m"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "BaNbO3",
+  "reference_sg": "Pm-3m",
+  "reference_id": "mp-3020",
+  "e_hull_meV_atom": 0.0,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "Pm-3m"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "BaNiO3",
+  "reference_sg": "P6_3/mmc",
+  "reference_id": "mp-19138",
+  "e_hull_meV_atom": 0.0,
+  "degenerate_reference": [
+   "P6_3/mmc",
+   "P6_3mc"
+  ],
+  "experimental_polymorphs": [
+   "P6_3/mmc",
+   "P6_3mc"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "BaPbO3",
+  "reference_sg": "Imma",
+  "reference_id": "mp-22230",
+  "e_hull_meV_atom": 0.0,
+  "degenerate_reference": [
+   "C2/m",
+   "I4/mcm",
+   "Imma"
+  ],
+  "experimental_polymorphs": [
+   "C2/m",
+   "I4/mcm",
+   "Imma",
+   "Pm-3m"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "BaSiO3",
+  "reference_sg": "P2_12_12_1",
+  "reference_id": "mp-7339",
+  "e_hull_meV_atom": 22.0,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "P2_12_12_1",
+   "P6_3/mmc",
+   "R-3m"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "BaSnO3",
+  "reference_sg": "Pm-3m",
+  "reference_id": "mp-3163",
+  "e_hull_meV_atom": 0.0,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "Pm-3m"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "BaTiO3",
+  "reference_sg": "Amm2",
+  "reference_id": "mp-5777",
+  "e_hull_meV_atom": 0.0,
+  "degenerate_reference": [
+   "Amm2",
+   "R3m"
+  ],
+  "experimental_polymorphs": [
+   "Amm2",
+   "C222_1",
+   "P4/mmm",
+   "P4mm",
+   "P6_3/mmc",
+   "Pm-3m",
+   "R3m"
+  ],
+  "status": "prior"
+ },
+ {
+  "family": "ABO3",
+  "formula": "BaZrO3",
+  "reference_sg": "I4/mcm",
+  "reference_id": "mp-1019544",
+  "e_hull_meV_atom": 0.0,
+  "degenerate_reference": [
+   "I4/mcm",
+   "Pm-3m"
+  ],
+  "experimental_polymorphs": [
+   "I4/mcm",
+   "Pm-3m"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "CaGeO3",
+  "reference_sg": "P-1",
+  "reference_id": "mp-17761",
+  "e_hull_meV_atom": 0.0,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "I4_1/a",
+   "P-1",
+   "Pnma"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "CaSiO3",
+  "reference_sg": "P-1",
+  "reference_id": "mp-4429",
+  "e_hull_meV_atom": 0.0,
+  "degenerate_reference": [
+   "P-1",
+   "P2_1/c"
+  ],
+  "experimental_polymorphs": [
+   "C2/c",
+   "P-1",
+   "P2_1/c",
+   "Pm-3m"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "CaSnO3",
+  "reference_sg": "Pnma",
+  "reference_id": "mp-4438",
+  "e_hull_meV_atom": 0.0,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "Pm-3m",
+   "Pnma",
+   "R-3"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "CaTiO3",
+  "reference_sg": "Pnma",
+  "reference_id": "mp-4019",
+  "e_hull_meV_atom": 0.0,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "Cmcm",
+   "I4/mcm",
+   "Pm-3m",
+   "Pnma"
+  ],
+  "status": "prior"
+ },
+ {
+  "family": "ABO3",
+  "formula": "CaZrO3",
+  "reference_sg": "Pnma",
+  "reference_id": "mp-4571",
+  "e_hull_meV_atom": 0.0,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "Pm-3m",
+   "Pnma"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "CdGeO3",
+  "reference_sg": "C2/c",
+  "reference_id": "mp-2951",
+  "e_hull_meV_atom": 23.2,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "C2/c",
+   "I4_1/a",
+   "Pnma",
+   "R-3"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "CdSiO3",
+  "reference_sg": "P2_1/c",
+  "reference_id": "mp-560560",
+  "e_hull_meV_atom": 0.0,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "P2_1/c"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "CdSnO3",
+  "reference_sg": "R-3",
+  "reference_id": "mp-754329",
+  "e_hull_meV_atom": 0.0,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "Pnma",
+   "R-3"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "CsIO3",
+  "reference_sg": "Pmn2_1",
+  "reference_id": "mp-28295",
+  "e_hull_meV_atom": 0.0,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "Pm-3m",
+   "Pmn2_1"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "CsNbO3",
+  "reference_sg": "P2_1/c",
+  "reference_id": "mp-27556",
+  "e_hull_meV_atom": 0.0,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "P2_1/c"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "DyAlO3",
+  "reference_sg": "Pnma",
+  "reference_id": "mp-756630",
+  "e_hull_meV_atom": 12.8,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "Pnma"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "EuZrO3",
+  "reference_sg": "Pnma",
+  "reference_id": "mp-1106293",
+  "e_hull_meV_atom": 0.0,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "Pnma"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "GaBO3",
+  "reference_sg": "R-3c",
+  "reference_id": "mp-1078259",
+  "e_hull_meV_atom": 3.8,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "R-3c"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "GaBiO3",
+  "reference_sg": "Pcca",
+  "reference_id": "mp-558285",
+  "e_hull_meV_atom": 2.0,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "Pcca"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "GePbO3",
+  "reference_sg": "R-3",
+  "reference_id": "mp-554699",
+  "e_hull_meV_atom": 0.0,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "P2/c",
+   "Pm-3m",
+   "R-3"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "HfPbO3",
+  "reference_sg": "Pbam",
+  "reference_id": "mp-22734",
+  "e_hull_meV_atom": 9.4,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "Pba2",
+   "Pbam",
+   "Pm-3m"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "InBiO3",
+  "reference_sg": "Pna2_1",
+  "reference_id": "mp-556892",
+  "e_hull_meV_atom": 28.9,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "Pna2_1",
+   "Pnma"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "KAsO3",
+  "reference_sg": "Pbcn",
+  "reference_id": "mp-1194970",
+  "e_hull_meV_atom": 0.0,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "P-1",
+   "P2_1/c",
+   "P2_12_12_1",
+   "Pbcn"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "KBiO3",
+  "reference_sg": "Pn-3",
+  "reference_id": "mp-29799",
+  "e_hull_meV_atom": 0.0,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "Pn-3"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "KIO3",
+  "reference_sg": "P1",
+  "reference_id": "mp-23487",
+  "e_hull_meV_atom": 0.0,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "P1",
+   "Pm-3m",
+   "R3",
+   "R3c",
+   "R3m"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "KNbO3",
+  "reference_sg": "R3m",
+  "reference_id": "mp-7375",
+  "e_hull_meV_atom": 0.0,
+  "degenerate_reference": [
+   "Amm2",
+   "R3m"
+  ],
+  "experimental_polymorphs": [
+   "Amm2",
+   "P4mm",
+   "Pm-3m",
+   "R3m"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "KTaO3",
+  "reference_sg": "Pm-3m",
+  "reference_id": "mp-3614",
+  "e_hull_meV_atom": 0.0,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "Pm-3m"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "KVO3",
+  "reference_sg": "Pbcm",
+  "reference_id": "mp-18815",
+  "e_hull_meV_atom": 0.0,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "Pbcm"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "LaAlO3",
+  "reference_sg": "R-3c",
+  "reference_id": "mp-2920",
+  "e_hull_meV_atom": 0.3,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "Pm-3m",
+   "R-3c"
+  ],
+  "status": "prior"
+ },
+ {
+  "family": "ABO3",
+  "formula": "LaCuO3",
+  "reference_sg": "R-3c",
+  "reference_id": "mp-3474",
+  "e_hull_meV_atom": 0.0,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "R-3c"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "LaScO3",
+  "reference_sg": "Pnma",
+  "reference_id": "mp-31116",
+  "e_hull_meV_atom": 0.0,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "Pnma"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "LaTiO3",
+  "reference_sg": "Pnma",
+  "reference_id": "mp-22013",
+  "e_hull_meV_atom": 25.4,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "Pm-3m",
+   "Pnma"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "LaVO3",
+  "reference_sg": "Pnma",
+  "reference_id": "mp-19350",
+  "e_hull_meV_atom": 0.0,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "Pm-3m",
+   "Pnma"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "LuRhO3",
+  "reference_sg": "Pnma",
+  "reference_id": "mp-1205366",
+  "e_hull_meV_atom": 0.0,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "Pnma"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "MgGeO3",
+  "reference_sg": "C2/c",
+  "reference_id": "mp-4819",
+  "e_hull_meV_atom": 11.7,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "C2/c",
+   "Cmcm",
+   "Pbca",
+   "R-3"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "MgSiO3",
+  "reference_sg": "P2_1/c",
+  "reference_id": "mp-3470",
+  "e_hull_meV_atom": 7.7,
+  "degenerate_reference": [
+   "P2_1/c",
+   "Pbca",
+   "Pbcn"
+  ],
+  "experimental_polymorphs": [
+   "C2/c",
+   "Cmcm",
+   "P2_1/c",
+   "Pbca",
+   "Pbcn",
+   "Pnma",
+   "R-3"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "MgTiO3",
+  "reference_sg": "R-3",
+  "reference_id": "mp-3771",
+  "e_hull_meV_atom": 0.0,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "R-3"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "NaAsO3",
+  "reference_sg": "P-1",
+  "reference_id": "mp-17868",
+  "e_hull_meV_atom": 0.0,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "P-1"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "NaNbO3",
+  "reference_sg": "R3c",
+  "reference_id": "mp-4514",
+  "e_hull_meV_atom": 0.0,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "Cmcm",
+   "P4/mbm",
+   "Pbcm",
+   "Pca2_1",
+   "Pm-3m",
+   "Pmc2_1",
+   "Pmn2_1",
+   "Pna2_1",
+   "Pnma",
+   "R-3",
+   "R3c"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "NaTaO3",
+  "reference_sg": "Pnma",
+  "reference_id": "mp-3858",
+  "e_hull_meV_atom": 0.0,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "Cmcm",
+   "P4/mbm",
+   "Pm-3m",
+   "Pnma"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "NaVO3",
+  "reference_sg": "C2/c",
+  "reference_id": "mp-19083",
+  "e_hull_meV_atom": 0.0,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "C2/c",
+   "Pnma"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "NdAlO3",
+  "reference_sg": "R-3c",
+  "reference_id": "mp-5899",
+  "e_hull_meV_atom": 0.0,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "Pm-3m",
+   "R-3c"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "NdCoO3",
+  "reference_sg": "Pnma",
+  "reference_id": "mp-22599",
+  "e_hull_meV_atom": 0.0,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "Pm-3m",
+   "Pnma"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "PrAlO3",
+  "reference_sg": "R-3c",
+  "reference_id": "mp-3466",
+  "e_hull_meV_atom": 0.0,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "Pm-3m",
+   "R-3c"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "PrCoO3",
+  "reference_sg": "Pnma",
+  "reference_id": "mp-20090",
+  "e_hull_meV_atom": 0.0,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "Pm-3m",
+   "Pnma"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "PrGaO3",
+  "reference_sg": "Pnma",
+  "reference_id": "mp-4535",
+  "e_hull_meV_atom": 29.3,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "Pm-3m",
+   "Pnma"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "RbNbO3",
+  "reference_sg": "P-1",
+  "reference_id": "mp-3283",
+  "e_hull_meV_atom": 0.0,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "P-1"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "RbTaO3",
+  "reference_sg": "C2/m",
+  "reference_id": "mp-3033",
+  "e_hull_meV_atom": 0.0,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "C2/m"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "RbVO3",
+  "reference_sg": "Pbcm",
+  "reference_id": "mp-19031",
+  "e_hull_meV_atom": 0.0,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "Pbcm"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "SiPbO3",
+  "reference_sg": "P2/c",
+  "reference_id": "mp-21723",
+  "e_hull_meV_atom": 0.0,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "P2/c"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "SmCoO3",
+  "reference_sg": "Pnma",
+  "reference_id": "mp-20016",
+  "e_hull_meV_atom": 0.0,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "Pm-3m",
+   "Pnma"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "SrGeO3",
+  "reference_sg": "C2/c",
+  "reference_id": "mp-17464",
+  "e_hull_meV_atom": 0.0,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "C2/c",
+   "P-1",
+   "P-62m",
+   "Pm-3m"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "SrHfO3",
+  "reference_sg": "Pnma",
+  "reference_id": "mp-3378",
+  "e_hull_meV_atom": 0.0,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "Cmcm",
+   "I4/mcm",
+   "Pm-3m",
+   "Pnma"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "SrMnO3",
+  "reference_sg": "C222_1",
+  "reference_id": "mp-559975",
+  "e_hull_meV_atom": 0.0,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "C222_1",
+   "P6_3/mmc",
+   "Pm-3m"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "SrNbO3",
+  "reference_sg": "Pnma",
+  "reference_id": "mp-10339",
+  "e_hull_meV_atom": 7.8,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "Pm-3m",
+   "Pnma"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "SrSiO3",
+  "reference_sg": "C2/c",
+  "reference_id": "mp-3978",
+  "e_hull_meV_atom": 0.0,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "C2/c",
+   "P-1",
+   "P2_1/c",
+   "Pm-3m"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "SrSnO3",
+  "reference_sg": "Pnma",
+  "reference_id": "mp-2879",
+  "e_hull_meV_atom": 0.0,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "I4/mcm",
+   "Imma",
+   "Pm-3m",
+   "Pnma"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "SrTcO3",
+  "reference_sg": "Pnma",
+  "reference_id": "mp-1188414",
+  "e_hull_meV_atom": 0.0,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "Imma",
+   "Pm-3m",
+   "Pnma"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "SrTiO3",
+  "reference_sg": "Pm-3m",
+  "reference_id": "mp-5229",
+  "e_hull_meV_atom": 0.5,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "Pm-3m"
+  ],
+  "status": "prior"
+ },
+ {
+  "family": "ABO3",
+  "formula": "SrZrO3",
+  "reference_sg": "Pnma",
+  "reference_id": "mp-4387",
+  "e_hull_meV_atom": 0.0,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "Cmcm",
+   "I4/mcm",
+   "P2_13",
+   "Pm-3m",
+   "Pnma"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "TiCdO3",
+  "reference_sg": "R-3",
+  "reference_id": "mp-13641",
+  "e_hull_meV_atom": 0.0,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "Pm-3m",
+   "Pmc2_1",
+   "Pna2_1",
+   "Pnma",
+   "R-3"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "TiPbO3",
+  "reference_sg": "P4mm",
+  "reference_id": "mp-20459",
+  "e_hull_meV_atom": 0.0,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "I4/m",
+   "P4mm",
+   "Pm-3m"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "TiZnO3",
+  "reference_sg": "R-3",
+  "reference_id": "mp-14142",
+  "e_hull_meV_atom": 28.6,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "R-3",
+   "R3c"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "TlIO3",
+  "reference_sg": "R3m",
+  "reference_id": "mp-22981",
+  "e_hull_meV_atom": 0.0,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "Pm-3m",
+   "R3m"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "VHgO3",
+  "reference_sg": "P-1",
+  "reference_id": "mp-29188",
+  "e_hull_meV_atom": 3.5,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "P-1"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "VPbO3",
+  "reference_sg": "P4mm",
+  "reference_id": "mp-20032",
+  "e_hull_meV_atom": 22.1,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "P4mm",
+   "Pm-3m"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "YCoO3",
+  "reference_sg": "Pnma",
+  "reference_id": "mp-22668",
+  "e_hull_meV_atom": 0.7,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "Pnma"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "ABO3",
+  "formula": "ZrPbO3",
+  "reference_sg": "Pbam",
+  "reference_id": "mp-542903",
+  "e_hull_meV_atom": 25.8,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "Amm2",
+   "Pba2",
+   "Pbam",
+   "Pm-3m"
+  ],
+  "status": "new"
+ },
+ {
+  "family": "A3B2O7",
+  "formula": "Sr3Ti2O7",
+  "reference_sg": "I4/mmm",
+  "reference_id": "mp-3349",
+  "e_hull_meV_atom": 0.0,
+  "degenerate_reference": null,
+  "experimental_polymorphs": [
+   "I4/mmm"
+  ],
+  "status": "prior"
+ }
+]
