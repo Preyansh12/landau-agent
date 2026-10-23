@@ -9,7 +9,9 @@ Protocol versions (all kept, all reported):
   v4  v3 + primaries are the three softest DISTINCT irreps (not one per short name), and the
       reported winner is always converged to fmax = 0.001 eV/A                        results/benchmark_v4*_<name>.json
   v5  v4, but primaries are every unstable irrep within a factor 2 of the softest curvature (max 4):
-      a fixed count of 3 dropped the X+ rotation of Sr3Hf2O7                           results/benchmark_v5*_<name>.json
+      a fixed count of 3 dropped the X+ rotation of Sr3Hf2O7. A winner whose 1e-3 A and 1e-2 A
+      space groups differ is snapped to the looser one and re-relaxed inside it; if that costs
+      < 0.05 meV/f.u. the higher symmetry is reported (PbTiO3 read Pm with P4mm at 1e-2 A)        results/benchmark_v5*_<name>.json
 MLIP: LANDAU_MLIP_MODEL=medium (MACE-MP-0, PBE) or mace-matpes-r2scan-0 (MACE MatPES r2SCAN); the tag records it.
 
 Protocol: MACE-relax the parent -> instabilities -> up to 3 most unstable distinct irreps as
@@ -70,7 +72,8 @@ def run(name):
     # v2 refined the best 4 of the 6 fixed-lattice relaxations; strain-driven phases (PbTiO3 P4mm)
     # can sit 5th or 6th at fixed lattice and win with a free cell, so v3 refines all 6.
     ref = s.refine_phases(top=6 if PROTOCOL in ("v3", "v4", "v5") else 4, fmax=0.01, steps=800, relaxed_cell_only=True,
-                          tighten_if_unresolved=(PROTOCOL in ("v3", "v4", "v5")), polish_winner=(PROTOCOL in ("v4", "v5")))
+                          tighten_if_unresolved=(PROTOCOL in ("v3", "v4", "v5")), polish_winner=(PROTOCOL in ("v4", "v5")),
+                          symmetrise_winner=(PROTOCOL == "v5"))
     best = ref["phases"][0]
     out = dict(material=name, parent=parent, instabilities=[{k: m[k] for k in ("name", "label", "curvature_eV_A2", "polar")} for m in modes if m["unstable"]],
                primaries=picked, enumeration=ph, refined=ref,

@@ -415,7 +415,7 @@ class Session:
     def refine_phases(self, top: int = 3, fmax: float = 0.005, steps: int = 1500,
                       relax_cell: bool = True, out_dir: str | None = None,
                       relaxed_cell_only: bool = False, tighten_if_unresolved: bool = False,
-                      polish_winner: bool = False) -> dict:
+                      polish_winner: bool = False, symmetrise_winner: bool = False) -> dict:
         """Tight MACE relaxation of the lowest enumerated phases, fixed lattice and (optionally)
         full cell relaxation inside the same symmetry. Energies vs the relaxed parent."""
         from ase.constraints import FixSymmetry
@@ -476,6 +476,37 @@ class Session:
                 and w[key].get("fmax_eV_per_A", fmax) > fmax * 0.1 + 1e-12:
             w[key] = relax(w["space_group_seed"], key, relaxed[(w["space_group_seed"], key)], fmax * 0.1, steps * 3)
             w[key]["polished"] = True
+            rows.sort(key=lambda x: x[key]["energy_meV_per_fu"])
+            res = self._resolution(rows, modes)
+        # Symmetrisation test. A winner that reads Pm at 1e-3 A but P4mm at 1e-2 A is either a genuinely
+        # lower-symmetry minimum or a numerically unconverged high-symmetry one. Decide by physics, not
+        # tolerance: snap the structure to the loose space group, relax inside it, and if that costs
+        # nothing (< 0.05 meV/f.u.) the high-symmetry label is the answer.
+        w = rows[0]
+        if symmetrise_winner and w[key]["space_group"] != w[key]["space_group_loose"]:
+            from ase.spacegroup.symmetrize import refine_symmetry
+            at = relaxed[(w["space_group_seed"], key)].copy()
+            at.calc = calc
+            refine_symmetry(at, symprec=1e-2, verbose=False)
+            at.set_constraint(FixSymmetry(at, symprec=1e-3))
+            if key == "fixed_cell":
+                FIRE(at, logfile=None).run(fmax=fmax * 0.1, steps=steps * 2)
+            else:
+                BFGS(FrechetCellFilter(at), logfile=None).run(fmax=fmax * 0.1, steps=steps * 2)
+            at.set_constraint()
+            e_sym = round(float((at.get_potential_energy() - self.model.E0) / self.model.n_fu * 1000), 2)
+            test = dict(symmetrised_to=SM.space_group(at, 1e-3), energy_meV_per_fu=e_sym,
+                        unsymmetrised_energy_meV_per_fu=w[key]["energy_meV_per_fu"],
+                        cost_meV_per_fu=round(e_sym - w[key]["energy_meV_per_fu"], 3))
+            if test["cost_meV_per_fu"] <= 0.05:
+                relaxed[(w["space_group_seed"], key)] = at
+                w[key].update(energy_meV_per_fu=e_sym, space_group=test["symmetrised_to"],
+                              space_group_loose=SM.space_group(at, 1e-2),
+                              lattice_A=[round(float(x), 4) for x in at.cell.cellpar()[:3]], fmax_eV_per_A=fmax * 0.1)
+                test["accepted"] = True
+            else:
+                test["accepted"] = False   # the lower symmetry is real: symmetrising costs energy
+            w[key]["symmetrisation_test"] = test
             rows.sort(key=lambda x: x[key]["energy_meV_per_fu"])
             res = self._resolution(rows, modes)
         if out_dir:
