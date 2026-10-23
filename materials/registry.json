@@ -1,0 +1,1739 @@
+{
+ "BaBiO3": {
+  "family": "ABO3",
+  "A": "Ba",
+  "B": "Bi",
+  "a": 4.3737,
+  "c": null,
+  "reference_sg": "P2_1/c",
+  "reference_sg_number": 14,
+  "reference_id": "mp-559051",
+  "e_hull_meV_atom": 0.0,
+  "pseudosymmetry_rms": 0.114,
+  "degenerate_reference": [
+   "C2/m",
+   "P2_1/c",
+   "R-3"
+  ],
+  "degenerate_reference_numbers": [
+   12,
+   14,
+   148
+  ],
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "C2/m",
+   "Fm-3m",
+   "P2_1/c",
+   "Pm-3m",
+   "R-3"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "BaCeO3": {
+  "family": "ABO3",
+  "A": "Ba",
+  "B": "Ce",
+  "a": 4.4168,
+  "c": null,
+  "reference_sg": "Pnma",
+  "reference_sg_number": 62,
+  "reference_id": "mp-3187",
+  "e_hull_meV_atom": 0.0,
+  "pseudosymmetry_rms": 0.137,
+  "degenerate_reference": [
+   "Imma",
+   "Pnma"
+  ],
+  "degenerate_reference_numbers": [
+   74,
+   62
+  ],
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "Imma",
+   "Pm-3m",
+   "Pnma",
+   "R-3c"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "BaMoO3": {
+  "family": "ABO3",
+  "A": "Ba",
+  "B": "Mo",
+  "a": 4.0484,
+  "c": null,
+  "reference_sg": "Pm-3m",
+  "reference_sg_number": 221,
+  "reference_id": "mp-19322",
+  "e_hull_meV_atom": 0.0,
+  "pseudosymmetry_rms": 0.0,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": true,
+  "experimental_polymorphs": [
+   "Pm-3m"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "BaNbO3": {
+  "family": "ABO3",
+  "A": "Ba",
+  "B": "Nb",
+  "a": 4.1336,
+  "c": null,
+  "reference_sg": "Pm-3m",
+  "reference_sg_number": 221,
+  "reference_id": "mp-3020",
+  "e_hull_meV_atom": 0.0,
+  "pseudosymmetry_rms": 0.0,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": true,
+  "experimental_polymorphs": [
+   "Pm-3m"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "BaPbO3": {
+  "family": "ABO3",
+  "A": "Ba",
+  "B": "Pb",
+  "a": 4.3022,
+  "c": null,
+  "reference_sg": "Imma",
+  "reference_sg_number": 74,
+  "reference_id": "mp-22230",
+  "e_hull_meV_atom": 0.0,
+  "pseudosymmetry_rms": 0.1,
+  "degenerate_reference": [
+   "C2/m",
+   "I4/mcm",
+   "Imma"
+  ],
+  "degenerate_reference_numbers": [
+   12,
+   140,
+   74
+  ],
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "C2/m",
+   "I4/mcm",
+   "Imma",
+   "Pm-3m"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "BaSnO3": {
+  "family": "ABO3",
+  "A": "Ba",
+  "B": "Sn",
+  "a": 4.1435,
+  "c": null,
+  "reference_sg": "Pm-3m",
+  "reference_sg_number": 221,
+  "reference_id": "mp-3163",
+  "e_hull_meV_atom": 0.0,
+  "pseudosymmetry_rms": 0.0,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": true,
+  "experimental_polymorphs": [
+   "Pm-3m"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "BaTiO3": {
+  "family": "ABO3",
+  "A": "Ba",
+  "B": "Ti",
+  "a": 4.0325,
+  "c": null,
+  "reference_sg": "Amm2",
+  "reference_sg_number": 38,
+  "reference_id": "mp-5777",
+  "e_hull_meV_atom": 0.0,
+  "pseudosymmetry_rms": 0.034,
+  "degenerate_reference": [
+   "Amm2",
+   "R3m"
+  ],
+  "degenerate_reference_numbers": [
+   38,
+   160
+  ],
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "Amm2",
+   "C222_1",
+   "P4/mmm",
+   "P4mm",
+   "P6_3/mmc",
+   "Pm-3m",
+   "R3m"
+  ],
+  "literature_sg": null,
+  "status": "prior"
+ },
+ "BaZrO3": {
+  "family": "ABO3",
+  "A": "Ba",
+  "B": "Zr",
+  "a": 4.2114,
+  "c": null,
+  "reference_sg": "I4/mcm",
+  "reference_sg_number": 140,
+  "reference_id": "mp-1019544",
+  "e_hull_meV_atom": 0.0,
+  "pseudosymmetry_rms": 0.023,
+  "degenerate_reference": [
+   "I4/mcm",
+   "Pm-3m"
+  ],
+  "degenerate_reference_numbers": [
+   140,
+   221
+  ],
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "I4/mcm",
+   "Pm-3m"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "BiCoO3": {
+  "family": "ABO3",
+  "A": "Bi",
+  "B": "Co",
+  "a": 3.8207,
+  "c": null,
+  "reference_sg": "P4mm",
+  "reference_sg_number": 99,
+  "reference_id": "mp-545522",
+  "e_hull_meV_atom": 0.0,
+  "pseudosymmetry_rms": 0.096,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "P4mm",
+   "Pnma"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "BiInO3": {
+  "family": "ABO3",
+  "A": "Bi",
+  "B": "In",
+  "a": 4.1749,
+  "c": null,
+  "reference_sg": "Pna2_1",
+  "reference_sg_number": 33,
+  "reference_id": "mp-556892",
+  "e_hull_meV_atom": 28.9,
+  "pseudosymmetry_rms": 0.252,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "Pna2_1",
+   "Pnma"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "CaPbO3": {
+  "family": "ABO3",
+  "A": "Ca",
+  "B": "Pb",
+  "a": 4.098,
+  "c": null,
+  "reference_sg": "Pnma",
+  "reference_sg_number": 62,
+  "reference_id": "mp-20079",
+  "e_hull_meV_atom": 2.5,
+  "pseudosymmetry_rms": 0.251,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "Pnma"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "CaSnO3": {
+  "family": "ABO3",
+  "A": "Ca",
+  "B": "Sn",
+  "a": 3.9622,
+  "c": null,
+  "reference_sg": "Pnma",
+  "reference_sg_number": 62,
+  "reference_id": "mp-4438",
+  "e_hull_meV_atom": 0.0,
+  "pseudosymmetry_rms": 0.207,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "Pm-3m",
+   "Pnma",
+   "R-3"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "CaTiO3": {
+  "family": "ABO3",
+  "A": "Ca",
+  "B": "Ti",
+  "a": 3.8264,
+  "c": null,
+  "reference_sg": "Pnma",
+  "reference_sg_number": 62,
+  "reference_id": "mp-4019",
+  "e_hull_meV_atom": 0.0,
+  "pseudosymmetry_rms": 0.156,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "Cmcm",
+   "I4/mcm",
+   "Pm-3m",
+   "Pnma"
+  ],
+  "literature_sg": null,
+  "status": "prior"
+ },
+ "CaZrO3": {
+  "family": "ABO3",
+  "A": "Ca",
+  "B": "Zr",
+  "a": 4.0142,
+  "c": null,
+  "reference_sg": "Pnma",
+  "reference_sg_number": 62,
+  "reference_id": "mp-4571",
+  "e_hull_meV_atom": 0.0,
+  "pseudosymmetry_rms": 0.214,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "Pm-3m",
+   "Pnma"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "DyAlO3": {
+  "family": "ABO3",
+  "A": "Dy",
+  "B": "Al",
+  "a": 3.6984,
+  "c": null,
+  "reference_sg": "Pnma",
+  "reference_sg_number": 62,
+  "reference_id": "mp-756630",
+  "e_hull_meV_atom": 12.8,
+  "pseudosymmetry_rms": 0.173,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "Pnma"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "DyCoO3": {
+  "family": "ABO3",
+  "A": "Dy",
+  "B": "Co",
+  "a": 3.7076,
+  "c": null,
+  "reference_sg": "Pnma",
+  "reference_sg_number": 62,
+  "reference_id": "mp-22137",
+  "e_hull_meV_atom": 9.3,
+  "pseudosymmetry_rms": 0.207,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "Pnma"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "DyScO3": {
+  "family": "ABO3",
+  "A": "Dy",
+  "B": "Sc",
+  "a": 3.9707,
+  "c": null,
+  "reference_sg": "Pnma",
+  "reference_sg_number": 62,
+  "reference_id": "mp-31120",
+  "e_hull_meV_atom": 25.8,
+  "pseudosymmetry_rms": 0.257,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "Pnma"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "ErCoO3": {
+  "family": "ABO3",
+  "A": "Er",
+  "B": "Co",
+  "a": 3.6929,
+  "c": null,
+  "reference_sg": "Pnma",
+  "reference_sg_number": 62,
+  "reference_id": "mp-562779",
+  "e_hull_meV_atom": 0.0,
+  "pseudosymmetry_rms": 0.22,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "Pnma"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "HoAlO3": {
+  "family": "ABO3",
+  "A": "Ho",
+  "B": "Al",
+  "a": 3.69,
+  "c": null,
+  "reference_sg": "Pnma",
+  "reference_sg_number": 62,
+  "reference_id": "mp-4891",
+  "e_hull_meV_atom": 15.7,
+  "pseudosymmetry_rms": 0.181,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "Pnma"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "HoCoO3": {
+  "family": "ABO3",
+  "A": "Ho",
+  "B": "Co",
+  "a": 3.705,
+  "c": null,
+  "reference_sg": "Pnma",
+  "reference_sg_number": 62,
+  "reference_id": "mp-20570",
+  "e_hull_meV_atom": 0.0,
+  "pseudosymmetry_rms": 0.213,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "Pnma"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "INaO3": {
+  "family": "ABO3",
+  "A": "I",
+  "B": "Na",
+  "a": 4.177,
+  "c": null,
+  "reference_sg": "Pnma",
+  "reference_sg_number": 62,
+  "reference_id": "mp-22989",
+  "e_hull_meV_atom": 0.0,
+  "pseudosymmetry_rms": 0.373,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "Cmmm",
+   "Pna2_1",
+   "Pnma"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "KNbO3": {
+  "family": "ABO3",
+  "A": "K",
+  "B": "Nb",
+  "a": 4.0499,
+  "c": null,
+  "reference_sg": "R3m",
+  "reference_sg_number": 160,
+  "reference_id": "mp-7375",
+  "e_hull_meV_atom": 0.0,
+  "pseudosymmetry_rms": 0.033,
+  "degenerate_reference": [
+   "Amm2",
+   "R3m"
+  ],
+  "degenerate_reference_numbers": [
+   38,
+   160
+  ],
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "Amm2",
+   "P4mm",
+   "Pm-3m",
+   "R3m"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "KTaO3": {
+  "family": "ABO3",
+  "A": "K",
+  "B": "Ta",
+  "a": 3.9949,
+  "c": null,
+  "reference_sg": "Pm-3m",
+  "reference_sg_number": 221,
+  "reference_id": "mp-3614",
+  "e_hull_meV_atom": 0.0,
+  "pseudosymmetry_rms": 0.0,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": true,
+  "experimental_polymorphs": [
+   "Pm-3m"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "LaAlO3": {
+  "family": "ABO3",
+  "A": "La",
+  "B": "Al",
+  "a": 3.7879,
+  "c": null,
+  "reference_sg": "R-3c",
+  "reference_sg_number": 167,
+  "reference_id": "mp-2920",
+  "e_hull_meV_atom": 0.3,
+  "pseudosymmetry_rms": 0.059,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "Pm-3m",
+   "R-3c"
+  ],
+  "literature_sg": null,
+  "status": "prior"
+ },
+ "LaCuO3": {
+  "family": "ABO3",
+  "A": "La",
+  "B": "Cu",
+  "a": 3.8541,
+  "c": null,
+  "reference_sg": "R-3c",
+  "reference_sg_number": 167,
+  "reference_id": "mp-3474",
+  "e_hull_meV_atom": 0.0,
+  "pseudosymmetry_rms": 0.095,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "R-3c"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "LaErO3": {
+  "family": "ABO3",
+  "A": "La",
+  "B": "Er",
+  "a": 4.2362,
+  "c": null,
+  "reference_sg": "Pnma",
+  "reference_sg_number": 62,
+  "reference_id": "mp-7538",
+  "e_hull_meV_atom": 27.9,
+  "pseudosymmetry_rms": 0.249,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "Pnma"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "LaInO3": {
+  "family": "ABO3",
+  "A": "La",
+  "B": "In",
+  "a": 4.1306,
+  "c": null,
+  "reference_sg": "Pnma",
+  "reference_sg_number": 62,
+  "reference_id": "mp-11623",
+  "e_hull_meV_atom": 6.7,
+  "pseudosymmetry_rms": 0.227,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "Pnma"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "LaLuO3": {
+  "family": "ABO3",
+  "A": "La",
+  "B": "Lu",
+  "a": 4.1579,
+  "c": null,
+  "reference_sg": "Pnma",
+  "reference_sg_number": 62,
+  "reference_id": "mp-22220",
+  "e_hull_meV_atom": 11.4,
+  "pseudosymmetry_rms": 0.23,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "Pnma"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "LaPdO3": {
+  "family": "ABO3",
+  "A": "La",
+  "B": "Pd",
+  "a": 4.0202,
+  "c": null,
+  "reference_sg": "Pnma",
+  "reference_sg_number": 62,
+  "reference_id": "mp-16415",
+  "e_hull_meV_atom": 0.0,
+  "pseudosymmetry_rms": 0.203,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "Pnma"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "LaRhO3": {
+  "family": "ABO3",
+  "A": "La",
+  "B": "Rh",
+  "a": 3.9718,
+  "c": null,
+  "reference_sg": "Pnma",
+  "reference_sg_number": 62,
+  "reference_id": "mp-5163",
+  "e_hull_meV_atom": 0.0,
+  "pseudosymmetry_rms": 0.204,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "Pnma"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "LaScO3": {
+  "family": "ABO3",
+  "A": "La",
+  "B": "Sc",
+  "a": 4.0581,
+  "c": null,
+  "reference_sg": "Pnma",
+  "reference_sg_number": 62,
+  "reference_id": "mp-31116",
+  "e_hull_meV_atom": 0.0,
+  "pseudosymmetry_rms": 0.197,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "Pnma"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "LaTiO3": {
+  "family": "ABO3",
+  "A": "La",
+  "B": "Ti",
+  "a": 3.9727,
+  "c": null,
+  "reference_sg": "Pnma",
+  "reference_sg_number": 62,
+  "reference_id": "mp-22013",
+  "e_hull_meV_atom": 25.4,
+  "pseudosymmetry_rms": 0.149,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "Pm-3m",
+   "Pnma"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "LaTmO3": {
+  "family": "ABO3",
+  "A": "La",
+  "B": "Tm",
+  "a": 4.2178,
+  "c": null,
+  "reference_sg": "Pnma",
+  "reference_sg_number": 62,
+  "reference_id": "mp-13374",
+  "e_hull_meV_atom": 21.4,
+  "pseudosymmetry_rms": 0.244,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "Pnma"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "LiNbO3": {
+  "family": "ABO3",
+  "A": "Li",
+  "B": "Nb",
+  "a": 3.7712,
+  "c": null,
+  "reference_sg": "R3c",
+  "reference_sg_number": 161,
+  "reference_id": "mp-3731",
+  "e_hull_meV_atom": 0.0,
+  "pseudosymmetry_rms": 0.274,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "P2_1/c",
+   "R-3",
+   "R-3c",
+   "R3c"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "LiOsO3": {
+  "family": "ABO3",
+  "A": "Li",
+  "B": "Os",
+  "a": 3.6657,
+  "c": null,
+  "reference_sg": "R3c",
+  "reference_sg_number": 161,
+  "reference_id": "mp-1078358",
+  "e_hull_meV_atom": 0.0,
+  "pseudosymmetry_rms": 0.26,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "R-3c",
+   "R3c"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "LiTaO3": {
+  "family": "ABO3",
+  "A": "Li",
+  "B": "Ta",
+  "a": 3.7459,
+  "c": null,
+  "reference_sg": "R3c",
+  "reference_sg_number": 161,
+  "reference_id": "mp-3666",
+  "e_hull_meV_atom": 0.0,
+  "pseudosymmetry_rms": 0.26,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "Pnma",
+   "R3c"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "LuRhO3": {
+  "family": "ABO3",
+  "A": "Lu",
+  "B": "Rh",
+  "a": 3.7923,
+  "c": null,
+  "reference_sg": "Pnma",
+  "reference_sg_number": 62,
+  "reference_id": "mp-1205366",
+  "e_hull_meV_atom": 0.0,
+  "pseudosymmetry_rms": 0.286,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "Pnma"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "NaNbO3": {
+  "family": "ABO3",
+  "A": "Na",
+  "B": "Nb",
+  "a": 3.9332,
+  "c": null,
+  "reference_sg": "R3c",
+  "reference_sg_number": 161,
+  "reference_id": "mp-4514",
+  "e_hull_meV_atom": 0.0,
+  "pseudosymmetry_rms": 0.159,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "Cmcm",
+   "P4/mbm",
+   "Pbcm",
+   "Pca2_1",
+   "Pm-3m",
+   "Pmc2_1",
+   "Pmn2_1",
+   "Pna2_1",
+   "Pnma",
+   "R-3",
+   "R3c"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "NaTaO3": {
+  "family": "ABO3",
+  "A": "Na",
+  "B": "Ta",
+  "a": 3.8823,
+  "c": null,
+  "reference_sg": "Pnma",
+  "reference_sg_number": 62,
+  "reference_id": "mp-3858",
+  "e_hull_meV_atom": 0.0,
+  "pseudosymmetry_rms": 0.142,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "Cmcm",
+   "P4/mbm",
+   "Pm-3m",
+   "Pnma"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "NdAlO3": {
+  "family": "ABO3",
+  "A": "Nd",
+  "B": "Al",
+  "a": 3.7533,
+  "c": null,
+  "reference_sg": "R-3c",
+  "reference_sg_number": 167,
+  "reference_id": "mp-5899",
+  "e_hull_meV_atom": 0.0,
+  "pseudosymmetry_rms": 0.092,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "Pm-3m",
+   "R-3c"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "NdCoO3": {
+  "family": "ABO3",
+  "A": "Nd",
+  "B": "Co",
+  "a": 3.7877,
+  "c": null,
+  "reference_sg": "Pnma",
+  "reference_sg_number": 62,
+  "reference_id": "mp-22599",
+  "e_hull_meV_atom": 0.0,
+  "pseudosymmetry_rms": 0.142,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "Pm-3m",
+   "Pnma"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "NdRhO3": {
+  "family": "ABO3",
+  "A": "Nd",
+  "B": "Rh",
+  "a": 3.9348,
+  "c": null,
+  "reference_sg": "Pnma",
+  "reference_sg_number": 62,
+  "reference_id": "mp-4582",
+  "e_hull_meV_atom": 0.0,
+  "pseudosymmetry_rms": 0.229,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "Pnma"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "NdScO3": {
+  "family": "ABO3",
+  "A": "Nd",
+  "B": "Sc",
+  "a": 4.0225,
+  "c": null,
+  "reference_sg": "Pnma",
+  "reference_sg_number": 62,
+  "reference_id": "mp-31117",
+  "e_hull_meV_atom": 0.0,
+  "pseudosymmetry_rms": 0.219,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "Pnma"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "PbHfO3": {
+  "family": "ABO3",
+  "A": "Pb",
+  "B": "Hf",
+  "a": 4.1145,
+  "c": null,
+  "reference_sg": "Pbam",
+  "reference_sg_number": 55,
+  "reference_id": "mp-22734",
+  "e_hull_meV_atom": 9.4,
+  "pseudosymmetry_rms": 0.111,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "Pba2",
+   "Pbam",
+   "Pm-3m"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "PbTiO3": {
+  "family": "ABO3",
+  "A": "Pb",
+  "B": "Ti",
+  "a": 4.0105,
+  "c": null,
+  "reference_sg": "P4mm",
+  "reference_sg_number": 99,
+  "reference_id": "mp-20459",
+  "e_hull_meV_atom": 0.0,
+  "pseudosymmetry_rms": 0.097,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "I4/m",
+   "P4mm",
+   "Pm-3m"
+  ],
+  "literature_sg": null,
+  "status": "prior"
+ },
+ "PbZnO3": {
+  "family": "ABO3",
+  "A": "Pb",
+  "B": "Zn",
+  "a": 4.0048,
+  "c": null,
+  "reference_sg": "R3c",
+  "reference_sg_number": 161,
+  "reference_id": "mp-1078329",
+  "e_hull_meV_atom": 22.5,
+  "pseudosymmetry_rms": 0.297,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "R3c"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "PbZrO3": {
+  "family": "ABO3",
+  "A": "Pb",
+  "B": "Zr",
+  "a": 4.2031,
+  "c": null,
+  "reference_sg": "Pbam",
+  "reference_sg_number": 55,
+  "reference_id": "mp-542903",
+  "e_hull_meV_atom": 25.8,
+  "pseudosymmetry_rms": 0.131,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "Amm2",
+   "Pba2",
+   "Pbam",
+   "Pm-3m"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "PrAlO3": {
+  "family": "ABO3",
+  "A": "Pr",
+  "B": "Al",
+  "a": 3.7692,
+  "c": null,
+  "reference_sg": "R-3c",
+  "reference_sg_number": 167,
+  "reference_id": "mp-3466",
+  "e_hull_meV_atom": 0.0,
+  "pseudosymmetry_rms": 0.08,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "Pm-3m",
+   "R-3c"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "PrCoO3": {
+  "family": "ABO3",
+  "A": "Pr",
+  "B": "Co",
+  "a": 3.7999,
+  "c": null,
+  "reference_sg": "Pnma",
+  "reference_sg_number": 62,
+  "reference_id": "mp-20090",
+  "e_hull_meV_atom": 0.0,
+  "pseudosymmetry_rms": 0.125,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "Pm-3m",
+   "Pnma"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "PrGaO3": {
+  "family": "ABO3",
+  "A": "Pr",
+  "B": "Ga",
+  "a": 3.9267,
+  "c": null,
+  "reference_sg": "Pnma",
+  "reference_sg_number": 62,
+  "reference_id": "mp-4535",
+  "e_hull_meV_atom": 29.3,
+  "pseudosymmetry_rms": 0.165,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "Pm-3m",
+   "Pnma"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "PrInO3": {
+  "family": "ABO3",
+  "A": "Pr",
+  "B": "In",
+  "a": 4.1099,
+  "c": null,
+  "reference_sg": "Pnma",
+  "reference_sg_number": 62,
+  "reference_id": "mp-1105130",
+  "e_hull_meV_atom": 5.4,
+  "pseudosymmetry_rms": 0.238,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "Pnma"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "PrLuO3": {
+  "family": "ABO3",
+  "A": "Pr",
+  "B": "Lu",
+  "a": 4.1376,
+  "c": null,
+  "reference_sg": "Pnma",
+  "reference_sg_number": 62,
+  "reference_id": "mp-21872",
+  "e_hull_meV_atom": 12.6,
+  "pseudosymmetry_rms": 0.239,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "Pnma"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "PrRhO3": {
+  "family": "ABO3",
+  "A": "Pr",
+  "B": "Rh",
+  "a": 3.9529,
+  "c": null,
+  "reference_sg": "Pnma",
+  "reference_sg_number": 62,
+  "reference_id": "mp-4789",
+  "e_hull_meV_atom": 0.0,
+  "pseudosymmetry_rms": 0.218,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "Pnma"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "PrScO3": {
+  "family": "ABO3",
+  "A": "Pr",
+  "B": "Sc",
+  "a": 4.039,
+  "c": null,
+  "reference_sg": "Pnma",
+  "reference_sg_number": 62,
+  "reference_id": "mp-559756",
+  "e_hull_meV_atom": 0.0,
+  "pseudosymmetry_rms": 0.209,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "Pnma"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "ScAlO3": {
+  "family": "ABO3",
+  "A": "Sc",
+  "B": "Al",
+  "a": 3.6284,
+  "c": null,
+  "reference_sg": "Pnma",
+  "reference_sg_number": 62,
+  "reference_id": "mp-4471",
+  "e_hull_meV_atom": 28.0,
+  "pseudosymmetry_rms": 0.242,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "Pnma"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "ScRhO3": {
+  "family": "ABO3",
+  "A": "Sc",
+  "B": "Rh",
+  "a": 3.7822,
+  "c": null,
+  "reference_sg": "P2_1/c",
+  "reference_sg_number": 14,
+  "reference_id": "mp-1196890",
+  "e_hull_meV_atom": 24.6,
+  "pseudosymmetry_rms": 0.312,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "P2_1/c"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "SeMgO3": {
+  "family": "ABO3",
+  "A": "Se",
+  "B": "Mg",
+  "a": 3.8429,
+  "c": null,
+  "reference_sg": "Pnma",
+  "reference_sg_number": 62,
+  "reference_id": "mp-12271",
+  "e_hull_meV_atom": 0.0,
+  "pseudosymmetry_rms": 0.329,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "Pnma"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "SmAlO3": {
+  "family": "ABO3",
+  "A": "Sm",
+  "B": "Al",
+  "a": 3.735,
+  "c": null,
+  "reference_sg": "Pnma",
+  "reference_sg_number": 62,
+  "reference_id": "mp-7405",
+  "e_hull_meV_atom": 0.0,
+  "pseudosymmetry_rms": 0.124,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "Pnma"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "SmCoO3": {
+  "family": "ABO3",
+  "A": "Sm",
+  "B": "Co",
+  "a": 3.7554,
+  "c": null,
+  "reference_sg": "Pnma",
+  "reference_sg_number": 62,
+  "reference_id": "mp-20016",
+  "e_hull_meV_atom": 0.0,
+  "pseudosymmetry_rms": 0.169,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "Pm-3m",
+   "Pnma"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "SmRhO3": {
+  "family": "ABO3",
+  "A": "Sm",
+  "B": "Rh",
+  "a": 3.9025,
+  "c": null,
+  "reference_sg": "Pnma",
+  "reference_sg_number": 62,
+  "reference_id": "mp-3317",
+  "e_hull_meV_atom": 0.0,
+  "pseudosymmetry_rms": 0.245,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "Pnma"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "SmScO3": {
+  "family": "ABO3",
+  "A": "Sm",
+  "B": "Sc",
+  "a": 3.9946,
+  "c": null,
+  "reference_sg": "Pnma",
+  "reference_sg_number": 62,
+  "reference_id": "mp-31118",
+  "e_hull_meV_atom": 0.0,
+  "pseudosymmetry_rms": 0.234,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "Pnma"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "SrBiO3": {
+  "family": "ABO3",
+  "A": "Sr",
+  "B": "Bi",
+  "a": 4.269,
+  "c": null,
+  "reference_sg": "P2_1/c",
+  "reference_sg_number": 14,
+  "reference_id": "mp-29164",
+  "e_hull_meV_atom": 0.0,
+  "pseudosymmetry_rms": 0.21,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "P2_1/c"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "SrCeO3": {
+  "family": "ABO3",
+  "A": "Sr",
+  "B": "Ce",
+  "a": 4.3038,
+  "c": null,
+  "reference_sg": "Pnma",
+  "reference_sg_number": 62,
+  "reference_id": "mp-22428",
+  "e_hull_meV_atom": 8.5,
+  "pseudosymmetry_rms": 0.214,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "Pnma"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "SrHfO3": {
+  "family": "ABO3",
+  "A": "Sr",
+  "B": "Hf",
+  "a": 4.0762,
+  "c": null,
+  "reference_sg": "Pnma",
+  "reference_sg_number": 62,
+  "reference_id": "mp-3378",
+  "e_hull_meV_atom": 0.0,
+  "pseudosymmetry_rms": 0.127,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "Cmcm",
+   "I4/mcm",
+   "Pm-3m",
+   "Pnma"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "SrNbO3": {
+  "family": "ABO3",
+  "A": "Sr",
+  "B": "Nb",
+  "a": 4.0562,
+  "c": null,
+  "reference_sg": "Pnma",
+  "reference_sg_number": 62,
+  "reference_id": "mp-10339",
+  "e_hull_meV_atom": 7.8,
+  "pseudosymmetry_rms": 0.091,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "Pm-3m",
+   "Pnma"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "SrPbO3": {
+  "family": "ABO3",
+  "A": "Sr",
+  "B": "Pb",
+  "a": 4.2026,
+  "c": null,
+  "reference_sg": "Pnma",
+  "reference_sg_number": 62,
+  "reference_id": "mp-20489",
+  "e_hull_meV_atom": 0.0,
+  "pseudosymmetry_rms": 0.196,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "Pnma"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "SrSnO3": {
+  "family": "ABO3",
+  "A": "Sr",
+  "B": "Sn",
+  "a": 4.0525,
+  "c": null,
+  "reference_sg": "Pnma",
+  "reference_sg_number": 62,
+  "reference_id": "mp-2879",
+  "e_hull_meV_atom": 0.0,
+  "pseudosymmetry_rms": 0.131,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "I4/mcm",
+   "Imma",
+   "Pm-3m",
+   "Pnma"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "SrTcO3": {
+  "family": "ABO3",
+  "A": "Sr",
+  "B": "Tc",
+  "a": 3.9609,
+  "c": null,
+  "reference_sg": "Pnma",
+  "reference_sg_number": 62,
+  "reference_id": "mp-1188414",
+  "e_hull_meV_atom": 0.0,
+  "pseudosymmetry_rms": 0.088,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "Imma",
+   "Pm-3m",
+   "Pnma"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "SrTiO3": {
+  "family": "ABO3",
+  "A": "Sr",
+  "B": "Ti",
+  "a": 3.9127,
+  "c": null,
+  "reference_sg": "Pm-3m",
+  "reference_sg_number": 221,
+  "reference_id": "mp-5229",
+  "e_hull_meV_atom": 0.5,
+  "pseudosymmetry_rms": 0.0,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": true,
+  "experimental_polymorphs": [
+   "Pm-3m"
+  ],
+  "literature_sg": null,
+  "status": "prior"
+ },
+ "SrZrO3": {
+  "family": "ABO3",
+  "A": "Sr",
+  "B": "Zr",
+  "a": 4.1125,
+  "c": null,
+  "reference_sg": "Pnma",
+  "reference_sg_number": 62,
+  "reference_id": "mp-4387",
+  "e_hull_meV_atom": 0.0,
+  "pseudosymmetry_rms": 0.145,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "Cmcm",
+   "I4/mcm",
+   "P2_13",
+   "Pm-3m",
+   "Pnma"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "TbAlO3": {
+  "family": "ABO3",
+  "A": "Tb",
+  "B": "Al",
+  "a": 3.7064,
+  "c": null,
+  "reference_sg": "Pnma",
+  "reference_sg_number": 62,
+  "reference_id": "mp-4434",
+  "e_hull_meV_atom": 9.0,
+  "pseudosymmetry_rms": 0.164,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "Pnma"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "TbCoO3": {
+  "family": "ABO3",
+  "A": "Tb",
+  "B": "Co",
+  "a": 3.7184,
+  "c": null,
+  "reference_sg": "Pnma",
+  "reference_sg_number": 62,
+  "reference_id": "mp-19802",
+  "e_hull_meV_atom": 0.0,
+  "pseudosymmetry_rms": 0.2,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "Pnma"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "TbRhO3": {
+  "family": "ABO3",
+  "A": "Tb",
+  "B": "Rh",
+  "a": 3.8572,
+  "c": null,
+  "reference_sg": "Pnma",
+  "reference_sg_number": 62,
+  "reference_id": "mp-5692",
+  "e_hull_meV_atom": 0.0,
+  "pseudosymmetry_rms": 0.263,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "Pnma"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "TbScO3": {
+  "family": "ABO3",
+  "A": "Tb",
+  "B": "Sc",
+  "a": 3.9539,
+  "c": null,
+  "reference_sg": "Pnma",
+  "reference_sg_number": 62,
+  "reference_id": "mp-31119",
+  "e_hull_meV_atom": 18.4,
+  "pseudosymmetry_rms": 0.253,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "Pnma"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "TmCoO3": {
+  "family": "ABO3",
+  "A": "Tm",
+  "B": "Co",
+  "a": 3.7788,
+  "c": null,
+  "reference_sg": "Pnma",
+  "reference_sg_number": 62,
+  "reference_id": "mp-561954",
+  "e_hull_meV_atom": 22.7,
+  "pseudosymmetry_rms": 0.246,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "Pnma"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "YAlO3": {
+  "family": "ABO3",
+  "A": "Y",
+  "B": "Al",
+  "a": 3.7018,
+  "c": null,
+  "reference_sg": "Pnma",
+  "reference_sg_number": 62,
+  "reference_id": "mp-3792",
+  "e_hull_meV_atom": 18.8,
+  "pseudosymmetry_rms": 0.173,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "P6_3/mmc",
+   "Pnma"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "YCoO3": {
+  "family": "ABO3",
+  "A": "Y",
+  "B": "Co",
+  "a": 3.7195,
+  "c": null,
+  "reference_sg": "Pnma",
+  "reference_sg_number": 62,
+  "reference_id": "mp-22668",
+  "e_hull_meV_atom": 0.7,
+  "pseudosymmetry_rms": 0.206,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "Pnma"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "YScO3": {
+  "family": "ABO3",
+  "A": "Y",
+  "B": "Sc",
+  "a": 3.9788,
+  "c": null,
+  "reference_sg": "Pnma",
+  "reference_sg_number": 62,
+  "reference_id": "mp-755165",
+  "e_hull_meV_atom": 28.7,
+  "pseudosymmetry_rms": 0.254,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "Pnma"
+  ],
+  "literature_sg": null,
+  "status": "new"
+ },
+ "Ca3Ti2O7": {
+  "family": "A3B2O7",
+  "A": "Ca",
+  "B": "Ti",
+  "a": 3.8439,
+  "c": 19.4429,
+  "reference_sg": "Cmc2_1",
+  "reference_sg_number": 36,
+  "reference_id": "mp-4163",
+  "e_hull_meV_atom": 2.6,
+  "pseudosymmetry_rms": 0.14,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "Cmc2_1"
+  ],
+  "literature_sg": null,
+  "status": "prior"
+ },
+ "Sr3Sn2O7": {
+  "family": "A3B2O7",
+  "A": "Sr",
+  "B": "Sn",
+  "a": 4.078,
+  "c": 20.5792,
+  "reference_sg": "Cmcm",
+  "reference_sg_number": 63,
+  "reference_id": "mp-17743",
+  "e_hull_meV_atom": 2.9,
+  "pseudosymmetry_rms": 0.098,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": false,
+  "experimental_polymorphs": [
+   "Cmcm"
+  ],
+  "literature_sg": null,
+  "status": "prior"
+ },
+ "Sr3Ti2O7": {
+  "family": "A3B2O7",
+  "A": "Sr",
+  "B": "Ti",
+  "a": 3.9087,
+  "c": 20.3684,
+  "reference_sg": "I4/mmm",
+  "reference_sg_number": 139,
+  "reference_id": "mp-3349",
+  "e_hull_meV_atom": 0.0,
+  "pseudosymmetry_rms": 0.011,
+  "degenerate_reference": null,
+  "degenerate_reference_numbers": null,
+  "reference_is_aristotype": true,
+  "experimental_polymorphs": [
+   "I4/mmm"
+  ],
+  "literature_sg": null,
+  "status": "prior"
+ }
+}

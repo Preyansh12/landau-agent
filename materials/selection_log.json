@@ -1,0 +1,5186 @@
+[
+ [
+  "AcAlO3",
+  "excluded element"
+ ],
+ [
+  "AcBO3",
+  "excluded element"
+ ],
+ [
+  "AcCrO3",
+  "excluded element"
+ ],
+ [
+  "AcCuO3",
+  "excluded element"
+ ],
+ [
+  "AcFeO3",
+  "excluded element"
+ ],
+ [
+  "AcGaO3",
+  "excluded element"
+ ],
+ [
+  "AcLiO3",
+  "excluded element"
+ ],
+ [
+  "AcMgO3",
+  "excluded element"
+ ],
+ [
+  "AcMnO3",
+  "excluded element"
+ ],
+ [
+  "AcNiO3",
+  "excluded element"
+ ],
+ [
+  "AcPdO3",
+  "excluded element"
+ ],
+ [
+  "AcScO3",
+  "excluded element"
+ ],
+ [
+  "AcSiO3",
+  "excluded element"
+ ],
+ [
+  "AcTiO3",
+  "excluded element"
+ ],
+ [
+  "AcVO3",
+  "excluded element"
+ ],
+ [
+  "AgAlO3",
+  "no experimental polymorph"
+ ],
+ [
+  "AgAsO3",
+  "B site not octahedral (CN [4, 6])"
+ ],
+ [
+  "AgAuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "AgBO3",
+  "no experimental polymorph"
+ ],
+ [
+  "AgBeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "AgBiO3",
+  "50 meV/atom above hull"
+ ],
+ [
+  "AgBrO3",
+  "no experimental polymorph"
+ ],
+ [
+  "AgCO3",
+  "no experimental polymorph"
+ ],
+ [
+  "AgClO3",
+  "38 meV/atom above hull"
+ ],
+ [
+  "AgCoO3",
+  "no experimental polymorph"
+ ],
+ [
+  "AgFeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "AgGeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "AgMnO3",
+  "no experimental polymorph"
+ ],
+ [
+  "AgNO3",
+  "B site not octahedral (CN [3])"
+ ],
+ [
+  "AgNbO3",
+  "59 meV/atom above hull"
+ ],
+ [
+  "AgPO3",
+  "B site not octahedral (CN [4])"
+ ],
+ [
+  "AgPaO3",
+  "excluded element"
+ ],
+ [
+  "AgPdO3",
+  "no experimental polymorph"
+ ],
+ [
+  "AgRuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "AgSbO3",
+  "reference polymorph Fd-3m not pseudosymmetric to Pm-3m"
+ ],
+ [
+  "AgScO3",
+  "no experimental polymorph"
+ ],
+ [
+  "AgSiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "AgSnO3",
+  "no experimental polymorph"
+ ],
+ [
+  "AgTaO3",
+  "32 meV/atom above hull"
+ ],
+ [
+  "AgVO3",
+  "reference polymorph Cm not pseudosymmetric to Pm-3m"
+ ],
+ [
+  "AgYO3",
+  "no experimental polymorph"
+ ],
+ [
+  "AlBO3",
+  "33 meV/atom above hull"
+ ],
+ [
+  "AlSiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "AuAlO3",
+  "no experimental polymorph"
+ ],
+ [
+  "AuAsO3",
+  "no experimental polymorph"
+ ],
+ [
+  "AuBO3",
+  "no experimental polymorph"
+ ],
+ [
+  "AuBeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "AuCoO3",
+  "no experimental polymorph"
+ ],
+ [
+  "AuSbO3",
+  "no experimental polymorph"
+ ],
+ [
+  "AuZnO3",
+  "no experimental polymorph"
+ ],
+ [
+  "BaAlO3",
+  "no experimental polymorph"
+ ],
+ [
+  "BaAuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "BaBO3",
+  "no experimental polymorph"
+ ],
+ [
+  "BaBeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "BaCO3",
+  "B site not octahedral (CN [3])"
+ ],
+ [
+  "BaCaO3",
+  "no experimental polymorph"
+ ],
+ [
+  "BaCdO3",
+  "no experimental polymorph"
+ ],
+ [
+  "BaClO3",
+  "915 meV/atom above hull"
+ ],
+ [
+  "BaCoO3",
+  "magnetic (FM, 3.9988418)"
+ ],
+ [
+  "BaCrO3",
+  "82 meV/atom above hull"
+ ],
+ [
+  "BaCuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "BaDyO3",
+  "no experimental polymorph"
+ ],
+ [
+  "BaErO3",
+  "no experimental polymorph"
+ ],
+ [
+  "BaEuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "BaFeO3",
+  "magnetic (FM, 20.0075123)"
+ ],
+ [
+  "BaGeO3",
+  "B site not octahedral (CN [4])"
+ ],
+ [
+  "BaHfO3",
+  "no experimental polymorph"
+ ],
+ [
+  "BaInO3",
+  "no experimental polymorph"
+ ],
+ [
+  "BaIrO3",
+  "magnetic (FM, 2.1983903)"
+ ],
+ [
+  "BaLiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "BaMnO3",
+  "magnetic (FM, 8.9998148)"
+ ],
+ [
+  "BaNdO3",
+  "no experimental polymorph"
+ ],
+ [
+  "BaNiO3",
+  "reference polymorph P6_3/mmc not pseudosymmetric to Pm-3m"
+ ],
+ [
+  "BaNpO3",
+  "excluded element"
+ ],
+ [
+  "BaOsO3",
+  "80 meV/atom above hull"
+ ],
+ [
+  "BaPaO3",
+  "excluded element"
+ ],
+ [
+  "BaPdO3",
+  "no experimental polymorph"
+ ],
+ [
+  "BaPrO3",
+  "107 meV/atom above hull"
+ ],
+ [
+  "BaPtO3",
+  "no experimental polymorph"
+ ],
+ [
+  "BaPuO3",
+  "excluded element"
+ ],
+ [
+  "BaReO3",
+  "no experimental polymorph"
+ ],
+ [
+  "BaRhO3",
+  "magnetic (FM, 4.0182156)"
+ ],
+ [
+  "BaRuO3",
+  "magnetic (FM, 8.0185275)"
+ ],
+ [
+  "BaSO3",
+  "no experimental polymorph"
+ ],
+ [
+  "BaScO3",
+  "no experimental polymorph"
+ ],
+ [
+  "BaSeO3",
+  "B site not octahedral (CN [3])"
+ ],
+ [
+  "BaSiO3",
+  "B site not octahedral (CN [4])"
+ ],
+ [
+  "BaTaO3",
+  "no experimental polymorph"
+ ],
+ [
+  "BaTbO3",
+  "92 meV/atom above hull"
+ ],
+ [
+  "BaTcO3",
+  "magnetic (FiM, 2.0395058)"
+ ],
+ [
+  "BaTeO3",
+  "B site not octahedral (CN [3])"
+ ],
+ [
+  "BaThO3",
+  "excluded element"
+ ],
+ [
+  "BaTlO3",
+  "no experimental polymorph"
+ ],
+ [
+  "BaTmO3",
+  "no experimental polymorph"
+ ],
+ [
+  "BaUO3",
+  "excluded element"
+ ],
+ [
+  "BaVO3",
+  "75 meV/atom above hull"
+ ],
+ [
+  "BaWO3",
+  "no experimental polymorph"
+ ],
+ [
+  "BaYbO3",
+  "no experimental polymorph"
+ ],
+ [
+  "BaZnO3",
+  "no experimental polymorph"
+ ],
+ [
+  "BeBO3",
+  "no experimental polymorph"
+ ],
+ [
+  "BeSiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "BiAlO3",
+  "53 meV/atom above hull"
+ ],
+ [
+  "BiBO3",
+  "B site not octahedral (CN [3])"
+ ],
+ [
+  "BiBeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "BiCO3",
+  "no experimental polymorph"
+ ],
+ [
+  "BiCrO3",
+  "magnetic (AFM, 0.0)"
+ ],
+ [
+  "BiCuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "BiErO3",
+  "no experimental polymorph"
+ ],
+ [
+  "BiFeO3",
+  "magnetic (FM, 10.0000001)"
+ ],
+ [
+  "BiGaO3",
+  "B site not octahedral (CN [4])"
+ ],
+ [
+  "BiGeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "BiLiO3",
+  "reference polymorph Pccn not pseudosymmetric to Pm-3m"
+ ],
+ [
+  "BiLuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "BiMgO3",
+  "no experimental polymorph"
+ ],
+ [
+  "BiMnO3",
+  "magnetic (FM, 15.9999979)"
+ ],
+ [
+  "BiMoO3",
+  "no experimental polymorph"
+ ],
+ [
+  "BiNbO3",
+  "no experimental polymorph"
+ ],
+ [
+  "BiNiO3",
+  "magnetic (FM, 7.9998931)"
+ ],
+ [
+  "BiPtO3",
+  "no experimental polymorph"
+ ],
+ [
+  "BiReO3",
+  "no experimental polymorph"
+ ],
+ [
+  "BiRhO3",
+  "62 meV/atom above hull"
+ ],
+ [
+  "BiSbO3",
+  "no experimental polymorph"
+ ],
+ [
+  "BiScO3",
+  "34 meV/atom above hull"
+ ],
+ [
+  "BiSiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "BiVO3",
+  "no experimental polymorph"
+ ],
+ [
+  "BiZnO3",
+  "no experimental polymorph"
+ ],
+ [
+  "BrNO3",
+  "B site not octahedral (CN [3])"
+ ],
+ [
+  "CaBO3",
+  "101 meV/atom above hull"
+ ],
+ [
+  "CaBeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CaBiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CaCO3",
+  "B site not octahedral (CN [3])"
+ ],
+ [
+  "CaCeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CaCoO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CaCrO3",
+  "65 meV/atom above hull"
+ ],
+ [
+  "CaCuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CaFeO3",
+  "magnetic (FM, 15.5379632)"
+ ],
+ [
+  "CaGeO3",
+  "B site not octahedral (CN [4])"
+ ],
+ [
+  "CaHfO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CaHoO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CaInO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CaIrO3",
+  "magnetic (Unknown, 2.0033388)"
+ ],
+ [
+  "CaLiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CaMgO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CaMnO3",
+  "35 meV/atom above hull"
+ ],
+ [
+  "CaMoO3",
+  "magnetic (FM, 7.9962501)"
+ ],
+ [
+  "CaNbO3",
+  "59 meV/atom above hull"
+ ],
+ [
+  "CaNiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CaOsO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CaPrO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CaPtO3",
+  "reference polymorph Cmcm not pseudosymmetric to Pm-3m"
+ ],
+ [
+  "CaRhO3",
+  "magnetic (Unknown, 1.9944838)"
+ ],
+ [
+  "CaRuO3",
+  "magnetic (FM, 7.9989245)"
+ ],
+ [
+  "CaSbO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CaScO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CaSeO3",
+  "B site not octahedral (CN [3])"
+ ],
+ [
+  "CaSiO3",
+  "B site not octahedral (CN [4])"
+ ],
+ [
+  "CaTcO3",
+  "magnetic (FM, 12.0039714)"
+ ],
+ [
+  "CaTmO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CaVO3",
+  "magnetic (FM, 3.999347)"
+ ],
+ [
+  "CaWO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CaYO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CaZnO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CdBO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CdBeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CdBiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CdCO3",
+  "B site not octahedral (CN [3])"
+ ],
+ [
+  "CdCeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CdCoO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CdFeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CdGdO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CdGeO3",
+  "B site not octahedral (CN [4])"
+ ],
+ [
+  "CdHfO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CdIrO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CdLiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CdMnO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CdOsO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CdRhO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CdRuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CdSO3",
+  "96 meV/atom above hull"
+ ],
+ [
+  "CdSeO3",
+  "B site not octahedral (CN [3])"
+ ],
+ [
+  "CdSiO3",
+  "B site not octahedral (CN [4])"
+ ],
+ [
+  "CdSnO3",
+  "reference polymorph R-3 not pseudosymmetric to Pm-3m"
+ ],
+ [
+  "CdTcO3",
+  "116 meV/atom above hull"
+ ],
+ [
+  "CdTiO3",
+  "reference polymorph R-3 not pseudosymmetric to Pm-3m"
+ ],
+ [
+  "CdVO3",
+  "magnetic (Unknown, 4.0000007)"
+ ],
+ [
+  "CdYbO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CdZrO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CeAlO3",
+  "magnetic (Unknown, 2.0)"
+ ],
+ [
+  "CeAsO3",
+  "80 meV/atom above hull"
+ ],
+ [
+  "CeBO3",
+  "magnetic (FM, 4.0000001)"
+ ],
+ [
+  "CeBeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CeCrO3",
+  "192 meV/atom above hull"
+ ],
+ [
+  "CeCuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CeFeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CeGaO3",
+  "233 meV/atom above hull"
+ ],
+ [
+  "CeLiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CeLuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CeMnO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CeNiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CePuO3",
+  "excluded element"
+ ],
+ [
+  "CeRhO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CeSbO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CeScO3",
+  "magnetic (FM, 3.9999998)"
+ ],
+ [
+  "CeTaO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CeTiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CeVO3",
+  "magnetic (FM, 12.0000004)"
+ ],
+ [
+  "ClNO3",
+  "1412 meV/atom above hull"
+ ],
+ [
+  "ClReO3",
+  "41 meV/atom above hull"
+ ],
+ [
+  "CoAlO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CoBO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CoCO3",
+  "magnetic (Unknown, 5.9982556)"
+ ],
+ [
+  "CoNiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CoRhO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CoSiO3",
+  "magnetic (FM, 48.0057909)"
+ ],
+ [
+  "CrAlO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CrBO3",
+  "magnetic (Unknown, 6.0000002)"
+ ],
+ [
+  "CrCuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CrFeO3",
+  "magnetic (FM, 15.9967779)"
+ ],
+ [
+  "CrGeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CrHfO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CrInO3",
+  "51 meV/atom above hull"
+ ],
+ [
+  "CrLiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CrMgO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CrMoO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CrRhO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CrScO3",
+  "37 meV/atom above hull"
+ ],
+ [
+  "CrTcO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CrTiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CrVO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CrWO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CrZnO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CrZrO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CsAcO3",
+  "excluded element"
+ ],
+ [
+  "CsAsO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CsAuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CsBaO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CsBiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CsBrO3",
+  "B site not octahedral (CN [3])"
+ ],
+ [
+  "CsCaO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CsCdO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CsClO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CsEuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CsGdO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CsGeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CsIO3",
+  "B site not octahedral (CN [3])"
+ ],
+ [
+  "CsIrO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CsKO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CsLaO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CsMgO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CsMoO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CsNO3",
+  "B site not octahedral (CN [3])"
+ ],
+ [
+  "CsNaO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CsNbO3",
+  "reference polymorph P2_1/c not pseudosymmetric to Pm-3m"
+ ],
+ [
+  "CsNdO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CsNpO3",
+  "excluded element"
+ ],
+ [
+  "CsOsO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CsPO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CsPaO3",
+  "excluded element"
+ ],
+ [
+  "CsPbO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CsPdO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CsPrO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CsPuO3",
+  "excluded element"
+ ],
+ [
+  "CsRbO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CsRuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CsSO3",
+  "B site not octahedral (CN [3])"
+ ],
+ [
+  "CsSbO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CsSmO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CsSnO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CsSrO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CsTaO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CsTbO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CsTeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CsThO3",
+  "excluded element"
+ ],
+ [
+  "CsTiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CsTlO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CsUO3",
+  "excluded element"
+ ],
+ [
+  "CsVO3",
+  "B site not octahedral (CN [4])"
+ ],
+ [
+  "CsYbO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CuAlO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CuAsO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CuBO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CuBeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CuCO3",
+  "140 meV/atom above hull"
+ ],
+ [
+  "CuGeO3",
+  "73 meV/atom above hull"
+ ],
+ [
+  "CuPO3",
+  "no experimental polymorph"
+ ],
+ [
+  "CuSiO3",
+  "68 meV/atom above hull"
+ ],
+ [
+  "CuVO3",
+  "94 meV/atom above hull"
+ ],
+ [
+  "DyBO3",
+  "B site not octahedral (CN [3])"
+ ],
+ [
+  "DyBiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "DyCrO3",
+  "magnetic (Unknown, 12.0000008)"
+ ],
+ [
+  "DyCuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "DyErO3",
+  "no experimental polymorph"
+ ],
+ [
+  "DyFeO3",
+  "magnetic (FM, 20.0067112)"
+ ],
+ [
+  "DyGaO3",
+  "48 meV/atom above hull"
+ ],
+ [
+  "DyHoO3",
+  "no experimental polymorph"
+ ],
+ [
+  "DyInO3",
+  "no experimental polymorph"
+ ],
+ [
+  "DyLiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "DyLuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "DyMnO3",
+  "magnetic (FM, 24.0000003)"
+ ],
+ [
+  "DyNiO3",
+  "magnetic (Unknown, 3.9999993)"
+ ],
+ [
+  "DyPaO3",
+  "excluded element"
+ ],
+ [
+  "DyRhO3",
+  "no experimental polymorph"
+ ],
+ [
+  "DySbO3",
+  "no experimental polymorph"
+ ],
+ [
+  "DySeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "DySnO3",
+  "no experimental polymorph"
+ ],
+ [
+  "DyTiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "DyTmO3",
+  "no experimental polymorph"
+ ],
+ [
+  "DyVO3",
+  "magnetic (FM, 8.0)"
+ ],
+ [
+  "DyYO3",
+  "no experimental polymorph"
+ ],
+ [
+  "ErAlO3",
+  "no experimental polymorph"
+ ],
+ [
+  "ErBO3",
+  "B site not octahedral (CN [4])"
+ ],
+ [
+  "ErBeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "ErCrO3",
+  "magnetic (Unknown, 12.0000001)"
+ ],
+ [
+  "ErCuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "ErFeO3",
+  "magnetic (FM, 20.0023773)"
+ ],
+ [
+  "ErGaO3",
+  "no experimental polymorph"
+ ],
+ [
+  "ErInO3",
+  "no experimental polymorph"
+ ],
+ [
+  "ErIrO3",
+  "no experimental polymorph"
+ ],
+ [
+  "ErLiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "ErLuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "ErMnO3",
+  "magnetic (FM, 23.999999)"
+ ],
+ [
+  "ErNiO3",
+  "magnetic (FM, 4.0000005)"
+ ],
+ [
+  "ErRhO3",
+  "no experimental polymorph"
+ ],
+ [
+  "ErScO3",
+  "no experimental polymorph"
+ ],
+ [
+  "ErTaO3",
+  "no experimental polymorph"
+ ],
+ [
+  "ErTbO3",
+  "no experimental polymorph"
+ ],
+ [
+  "ErTiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "ErVO3",
+  "magnetic (FM, 8.0)"
+ ],
+ [
+  "ErZnO3",
+  "no experimental polymorph"
+ ],
+ [
+  "EuAgO3",
+  "no experimental polymorph"
+ ],
+ [
+  "EuAlO3",
+  "111 meV/atom above hull"
+ ],
+ [
+  "EuAsO3",
+  "no experimental polymorph"
+ ],
+ [
+  "EuAuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "EuBO3",
+  "magnetic (FM, 24.0000001)"
+ ],
+ [
+  "EuBeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "EuCO3",
+  "magnetic (FM, 28.0000011)"
+ ],
+ [
+  "EuCdO3",
+  "no experimental polymorph"
+ ],
+ [
+  "EuCoO3",
+  "no experimental polymorph"
+ ],
+ [
+  "EuCrO3",
+  "110 meV/atom above hull"
+ ],
+ [
+  "EuCuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "EuErO3",
+  "no experimental polymorph"
+ ],
+ [
+  "EuFeO3",
+  "149 meV/atom above hull"
+ ],
+ [
+  "EuGaO3",
+  "no experimental polymorph"
+ ],
+ [
+  "EuGeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "EuHO3",
+  "no experimental polymorph"
+ ],
+ [
+  "EuHfO3",
+  "no experimental polymorph"
+ ],
+ [
+  "EuInO3",
+  "no experimental polymorph"
+ ],
+ [
+  "EuIrO3",
+  "no experimental polymorph"
+ ],
+ [
+  "EuLiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "EuLuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "EuMgO3",
+  "no experimental polymorph"
+ ],
+ [
+  "EuMnO3",
+  "77 meV/atom above hull"
+ ],
+ [
+  "EuMoO3",
+  "no experimental polymorph"
+ ],
+ [
+  "EuNbO3",
+  "magnetic (Unknown, 13.4203772)"
+ ],
+ [
+  "EuNiO3",
+  "136 meV/atom above hull"
+ ],
+ [
+  "EuNpO3",
+  "excluded element"
+ ],
+ [
+  "EuOsO3",
+  "no experimental polymorph"
+ ],
+ [
+  "EuPbO3",
+  "no experimental polymorph"
+ ],
+ [
+  "EuPdO3",
+  "no experimental polymorph"
+ ],
+ [
+  "EuPmO3",
+  "no experimental polymorph"
+ ],
+ [
+  "EuPtO3",
+  "no experimental polymorph"
+ ],
+ [
+  "EuReO3",
+  "no experimental polymorph"
+ ],
+ [
+  "EuRhO3",
+  "65 meV/atom above hull"
+ ],
+ [
+  "EuRuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "EuSbO3",
+  "no experimental polymorph"
+ ],
+ [
+  "EuScO3",
+  "181 meV/atom above hull"
+ ],
+ [
+  "EuSeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "EuSiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "EuSnO3",
+  "no experimental polymorph"
+ ],
+ [
+  "EuTcO3",
+  "no experimental polymorph"
+ ],
+ [
+  "EuTiO3",
+  "magnetic (Unknown, 13.9952801)"
+ ],
+ [
+  "EuTmO3",
+  "no experimental polymorph"
+ ],
+ [
+  "EuUO3",
+  "excluded element"
+ ],
+ [
+  "EuVO3",
+  "no experimental polymorph"
+ ],
+ [
+  "EuWO3",
+  "no experimental polymorph"
+ ],
+ [
+  "EuYbO3",
+  "no experimental polymorph"
+ ],
+ [
+  "EuZrO3",
+  "magnetic (AFM, 0.0)"
+ ],
+ [
+  "FeAlO3",
+  "44 meV/atom above hull"
+ ],
+ [
+  "FeAsO3",
+  "no experimental polymorph"
+ ],
+ [
+  "FeBO3",
+  "magnetic (Unknown, 9.9999998)"
+ ],
+ [
+  "FeCO3",
+  "magnetic (Unknown, 8.0000006)"
+ ],
+ [
+  "FeGaO3",
+  "36 meV/atom above hull"
+ ],
+ [
+  "FeGeO3",
+  "magnetic (FM, 16.0283091)"
+ ],
+ [
+  "FeHfO3",
+  "no experimental polymorph"
+ ],
+ [
+  "FeNbO3",
+  "no experimental polymorph"
+ ],
+ [
+  "FeNiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "FeRhO3",
+  "no experimental polymorph"
+ ],
+ [
+  "FeSiO3",
+  "magnetic (FM, 64.0000023)"
+ ],
+ [
+  "FeSnO3",
+  "no experimental polymorph"
+ ],
+ [
+  "FeTaO3",
+  "no experimental polymorph"
+ ],
+ [
+  "FeTiO3",
+  "magnetic (Unknown, 8.000182)"
+ ],
+ [
+  "GaAlO3",
+  "no experimental polymorph"
+ ],
+ [
+  "GaBO3",
+  "B site not octahedral (CN [3])"
+ ],
+ [
+  "GaBeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "GaNiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "GaSiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "GdAlO3",
+  "magnetic (FM, 27.9999996)"
+ ],
+ [
+  "GdAsO3",
+  "no experimental polymorph"
+ ],
+ [
+  "GdBO3",
+  "magnetic (Unknown, 42.0000001)"
+ ],
+ [
+  "GdBeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "GdCoO3",
+  "no experimental polymorph"
+ ],
+ [
+  "GdCrO3",
+  "magnetic (FM, 40.0000011)"
+ ],
+ [
+  "GdCuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "GdErO3",
+  "no experimental polymorph"
+ ],
+ [
+  "GdFeO3",
+  "magnetic (FM, 48.0089536)"
+ ],
+ [
+  "GdGaO3",
+  "49 meV/atom above hull"
+ ],
+ [
+  "GdInO3",
+  "no experimental polymorph"
+ ],
+ [
+  "GdLiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "GdLuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "GdMnO3",
+  "magnetic (FM, 44.0000015)"
+ ],
+ [
+  "GdNiO3",
+  "magnetic (FiM, 24.0000019)"
+ ],
+ [
+  "GdRhO3",
+  "no experimental polymorph"
+ ],
+ [
+  "GdScO3",
+  "magnetic (FM, 27.9999996)"
+ ],
+ [
+  "GdSiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "GdTbO3",
+  "no experimental polymorph"
+ ],
+ [
+  "GdTiO3",
+  "magnetic (FiM, 24.0002879)"
+ ],
+ [
+  "GdVO3",
+  "magnetic (FiM, 21.9999991)"
+ ],
+ [
+  "GdZrO3",
+  "no experimental polymorph"
+ ],
+ [
+  "GeBO3",
+  "no experimental polymorph"
+ ],
+ [
+  "GeBeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "GeCoO3",
+  "magnetic (FM, 11.9999995)"
+ ],
+ [
+  "GeGaO3",
+  "no experimental polymorph"
+ ],
+ [
+  "GeSiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "HfBO3",
+  "no experimental polymorph"
+ ],
+ [
+  "HfBeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "HfCoO3",
+  "no experimental polymorph"
+ ],
+ [
+  "HfNiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "HfSnO3",
+  "no experimental polymorph"
+ ],
+ [
+  "HgAsO3",
+  "no experimental polymorph"
+ ],
+ [
+  "HgBeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "HgBiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "HgBrO3",
+  "B site not octahedral (CN [3])"
+ ],
+ [
+  "HgCaO3",
+  "no experimental polymorph"
+ ],
+ [
+  "HgClO3",
+  "40 meV/atom above hull"
+ ],
+ [
+  "HgCuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "HgEuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "HgGeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "HgHfO3",
+  "no experimental polymorph"
+ ],
+ [
+  "HgIrO3",
+  "no experimental polymorph"
+ ],
+ [
+  "HgMgO3",
+  "no experimental polymorph"
+ ],
+ [
+  "HgMnO3",
+  "no experimental polymorph"
+ ],
+ [
+  "HgNO3",
+  "B site not octahedral (CN [3])"
+ ],
+ [
+  "HgNpO3",
+  "excluded element"
+ ],
+ [
+  "HgOsO3",
+  "no experimental polymorph"
+ ],
+ [
+  "HgPaO3",
+  "excluded element"
+ ],
+ [
+  "HgRhO3",
+  "no experimental polymorph"
+ ],
+ [
+  "HgRuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "HgSeO3",
+  "B site not octahedral (CN [3])"
+ ],
+ [
+  "HgSiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "HgSnO3",
+  "65 meV/atom above hull"
+ ],
+ [
+  "HgTiO3",
+  "108 meV/atom above hull"
+ ],
+ [
+  "HgUO3",
+  "excluded element"
+ ],
+ [
+  "HgVO3",
+  "B site not octahedral (CN [5])"
+ ],
+ [
+  "HgZrO3",
+  "no experimental polymorph"
+ ],
+ [
+  "HoBO3",
+  "no experimental polymorph"
+ ],
+ [
+  "HoBeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "HoBiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "HoCrO3",
+  "magnetic (Unknown, 12.0000005)"
+ ],
+ [
+  "HoCuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "HoErO3",
+  "no experimental polymorph"
+ ],
+ [
+  "HoFeO3",
+  "magnetic (FM, 20.0039385)"
+ ],
+ [
+  "HoGaO3",
+  "50 meV/atom above hull"
+ ],
+ [
+  "HoGeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "HoInO3",
+  "no experimental polymorph"
+ ],
+ [
+  "HoLiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "HoLuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "HoMnO3",
+  "magnetic (FM, 24.0)"
+ ],
+ [
+  "HoNiO3",
+  "magnetic (FM, 4.0)"
+ ],
+ [
+  "HoRhO3",
+  "no experimental polymorph"
+ ],
+ [
+  "HoSbO3",
+  "no experimental polymorph"
+ ],
+ [
+  "HoScO3",
+  "37 meV/atom above hull"
+ ],
+ [
+  "HoSiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "HoSnO3",
+  "no experimental polymorph"
+ ],
+ [
+  "HoTbO3",
+  "no experimental polymorph"
+ ],
+ [
+  "HoTiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "HoVO3",
+  "magnetic (FM, 8.0000001)"
+ ],
+ [
+  "HoYO3",
+  "no experimental polymorph"
+ ],
+ [
+  "IAgO3",
+  "B site not octahedral (CN [5])"
+ ],
+ [
+  "IClO3",
+  "no experimental polymorph"
+ ],
+ [
+  "IHO3",
+  "B site not octahedral (CN [1])"
+ ],
+ [
+  "ILaO3",
+  "73 meV/atom above hull"
+ ],
+ [
+  "ILiO3",
+  "B site not octahedral (CN [4])"
+ ],
+ [
+  "INO3",
+  "no experimental polymorph"
+ ],
+ [
+  "InAlO3",
+  "no experimental polymorph"
+ ],
+ [
+  "InAsO3",
+  "no experimental polymorph"
+ ],
+ [
+  "InBO3",
+  "B site not octahedral (CN [3])"
+ ],
+ [
+  "InBeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "InCoO3",
+  "no experimental polymorph"
+ ],
+ [
+  "InCuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "InFeO3",
+  "47 meV/atom above hull"
+ ],
+ [
+  "InGaO3",
+  "B site not octahedral (CN [5])"
+ ],
+ [
+  "InMgO3",
+  "no experimental polymorph"
+ ],
+ [
+  "InMnO3",
+  "magnetic (FM, 24.0000006)"
+ ],
+ [
+  "InOsO3",
+  "no experimental polymorph"
+ ],
+ [
+  "InPtO3",
+  "no experimental polymorph"
+ ],
+ [
+  "InRhO3",
+  "41 meV/atom above hull"
+ ],
+ [
+  "InSbO3",
+  "no experimental polymorph"
+ ],
+ [
+  "InScO3",
+  "no experimental polymorph"
+ ],
+ [
+  "InSiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "InTaO3",
+  "no experimental polymorph"
+ ],
+ [
+  "IrAlO3",
+  "no experimental polymorph"
+ ],
+ [
+  "IrBO3",
+  "no experimental polymorph"
+ ],
+ [
+  "KAcO3",
+  "excluded element"
+ ],
+ [
+  "KAgO3",
+  "no experimental polymorph"
+ ],
+ [
+  "KAlO3",
+  "no experimental polymorph"
+ ],
+ [
+  "KAsO3",
+  "B site not octahedral (CN [4])"
+ ],
+ [
+  "KAuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "KBaO3",
+  "no experimental polymorph"
+ ],
+ [
+  "KBeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "KBiO3",
+  "reference polymorph Pn-3 not pseudosymmetric to Pm-3m"
+ ],
+ [
+  "KBrO3",
+  "B site not octahedral (CN [3])"
+ ],
+ [
+  "KCO3",
+  "magnetic (FM, 4.0017107)"
+ ],
+ [
+  "KCaO3",
+  "no experimental polymorph"
+ ],
+ [
+  "KCdO3",
+  "no experimental polymorph"
+ ],
+ [
+  "KClO3",
+  "51 meV/atom above hull"
+ ],
+ [
+  "KCoO3",
+  "no experimental polymorph"
+ ],
+ [
+  "KCrO3",
+  "no experimental polymorph"
+ ],
+ [
+  "KDyO3",
+  "no experimental polymorph"
+ ],
+ [
+  "KErO3",
+  "no experimental polymorph"
+ ],
+ [
+  "KFeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "KGdO3",
+  "no experimental polymorph"
+ ],
+ [
+  "KHfO3",
+  "no experimental polymorph"
+ ],
+ [
+  "KHoO3",
+  "no experimental polymorph"
+ ],
+ [
+  "KIO3",
+  "B site not octahedral (CN [3])"
+ ],
+ [
+  "KInO3",
+  "no experimental polymorph"
+ ],
+ [
+  "KIrO3",
+  "reference polymorph Pn-3 not pseudosymmetric to Pm-3m"
+ ],
+ [
+  "KLiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "KLuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "KMgO3",
+  "no experimental polymorph"
+ ],
+ [
+  "KMnO3",
+  "no experimental polymorph"
+ ],
+ [
+  "KMoO3",
+  "no experimental polymorph"
+ ],
+ [
+  "KNO3",
+  "B site not octahedral (CN [3])"
+ ],
+ [
+  "KNaO3",
+  "no experimental polymorph"
+ ],
+ [
+  "KNpO3",
+  "excluded element"
+ ],
+ [
+  "KOsO3",
+  "no experimental polymorph"
+ ],
+ [
+  "KPO3",
+  "B site not octahedral (CN [4])"
+ ],
+ [
+  "KPaO3",
+  "excluded element"
+ ],
+ [
+  "KPbO3",
+  "no experimental polymorph"
+ ],
+ [
+  "KPdO3",
+  "no experimental polymorph"
+ ],
+ [
+  "KPtO3",
+  "no experimental polymorph"
+ ],
+ [
+  "KPuO3",
+  "excluded element"
+ ],
+ [
+  "KReO3",
+  "no experimental polymorph"
+ ],
+ [
+  "KRhO3",
+  "no experimental polymorph"
+ ],
+ [
+  "KRuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "KSO3",
+  "B site not octahedral (CN [3])"
+ ],
+ [
+  "KSbO3",
+  "reference polymorph R-3 not pseudosymmetric to Pm-3m"
+ ],
+ [
+  "KScO3",
+  "no experimental polymorph"
+ ],
+ [
+  "KSiO3",
+  "148 meV/atom above hull"
+ ],
+ [
+  "KSrO3",
+  "no experimental polymorph"
+ ],
+ [
+  "KTbO3",
+  "no experimental polymorph"
+ ],
+ [
+  "KTcO3",
+  "no experimental polymorph"
+ ],
+ [
+  "KTeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "KTiO3",
+  "99 meV/atom above hull"
+ ],
+ [
+  "KTlO3",
+  "no experimental polymorph"
+ ],
+ [
+  "KTmO3",
+  "no experimental polymorph"
+ ],
+ [
+  "KUO3",
+  "excluded element"
+ ],
+ [
+  "KVO3",
+  "B site not octahedral (CN [4])"
+ ],
+ [
+  "KWO3",
+  "no experimental polymorph"
+ ],
+ [
+  "KYO3",
+  "no experimental polymorph"
+ ],
+ [
+  "KYbO3",
+  "no experimental polymorph"
+ ],
+ [
+  "KZnO3",
+  "no experimental polymorph"
+ ],
+ [
+  "KZrO3",
+  "no experimental polymorph"
+ ],
+ [
+  "LaAgO3",
+  "no experimental polymorph"
+ ],
+ [
+  "LaAsO3",
+  "B site not octahedral (CN [3])"
+ ],
+ [
+  "LaAuO3",
+  "B site not octahedral (CN [4])"
+ ],
+ [
+  "LaBO3",
+  "B site not octahedral (CN [3])"
+ ],
+ [
+  "LaBeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "LaBiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "LaCaO3",
+  "no experimental polymorph"
+ ],
+ [
+  "LaCdO3",
+  "no experimental polymorph"
+ ],
+ [
+  "LaCoO3",
+  "magnetic (FM, 3.9987316)"
+ ],
+ [
+  "LaCrO3",
+  "magnetic (Unknown, 12.0000006)"
+ ],
+ [
+  "LaDyO3",
+  "no experimental polymorph"
+ ],
+ [
+  "LaFeO3",
+  "magnetic (Unknown, 6.0000002)"
+ ],
+ [
+  "LaGaO3",
+  "33 meV/atom above hull"
+ ],
+ [
+  "LaHoO3",
+  "35 meV/atom above hull"
+ ],
+ [
+  "LaLiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "LaMgO3",
+  "no experimental polymorph"
+ ],
+ [
+  "LaMnO3",
+  "126 meV/atom above hull"
+ ],
+ [
+  "LaNiO3",
+  "magnetic (Unknown, 1.999905)"
+ ],
+ [
+  "LaPtO3",
+  "no experimental polymorph"
+ ],
+ [
+  "LaRuO3",
+  "44 meV/atom above hull"
+ ],
+ [
+  "LaSnO3",
+  "no experimental polymorph"
+ ],
+ [
+  "LaTaO3",
+  "no experimental polymorph"
+ ],
+ [
+  "LaVO3",
+  "magnetic (AFM, 0.0002747)"
+ ],
+ [
+  "LaYO3",
+  "40 meV/atom above hull"
+ ],
+ [
+  "LaZnO3",
+  "no experimental polymorph"
+ ],
+ [
+  "LaZrO3",
+  "no experimental polymorph"
+ ],
+ [
+  "LiAlO3",
+  "no experimental polymorph"
+ ],
+ [
+  "LiAsO3",
+  "reference polymorph R-3 not pseudosymmetric to Pm-3m"
+ ],
+ [
+  "LiBO3",
+  "no experimental polymorph"
+ ],
+ [
+  "LiBeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "LiBrO3",
+  "253 meV/atom above hull"
+ ],
+ [
+  "LiFeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "LiGeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "LiMgO3",
+  "no experimental polymorph"
+ ],
+ [
+  "LiMnO3",
+  "no experimental polymorph"
+ ],
+ [
+  "LiNO3",
+  "B site not octahedral (CN [3])"
+ ],
+ [
+  "LiNiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "LiPO3",
+  "B site not octahedral (CN [4])"
+ ],
+ [
+  "LiReO3",
+  "75 meV/atom above hull"
+ ],
+ [
+  "LiRuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "LiSbO3",
+  "reference polymorph Pnna not pseudosymmetric to Pm-3m"
+ ],
+ [
+  "LiSiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "LiTcO3",
+  "no experimental polymorph"
+ ],
+ [
+  "LiVO3",
+  "B site not octahedral (CN [4])"
+ ],
+ [
+  "LuAlO3",
+  "no experimental polymorph"
+ ],
+ [
+  "LuBO3",
+  "B site not octahedral (CN [3])"
+ ],
+ [
+  "LuCoO3",
+  "37 meV/atom above hull"
+ ],
+ [
+  "LuCrO3",
+  "magnetic (FM, 11.9999995)"
+ ],
+ [
+  "LuFeO3",
+  "magnetic (FM, 30.026162)"
+ ],
+ [
+  "LuGaO3",
+  "no experimental polymorph"
+ ],
+ [
+  "LuGeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "LuLiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "LuMnO3",
+  "magnetic (FM, 23.9999987)"
+ ],
+ [
+  "LuNiO3",
+  "magnetic (FM, 4.0000014)"
+ ],
+ [
+  "LuNpO3",
+  "excluded element"
+ ],
+ [
+  "LuPdO3",
+  "no experimental polymorph"
+ ],
+ [
+  "LuReO3",
+  "no experimental polymorph"
+ ],
+ [
+  "LuScO3",
+  "no experimental polymorph"
+ ],
+ [
+  "LuSiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "LuTbO3",
+  "no experimental polymorph"
+ ],
+ [
+  "LuTiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "LuUO3",
+  "excluded element"
+ ],
+ [
+  "LuVO3",
+  "magnetic (FM, 7.9962171)"
+ ],
+ [
+  "MgAlO3",
+  "no experimental polymorph"
+ ],
+ [
+  "MgBO3",
+  "183 meV/atom above hull"
+ ],
+ [
+  "MgBeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "MgCO3",
+  "B site not octahedral (CN [3])"
+ ],
+ [
+  "MgCoO3",
+  "no experimental polymorph"
+ ],
+ [
+  "MgCuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "MgFeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "MgGeO3",
+  "B site not octahedral (CN [4])"
+ ],
+ [
+  "MgHfO3",
+  "no experimental polymorph"
+ ],
+ [
+  "MgIrO3",
+  "no experimental polymorph"
+ ],
+ [
+  "MgMoO3",
+  "no experimental polymorph"
+ ],
+ [
+  "MgOsO3",
+  "no experimental polymorph"
+ ],
+ [
+  "MgReO3",
+  "no experimental polymorph"
+ ],
+ [
+  "MgRhO3",
+  "no experimental polymorph"
+ ],
+ [
+  "MgRuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "MgSbO3",
+  "no experimental polymorph"
+ ],
+ [
+  "MgSiO3",
+  "B site not octahedral (CN [4])"
+ ],
+ [
+  "MgSnO3",
+  "no experimental polymorph"
+ ],
+ [
+  "MgTiO3",
+  "reference polymorph R-3 not pseudosymmetric to Pm-3m"
+ ],
+ [
+  "MgVO3",
+  "185 meV/atom above hull"
+ ],
+ [
+  "MgWO3",
+  "no experimental polymorph"
+ ],
+ [
+  "MgZrO3",
+  "no experimental polymorph"
+ ],
+ [
+  "MnAlO3",
+  "no experimental polymorph"
+ ],
+ [
+  "MnBO3",
+  "no experimental polymorph"
+ ],
+ [
+  "MnCO3",
+  "magnetic (Unknown, 10.0)"
+ ],
+ [
+  "MnClO3",
+  "484 meV/atom above hull"
+ ],
+ [
+  "MnCoO3",
+  "magnetic (Unknown, 11.9987934)"
+ ],
+ [
+  "MnCuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "MnFO3",
+  "no experimental polymorph"
+ ],
+ [
+  "MnFeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "MnGaO3",
+  "no experimental polymorph"
+ ],
+ [
+  "MnGeO3",
+  "magnetic (AFM, 0.0)"
+ ],
+ [
+  "MnHfO3",
+  "no experimental polymorph"
+ ],
+ [
+  "MnMgO3",
+  "no experimental polymorph"
+ ],
+ [
+  "MnNiO3",
+  "magnetic (Unknown, 10.004428)"
+ ],
+ [
+  "MnPO3",
+  "no experimental polymorph"
+ ],
+ [
+  "MnSiO3",
+  "magnetic (FM, 70.0017624)"
+ ],
+ [
+  "MnSnO3",
+  "magnetic (Unknown, 9.9999999)"
+ ],
+ [
+  "MnTiO3",
+  "magnetic (Unknown, 10.0000004)"
+ ],
+ [
+  "MnVO3",
+  "42 meV/atom above hull"
+ ],
+ [
+  "MnZrO3",
+  "no experimental polymorph"
+ ],
+ [
+  "MoAlO3",
+  "no experimental polymorph"
+ ],
+ [
+  "MoCoO3",
+  "no experimental polymorph"
+ ],
+ [
+  "MoHO3",
+  "no experimental polymorph"
+ ],
+ [
+  "MoNiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "MoSiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "NHO3",
+  "B site not octahedral (CN [2])"
+ ],
+ [
+  "NPO3",
+  "896 meV/atom above hull"
+ ],
+ [
+  "NaAgO3",
+  "no experimental polymorph"
+ ],
+ [
+  "NaAlO3",
+  "no experimental polymorph"
+ ],
+ [
+  "NaAsO3",
+  "B site not octahedral (CN [4])"
+ ],
+ [
+  "NaBeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "NaBiO3",
+  "reference polymorph R-3 not pseudosymmetric to Pm-3m"
+ ],
+ [
+  "NaBrO3",
+  "B site not octahedral (CN [3])"
+ ],
+ [
+  "NaCO3",
+  "magnetic (FM, 4.0)"
+ ],
+ [
+  "NaCaO3",
+  "no experimental polymorph"
+ ],
+ [
+  "NaCdO3",
+  "no experimental polymorph"
+ ],
+ [
+  "NaClO3",
+  "B site not octahedral (CN [3])"
+ ],
+ [
+  "NaCoO3",
+  "no experimental polymorph"
+ ],
+ [
+  "NaCrO3",
+  "no experimental polymorph"
+ ],
+ [
+  "NaFeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "NaGeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "NaInO3",
+  "no experimental polymorph"
+ ],
+ [
+  "NaIrO3",
+  "magnetic (Unknown, 0.6267535)"
+ ],
+ [
+  "NaLiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "NaMgO3",
+  "no experimental polymorph"
+ ],
+ [
+  "NaMoO3",
+  "no experimental polymorph"
+ ],
+ [
+  "NaNO3",
+  "B site not octahedral (CN [3])"
+ ],
+ [
+  "NaNiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "NaOsO3",
+  "magnetic (FM, 6.2211615)"
+ ],
+ [
+  "NaPO3",
+  "B site not octahedral (CN [4])"
+ ],
+ [
+  "NaPaO3",
+  "excluded element"
+ ],
+ [
+  "NaPbO3",
+  "no experimental polymorph"
+ ],
+ [
+  "NaPdO3",
+  "no experimental polymorph"
+ ],
+ [
+  "NaPuO3",
+  "excluded element"
+ ],
+ [
+  "NaReO3",
+  "no experimental polymorph"
+ ],
+ [
+  "NaRuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "NaSbO3",
+  "reference polymorph R-3 not pseudosymmetric to Pm-3m"
+ ],
+ [
+  "NaSeO3",
+  "74 meV/atom above hull"
+ ],
+ [
+  "NaSiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "NaTcO3",
+  "no experimental polymorph"
+ ],
+ [
+  "NaTiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "NaUO3",
+  "excluded element"
+ ],
+ [
+  "NaVO3",
+  "B site not octahedral (CN [4])"
+ ],
+ [
+  "NaWO3",
+  "55 meV/atom above hull"
+ ],
+ [
+  "NaYbO3",
+  "no experimental polymorph"
+ ],
+ [
+  "NaZnO3",
+  "346 meV/atom above hull"
+ ],
+ [
+  "CuNbO3",
+  "reference polymorph C2/m not pseudosymmetric to Pm-3m"
+ ],
+ [
+  "NbHO3",
+  "no experimental polymorph"
+ ],
+ [
+  "NdBO3",
+  "B site not octahedral (CN [3])"
+ ],
+ [
+  "NdBeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "NdBiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "NdCrO3",
+  "magnetic (Unknown, 11.9999999)"
+ ],
+ [
+  "NdCuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "NdFeO3",
+  "magnetic (FM, 19.9878786)"
+ ],
+ [
+  "NdGaO3",
+  "34 meV/atom above hull"
+ ],
+ [
+  "NdGeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "NdInO3",
+  "no experimental polymorph"
+ ],
+ [
+  "NdLiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "NdLuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "NdMgO3",
+  "no experimental polymorph"
+ ],
+ [
+  "NdMnO3",
+  "magnetic (FM, 16.0000003)"
+ ],
+ [
+  "NdNiO3",
+  "magnetic (FM, 3.9998971)"
+ ],
+ [
+  "NdNpO3",
+  "excluded element"
+ ],
+ [
+  "NdReO3",
+  "no experimental polymorph"
+ ],
+ [
+  "NdSbO3",
+  "no experimental polymorph"
+ ],
+ [
+  "NdTaO3",
+  "no experimental polymorph"
+ ],
+ [
+  "NdTiO3",
+  "42 meV/atom above hull"
+ ],
+ [
+  "NdVO3",
+  "magnetic (FM, 7.9999996)"
+ ],
+ [
+  "NdYbO3",
+  "no experimental polymorph"
+ ],
+ [
+  "NdZrO3",
+  "no experimental polymorph"
+ ],
+ [
+  "NiAlO3",
+  "no experimental polymorph"
+ ],
+ [
+  "NiAsO3",
+  "no experimental polymorph"
+ ],
+ [
+  "NiCO3",
+  "magnetic (Unknown, 3.9999998)"
+ ],
+ [
+  "NiRuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "NpAlO3",
+  "excluded element"
+ ],
+ [
+  "NpBO3",
+  "excluded element"
+ ],
+ [
+  "NpBeO3",
+  "excluded element"
+ ],
+ [
+  "NpHfO3",
+  "excluded element"
+ ],
+ [
+  "NpMoO3",
+  "excluded element"
+ ],
+ [
+  "NpOsO3",
+  "excluded element"
+ ],
+ [
+  "NpRuO3",
+  "excluded element"
+ ],
+ [
+  "NpSiO3",
+  "excluded element"
+ ],
+ [
+  "NpSnO3",
+  "excluded element"
+ ],
+ [
+  "NpTaO3",
+  "excluded element"
+ ],
+ [
+  "NpTcO3",
+  "excluded element"
+ ],
+ [
+  "NpTiO3",
+  "excluded element"
+ ],
+ [
+  "OsBO3",
+  "no experimental polymorph"
+ ],
+ [
+  "OsBeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "PaBO3",
+  "excluded element"
+ ],
+ [
+  "PaBeO3",
+  "excluded element"
+ ],
+ [
+  "PaCoO3",
+  "excluded element"
+ ],
+ [
+  "PaLiO3",
+  "excluded element"
+ ],
+ [
+  "PaOsO3",
+  "excluded element"
+ ],
+ [
+  "PaSiO3",
+  "excluded element"
+ ],
+ [
+  "PaTaO3",
+  "excluded element"
+ ],
+ [
+  "PbAgO3",
+  "no experimental polymorph"
+ ],
+ [
+  "PbAlO3",
+  "no experimental polymorph"
+ ],
+ [
+  "PbAuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "PbBO3",
+  "no experimental polymorph"
+ ],
+ [
+  "PbBeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "PbCO3",
+  "B site not octahedral (CN [3])"
+ ],
+ [
+  "PbCdO3",
+  "no experimental polymorph"
+ ],
+ [
+  "PbCeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "PbCoO3",
+  "no experimental polymorph"
+ ],
+ [
+  "PbCrO3",
+  "157 meV/atom above hull"
+ ],
+ [
+  "PbCuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "PbFeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "PbGeO3",
+  "B site not octahedral (CN [4])"
+ ],
+ [
+  "PbMgO3",
+  "no experimental polymorph"
+ ],
+ [
+  "PbMnO3",
+  "60 meV/atom above hull"
+ ],
+ [
+  "PbMoO3",
+  "no experimental polymorph"
+ ],
+ [
+  "PbNiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "PbOsO3",
+  "reference polymorph Fd-3m not pseudosymmetric to Pm-3m"
+ ],
+ [
+  "PbPO3",
+  "311 meV/atom above hull"
+ ],
+ [
+  "PbPrO3",
+  "no experimental polymorph"
+ ],
+ [
+  "PbPuO3",
+  "excluded element"
+ ],
+ [
+  "PbRuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "PbSO3",
+  "81 meV/atom above hull"
+ ],
+ [
+  "PbSbO3",
+  "no experimental polymorph"
+ ],
+ [
+  "PbSeO3",
+  "B site not octahedral (CN [3])"
+ ],
+ [
+  "PbSiO3",
+  "B site not octahedral (CN [4])"
+ ],
+ [
+  "PbSnO3",
+  "155 meV/atom above hull"
+ ],
+ [
+  "PbTcO3",
+  "64 meV/atom above hull"
+ ],
+ [
+  "PbVO3",
+  "magnetic (AFM, 1.2e-06)"
+ ],
+ [
+  "PdAlO3",
+  "no experimental polymorph"
+ ],
+ [
+  "PdBO3",
+  "no experimental polymorph"
+ ],
+ [
+  "PdBeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "PdCuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "PdGeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "PdNiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "PdSbO3",
+  "no experimental polymorph"
+ ],
+ [
+  "PdSiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "PmBeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "PmErO3",
+  "no experimental polymorph"
+ ],
+ [
+  "PmInO3",
+  "no experimental polymorph"
+ ],
+ [
+  "PmLiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "PmMgO3",
+  "no experimental polymorph"
+ ],
+ [
+  "PmRuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "PmTiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "PmWO3",
+  "no experimental polymorph"
+ ],
+ [
+  "PrBO3",
+  "B site not octahedral (CN [3])"
+ ],
+ [
+  "PrBeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "PrBiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "PrCrO3",
+  "magnetic (FM, 12.0000002)"
+ ],
+ [
+  "PrCuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "PrFeO3",
+  "magnetic (FM, 19.9690725)"
+ ],
+ [
+  "PrHfO3",
+  "no experimental polymorph"
+ ],
+ [
+  "PrLiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "PrMnO3",
+  "magnetic (FM, 15.9999997)"
+ ],
+ [
+  "PrNbO3",
+  "no experimental polymorph"
+ ],
+ [
+  "PrNiO3",
+  "magnetic (FM, 3.9996803)"
+ ],
+ [
+  "PrRuO3",
+  "76 meV/atom above hull"
+ ],
+ [
+  "PrTiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "PrVO3",
+  "magnetic (FM, 8.0000009)"
+ ],
+ [
+  "PtBO3",
+  "no experimental polymorph"
+ ],
+ [
+  "PtBeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "PtNiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "PtVO3",
+  "no experimental polymorph"
+ ],
+ [
+  "PuBO3",
+  "excluded element"
+ ],
+ [
+  "PuCrO3",
+  "excluded element"
+ ],
+ [
+  "PuCuO3",
+  "excluded element"
+ ],
+ [
+  "PuGaO3",
+  "excluded element"
+ ],
+ [
+  "PuInO3",
+  "excluded element"
+ ],
+ [
+  "PuIrO3",
+  "excluded element"
+ ],
+ [
+  "PuMgO3",
+  "excluded element"
+ ],
+ [
+  "PuNiO3",
+  "excluded element"
+ ],
+ [
+  "PuPtO3",
+  "excluded element"
+ ],
+ [
+  "PuSbO3",
+  "excluded element"
+ ],
+ [
+  "PuTiO3",
+  "excluded element"
+ ],
+ [
+  "PuVO3",
+  "excluded element"
+ ],
+ [
+  "RbAcO3",
+  "excluded element"
+ ],
+ [
+  "RbAgO3",
+  "no experimental polymorph"
+ ],
+ [
+  "RbAlO3",
+  "no experimental polymorph"
+ ],
+ [
+  "RbAsO3",
+  "no experimental polymorph"
+ ],
+ [
+  "RbAuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "RbBO3",
+  "no experimental polymorph"
+ ],
+ [
+  "RbBaO3",
+  "no experimental polymorph"
+ ],
+ [
+  "RbBeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "RbBiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "RbBrO3",
+  "B site not octahedral (CN [3])"
+ ],
+ [
+  "RbCO3",
+  "57 meV/atom above hull"
+ ],
+ [
+  "RbCaO3",
+  "no experimental polymorph"
+ ],
+ [
+  "RbCdO3",
+  "no experimental polymorph"
+ ],
+ [
+  "RbClO3",
+  "65 meV/atom above hull"
+ ],
+ [
+  "RbCrO3",
+  "no experimental polymorph"
+ ],
+ [
+  "RbCuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "RbDyO3",
+  "no experimental polymorph"
+ ],
+ [
+  "RbErO3",
+  "no experimental polymorph"
+ ],
+ [
+  "RbFeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "RbGdO3",
+  "no experimental polymorph"
+ ],
+ [
+  "RbGeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "RbHgO3",
+  "no experimental polymorph"
+ ],
+ [
+  "RbHoO3",
+  "no experimental polymorph"
+ ],
+ [
+  "RbIO3",
+  "B site not octahedral (CN [3])"
+ ],
+ [
+  "RbInO3",
+  "no experimental polymorph"
+ ],
+ [
+  "RbIrO3",
+  "no experimental polymorph"
+ ],
+ [
+  "RbKO3",
+  "no experimental polymorph"
+ ],
+ [
+  "RbLiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "RbMgO3",
+  "no experimental polymorph"
+ ],
+ [
+  "RbMnO3",
+  "no experimental polymorph"
+ ],
+ [
+  "RbMoO3",
+  "no experimental polymorph"
+ ],
+ [
+  "RbNO3",
+  "B site not octahedral (CN [3])"
+ ],
+ [
+  "RbNaO3",
+  "no experimental polymorph"
+ ],
+ [
+  "RbNbO3",
+  "reference polymorph P-1 not pseudosymmetric to Pm-3m"
+ ],
+ [
+  "RbNiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "RbNpO3",
+  "excluded element"
+ ],
+ [
+  "RbOsO3",
+  "no experimental polymorph"
+ ],
+ [
+  "RbPO3",
+  "B site not octahedral (CN [4])"
+ ],
+ [
+  "RbPaO3",
+  "excluded element"
+ ],
+ [
+  "RbPdO3",
+  "no experimental polymorph"
+ ],
+ [
+  "RbPtO3",
+  "no experimental polymorph"
+ ],
+ [
+  "RbPuO3",
+  "excluded element"
+ ],
+ [
+  "RbReO3",
+  "no experimental polymorph"
+ ],
+ [
+  "RbRhO3",
+  "no experimental polymorph"
+ ],
+ [
+  "RbRuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "RbSO3",
+  "B site not octahedral (CN [3])"
+ ],
+ [
+  "RbSbO3",
+  "no experimental polymorph"
+ ],
+ [
+  "RbSeO3",
+  "174 meV/atom above hull"
+ ],
+ [
+  "RbSmO3",
+  "no experimental polymorph"
+ ],
+ [
+  "RbSnO3",
+  "no experimental polymorph"
+ ],
+ [
+  "RbSrO3",
+  "no experimental polymorph"
+ ],
+ [
+  "RbTaO3",
+  "reference polymorph C2/m not pseudosymmetric to Pm-3m"
+ ],
+ [
+  "RbTbO3",
+  "no experimental polymorph"
+ ],
+ [
+  "RbTeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "RbTlO3",
+  "no experimental polymorph"
+ ],
+ [
+  "RbTmO3",
+  "no experimental polymorph"
+ ],
+ [
+  "RbUO3",
+  "excluded element"
+ ],
+ [
+  "RbVO3",
+  "B site not octahedral (CN [4])"
+ ],
+ [
+  "RbWO3",
+  "no experimental polymorph"
+ ],
+ [
+  "RbYO3",
+  "no experimental polymorph"
+ ],
+ [
+  "RbYbO3",
+  "no experimental polymorph"
+ ],
+ [
+  "RbZnO3",
+  "no experimental polymorph"
+ ],
+ [
+  "ReBeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "ReFO3",
+  "B site not octahedral (CN [0])"
+ ],
+ [
+  "RhAlO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SFeO3",
+  "105 meV/atom above hull"
+ ],
+ [
+  "SMgO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SMnO3",
+  "72 meV/atom above hull"
+ ],
+ [
+  "SNO3",
+  "1024 meV/atom above hull"
+ ],
+ [
+  "SbAlO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SbAsO3",
+  "B site not octahedral (CN [3])"
+ ],
+ [
+  "SbBO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SbBeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SbCoO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SbHO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SbNiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SbReO3",
+  "no experimental polymorph"
+ ],
+ [
+  "ScAsO3",
+  "no experimental polymorph"
+ ],
+ [
+  "ScBO3",
+  "B site not octahedral (CN [3])"
+ ],
+ [
+  "ScCoO3",
+  "no experimental polymorph"
+ ],
+ [
+  "ScCuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "ScFeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "ScGaO3",
+  "no experimental polymorph"
+ ],
+ [
+  "ScMnO3",
+  "magnetic (FM, 23.9999995)"
+ ],
+ [
+  "ScPdO3",
+  "no experimental polymorph"
+ ],
+ [
+  "ScSiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "ScSnO3",
+  "no experimental polymorph"
+ ],
+ [
+  "ScTiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "ScVO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SeCoO3",
+  "magnetic (AFM, 0.0038762)"
+ ],
+ [
+  "SeCuO3",
+  "magnetic (FM, 6.0)"
+ ],
+ [
+  "SeLiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SeLuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SeMnO3",
+  "magnetic (FM, 39.9999997)"
+ ],
+ [
+  "SeNiO3",
+  "magnetic (Unknown, 7.9999976)"
+ ],
+ [
+  "SePdO3",
+  "B site not octahedral (CN [4])"
+ ],
+ [
+  "SeZnO3",
+  "B site not octahedral (CN [5])"
+ ],
+ [
+  "SiBO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SmAgO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SmBO3",
+  "B site not octahedral (CN [3])"
+ ],
+ [
+  "SmBeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SmCrO3",
+  "magnetic (Unknown, 12.0000004)"
+ ],
+ [
+  "SmCuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SmDyO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SmErO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SmFeO3",
+  "magnetic (FM, 20.008487)"
+ ],
+ [
+  "SmGaO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SmGeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SmHoO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SmInO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SmLaO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SmLiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SmLuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SmMnO3",
+  "magnetic (FM, 16.000001)"
+ ],
+ [
+  "SmNiO3",
+  "magnetic (Unknown, 3.9999879)"
+ ],
+ [
+  "SmPuO3",
+  "excluded element"
+ ],
+ [
+  "SmSbO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SmSiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SmTbO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SmTiO3",
+  "49 meV/atom above hull"
+ ],
+ [
+  "SmTmO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SmVO3",
+  "magnetic (FM, 7.9999985)"
+ ],
+ [
+  "SmYO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SnAlO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SnBO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SnCoO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SnGaO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SnGeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SnNiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SnPO3",
+  "311 meV/atom above hull"
+ ],
+ [
+  "SnSiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SnTaO3",
+  "325 meV/atom above hull"
+ ],
+ [
+  "SnTcO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SnVO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SrAgO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SrAlO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SrAsO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SrAuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SrBO3",
+  "62 meV/atom above hull"
+ ],
+ [
+  "SrBeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SrCO3",
+  "B site not octahedral (CN [3])"
+ ],
+ [
+  "SrCaO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SrCoO3",
+  "82 meV/atom above hull"
+ ],
+ [
+  "SrCrO3",
+  "73 meV/atom above hull"
+ ],
+ [
+  "SrCuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SrDyO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SrErO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SrEuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SrFeO3",
+  "magnetic (Unknown, 3.8837813)"
+ ],
+ [
+  "SrGeO3",
+  "B site not octahedral (CN [4])"
+ ],
+ [
+  "SrHgO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SrHoO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SrInO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SrIrO3",
+  "magnetic (FiM, 2.0247608)"
+ ],
+ [
+  "SrLiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SrMgO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SrMnO3",
+  "magnetic (AFM, 0.0)"
+ ],
+ [
+  "SrMoO3",
+  "magnetic (FiM, 0.2020207)"
+ ],
+ [
+  "SrNaO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SrNdO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SrNiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SrOsO3",
+  "61 meV/atom above hull"
+ ],
+ [
+  "SrPdO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SrPrO3",
+  "145 meV/atom above hull"
+ ],
+ [
+  "SrPtO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SrPuO3",
+  "excluded element"
+ ],
+ [
+  "SrReO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SrRhO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SrRuO3",
+  "magnetic (FM, 8.0012349)"
+ ],
+ [
+  "SrSbO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SrScO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SrSeO3",
+  "B site not octahedral (CN [3])"
+ ],
+ [
+  "SrSiO3",
+  "B site not octahedral (CN [4])"
+ ],
+ [
+  "SrTaO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SrTbO3",
+  "122 meV/atom above hull"
+ ],
+ [
+  "SrTeO3",
+  "B site not octahedral (CN [3])"
+ ],
+ [
+  "SrTmO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SrVO3",
+  "39 meV/atom above hull"
+ ],
+ [
+  "SrWO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SrYbO3",
+  "no experimental polymorph"
+ ],
+ [
+  "SrZnO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TaBeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TaCuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TaHO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TbBO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TbBeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TbCO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TbCrO3",
+  "magnetic (Unknown, 12.000001)"
+ ],
+ [
+  "TbCuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TbFeO3",
+  "magnetic (FM, 20.0102995)"
+ ],
+ [
+  "TbGaO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TbGeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TbInO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TbMgO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TbMnO3",
+  "magnetic (FM, 16.0000011)"
+ ],
+ [
+  "TbNiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TbOsO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TbSiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TbTiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TbVO3",
+  "magnetic (FM, 7.9999998)"
+ ],
+ [
+  "TcFO3",
+  "B site not octahedral (CN [0])"
+ ],
+ [
+  "TeAgO3",
+  "B site not octahedral (CN [3, 4])"
+ ],
+ [
+  "TeBO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TeCaO3",
+  "B site not octahedral (CN [6, 7])"
+ ],
+ [
+  "TeCdO3",
+  "reference polymorph P2_1/c not pseudosymmetric to Pm-3m"
+ ],
+ [
+  "TeCoO3",
+  "47 meV/atom above hull"
+ ],
+ [
+  "TeCuO3",
+  "35 meV/atom above hull"
+ ],
+ [
+  "TeGaO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TeGeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TeHO3",
+  "B site not octahedral (CN [1])"
+ ],
+ [
+  "TeHgO3",
+  "B site not octahedral (CN [2, 5])"
+ ],
+ [
+  "TeLiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TeMnO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TeNaO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TeNiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TePbO3",
+  "B site not octahedral (CN [4, 5])"
+ ],
+ [
+  "TePdO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TeReO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TeSbO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TeTbO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TeTiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TeVO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TeZnO3",
+  "B site not octahedral (CN [5])"
+ ],
+ [
+  "ThBO3",
+  "excluded element"
+ ],
+ [
+  "ThBeO3",
+  "excluded element"
+ ],
+ [
+  "ThCuO3",
+  "excluded element"
+ ],
+ [
+  "ThGdO3",
+  "excluded element"
+ ],
+ [
+  "ThHfO3",
+  "excluded element"
+ ],
+ [
+  "ThMoO3",
+  "excluded element"
+ ],
+ [
+  "ThPdO3",
+  "excluded element"
+ ],
+ [
+  "ThReO3",
+  "excluded element"
+ ],
+ [
+  "ThSiO3",
+  "excluded element"
+ ],
+ [
+  "ThWO3",
+  "excluded element"
+ ],
+ [
+  "TiAlO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TiBO3",
+  "76 meV/atom above hull"
+ ],
+ [
+  "TiBeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TiCoO3",
+  "magnetic (Unknown, 6.0000001)"
+ ],
+ [
+  "TiCuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TiGeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TiNiO3",
+  "magnetic (Unknown, 4.0000001)"
+ ],
+ [
+  "TiSnO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TiVO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TlAlO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TlBO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TlBrO3",
+  "B site not octahedral (CN [3])"
+ ],
+ [
+  "TlClO3",
+  "62 meV/atom above hull"
+ ],
+ [
+  "TlCoO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TlCrO3",
+  "40 meV/atom above hull"
+ ],
+ [
+  "TlCuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TlErO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TlFeO3",
+  "47 meV/atom above hull"
+ ],
+ [
+  "TlGaO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TlGeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TlHgO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TlIO3",
+  "B site not octahedral (CN [3])"
+ ],
+ [
+  "TlLaO3",
+  "157 meV/atom above hull"
+ ],
+ [
+  "TlLuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TlMgO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TlMnO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TlNO3",
+  "B site not octahedral (CN [3])"
+ ],
+ [
+  "TlNbO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TlNiO3",
+  "74 meV/atom above hull"
+ ],
+ [
+  "TlPO3",
+  "B site not octahedral (CN [4])"
+ ],
+ [
+  "TlPaO3",
+  "excluded element"
+ ],
+ [
+  "TlPrO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TlPuO3",
+  "excluded element"
+ ],
+ [
+  "TlSbO3",
+  "reference polymorph R-3 not pseudosymmetric to Pm-3m"
+ ],
+ [
+  "TlScO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TlSiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TlSmO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TlSrO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TlTaO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TlTcO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TlTmO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TlUO3",
+  "excluded element"
+ ],
+ [
+  "TlVO3",
+  "B site not octahedral (CN [4])"
+ ],
+ [
+  "TlWO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TlZrO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TmAlO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TmBO3",
+  "318 meV/atom above hull"
+ ],
+ [
+  "TmBeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TmBiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TmCeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TmCrO3",
+  "magnetic (FM, 11.9999998)"
+ ],
+ [
+  "TmFeO3",
+  "magnetic (FM, 30.0246847)"
+ ],
+ [
+  "TmGaO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TmGdO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TmGeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TmHoO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TmInO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TmLiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TmMnO3",
+  "magnetic (FM, 23.9999996)"
+ ],
+ [
+  "TmNiO3",
+  "magnetic (FM, 4.0001937)"
+ ],
+ [
+  "TmRhO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TmScO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TmSeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TmTbO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TmTiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TmVO3",
+  "magnetic (FM, 8.0000001)"
+ ],
+ [
+  "TmYO3",
+  "no experimental polymorph"
+ ],
+ [
+  "TmYbO3",
+  "no experimental polymorph"
+ ],
+ [
+  "UAlO3",
+  "excluded element"
+ ],
+ [
+  "UBO3",
+  "excluded element"
+ ],
+ [
+  "UBeO3",
+  "excluded element"
+ ],
+ [
+  "UIrO3",
+  "excluded element"
+ ],
+ [
+  "ULiO3",
+  "excluded element"
+ ],
+ [
+  "UMgO3",
+  "excluded element"
+ ],
+ [
+  "UPdO3",
+  "excluded element"
+ ],
+ [
+  "UReO3",
+  "excluded element"
+ ],
+ [
+  "USiO3",
+  "excluded element"
+ ],
+ [
+  "UTcO3",
+  "excluded element"
+ ],
+ [
+  "UTiO3",
+  "excluded element"
+ ],
+ [
+  "VAlO3",
+  "no experimental polymorph"
+ ],
+ [
+  "VBO3",
+  "magnetic (Unknown, 4.0)"
+ ],
+ [
+  "VBeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "VCoO3",
+  "no experimental polymorph"
+ ],
+ [
+  "VGaO3",
+  "no experimental polymorph"
+ ],
+ [
+  "VGeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "VHO3",
+  "no experimental polymorph"
+ ],
+ [
+  "VIrO3",
+  "no experimental polymorph"
+ ],
+ [
+  "VNO3",
+  "1390 meV/atom above hull"
+ ],
+ [
+  "VNiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "VOsO3",
+  "no experimental polymorph"
+ ],
+ [
+  "VSiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "WAlO3",
+  "no experimental polymorph"
+ ],
+ [
+  "YBO3",
+  "B site not octahedral (CN [4])"
+ ],
+ [
+  "YBiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "YCrO3",
+  "magnetic (Unknown, 12.0000009)"
+ ],
+ [
+  "YCuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "YErO3",
+  "no experimental polymorph"
+ ],
+ [
+  "YFeO3",
+  "magnetic (FM, 20.0068319)"
+ ],
+ [
+  "YGaO3",
+  "B site not octahedral (CN [5])"
+ ],
+ [
+  "YInO3",
+  "B site not octahedral (CN [5])"
+ ],
+ [
+  "YLiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "YLuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "YMnO3",
+  "magnetic (FM, 24.0000002)"
+ ],
+ [
+  "YMoO3",
+  "no experimental polymorph"
+ ],
+ [
+  "YNiO3",
+  "magnetic (FM, 3.9999993)"
+ ],
+ [
+  "YOsO3",
+  "no experimental polymorph"
+ ],
+ [
+  "YRhO3",
+  "no experimental polymorph"
+ ],
+ [
+  "YSbO3",
+  "no experimental polymorph"
+ ],
+ [
+  "YSeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "YSiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "YSnO3",
+  "no experimental polymorph"
+ ],
+ [
+  "YTiO3",
+  "58 meV/atom above hull"
+ ],
+ [
+  "YVO3",
+  "magnetic (FM, 7.9999996)"
+ ],
+ [
+  "YWO3",
+  "no experimental polymorph"
+ ],
+ [
+  "YZrO3",
+  "no experimental polymorph"
+ ],
+ [
+  "YbAlO3",
+  "no experimental polymorph"
+ ],
+ [
+  "YbAuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "YbBO3",
+  "B site not octahedral (CN [3])"
+ ],
+ [
+  "YbBeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "YbBiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "YbCrO3",
+  "no experimental polymorph"
+ ],
+ [
+  "YbCuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "YbGaO3",
+  "no experimental polymorph"
+ ],
+ [
+  "YbGeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "YbInO3",
+  "no experimental polymorph"
+ ],
+ [
+  "YbLiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "YbMgO3",
+  "no experimental polymorph"
+ ],
+ [
+  "YbNbO3",
+  "no experimental polymorph"
+ ],
+ [
+  "YbNiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "YbPdO3",
+  "no experimental polymorph"
+ ],
+ [
+  "YbPtO3",
+  "no experimental polymorph"
+ ],
+ [
+  "YbPuO3",
+  "excluded element"
+ ],
+ [
+  "YbReO3",
+  "no experimental polymorph"
+ ],
+ [
+  "YbScO3",
+  "no experimental polymorph"
+ ],
+ [
+  "YbSiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "YbSnO3",
+  "no experimental polymorph"
+ ],
+ [
+  "YbTaO3",
+  "no experimental polymorph"
+ ],
+ [
+  "YbTcO3",
+  "no experimental polymorph"
+ ],
+ [
+  "YbTiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "YbWO3",
+  "no experimental polymorph"
+ ],
+ [
+  "YbZnO3",
+  "no experimental polymorph"
+ ],
+ [
+  "ZnBO3",
+  "no experimental polymorph"
+ ],
+ [
+  "ZnBeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "ZnCO3",
+  "B site not octahedral (CN [3])"
+ ],
+ [
+  "ZnCoO3",
+  "no experimental polymorph"
+ ],
+ [
+  "ZnCuO3",
+  "no experimental polymorph"
+ ],
+ [
+  "ZnFeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "ZnGaO3",
+  "no experimental polymorph"
+ ],
+ [
+  "ZnGeO3",
+  "59 meV/atom above hull"
+ ],
+ [
+  "ZnHfO3",
+  "no experimental polymorph"
+ ],
+ [
+  "ZnIrO3",
+  "no experimental polymorph"
+ ],
+ [
+  "ZnMgO3",
+  "no experimental polymorph"
+ ],
+ [
+  "ZnMnO3",
+  "no experimental polymorph"
+ ],
+ [
+  "ZnMoO3",
+  "no experimental polymorph"
+ ],
+ [
+  "ZnNiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "ZnOsO3",
+  "no experimental polymorph"
+ ],
+ [
+  "ZnRhO3",
+  "no experimental polymorph"
+ ],
+ [
+  "ZnSbO3",
+  "no experimental polymorph"
+ ],
+ [
+  "ZnSiO3",
+  "50 meV/atom above hull"
+ ],
+ [
+  "ZnSnO3",
+  "41 meV/atom above hull"
+ ],
+ [
+  "ZnTiO3",
+  "reference polymorph R-3 not pseudosymmetric to Pm-3m"
+ ],
+ [
+  "ZnVO3",
+  "no experimental polymorph"
+ ],
+ [
+  "ZnWO3",
+  "no experimental polymorph"
+ ],
+ [
+  "ZnZrO3",
+  "no experimental polymorph"
+ ],
+ [
+  "ZrAlO3",
+  "no experimental polymorph"
+ ],
+ [
+  "ZrBO3",
+  "no experimental polymorph"
+ ],
+ [
+  "ZrBeO3",
+  "no experimental polymorph"
+ ],
+ [
+  "ZrCoO3",
+  "no experimental polymorph"
+ ],
+ [
+  "ZrNiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "ZrOsO3",
+  "no experimental polymorph"
+ ],
+ [
+  "ZrSiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "ZrTiO3",
+  "no experimental polymorph"
+ ],
+ [
+  "Ba3Hf2O7",
+  "no experimental polymorph"
+ ],
+ [
+  "Ba3Pt2O7",
+  "no experimental polymorph"
+ ],
+ [
+  "Ba3Sn2O7",
+  "no experimental polymorph"
+ ],
+ [
+  "Ba3Ti2O7",
+  "no experimental polymorph"
+ ],
+ [
+  "Ba3Zr2O7",
+  "no experimental polymorph"
+ ],
+ [
+  "Bi3Mn2O7",
+  "77 meV/atom above hull"
+ ],
+ [
+  "Ca3Bi2O7",
+  "no experimental polymorph"
+ ],
+ [
+  "Ca3Co2O7",
+  "no experimental polymorph"
+ ],
+ [
+  "Ca3Cr2O7",
+  "no experimental polymorph"
+ ],
+ [
+  "Ca3Fe2O7",
+  "no experimental polymorph"
+ ],
+ [
+  "Ca3Mn2O7",
+  "magnetic (FM, 11.9999999)"
+ ],
+ [
+  "Ca3Mo2O7",
+  "no experimental polymorph"
+ ],
+ [
+  "Ca3Ni2O7",
+  "no experimental polymorph"
+ ],
+ [
+  "Ca3Ru2O7",
+  "magnetic (FM, 7.9999306)"
+ ],
+ [
+  "Ca3Sb2O7",
+  "no experimental polymorph"
+ ],
+ [
+  "Ca3Si2O7",
+  "B site not octahedral (CN [4])"
+ ],
+ [
+  "Ca3Sn2O7",
+  "no experimental polymorph"
+ ],
+ [
+  "Ca3V2O7",
+  "no experimental polymorph"
+ ],
+ [
+  "Ca3W2O7",
+  "no experimental polymorph"
+ ],
+ [
+  "Ca3Zr2O7",
+  "no experimental polymorph"
+ ],
+ [
+  "Eu3Al2O7",
+  "no experimental polymorph"
+ ],
+ [
+  "Eu3Ti2O7",
+  "no experimental polymorph"
+ ],
+ [
+  "Eu3V2O7",
+  "no experimental polymorph"
+ ],
+ [
+  "La3Ni2O7",
+  "magnetic (FM, 5.9965936)"
+ ],
+ [
+  "Mg3C2O7",
+  "no experimental polymorph"
+ ],
+ [
+  "Mg3Co2O7",
+  "no experimental polymorph"
+ ],
+ [
+  "Mg3Fe2O7",
+  "no experimental polymorph"
+ ],
+ [
+  "Mg3Mo2O7",
+  "no experimental polymorph"
+ ],
+ [
+  "Mg3Ni2O7",
+  "no experimental polymorph"
+ ],
+ [
+  "Mg3Sb2O7",
+  "no experimental polymorph"
+ ],
+ [
+  "Mg3Sn2O7",
+  "no experimental polymorph"
+ ],
+ [
+  "Mg3Ti2O7",
+  "no experimental polymorph"
+ ],
+ [
+  "Mg3V2O7",
+  "no experimental polymorph"
+ ],
+ [
+  "Mn3Mg2O7",
+  "no experimental polymorph"
+ ],
+ [
+  "Pb3Si2O7",
+  "B site not octahedral (CN [4])"
+ ],
+ [
+  "Sr3Cr2O7",
+  "no experimental polymorph"
+ ],
+ [
+  "Sr3Fe2O7",
+  "magnetic (Unknown, 7.9398442)"
+ ],
+ [
+  "Sr3Hf2O7",
+  "no experimental polymorph"
+ ],
+ [
+  "Sr3Ir2O7",
+  "no experimental polymorph"
+ ],
+ [
+  "Sr3Mn2O7",
+  "magnetic (FM, 6.1250504)"
+ ],
+ [
+  "Sr3Mo2O7",
+  "no experimental polymorph"
+ ],
+ [
+  "Sr3Rh2O7",
+  "no experimental polymorph"
+ ],
+ [
+  "Sr3Ru2O7",
+  "magnetic (FM, 7.9999305)"
+ ],
+ [
+  "Sr3V2O7",
+  "magnetic (Unknown, 1.99771)"
+ ],
+ [
+  "Sr3Zr2O7",
+  "no experimental polymorph"
+ ],
+ [
+  "Ti3H2O7",
+  "78 meV/atom above hull"
+ ],
+ [
+  "Zn3Co2O7",
+  "no experimental polymorph"
+ ],
+ [
+  "Zn3Fe2O7",
+  "no experimental polymorph"
+ ],
+ [
+  "Zn3Mn2O7",
+  "no experimental polymorph"
+ ],
+ [
+  "Zn3Mo2O7",
+  "no experimental polymorph"
+ ],
+ [
+  "Zn3Sb2O7",
+  "no experimental polymorph"
+ ],
+ [
+  "Zn3Sn2O7",
+  "no experimental polymorph"
+ ],
+ [
+  "Zn3Ti2O7",
+  "no experimental polymorph"
+ ],
+ [
+  "Zn3V2O7",
+  "no experimental polymorph"
+ ],
+ [
+  "Zn3W2O7",
+  "no experimental polymorph"
+ ]
+]
