@@ -11,6 +11,7 @@ try:
     from pymatgen.analysis.structure_matcher import StructureMatcher
     from pymatgen.analysis.local_env import CrystalNN
     from pymatgen.symmetry.analyzer import SpacegroupAnalyzer
+    from pymatgen.symmetry.groups import SpaceGroup
     from pymatgen.io.ase import AseAtomsAdaptor
 except ImportError:
     sys.exit("pip install mp-api pymatgen")
@@ -131,6 +132,7 @@ def main():
                     reference_id=str(ref.material_id), e_hull_meV_atom=round(ref.energy_above_hull * 1000, 1),
                     pseudosymmetry_rms=round(float(rms[0]), 3),
                     degenerate_reference=deg if len(deg) > 1 else None,
+                    degenerate_reference_numbers=[SpaceGroup(x).int_number for x in deg] if len(deg) > 1 else None,
                     reference_is_aristotype=(ref.symmetry.symbol == aristo),
                     experimental_polymorphs=sorted({d.symmetry.symbol for d in exp}),
                     literature_sg=None,                 # filled AFTER the run, from the literature; see SELECTION_RULE.md

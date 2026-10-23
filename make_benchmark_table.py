@@ -9,9 +9,12 @@ KNOWN = {  # experimental ground state (space-group number) ; aliases that count
 }
 from landau_agent import registry as _registry
 REGISTRY = _registry.load()
+ACCEPT = {}                                           # material -> set of space-group numbers that count as the known state
 for _n, _e in REGISTRY.items():                      # database-drawn set: reference = lowest experimental polymorph
     if _n not in KNOWN:
-        KNOWN[_n] = (_e["reference_sg"], _e["reference_sg_number"])
+        KNOWN[_n] = (_e["reference_sg"] + (f" or {'/'.join(x for x in _e['degenerate_reference'] if x != _e['reference_sg'])}" if _e.get("degenerate_reference") else ""),
+                     _e["reference_sg_number"])
+        ACCEPT[_n] = set(_e.get("degenerate_reference_numbers") or []) | {_e["reference_sg_number"]}
 DATABASE = [n for n, e in REGISTRY.items() if e["status"] == "new"]
 DB_PROTOCOLS = [("v5", "benchmark_v5_matpes_r2scan_0_{m}.json", "v5 (r2SCAN)"), ("v5p", "benchmark_v5_{m}.json", "v5 (PBE)")]
 ORDER = ["CaTiO3", "PbTiO3", "BaTiO3", "LaAlO3", "SrTiO3", "Ca3Ti2O7", "Sr3Zr2O7", "Ca3Mn2O7", "Ca3Sn2O7",
@@ -31,9 +34,10 @@ def sgnum(label):
 def verdict(mat, d):
     """hit / unresolved(+contains) / miss, from the winner and the resolution verdict when present."""
     known_num = KNOWN[mat][1]
+    accept = ACCEPT.get(mat, {known_num})          # degenerate database references count as a set
     w = d["winner"]
     if "no instability" in w.get("space_group", ""):
-        return ("hit" if known_num in (139, 221) else "miss"), "no instability"   # reference is the aristotype itself
+        return ("hit" if accept & {139, 221} else "miss"), "no instability"   # reference is the aristotype itself
     loose = w.get("space_group_tol_0_01") or w["space_group"]
     pol = d.get("winner_polished") or {}
     if pol.get("needed"):          # v3: winner converged to fmax 0.001 when its symmetry was tolerance-dependent
@@ -47,14 +51,14 @@ def verdict(mat, d):
         if not r["within_1_meV_per_fu_of_lowest"]:
             r["verdict"] = "resolved"
     txt = f"{loose} ({w['energy_meV_per_fu']})"
-    if sgnum(loose) == known_num:
+    if sgnum(loose) in accept:
         if r and r["verdict"] != "resolved":   # the tool itself declines to call a winner: not a hit
             return "unresolved", txt + "; known state lowest but within 1 meV/f.u. of " + ", ".join(r["within_1_meV_per_fu_of_lowest"])
         return "hit", txt
     if r and r["verdict"] != "resolved":
         close = r["within_1_meV_per_fu_of_lowest"]
-        if any(sgnum(c) == known_num for c in close):
-            return "unresolved", txt + "; known state within " + ", ".join(c for c in close if sgnum(c) == known_num)
+        if any(sgnum(c) in accept for c in close):
+            return "unresolved", txt + "; known state within " + ", ".join(c for c in close if sgnum(c) in accept)
         return "miss", txt + "; degenerate set lacks the known state"
     return "miss", txt
 
