@@ -49,7 +49,7 @@ def run(name):
         # v5: curvature window instead of a fixed count. v4's "three softest distinct" dropped the X+ rotation of
         # Sr3Hf2O7 (fourth softest, 0.015 eV/A^2 behind three X- modes), so A2_1am could not be enumerated.
         unstable = [m for m in modes if m["unstable"]]
-        kmin = min(m["curvature_eV_A2"] for m in unstable)
+        kmin = min((m["curvature_eV_A2"] for m in unstable), default=0.0)   # no instability -> nothing picked
         picked = [m["label"] for m in unstable if m["curvature_eV_A2"] <= kmin / V5_WINDOW][:V5_CAP]
     elif PROTOCOL == "v4":
         # v4: the three softest DISTINCT irreps, whatever their short names. Keeping one irrep per
