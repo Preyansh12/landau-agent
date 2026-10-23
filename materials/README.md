@@ -1,0 +1,1 @@
+Database-drawn materials (SELECTION_RULE.md). `registry.json` is written once by `select_materials.py` and never edited after results exist; `selection_log.json` lists every excluded composition and why.

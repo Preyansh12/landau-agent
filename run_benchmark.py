@@ -27,6 +27,10 @@ SUPERCELLS.update({"SrTiO3": [[2, 0, 0], [0, 2, 0], [0, 0, 2]], "LaAlO3": [[2, 0
                    "Ca3Zr2O7": [[1, 1, 0], [-1, 1, 0], [0, 0, 1]]})
 for _n in ("Sr3Ti2O7", "Ca3Mn2O7", "Ca3Sn2O7", "Sr3Sn2O7", "Sr3Hf2O7", "Sr3Ru2O7"):
     SUPERCELLS[_n] = [[1, 1, 0], [-1, 1, 0], [0, 0, 1]]
+from landau_agent import registry as _registry
+REGISTRY = _registry.load()
+for _n, _e in REGISTRY.items():
+    SUPERCELLS.setdefault(_n, _registry.supercell(_e))
 
 import os
 from landau_agent import energy as _E
@@ -84,7 +88,12 @@ def run(name):
     print(name, "->", out["winner"], f"{out['runtime_s']}s", flush=True)
 
 if __name__ == "__main__":
-    for n in sys.argv[1:]:
+    names = sys.argv[1:]
+    if names == ["--registry"]:            # every database-drawn material not yet run under this tag
+        names = [n for n, e in REGISTRY.items() if e["status"] == "new"
+                 and not os.path.exists(f"results/benchmark_{TAG}_{n}.json")]
+        print(f"{len(names)} registry materials to run under {TAG}", flush=True)
+    for n in names:
         try:
             run(n)
         except Exception as e:

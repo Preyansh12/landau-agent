@@ -35,6 +35,9 @@ BUILTIN = {
     "Sr3Hf2O7": lambda: ruddlesden_popper_n2("Sr", "Hf", "O", a=4.1, c=20.9),
     "Sr3Ru2O7": lambda: ruddlesden_popper_n2("Sr", "Ru", "O", a=3.89, c=20.7),
 }
+from . import registry as _registry
+for _name, _entry in _registry.load().items():      # database-drawn materials (SELECTION_RULE.md)
+    BUILTIN.setdefault(_name, _registry.builder(_entry))
 
 
 @dataclass

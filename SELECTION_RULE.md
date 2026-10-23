@@ -25,3 +25,18 @@ marked `prior`; everything else is `new`.
 
 **Protocol.** v4 (`run_v4_all.sh` style), `mace-matpes-r2scan-0`, no experimental lattice input. Scoring:
 hit / unresolved / miss exactly as in `make_benchmark_table.py`. No material is removed after its run.
+
+## Amendments made before any selected material was run (23 Oct 2026, evening)
+
+- **Protocol frozen at v5** (`run_benchmark.py`, commit "v5: symmetrisation test"). v5 was developed on the 13 hackathon
+  materials, which are therefore a *development set*; the database-drawn materials are the test set. Any later change to
+  the protocol is a new version with its own column, never an edit to v5.
+- **Two columns**: v5 with `mace-matpes-r2scan-0` (primary) and v5 with MACE-MP-0 `medium` (PBE baseline).
+- **Reference when the lowest experimental polymorph is the aristotype itself** (`reference_is_aristotype`): the expected
+  answer is "no instability", scored as a hit only if the pipeline finds none. This is a negative-control category, and
+  it is also where a missing low-temperature ICSD entry would mislead the database reference.
+- **Literature audit, after the run**: `literature_sg` is filled by hand from the literature *after* all results exist and is
+  recorded separately. Two scores are reported, against the database reference and against the literature reference,
+  with every disagreement between the two listed. The database reference is never edited.
+- **Scoring**: the verdict function of `make_benchmark_table.py` as committed at the freeze; hit / unresolved / miss with the
+  same 1 meV/f.u. window and the same alias rule as the hackathon table.
