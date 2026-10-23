@@ -319,7 +319,8 @@ class Session:
         return [round(float(x) * 1602.176634, 2) for x in P]
 
     def enumerate_phases(self, max_phases: int = 8, fmax: float = 0.03, steps: int = 250,
-                         screen_steps: int = 0) -> dict:
+                         screen_steps: int = 0, screen_window: float | None = None,
+                         max_window_phases: int = 24) -> dict:
         """Isotropy-subgroup style enumeration: every distinct OP-direction pattern of the
         PRIMARY order parameters, de-duplicated by space group, relaxed with MACE inside its
         own symmetry (all compatible secondary modes free to develop), ranked by energy."""
@@ -395,9 +396,18 @@ class Session:
                              order_parameter_directions=d) for e, sg, d, _ in screened]
         cands = [(sg, desc, at) for _, sg, desc, at in screened]
         self._seed_structs = {sg: at.copy() for sg, _, at in cands}   # every candidate's seed, for diagnostics
+        # How many candidates go on to the fixed-lattice relaxation. A fixed count (max_phases) is unsafe
+        # when many primaries give many patterns: in CaZrO3 (4 primaries, 72 patterns) Pnma sat 10th after
+        # the 25-step screen and was cut, while fully relaxed it is 74 meV/f.u. below the R3c that won.
+        # screen_window keeps every candidate whose screened energy is within that fraction of the best.
+        n_keep = max_phases
+        if screen_window is not None and screened and screened[0][0] < 0:
+            cut = screened[0][0] * (1.0 - screen_window)
+            n_keep = max(max_phases, min(max_window_phases, sum(1 for e, *_ in screened if e <= cut)))
+        self._n_kept = n_keep
         rows = []
         calc = E.get_calculator()
-        for sg, desc, at in cands[:max_phases]:
+        for sg, desc, at in cands[:n_keep]:
             at = at.copy()
             at.calc = calc
             at.set_constraint(FixSymmetry(at, symprec=1e-3))

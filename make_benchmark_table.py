@@ -16,14 +16,16 @@ for _n, _e in REGISTRY.items():                      # database-drawn set: refer
                      _e["reference_sg_number"])
         ACCEPT[_n] = set(_e.get("degenerate_reference_numbers") or []) | {_e["reference_sg_number"]}
 DATABASE = [n for n, e in REGISTRY.items() if e["status"] == "new"]
-DB_PROTOCOLS = [("v5", "benchmark_v5_matpes_r2scan_0_{m}.json", "v5 (r2SCAN)"), ("v5p", "benchmark_v5_{m}.json", "v5 (PBE)")]
+DB_PROTOCOLS = [("v5", "benchmark_v5_matpes_r2scan_0_{m}.json", "v5 (r2SCAN)"), ("v5p", "benchmark_v5_{m}.json", "v5 (PBE)"),
+                ("v6", "benchmark_v6_matpes_r2scan_0_{m}.json", "v6 (r2SCAN)"), ("v6p", "benchmark_v6_{m}.json", "v6 (PBE)")]
 ORDER = ["CaTiO3", "PbTiO3", "BaTiO3", "LaAlO3", "SrTiO3", "Ca3Ti2O7", "Sr3Zr2O7", "Ca3Mn2O7", "Ca3Sn2O7",
          "Sr3Sn2O7", "Sr3Hf2O7", "Sr3Ru2O7", "Sr3Ti2O7"]
 PROTOCOLS = [("v1", "benchmark_{m}.json", "v1 (PBE)"), ("v2", "benchmark_v2_{m}.json", "v2 (PBE)"),
              ("v2r", "benchmark_v2_matpes_r2scan_0_{m}.json", "v2 (r2SCAN)"),
              ("v3", "benchmark_v3_matpes_r2scan_0_{m}.json", "v3 (r2SCAN)"),
              ("v4", "benchmark_v4_matpes_r2scan_0_{m}.json", "v4 (r2SCAN)"),
-             ("v5", "benchmark_v5_matpes_r2scan_0_{m}.json", "v5 (r2SCAN)")]
+             ("v5", "benchmark_v5_matpes_r2scan_0_{m}.json", "v5 (r2SCAN)"),
+             ("v6", "benchmark_v6_matpes_r2scan_0_{m}.json", "v6 (r2SCAN)")]
 
 
 def sgnum(label):

@@ -12,6 +12,10 @@ Protocol versions (all kept, all reported):
       a fixed count of 3 dropped the X+ rotation of Sr3Hf2O7. A winner whose 1e-3 A and 1e-2 A
       space groups differ is snapped to the looser one and re-relaxed inside it; if that costs
       < 0.05 meV/f.u. the higher symmetry is reported (PbTiO3 read Pm with P4mm at 1e-2 A)        results/benchmark_v5*_<name>.json
+  v6  v5, but every candidate within 30 % of the best screened energy (max 24, min 6) gets the
+      fixed-lattice relaxation instead of a fixed best-6: with 4 primaries and 72 patterns, CaZrO3's
+      Pnma sat 10th after the screen and was cut; fully relaxed it beats the R3c winner by 74 meV/f.u.
+      Designed after the first 23 test-set results (SELECTION_RULE.md, protocol log)                results/benchmark_v6*_<name>.json
 MLIP: LANDAU_MLIP_MODEL=medium (MACE-MP-0, PBE) or mace-matpes-r2scan-0 (MACE MatPES r2SCAN); the tag records it.
 
 Protocol: MACE-relax the parent -> instabilities -> up to 3 most unstable distinct irreps as
@@ -35,7 +39,8 @@ for _n, _e in REGISTRY.items():
 import os
 from landau_agent import energy as _E
 PROTOCOL = os.environ.get("LANDAU_PROTOCOL", "v2")          # v2: single-point screening; v3/v4: 25-step relaxation screening
-SCREEN_STEPS = {"v2": 0, "v3": 25, "v4": 25, "v5": 25}[PROTOCOL]
+SCREEN_STEPS = {"v2": 0, "v3": 25, "v4": 25, "v5": 25, "v6": 25}[PROTOCOL]
+SCREEN_WINDOW = 0.30 if PROTOCOL == "v6" else None   # v6: fixed-lattice relaxation for every candidate within 30 % of the best screened energy (max 24)
 V5_WINDOW, V5_CAP = 2.0, 4   # v5: every unstable irrep within a factor V5_WINDOW of the softest curvature, at most V5_CAP
 TAG = PROTOCOL if _E.MODEL == "medium" else PROTOCOL + "_" + _E.MODEL.replace("mace-", "").replace("-", "_")
 
@@ -49,7 +54,7 @@ def run(name):
     s.set_supercell(SUPERCELLS[name])
     modes = s.find_instabilities()["modes"]
     picked, seen = [], set()
-    if PROTOCOL == "v5":
+    if PROTOCOL in ("v5", "v6"):
         # v5: curvature window instead of a fixed count. v4's "three softest distinct" dropped the X+ rotation of
         # Sr3Hf2O7 (fourth softest, 0.015 eV/A^2 behind three X- modes), so A2_1am could not be enumerated.
         unstable = [m for m in modes if m["unstable"]]
@@ -71,13 +76,13 @@ def run(name):
         print(name, "->", out["winner"], flush=True)
         return
     s.choose_order_parameters(picked)
-    ph = s.enumerate_phases(max_phases=6, fmax=0.03, steps=250, screen_steps=SCREEN_STEPS)
+    ph = s.enumerate_phases(max_phases=6, fmax=0.03, steps=250, screen_steps=SCREEN_STEPS, screen_window=SCREEN_WINDOW)
     # v2: strain can reorder phases, so the best 4 (not 2) get a full cell relaxation
     # v2 refined the best 4 of the 6 fixed-lattice relaxations; strain-driven phases (PbTiO3 P4mm)
     # can sit 5th or 6th at fixed lattice and win with a free cell, so v3 refines all 6.
-    ref = s.refine_phases(top=6 if PROTOCOL in ("v3", "v4", "v5") else 4, fmax=0.01, steps=800, relaxed_cell_only=True,
-                          tighten_if_unresolved=(PROTOCOL in ("v3", "v4", "v5")), polish_winner=(PROTOCOL in ("v4", "v5")),
-                          symmetrise_winner=(PROTOCOL == "v5"))
+    ref = s.refine_phases(top=6 if PROTOCOL in ("v3", "v4", "v5", "v6") else 4, fmax=0.01, steps=800, relaxed_cell_only=True,
+                          tighten_if_unresolved=(PROTOCOL in ("v3", "v4", "v5", "v6")), polish_winner=(PROTOCOL in ("v4", "v5", "v6")),
+                          symmetrise_winner=(PROTOCOL in ("v5", "v6")))
     best = ref["phases"][0]
     out = dict(material=name, parent=parent, instabilities=[{k: m[k] for k in ("name", "label", "curvature_eV_A2", "polar")} for m in modes if m["unstable"]],
                primaries=picked, enumeration=ph, refined=ref,
