@@ -2,7 +2,19 @@
 
 The rule, not the author, chooses the set. It is committed before any selected material is run.
 
-## Rule, version 2 (23 Oct 2026, 21:30 IST) — the one in force
+## Rule, version 2.1 (23 Oct 2026, 21:45 IST) — the one in force
+
+Version 2 below, with two amendments made after inspecting its printed list and before any run:
+- **Magnetism.** MP `ordering` ∈ {FM, AFM, FiM} excludes; "Unknown"/missing falls back to |total magnetization| < 0.1 μB/f.u.
+  (Version 2 excluded everything ≠ "NM", which removed the titanates, whose entries carry "Unknown".)
+- **Octahedral B.** Every B site of the reference polymorph must be six-coordinate by oxygen (pymatgen `CrystalNN`), and
+  B is *defined* as the six-coordinate cation (A the other, and the larger). This is the defining feature of the
+  perovskite and RP families (corner-sharing BO₆ octahedra) and removes the nitrates, borates, selenites, iodates and
+  chain vanadates that the matcher alone admitted at rms 0.31–0.39. Calibration: CaTiO₃ Pnma, LiNbO₃, ilmenite FeTiO₃
+  and our Ca₃Ti₂O₇ all have CN 6 (ilmenite is still removed by the pseudosymmetry test); calcite-type NaNO₃ has CN 3.
+The version-2 list is kept in `materials/selection_v2_list.txt`.
+
+## Rule, version 2 (23 Oct 2026, 21:30 IST)
 
 **Source.** Materials Project (`mp-api`), summary documents for the anonymous formulas ABC₃ and A₂B₃C₇ containing
 oxygen, queried by `select_materials.py`.

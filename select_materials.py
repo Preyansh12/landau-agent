@@ -9,6 +9,7 @@ try:
     from mp_api.client import MPRester
     from pymatgen.core import Composition, Element
     from pymatgen.analysis.structure_matcher import StructureMatcher
+    from pymatgen.analysis.local_env import CrystalNN
     from pymatgen.symmetry.analyzer import SpacegroupAnalyzer
     from pymatgen.io.ase import AseAtomsAdaptor
 except ImportError:
@@ -17,6 +18,7 @@ from landau_agent.structures import cubic_perovskite, ruddlesden_popper_n2
 
 HULL_MEV = 30.0
 MATCH = dict(ltol=0.3, stol=0.4, angle_tol=10)     # pseudosymmetry test; calibrated in SELECTION_RULE.md
+MAGNETIC = {"FM", "AFM", "FiM"}                     # MP ordering values that mean magnetic; "Unknown"/None fall back to the moment
 BAD = set("He Ne Ar Kr Xe Rn Ac Th Pa U Np Pu Am Cm Bk Cf Es Fm Md No Lr Po At Fr Ra".split())
 PRIOR = set("CaTiO3 PbTiO3 LaAlO3 BaTiO3 SrTiO3 Ca3Ti2O7 Sr3Zr2O7 Sr3Ru2O7 Sr3Ti2O7 Ca3Mn2O7 Ca3Sn2O7 Sr3Sn2O7 Sr3Hf2O7".split())
 # family: (MP anonymous formula, cation counts (A, B), O count, aristotype symbol)
@@ -47,6 +49,18 @@ def classify(formula, family):
         if radius(A) < radius(B):
             return None
     return A, B
+
+
+def octahedral_b(struct, A, B):
+    """Perovskites are corner-sharing BO6 octahedra: every B site must be 6-coordinate by oxygen (CrystalNN).
+    Returns (ok, list of B coordination numbers)."""
+    cnn = CrystalNN()
+    cns = []
+    for i, site in enumerate(struct):
+        if site.specie.symbol == B:
+            nn = cnn.get_nn_info(struct, i)
+            cns.append(sum(1 for n in nn if n["site"].specie.symbol == "O"))
+    return bool(cns) and all(c == 6 for c in cns), sorted(set(cns))
 
 
 def ideal(family, A, B, a, c):
@@ -83,20 +97,30 @@ def main():
                 if ref.energy_above_hull * 1000 > HULL_MEV:
                     log.append((name, f"{ref.energy_above_hull * 1000:.0f} meV/atom above hull")); continue
                 fu = max(ref.nsites // n_per_fu, 1)
-                if (ref.ordering and ref.ordering != "NM") or abs(ref.total_magnetization or 0) / fu >= 0.1:
-                    log.append((name, f"magnetic ({ref.ordering})")); continue
+                ordering = str(ref.ordering or "Unknown").replace("Ordering.", "")
+                if ordering in MAGNETIC or (ordering not in ("NM",) and abs(ref.total_magnetization or 0) / fu >= 0.1):
+                    log.append((name, f"magnetic ({ordering}, {ref.total_magnetization})")); continue
+                ref_struct = mpr.get_structure_by_material_id(ref.material_id)
+                # B must be the six-coordinate cation; A the other one (and the larger, as a sanity check)
+                okB, cnB = octahedral_b(ref_struct, A, B)
+                if not okB:
+                    okA, cnA = octahedral_b(ref_struct, B, A)
+                    if okA and radius(B) >= radius(A):
+                        A, B = B, A
+                        name = f"{A}{B}O3" if fam == "ABO3" else f"{A}3{B}2O7"
+                    else:
+                        log.append((name, f"B site not octahedral (CN {cnB})")); continue
                 # aristotype lattice from the reference polymorph's volume (no aristotype entry needed)
                 v_fu = ref.volume / fu
                 if fam == "ABO3":
                     a, c = v_fu ** (1 / 3), None
                 else:
-                    st = SpacegroupAnalyzer(mpr.get_structure_by_material_id(ref.material_id)).get_conventional_standard_structure()
+                    st = SpacegroupAnalyzer(ref_struct).get_conventional_standard_structure()
                     c = max(st.lattice.abc)
                     if not 17.0 < c < 25.0:
                         log.append((name, f"cannot infer RP c axis ({c:.1f} A)")); continue
                     a = (2 * v_fu / c) ** 0.5
                 # pseudosymmetry: the reference polymorph must be a small distortion of the ideal aristotype
-                ref_struct = mpr.get_structure_by_material_id(ref.material_id)
                 rms = matcher.get_rms_dist(ref_struct, ideal(fam, A, B, a, c))
                 if rms is None:
                     log.append((name, f"reference polymorph {ref.symmetry.symbol} not pseudosymmetric to {aristo}")); continue
@@ -120,9 +144,10 @@ def main():
         print(f"{r['family']:7} {n:10} {r['A']:3}{r['B']:3} {r['a']:7.3f} {(r['c'] or 0):7.2f} {r['reference_sg']:12} {r['pseudosymmetry_rms']:6.3f} {r['status']:6} {notes}")
     reasons = defaultdict(int)
     for _, why in log:
-        reasons[why.split(" (")[0].split(" not ")[0][:40]] += 1
+        reasons["above hull" if "above hull" in why else why.split(" (")[0].split(" not ")[0][:40]] += 1
     print(len(registry), "compositions;", sum(r["status"] == "new" for r in registry.values()), "new;", len(log), "excluded:",
           dict(reasons))
+    print("prior materials not selected:", {n: w for n, w in log if n in PRIOR} or "none")
 
 
 if __name__ == "__main__":
